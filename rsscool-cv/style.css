@@ -1,0 +1,161 @@
+header {
+    padding-top: 25px;
+    text-align: center;
+    justify-content: center;
+}
+
+header img {
+    border-radius: 90px;
+}
+
+.position {
+    margin: 0 auto;
+    width: fit-content;
+    line-height: 70px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 90px;
+    border-bottom: 3px rgb(194, 190, 190) solid;
+    width: fit-content;
+    margin: 0 auto;    
+    font-family: Duality;
+    font-weight: lighter;
+    text-align: center;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100vw;
+}
+ 
+.summary {
+    width: 80%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+.skills {
+        text-transform: capitalize;
+        font-family: sans-serif;
+        font-weight: lighter;
+        margin-bottom: 0px;
+        list-style: none;
+        text-align: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 20px 60px 20px 60px;
+    background-color: white;
+    margin-bottom: 3px;
+    align-items: center;
+    width: 590px;
+    justify-content: center;
+} 
+
+
+.experiencePosition {
+    text-decoration: underline;
+    font-weight: normal;
+    margin-bottom: 37px;
+}
+
+.jobDescription {
+    margin-top: 7px;
+} 
+
+.wrapper {
+    width: 100vw;
+    display: flex;
+    overflow: auto;
+    background-color: rgb(194, 190, 190);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3px;
+    margin-top: 60px;
+    padding-top: 3px;
+    flex-basis: 0;
+}
+
+h2 {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.label-grey {
+    color: grey;
+} 
+
+.code {
+    text-align: left;
+} 
+
+.code-preview {
+    margin-top: 50px;
+    width: 89%;
+    text-align: left;
+    line-height: 25px;
+    background-color: rgb(230, 225, 225);
+    padding-top: 50px;
+}  
+
+.code h2 {
+    padding-top: 3px;
+    width: 50vw;
+    float: left;
+}
+
+.email > p {
+    text-transform: lowercase !important;
+}
+
+footer {
+    background-color: rgb(194, 190, 190);
+    padding-top: 30px;
+    padding-bottom: 40px;
+    justify-content: space-around;
+    font-size: 23px;
+}
+
+.contacts {
+    display:flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+
+}
+
+.fab, .fas {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
