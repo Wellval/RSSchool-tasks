@@ -124,8 +124,16 @@ h2 {
     float: left;
 }
 
-.email > p {
-    text-transform: lowercase !important;
+.email {
+    text-transform: lowercase;
+}
+
+.email:hover {
+    cursor: pointer;
+}
+
+.phone-number:hover {
+    cursor: pointer;
 }
 
 footer {
@@ -153,6 +161,10 @@ footer {
     height: 20px;
     margin-right: 20px;
     font-size: 20px;
+}
+
+.fab:hover, .fas:hover {
+    cursor: pointer;
 }
 
 a {
