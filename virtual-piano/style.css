@@ -84,6 +84,12 @@ body {
   max-width: 560px;
   margin: 0 auto 60px;
 }
+.piano-key.letters::after {
+  display: block;
+}
+.piano-key.no-pseudo::before {
+  display: none;
+}
 .piano-key {
   position: relative;
   width: 80px;
