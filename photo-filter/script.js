@@ -3,6 +3,20 @@ const outputs = document.querySelectorAll('.filters output');
 const resetBtn = document.querySelector('.btn-reset');
 const labels = document.querySelectorAll('label');
 const fullscreen = document.querySelector('.fullscreen');
+const next = document.querySelector('.btn-next');
+const picture = document.querySelector('.editor img')
+let now = new Date();
+let hour = now.getHours();
+let dayTime;
+let n = 1;
+
+if ((hour => 6) && (hour < 12)) {
+    dayTime = 'morning';
+} else if ((hour >= 12) && (hour < 18)) {
+    dayTime = 'day';
+} else if ((hour >= 18) && (hour <= 23)) {
+    dayTime = 'evening';
+} else dayTime = 'night';
 
 function changeHandler() {
     let suffix = this.dataset.sizing || '';
@@ -24,6 +38,14 @@ function reset() {
 });
 }
 
+function nextPicture() {
+    if (n > 0 && n < 10) {
+        picture.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${dayTime}/0${n++}.jpg`;
+    } else if (n <= 20) {
+        picture.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${dayTime}/${n++}.jpg`;
+    } else n = 1;
+}
+
 inputs.forEach(input => input.addEventListener('mousemove', changeHandler));
 resetBtn.addEventListener('click', reset);
 fullscreen.addEventListener('click', () => {
@@ -31,3 +53,4 @@ fullscreen.addEventListener('click', () => {
         document.documentElement.requestFullscreen();
     } else document.exitFullscreen();
 });
+next.addEventListener('click', nextPicture);
