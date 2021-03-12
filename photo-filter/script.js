@@ -5,7 +5,11 @@ const loadBtn = document.querySelector('.btn-load--input');
 const labels = document.querySelectorAll('label');
 const fullscreen = document.querySelector('.fullscreen');
 const next = document.querySelector('.btn-next');
-const picture = document.querySelector('.editor img')
+const picture = document.querySelector('.editor img');
+const saveBtn = document.querySelector('.btn-save');
+const img = document.querySelector('img');
+let imgContainer = document.querySelector('.img-container');
+let fileInput = document.querySelector('input[type="file"]');
 let now = new Date();
 let hour = now.getHours();
 let dayTime;
@@ -56,6 +60,18 @@ function nextPicture() {
     }
 }
 
+function loadImage(e) {
+    let file = fileInput.files[0];
+    let reader = new FileReader();
+    reader.onload = () => {
+        let img = new Image();
+        img.src = reader.result;
+        imgContainer.innerHTML = '';
+        imgContainer.append(img);
+    }
+    reader.readAsDataURL(file);
+}
+
 inputs.forEach(input => input.addEventListener('mousemove', changeHandler));
 resetBtn.addEventListener('click', reset);
 fullscreen.addEventListener('click', () => {
@@ -64,6 +80,6 @@ fullscreen.addEventListener('click', () => {
     } else document.exitFullscreen();
 });
 next.addEventListener('click', nextPicture);
-loadBtn.addEventListener('load', () => {
-    console.log(this)
-})
+fileInput.addEventListener('change', loadImage)
+
+
