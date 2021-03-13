@@ -12,6 +12,10 @@ function play(e) {
     let audio = new Audio(`./assets/audio/${note}.mp3`);
     audio.play();
     e.target.classList.add('piano-key-active');
+    if (e.target.classList.contains('main')) {
+        isDown = !isDown;
+    }
+    console.log(e.target.classList.contains('main'))
 }
 
 let notesActive = true;
