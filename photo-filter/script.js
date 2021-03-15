@@ -29,7 +29,9 @@ if ((hour >= 6) && (hour < 12)) {
 } else dayTime = 'night';
 
 function renderCanvas() {
-    let box = [0, 0, canvas.clientWidth, canvas.clientHeight];
+    ctx.canvas.width  = image.width;
+    ctx.canvas.height = image.height;
+    let box = [0, 0, ctx.canvas.width, ctx.canvas.height];
     ctx.filter = Object.keys(filters).map(name => `${name}(${filters[name]})`).join(' ');
     ctx.drawImage(this, ...box);
 }
