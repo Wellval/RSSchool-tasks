@@ -13,9 +13,8 @@ function play(e) {
     audio.play();
     e.target.classList.add('piano-key-active');
     if (e.target.classList.contains('main')) {
-        isDown = !isDown;
+        audio.pause();
     }
-    console.log(e.target.classList.contains('main'))
 }
 
 let notesActive = true;
@@ -52,6 +51,12 @@ window.addEventListener('keydown', (e) => {
     audio.currentTime = 0;
     audio.play();
     key.classList.add('piano-key-active');
+});
+
+window.addEventListener('keyup', (e) => {
+    let keyLetter = e.code[code.length - 1];
+    let key = (document.querySelector(`.piano-key[data-letter="${keyLetter}"]`));
+    key.classList.remove('piano-key-active');
 })
 
 function removeTransition(e) {
@@ -63,7 +68,7 @@ keys.forEach(key => key.addEventListener('click', play));
 keys.forEach(key => key.addEventListener('mousedown', (e) => {
     isDown = true;
 }));
-keys.forEach(key => key.addEventListener('mouseup', (e) => isDown = false));
+document.addEventListener('mouseup', (e) => isDown = false);
 window.addEventListener('mousemove', play);
 notesBtn.addEventListener('click', activeNotes);
 lettersBtn.addEventListener('click', activeLetters);
