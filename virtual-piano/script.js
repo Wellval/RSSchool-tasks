@@ -54,25 +54,26 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('keyup', (e) => {
-    let keyLetter = e.code[code.length - 1];
-    let key = (document.querySelector(`.piano-key[data-letter="${keyLetter}"]`));
-    key.classList.remove('piano-key-active');
+    keys.forEach(key => key.classList.remove('piano-key-active'));
 })
 
 function removeTransition(e) {
     if (e.propertyName != 'transform') return;
-    e.target.classList.remove('piano-key-active');
+    keys.forEach(key => key.classList.remove('piano-key-active'));
 }
 
 keys.forEach(key => key.addEventListener('click', play));
 keys.forEach(key => key.addEventListener('mousedown', (e) => {
     isDown = true;
 }));
-document.addEventListener('mouseup', (e) => isDown = false);
+document.addEventListener('mouseup', (e) => {
+    isDown = false;
+    keys.forEach(key => key.classList.remove('piano-key-active'));
+});
 window.addEventListener('mousemove', play);
 notesBtn.addEventListener('click', activeNotes);
 lettersBtn.addEventListener('click', activeLetters);
-keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('transitionend', removeTransition);
 screenButton.addEventListener('click', (e) => {
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen();
