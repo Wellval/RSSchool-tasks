@@ -8,13 +8,13 @@ let allowed = true;
 
 //play function for click and mousemove when mousedown event
 function play(e) {
-    console.log(isDown)
     if (isDown = false && e.type == 'mousemove') return;
     else {
         let note = event.target.dataset.note;
         let audio = new Audio(`./assets/audio/${note}.mp3`);
         audio.play();
         e.target.classList.add('piano-key-active');
+        e.target.classList.add('piano-key-active-pseudo');
         if (e.target.classList.contains('main')) {
             audio.pause();
         }
@@ -56,11 +56,12 @@ window.addEventListener('keydown', (e) => {
     let keyLetter = code[code.length - 1];
     let key = (document.querySelector(`.piano-key[data-letter="${keyLetter}"]`));
     if (!key) return;
+    key.classList.add('piano-key-active');
+    key.classList.add('piano-key-active-pseudo');
     let note = key.dataset.note;
     let audio = new Audio(`./assets/audio/${note}.mp3`);
     audio.currentTime = 0;
     audio.play();
-    key.classList.add('piano-key-active');
 });
 
 window.addEventListener('keyup', (e) => {
@@ -92,16 +93,6 @@ window.addEventListener('mouseover', (e) => {
     }
  }
 });
-    // else {
-    //     let note = event.target.dataset.note;
-    //     let audio = new Audio(`./assets/audio/${note}.mp3`);
-    //     audio.play();
-    //     e.target.classList.add('piano-key-active');
-    //     if (e.target.classList.contains('main')) {
-    //         audio.pause();
-    //     }
-    // }
-//);
 
 notesBtn.addEventListener('click', activeNotes);
 lettersBtn.addEventListener('click', activeLetters);

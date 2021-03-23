@@ -48,6 +48,10 @@ body {
   margin: 0 auto;
   margin-bottom: 80px;
 }
+
+.letter-color {
+  background-color: green;
+}
 .btn {
   width: 150px;
   height: 40px;
@@ -86,6 +90,10 @@ body {
 }
 .piano-key.letters::after {
   display: block;
+}
+
+.piano-key.letters-active::after {
+  color: green;
 }
 .piano-key.no-pseudo::before {
   display: none;
@@ -127,6 +135,11 @@ body {
 .piano-key.sharp.piano-key-active {
   transform: scale(0.96);
 }
+
+.piano-key-active-pseudo::before,
+.piano-key-active-pseudo::after {
+ color: #48535e;
+}
 .piano-key.none {
   background-color: transparent;
   border: 0;
@@ -157,7 +170,7 @@ body {
 }
 .piano-key:active::before,
 .piano-key:active::after {
-  color: #fff;
+  color: #48535e;
 }
 .piano-key.sharp::before,
 .piano-key.sharp::after {
