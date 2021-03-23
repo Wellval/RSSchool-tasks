@@ -8,13 +8,16 @@ let allowed = true;
 
 //play function for click and mousemove when mousedown event
 function play(e) {
-    if (!isDown && e.type == 'mousemove') return;
-    let note = event.target.dataset.note;
-    let audio = new Audio(`./assets/audio/${note}.mp3`);
-    audio.play();
-    e.target.classList.add('piano-key-active');
-    if (e.target.classList.contains('main')) {
-        audio.pause();
+    console.log(isDown)
+    if (isDown = false && e.type == 'mousemove') return;
+    else {
+        let note = event.target.dataset.note;
+        let audio = new Audio(`./assets/audio/${note}.mp3`);
+        audio.play();
+        e.target.classList.add('piano-key-active');
+        if (e.target.classList.contains('main')) {
+            audio.pause();
+        }
     }
 }
 
@@ -78,7 +81,27 @@ document.addEventListener('mouseup', (e) => {
     isDown = false;
     keys.forEach(key => key.classList.remove('piano-key-active'));
 });
-window.addEventListener('mousemove', play);
+window.addEventListener('mouseover', (e) => {
+    if (isDown == true) {
+        let note = event.target.dataset.note;
+        let audio = new Audio(`./assets/audio/${note}.mp3`);
+        audio.play();
+        e.target.classList.add('piano-key-active');
+        if (e.target.classList.contains('main')) {
+            audio.pause();
+    }
+ }
+});
+    // else {
+    //     let note = event.target.dataset.note;
+    //     let audio = new Audio(`./assets/audio/${note}.mp3`);
+    //     audio.play();
+    //     e.target.classList.add('piano-key-active');
+    //     if (e.target.classList.contains('main')) {
+    //         audio.pause();
+    //     }
+    // }
+//);
 
 notesBtn.addEventListener('click', activeNotes);
 lettersBtn.addEventListener('click', activeLetters);
