@@ -72,11 +72,6 @@ function removeTransition(e) {
 
 keys.forEach(key => key.addEventListener('click', play));
 keys.forEach(key => key.addEventListener('mousedown', (e) => {
-    if (e.repeat != undefined) {
-        allowed = !e.repeat;
-      }
-    if (!allowed) return;
-    allowed = false;
     isDown = true;
 }));
 document.addEventListener('mouseup', (e) => {
