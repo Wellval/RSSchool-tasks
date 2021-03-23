@@ -132,13 +132,14 @@ body {
   pointer-events: auto;
 }
 .piano-key.piano-key-active,
-.piano-key.sharp.piano-key-active {
+.piano-key.sharp.piano-key-active
+{
   transform: scale(0.96);
 }
 
-.piano-key-active-pseudo::before,
-.piano-key-active-pseudo::after {
- color: #48535e;
+.piano-key.piano-key-active::before,
+.piano-key.piano-key-active::after {
+  color: blue;
 }
 .piano-key.none {
   background-color: transparent;
@@ -170,7 +171,7 @@ body {
 }
 .piano-key:active::before,
 .piano-key:active::after {
-  color: #48535e;
+  color: blue;
 }
 .piano-key.sharp::before,
 .piano-key.sharp::after {
