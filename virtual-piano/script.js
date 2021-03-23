@@ -4,6 +4,7 @@ const lettersBtn = document.querySelector('.btn-letters');
 const btns = document.querySelectorAll('.btn');
 const screenButton = document.querySelector('.fullscreen');
 let isDown = false;
+let allowed = true;
 
 //play function for click and mousemove when mousedown event
 function play(e) {
@@ -42,6 +43,12 @@ function activeLetters(e) {
 
 //play function for keydown event
 window.addEventListener('keydown', (e) => {
+    if (e.repeat != undefined) {
+        allowed = !e.repeat;
+      }
+    if (!allowed) return;
+    allowed = false;
+    e.repeat = false;
     let code = e.code;
     let keyLetter = code[code.length - 1];
     let key = (document.querySelector(`.piano-key[data-letter="${keyLetter}"]`));
@@ -54,6 +61,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('keyup', (e) => {
+    allowed = true;
     keys.forEach(key => key.classList.remove('piano-key-active'));
 })
 
@@ -64,6 +72,11 @@ function removeTransition(e) {
 
 keys.forEach(key => key.addEventListener('click', play));
 keys.forEach(key => key.addEventListener('mousedown', (e) => {
+    if (e.repeat != undefined) {
+        allowed = !e.repeat;
+      }
+    if (!allowed) return;
+    allowed = false;
     isDown = true;
 }));
 document.addEventListener('mouseup', (e) => {
@@ -71,6 +84,7 @@ document.addEventListener('mouseup', (e) => {
     keys.forEach(key => key.classList.remove('piano-key-active'));
 });
 window.addEventListener('mousemove', play);
+
 notesBtn.addEventListener('click', activeNotes);
 lettersBtn.addEventListener('click', activeLetters);
 window.addEventListener('transitionend', removeTransition);
