@@ -14,7 +14,6 @@ function play(e) {
         let audio = new Audio(`./assets/audio/${note}.mp3`);
         audio.play();
         e.target.classList.add('piano-key-active');
-        e.target.classList.add('piano-key-active-pseudo');
         if (e.target.classList.contains('main')) {
             audio.pause();
         }
@@ -57,7 +56,6 @@ window.addEventListener('keydown', (e) => {
     let key = (document.querySelector(`.piano-key[data-letter="${keyLetter}"]`));
     if (!key) return;
     key.classList.add('piano-key-active');
-    key.classList.add('piano-key-active-pseudo');
     let note = key.dataset.note;
     let audio = new Audio(`./assets/audio/${note}.mp3`);
     audio.currentTime = 0;
