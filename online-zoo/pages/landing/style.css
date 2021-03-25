@@ -1,0 +1,299 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  height: 9.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header h1 {
+  display: none;
+}
+
+header .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 162rem;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header-wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  width: 57.3rem;
+}
+
+header .header-wrapper ul .nav-item-active {
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+header .header-wrapper ul .nav-item {
+  font-size: 1.6rem;
+}
+
+header .header-wrapper ul .nav-item a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+}
+
+header .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+header .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F2F2F2;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .switch input:checked + .slider {
+  background-color: #4F4F4F;
+}
+
+header .switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+header .switch .slider.round {
+  border-radius: 34px;
+}
+
+header .switch input:checked + .slider.round:before {
+  background-color: #1B1B1B;
+}
+
+header .switch .slider.round:before {
+  border-radius: 50%;
+}
+
+main {
+  width: 100%;
+  background-color: green;
+  height: 100vh;
+}
+
+main .favorite-animal {
+  background-image: url(../../assets/landing/landing.png);
+  margin: 0 auto;
+  height: 94rem;
+  width: 100%;
+  overflow: hidden;
+  background-size: 100%;
+  position: absolute;
+}
+
+main .favorite-animal__wrapper {
+  width: 84.375%;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 190rem;
+}
+
+main .favorite-animal__wrapper h2 {
+  color: #FEFEFE;
+  font-size: 8.9rem;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding-top: 20.6rem;
+  padding-left: 14rem;
+  width: 79.3rem;
+}
+
+main .favorite-animal__wrapper button {
+  width: 24.5rem;
+  height: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4BD8B5), to(#49D6DF));
+  background: linear-gradient(#4BD8B5, #49D6DF);
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+  margin-left: 14rem;
+}
+
+main .favorite-animal__wrapper button p {
+  padding-left: 0.5rem;
+}
+
+main .favorite-animal .carousel-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3.7rem;
+}
+
+main .favorite-animal #line {
+  position: absolute;
+  top: 60rem;
+  left: 39%;
+}
+
+main .favorite-animal .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 119.4rem;
+  height: 42.1rem;
+  top: 39.6rem;
+  margin-left: 68.5rem;
+  position: absolute;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: hidden;
+}
+
+main .favorite-animal .carousel-animal {
+  width: 14rem;
+  height: 20.3rem;
+}
+
+main .favorite-animal .carousel-animal:hover {
+  -webkit-transform: scale(1.74);
+          transform: scale(1.74);
+}
+
+main .favorite-animal .carousel-animal-active {
+  width: 24.5rem;
+  height: 35.2rem;
+}
+
+main .favorite-animal .carousel-animal-active:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main .favorite-animal .carousel-animal-active button {
+  width: 13.4rem;
+  font-size: 1.2rem;
+  background: none;
+  margin-top: 13rem;
+  margin: 13rem auto;
+}
+
+main .favorite-animal .carousel-animal-active button p {
+  padding-left: 0.3rem;
+  background: -webkit-linear-gradient(#4BD8B5, #49D6DF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .favorite-animal .carousel-animal-active .description {
+  width: 19.4rem;
+  height: 4.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: -12.5rem auto;
+}
+
+main .favorite-animal .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 2rem;
+  height: 10.7rem;
+  margin-top: 21.6rem;
+}
+
+main .favorite-animal .social-media img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+main .how-it-works {
+  width: 100%;
+  height: 88.3rem;
+  position: absolute;
+  margin-top: 94rem;
+}
+
+main .pay-and-feed {
+  position: absolute;
+  margin-top: 181.3rem;
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 75.4rem;
+}
+/*# sourceMappingURL=style.css.map */
