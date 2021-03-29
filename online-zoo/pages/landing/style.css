@@ -7,6 +7,15 @@ body {
   width: 100%;
 }
 
+h3 {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  color: #333333;
+  font-size: 2rem;
+}
+
 header {
   width: 100%;
   background-color: #fff;
@@ -27,11 +36,10 @@ header .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 162rem;
+  width: 100%;
   margin: 0 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 header .header-wrapper ul {
@@ -131,7 +139,7 @@ main .favorite-animal {
   height: 94rem;
   width: 100%;
   overflow: hidden;
-  background-size: 100%;
+  background-size: cover;
   position: absolute;
 }
 
@@ -139,7 +147,6 @@ main .favorite-animal__wrapper {
   width: 84.375%;
   margin: 0 auto;
   height: 100%;
-  max-width: 190rem;
 }
 
 main .favorite-animal__wrapper h2 {
@@ -149,7 +156,7 @@ main .favorite-animal__wrapper h2 {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding-top: 20.6rem;
-  padding-left: 14rem;
+  padding-left: 22rem;
   width: 79.3rem;
 }
 
@@ -175,17 +182,22 @@ main .favorite-animal__wrapper button {
   outline: none;
   border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 22rem;
+}
+
+main .favorite-animal__wrapper button:hover {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  cursor: pointer;
-  margin-left: 14rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#49D6DF), to(#4BD8B5));
+  background: linear-gradient(#49D6DF, #4BD8B5);
 }
 
 main .favorite-animal__wrapper button p {
   padding-left: 0.5rem;
 }
 
-main .favorite-animal .carousel-container {
+main .favorite-animal .carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,20 +207,20 @@ main .favorite-animal .carousel-container {
 main .favorite-animal #line {
   position: absolute;
   top: 60rem;
-  left: 39%;
+  left: 43%;
 }
 
-main .favorite-animal .carousel {
+main .favorite-animal .carousel__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 119.4rem;
+  width: 107.4rem;
   height: 42.1rem;
   top: 39.6rem;
-  margin-left: 68.5rem;
+  margin-left: 40.7%;
   position: absolute;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -216,49 +228,71 @@ main .favorite-animal .carousel {
   overflow: hidden;
 }
 
-main .favorite-animal .carousel-animal {
+main .favorite-animal .carousel__container-animal {
   width: 14rem;
   height: 20.3rem;
+  overflow: hidden;
 }
 
-main .favorite-animal .carousel-animal:hover {
+main .favorite-animal .carousel__container-animal__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .favorite-animal .carousel__container-animal:hover {
   -webkit-transform: scale(1.74);
           transform: scale(1.74);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-main .favorite-animal .carousel-animal-active {
+main .favorite-animal .carousel__container-animal-active {
   width: 24.5rem;
   height: 35.2rem;
 }
 
-main .favorite-animal .carousel-animal-active:hover {
+main .favorite-animal .carousel__container-animal-active:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+  -webkit-transition: 5s;
+  transition: 5s;
 }
 
-main .favorite-animal .carousel-animal-active button {
+main .favorite-animal .carousel__container-animal-active:hover button,
+main .favorite-animal .carousel__container-animal-active:hover .description {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(-11rem);
+          transform: translateY(-11rem);
+}
+
+main .favorite-animal .carousel__container-animal-active button {
   width: 13.4rem;
   font-size: 1.2rem;
   background: none;
-  margin-top: 13rem;
-  margin: 13rem auto;
+  margin: 0 auto;
+  opacity: 0;
 }
 
-main .favorite-animal .carousel-animal-active button p {
-  padding-left: 0.3rem;
+main .favorite-animal .carousel__container-animal-active button p {
+  width: 9rem;
+  text-align: left;
   background: -webkit-linear-gradient(#4BD8B5, #49D6DF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-main .favorite-animal .carousel-animal-active .description {
+main .favorite-animal .carousel__container-animal-active .description {
   width: 19.4rem;
   height: 4.8rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #fff;
   font-size: 1.4rem;
-  margin: -12.5rem auto;
+  margin: 0 auto;
+  opacity: 0;
 }
 
 main .favorite-animal .social-media {
@@ -282,18 +316,326 @@ main .favorite-animal .social-media img:hover {
   cursor: pointer;
 }
 
+main .favorite-animal .carousel-range__container {
+  margin-left: 40.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: white;
+}
+
+main .favorite-animal .carousel-range__container #carousel-range {
+  width: 24.5rem;
+  outline: none;
+}
+
+main .favorite-animal .carousel-range__container #carousel-range::-webkit-slider-runnable-track {
+  height: 0.7rem;
+  cursor: pointer;
+  background: yellow;
+  opacity: 57%;
+}
+
+main .favorite-animal .carousel-range__container #carousel-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 0.5rem;
+  background: green;
+  border: 1px solid;
+  margin-top: -5px;
+}
+
 main .how-it-works {
   width: 100%;
   height: 88.3rem;
   position: absolute;
   margin-top: 94rem;
+  background: white;
 }
 
-main .pay-and-feed {
+main .how-it-works #how-it-works-range {
+  width: 24.5rem;
+}
+
+main .how-it-works__container {
+  width: 79rem;
+  height: 68.2rem;
+  margin: 10rem auto;
+}
+
+main .how-it-works__container p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4F4F4F;
+}
+
+main .how-it-works__container button {
+  width: 24.5rem;
+  height: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4BD8B5), to(#49D6DF));
+  background: linear-gradient(#4BD8B5, #49D6DF);
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 3rem auto;
+}
+
+main .how-it-works__container button:hover {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: -webkit-gradient(linear, left top, left bottom, from(#49D6DF), to(#4BD8B5));
+  background: linear-gradient(#49D6DF, #4BD8B5);
+}
+
+main .how-it-works__container button p {
+  padding-left: 0.5rem;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+main .how-it-works__range-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 2.9rem;
+}
+
+main .how-it-works__range-container .how-it-works-range {
+  width: 24.5rem;
+  height: 4.9rem;
+}
+
+main .mission {
   position: absolute;
   margin-top: 181.3rem;
   background-color: #F2F2F2;
   width: 100%;
+  height: 41.3rem;
+}
+
+main .mission__container {
+  width: 120rem;
+  margin: 10rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .mission .mission__card {
+  width: 38rem;
+  height: 21.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .mission .mission__card p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #4F4F4F;
+}
+
+main .mission .mission__card img {
+  width: 8rem;
+  height: 8rem;
+}
+
+main .pets {
+  height: 85.4rem;
+  margin-top: 222.6rem;
+  position: absolute;
+  width: 100%;
+}
+
+main .pets__container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .pets-range__container {
+  height: 4.9rem;
+  width: 24.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  margin-top: 2.9rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .pets-range__container #pets-range {
+  width: 24.5rem;
+}
+
+main .pets button {
+  width: 24.5rem;
+  height: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4BD8B5), to(#49D6DF));
+  background: linear-gradient(#4BD8B5, #49D6DF);
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+main .pets button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#49D6DF), to(#4BD8B5));
+  background: linear-gradient(#49D6DF, #4BD8B5);
+}
+
+main .pets h3 {
+  font-size: 4.8rem;
+  margin-top: 10rem;
+}
+
+main .pets__carousel__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 130.2rem;
+}
+
+main .pets__carousel__items .item img {
+  height: 39.9rem;
+  width: 27.8rem;
+}
+
+main .pets__carousel__items .arrow {
+  cursor: pointer;
+}
+
+main .pets__carousel__items .arrow-left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main .pay-and-feed {
   height: 75.4rem;
+  background: #F2F2F2;
+  margin-top: 308rem;
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .pay-and-feed__container {
+  text-align: center;
+}
+
+main .pay-and-feed p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+main .pay-and-feed h3 {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  color: #333333;
 }
 /*# sourceMappingURL=style.css.map */

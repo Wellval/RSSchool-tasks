@@ -1,7 +1,10 @@
 let carouselItems = document.querySelectorAll('.carousel-animal');
 
 function makeActive() {
-    this.style.transform = 'scale(1.75)';
+    if (this.classList.contains('carousel-animal-active')) return;
+    else {
+        this.style.transform = 'scale(1.75)';
+    }
 
 }
 

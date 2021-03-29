@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../normalize.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -37,31 +38,56 @@
         <div class="favorite-animal">
             <div class="favorite-animal__wrapper">
                 <h2>Watch your favorite animal online</h2>
-                <div class="carousel-container">
+                <div class="carousel">
                     <button>
                         <img src="../../assets/landing/watch.svg" alt="watch online">
                         <p>Watch online</p>
                     </button>
                     <img id="line" src="../../assets/landing/line.svg" alt="">
-                            
-                    <div class="carousel">
-                        <div class="carousel-animal">
+
+                    <div class="carousel__container">
+                        <div class="carousel__container-animal">
                             <img src="../../assets/landing/eagles.png" alt="">
                         </div>
-                        <div class="carousel-animal carousel-animal-active">
+                        <div class="carousel__container-animal carousel__container-animal-active">
                             <img src="../../assets/landing/panda.png">
-                            <p class="description">Panda’s name is Bei Bei. He 
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                            <button>
-                                <svg ></svg> 
-                                <img src="../../assets/landing/watch.svg" alt="watch online">
-                                <p>Watch online</p>
-                            </button>
+                            <p class="description">Panda’s name is Bei Bei. He
+                                is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                            <div class="carousel__container-animal__buttons">
+                                <button>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="16" cy="16" r="15.5" stroke="url(#MyGradient)" />
+                                        <path d="M21 16L13.5 20.3301V11.6699L21 16Z" fill="url(#MyGradient)" />
+                                        <defs>
+                                            <linearGradient id="MyGradient">
+                                                <stop offset="5%" stop-color="#4BD8B5" />
+                                                <stop offset="95%" stop-color="#49D6DF" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p>Watch online</p>
+                                </button>
+                                <button>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="16" cy="16" r="15.5" stroke="url(#MyGradient)" />
+                                        <path d="M21 16L13.5 20.3301V11.6699L21 16Z" fill="url(#MyGradient)" />
+                                        <defs>
+                                            <linearGradient id="MyGradient">
+                                                <stop offset="5%" stop-color="#4BD8B5" />
+                                                <stop offset="95%" stop-color="#49D6DF" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p>Donate</p>
+                                </button>
+                            </div>
                         </div>
-                        <div class="carousel-animal"><img src="../../assets/landing/gorilla.png"></div>
-                        <div class="carousel-animal"><img src="../../assets/landing/crocodile.png"></div>
-                        <div class="carousel-animal"><img src="../../assets/landing/fox.png"></div>
-                </div>
+                        <div class="carousel__container-animal"><img src="../../assets/landing/gorilla.png"></div>
+                        <div class="carousel__container-animal"><img src="../../assets/landing/crocodile.png"></div>
+                        <div class="carousel__container-animal"><img src="../../assets/landing/fox.png"></div>
+                    </div>
                 </div>
                 <div class="social-media">
                     <a href="https://www.instagram.com/"><img src="../../assets/landing/instagram.svg" alt=""></a>
@@ -69,13 +95,96 @@
                     <a href="https://youtube.com/"><img src="../../assets/landing/youtube.svg" alt=""></a>
                     <a href="https://vk.com/"><img src="../../assets/landing/vk.svg" alt=""></a>
                 </div>
+                <div class="carousel-range__container">
+                    <label for="carousel-range">02/08</label>
+                    <input type="range" name="carousel-range" id="carousel-range" min="1" max="8" value="2">
+                </div>
             </div>
         </div>
         <div class="how-it-works">
-            
+            <div class="how-it-works__container">
+                <h3>How it works?</h3>
+                <p>As a voice for wildlife, we are devastated by the impact of the 2020
+                    Australian bushfires on precious species and their habitat, and we are
+                    determined to assist in all aspects, including providing veterinary support
+                    and raising much-needed emergency funds. Zoo Online saves wildlife and inspires
+                    everyone to make conservation a priority in their lives. Animals have the right to
+                    a pain-free and happy life. They have equal claim to the resources of this planet,
+                    and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated
+                    by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+                <img src="../../assets/landing/deers.png" alt="deers">
+                <div class="how-it-works__range-container">
+                    <label for="how-it-works-range">02/08</label>
+                    <input type="range" name="how-it-works-range" id="how-it-works-range" min="1" max="8" value="2">
+                </div>
+                <button>
+                    <img src="../../assets/landing/watch.svg" alt="watch online">
+                    <p>Watch online</p>
+                </button>
+            </div>
+
+        </div>
+        <div class="mission">
+            <div class="mission__container">
+                <div class="mission__card">
+                    <img src="../../assets/landing/inspire.svg" alt="">
+                    <h3>What inspires us?</h3>
+                    <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian
+                        bushfires on precious species and their habitat, and we are determined to assist
+                        in all aspects.</p>
+                </div>
+                <div class="mission__card">
+                    <img src="../../assets/landing/mission.svg" alt="">
+                    <h3>Our mission</h3>
+                    <p>Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives.
+                    </p>
+                </div>
+                <div class="mission__card">
+                    <img src="../../assets/landing/believe.svg" alt="">
+                    <h3>What we believe in?</h3>
+                    <p>Animals have the right to a pain-free and happy life. They have equal claim to the
+                        resources of this planet, and deserve a life of dignity and compassion.</p>
+                </div>
+            </div>
+        </div>
+        <div class="pets">
+            <div class="pets__container">
+                <h3>Pets in Zoo</h3>
+                <div class="pets__carousel">
+                    <div class="pets__carousel__items">
+                        <div class="arrow arrow-left">
+                            <img src="../../assets/landing/arrow.svg" alt="arrow-left">
+                        </div>
+                        <div class="item">
+                            <img src="../../assets/landing/panda.png" alt="panda">
+                        </div>
+                        <div class="item">
+                            <img src="../../assets/landing/eagles.png" alt="panda">
+                        </div>
+                        <div class="item">
+                            <img src="../../assets/landing/gorilla.png" alt="panda">
+                        </div>
+                        <div class="item">
+                            <img src="../../assets/landing/crocodile.png" alt="panda">
+                        </div>
+                        <div class="arrow arrow-right">
+                            <img src="../../assets/landing/arrow.svg" alt="arrow-left">
+                        </div>
+                    </div>
+                </div>
+                <div class="pets-range__container">
+                    <label for="pets-range">01/08</label>
+                    <input type="range" name="pets-range" id="pets-range" min="1" max="8">
+                </div>
+                <button>Choose your favorite</button>
+            </div>
         </div>
         <div class="pay-and-feed">
-    
+            <div class="pay-and-feed__container">
+                <h3>Pay and feed</h3>
+                <p>The opportunity to easily and naturally (but as often as possible) donate to the 
+                    needs of animals that you like.</p>
+            </div>
         </div>
     </main>
     <script src="./script.js"></script>

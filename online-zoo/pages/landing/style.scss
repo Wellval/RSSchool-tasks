@@ -6,6 +6,14 @@ $base: #FEFEFE;
 $gradient-green: #4BD8B5;
 $gradient-blue: #49D6DF;
 
+@mixin h3 {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    color: $gray;
+}
+
 @mixin watch {
     width: 24.5rem;
     height: 5.5rem;
@@ -21,7 +29,6 @@ $gradient-blue: #49D6DF;
     outline: none;
     border: none;
     border-radius: 0.5rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     cursor: pointer;
 }
 
@@ -33,6 +40,11 @@ html {
 body {
     margin: 0;
     width: 100%;
+}
+
+h3 {
+    @include h3();
+    font-size: 2rem;
 }
 
 header {
@@ -48,9 +60,9 @@ header {
 
     .header-wrapper {
         display: flex;
-        width: 162rem;
+        width: 100%;
         margin: 0 auto;
-        justify-content: space-between;
+        justify-content: space-around;
 
         ul {
             display: flex;
@@ -147,14 +159,13 @@ main {
         height: 94rem;
         width: 100%;
         overflow: hidden;
-        background-size: 100%;
+        background-size: cover;
         position: absolute;
 
         &__wrapper {
             width: 84.375%;
             margin: 0 auto;
             height: 100%;
-            max-width: 190rem;
 
             h2 {
                 color: $base;
@@ -163,13 +174,18 @@ main {
                 font-family: 'Roboto', sans-serif;
                 margin: 0;
                 padding-top: 20.6rem;
-                padding-left: 14rem;
+                padding-left: 22rem;
                 width: 79.3rem;
             }
 
             button {
                 @include watch;
-                margin-left: 14rem;
+                margin-left: 22rem;
+
+                &:hover {
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    background: linear-gradient($gradient-blue, $gradient-green);
+                }
                 
                 p {
                     padding-left: 0.5rem;
@@ -177,7 +193,7 @@ main {
             }
         }
 
-        .carousel-container {
+        .carousel {
             display: flex;
             margin-top: 3.7rem;
         }
@@ -185,16 +201,16 @@ main {
         #line {
             position: absolute;
             top: 60rem;
-            left: 39%;
+            left: 43%;
         }
 
-        .carousel {
+        .carousel__container {
             display: flex;
             align-items: center;
-            width: 119.4rem;
+            width: 107.4rem;
             height: 42.1rem;
             top: 39.6rem;
-            margin-left: 68.5rem;
+            margin-left: 40.7%;
             position: absolute;
             justify-content: space-evenly;
             overflow: hidden;
@@ -202,9 +218,15 @@ main {
             &-animal {
                 width: 14rem;
                 height: 20.3rem;
+                overflow: hidden;
+
+                &__buttons {
+                    display: flex;
+                }
 
                 &:hover {
                     transform: scale(1.74);
+                    transition: 1s;
                 }
 
                 &-active {
@@ -213,17 +235,27 @@ main {
 
                     &:hover {
                         transform: scale(1);
+                        transition: 5s;
+
+                        button,
+                        .description {
+                            opacity: 1;
+                            transition: 1s;
+                            transform: translateY(-11rem);
+                        }
                     }
 
                     button {
                         width: 13.4rem;
                         font-size: 1.2rem;
                         background: none;
-                        margin-top: 13rem;
-                        margin: 13rem auto;
+                        margin: 0 auto;
+                        opacity: 0;
 
                         p {
-                            padding-left: 0.3rem;
+                            width: 9rem;
+                            text-align: left;
+                            //padding-left: 0.3rem;
                             background: -webkit-linear-gradient($gradient-green, $gradient-blue);
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
@@ -237,7 +269,8 @@ main {
                         font-weight: 400;
                         color: #fff;
                         font-size: 1.4rem;
-                        margin: -12.5rem auto;
+                        margin: 0 auto;
+                        opacity: 0;
                     }
                 }
             }
@@ -256,6 +289,39 @@ main {
                 cursor: pointer;
             }
         }
+
+        .carousel-range__container {
+            margin-left: 40.5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 2.4rem;
+            color: white;
+
+
+            #carousel-range {
+                width: 24.5rem;
+                outline: none;
+
+                &::-webkit-slider-runnable-track {
+                    height: 0.7rem;
+                    cursor: pointer;
+                    background: yellow;
+                    opacity: 57%;
+                }
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    height: 1.5rem;
+                    width: 0.5rem;
+                    background: green;
+                    border: 1px solid;
+                    margin-top: -5px;
+                }
+            }
+        }
     }
 
     .how-it-works {
@@ -263,13 +329,182 @@ main {
         height: 88.3rem;
         position: absolute;
         margin-top: 94rem;
+        background: white;
+
+        #how-it-works-range {
+            width: 24.5rem;
+        }
+
+        &__container {
+            width: 79rem;
+            height: 68.2rem;
+            margin: 10rem auto;
+
+            p {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                color: $dark-theme;
+            }
+
+            button {
+                @include watch();
+                margin: 3rem auto;
+                &:hover {
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    background: linear-gradient($gradient-blue, $gradient-green);
+                }
+                
+                p {
+                    padding-left: 0.5rem;
+                    color: white;
+                    font-size: 1.8rem;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        &__range-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 2.9rem;
+
+            .how-it-works-range {
+                width: 24.5rem;
+                height: 4.9rem;
+            }
+        }
     }
 
-    .pay-and-feed {
+    .mission {
         position: absolute;
         margin-top: 181.3rem;
         background-color: $light-theme;
         width: 100%;
+        height: 41.3rem;
+
+        &__container {
+            width: 120rem;
+            margin: 10rem auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mission__card {
+            width: 38rem;
+            height: 21.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: $dark-theme;
+            }
+
+            img {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+    }
+
+    .pets {
+        height: 85.4rem;
+        margin-top: 222.6rem;
+        position: absolute;
+        width: 100%;
+
+        &__container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-range__container {
+            height: 4.9rem;
+            width: 24.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.4rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            margin-top: 2.9rem;
+            justify-content: space-around;
+
+            #pets-range {
+                width: 24.5rem;
+            }
+        }
+
+        button {
+            @include watch();
+            margin-top: 3rem;
+
+            &:hover {
+                background: linear-gradient($gradient-blue, $gradient-green);
+            }
+        }
+
+        h3 {
+            font-size: 4.8rem;
+            margin-top: 10rem;
+        }
+
+        &__carousel__items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 130.2rem;
+
+            .item img {
+                height: 39.9rem;
+                width: 27.8rem;
+            }
+
+            .arrow {
+                cursor: pointer;
+            }
+
+            .arrow-left {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .pay-and-feed {
         height: 75.4rem;
+        background: $light-theme;
+        margin-top: 308rem;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__container {
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h3 {
+            @include h3();
+        }
     }
 }
