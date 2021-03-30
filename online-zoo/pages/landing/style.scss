@@ -146,7 +146,7 @@ header {
             border-radius: 50%;
           }
       }
-}
+    }
 
 main {
     width: 100%;
@@ -425,6 +425,61 @@ main {
         position: absolute;
         width: 100%;
 
+        &__buttons {
+            position: absolute;
+            top: 45.6rem;
+            display: flex;
+            width: 100%;
+        }
+
+        button {
+            border: none;
+            width: 13.4rem;
+            display: flex;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+            background: none;
+            height: 4.8rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color: #fff;
+            font-size: 1.4rem;
+            margin: -2rem auto;
+            opacity: 0;
+
+            &:hover {
+                
+                p {
+                    background: -webkit-linear-gradient($gradient-green, $gradient-blue);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                circle {
+                    stroke: url(#MyGradient);
+                }
+
+                path {
+                    fill: url(#MyGradient);
+                }
+              }
+
+            p {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.4rem;
+                font-size: 1.2rem;
+                width: 9rem;
+                text-align: left;
+                padding-left: 0.3rem;
+                background: white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
         &__container {
             align-items: center;
             display: flex;
@@ -448,7 +503,7 @@ main {
             }
         }
 
-        button {
+        #choose-button {
             @include watch();
             margin-top: 3rem;
 
@@ -468,9 +523,69 @@ main {
             justify-content: space-between;
             width: 130.2rem;
 
-            .item img {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .item {
                 height: 39.9rem;
                 width: 27.8rem;
+
+                display: block; 
+                position: relative; 
+
+            &:after { 
+                content: ''; 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                right: 0; 
+                bottom: 0; 
+                background: rgba(0,0,0,.2);  opacity: 0; }
+
+            &:before { 
+                content: ''; 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                right: 0; 
+                bottom: 0; 
+                background: url(icon-path); 
+                opacity: 0; 
+            }
+
+                &:hover {
+                    transform: scale(1);
+                    transition: 5s;
+                    cursor: pointer;
+
+                    &:before,
+                    &:after {
+                        opacity: 1;
+                    }
+
+                    button,
+                    .description {
+                        opacity: 1;
+                        transition: 1s;
+                        transform: translateY(-11rem);
+                        z-index: 1000;
+                    }
+                }
+            }
+
+            .description
+             {
+                width: 19.4rem;
+                height: 4.8rem;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                color: #fff;
+                font-size: 1.4rem;
+                margin: -2rem auto;
+                opacity: 0;
+                z-index: 1000;
             }
 
             .arrow {
@@ -495,6 +610,41 @@ main {
 
         &__container {
             text-align: center;
+            width: 80%;
+
+            button {
+                @include watch();
+                display: inline-block;
+                margin-top: 6rem;
+
+                &:hover {
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    background: linear-gradient($gradient-blue, $gradient-green);
+                }
+            }
+        }
+
+        .payment-process {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 9.2rem;
+
+            .payment-step {
+                background-image: url(../../assets/landing/ellipse.png);
+                width: 24.5rem;
+                height: 24.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    @include h3();
+                    font-size: 2rem;
+                    width: 13.5rem;
+                    line-height: 2rem;
+                }
+            }
         }
 
         p {

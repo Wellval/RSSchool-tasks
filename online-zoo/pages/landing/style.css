@@ -503,6 +503,62 @@ main .pets {
   width: 100%;
 }
 
+main .pets__buttons {
+  position: absolute;
+  top: 45.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main .pets button {
+  border: none;
+  width: 13.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  height: 4.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: -2rem auto;
+  opacity: 0;
+}
+
+main .pets button:hover p {
+  background: -webkit-linear-gradient(#4BD8B5, #49D6DF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .pets button:hover circle {
+  stroke: url(#MyGradient);
+}
+
+main .pets button:hover path {
+  fill: url(#MyGradient);
+}
+
+main .pets button p {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  width: 9rem;
+  text-align: left;
+  padding-left: 0.3rem;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 main .pets__container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -541,7 +597,7 @@ main .pets-range__container #pets-range {
   width: 24.5rem;
 }
 
-main .pets button {
+main .pets #choose-button {
   width: 24.5rem;
   height: 5.5rem;
   display: -webkit-box;
@@ -567,7 +623,7 @@ main .pets button {
   margin-top: 3rem;
 }
 
-main .pets button:hover {
+main .pets #choose-button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#49D6DF), to(#4BD8B5));
   background: linear-gradient(#49D6DF, #4BD8B5);
 }
@@ -590,9 +646,72 @@ main .pets__carousel__items {
   width: 130.2rem;
 }
 
-main .pets__carousel__items .item img {
+main .pets__carousel__items img {
+  width: 100%;
+  height: 100%;
+}
+
+main .pets__carousel__items .item {
   height: 39.9rem;
   width: 27.8rem;
+  display: block;
+  position: relative;
+}
+
+main .pets__carousel__items .item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+main .pets__carousel__items .item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(icon-path);
+  opacity: 0;
+}
+
+main .pets__carousel__items .item:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 5s;
+  transition: 5s;
+  cursor: pointer;
+}
+
+main .pets__carousel__items .item:hover:before, main .pets__carousel__items .item:hover:after {
+  opacity: 1;
+}
+
+main .pets__carousel__items .item:hover button,
+main .pets__carousel__items .item:hover .description {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(-11rem);
+          transform: translateY(-11rem);
+  z-index: 1000;
+}
+
+main .pets__carousel__items .description {
+  width: 19.4rem;
+  height: 4.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: -2rem auto;
+  opacity: 0;
+  z-index: 1000;
 }
 
 main .pets__carousel__items .arrow {
@@ -623,6 +742,81 @@ main .pay-and-feed {
 
 main .pay-and-feed__container {
   text-align: center;
+  width: 80%;
+}
+
+main .pay-and-feed__container button {
+  width: 24.5rem;
+  height: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4BD8B5), to(#49D6DF));
+  background: linear-gradient(#4BD8B5, #49D6DF);
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 6rem;
+}
+
+main .pay-and-feed__container button:hover {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: -webkit-gradient(linear, left top, left bottom, from(#49D6DF), to(#4BD8B5));
+  background: linear-gradient(#49D6DF, #4BD8B5);
+}
+
+main .pay-and-feed .payment-process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 9.2rem;
+}
+
+main .pay-and-feed .payment-process .payment-step {
+  background-image: url(../../assets/landing/ellipse.png);
+  width: 24.5rem;
+  height: 24.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .pay-and-feed .payment-process .payment-step p {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  color: #333333;
+  font-size: 2rem;
+  width: 13.5rem;
+  line-height: 2rem;
 }
 
 main .pay-and-feed p {
