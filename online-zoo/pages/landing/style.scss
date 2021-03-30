@@ -154,6 +154,12 @@ main {
     height: 100vh;
 
     .favorite-animal {
+
+        &__container {
+            width: 100%;
+            height: 94rem;
+        }
+
         background-image: url(../../assets/landing/landing.png);
         margin: 0 auto;
         height: 94rem;
@@ -327,9 +333,14 @@ main {
     .how-it-works {
         width: 100%;
         height: 88.3rem;
-        position: absolute;
-        margin-top: 94rem;
         background: white;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        h3 {
+            @include h3();
+        }
 
         #how-it-works-range {
             width: 24.5rem;
@@ -338,7 +349,8 @@ main {
         &__container {
             width: 79rem;
             height: 68.2rem;
-            margin: 10rem auto;
+            margin: auto;
+            margin-top: 5rem;
 
             p {
                 font-family: Roboto;
@@ -383,17 +395,16 @@ main {
     }
 
     .mission {
-        position: absolute;
-        margin-top: 181.3rem;
+        padding-top: 2rem;
         background-color: $light-theme;
         width: 100%;
         height: 41.3rem;
 
         &__container {
-            width: 120rem;
+            width: 65%;
             margin: 10rem auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
 
         .mission__card {
@@ -421,8 +432,6 @@ main {
 
     .pets {
         height: 85.4rem;
-        margin-top: 222.6rem;
-        position: absolute;
         width: 100%;
 
         &__buttons {
@@ -446,7 +455,6 @@ main {
             color: #fff;
             font-size: 1.4rem;
             margin: -2rem auto;
-            opacity: 0;
 
             &:hover {
                 
@@ -531,7 +539,7 @@ main {
             .item {
                 height: 39.9rem;
                 width: 27.8rem;
-
+                overflow: hidden;
                 display: block; 
                 position: relative; 
 
@@ -601,8 +609,6 @@ main {
     .pay-and-feed {
         height: 75.4rem;
         background: $light-theme;
-        margin-top: 308rem;
-        position: absolute;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -656,5 +662,9 @@ main {
         h3 {
             @include h3();
         }
+    }
+
+    .testimonials {
+        height: 81rem;
     }
 }
