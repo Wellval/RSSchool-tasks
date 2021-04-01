@@ -1,5 +1,5 @@
 $gray1: #333333;
-$light-theme: #F2F2F2;
+$gray6: #F2F2F2;
 $gray2: #4F4F4F;
 $gray2-round: #1B1B1B;
 $base: #FEFEFE;
@@ -133,6 +133,7 @@ $gradient-blue: #49D6DF;
 
 html { 
     font-size: 10px; 
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -180,7 +181,6 @@ header {
                     text-transform: capitalize;
                     text-decoration: none;
                     color: $gray1;
-                    font-family: 'Roboto', sans-serif;
                 }
             }
         }
@@ -205,7 +205,7 @@ header {
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: $light-theme;
+            background-color: $gray6;
             -webkit-transition: .4s;
             transition: .4s;
           }
@@ -255,14 +255,12 @@ main {
         color: $gray1;
         font-size: 2.4rem;
         font-weight: 900;
-        font-family: 'Roboto', sans-serif;
     }
 
     .range-amount {
         font-size: 1.4rem;
         line-height: 1.641rem;
         color: #B6B6B6;
-        font-family: 'Roboto', sans-serif;
         font-weight: 900;
     }
 
@@ -306,7 +304,6 @@ main {
                 color: $base;
                 font-size: 8.9rem;
                 font-weight: 900;
-                font-family: 'Roboto', sans-serif;
                 margin: 0;
                 padding-top: 20.6rem;
                 padding-left: 22rem;
@@ -414,7 +411,6 @@ main {
                     .description {
                         width: 19.4rem;
                         height: 4.8rem;
-                        font-family: 'Roboto', sans-serif;
                         font-weight: 400;
                         color: #fff;
                         font-size: 1.4rem;
@@ -444,7 +440,6 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-family: 'Roboto', sans-serif;
             font-weight: 900;
             font-size: 2.4rem;
             color: white;
@@ -502,7 +497,6 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-family: 'Roboto', sans-serif;
             margin-top: 2.9rem;
 
             @include range();
@@ -515,7 +509,7 @@ main {
 
     .mission {
         padding-top: 2rem;
-        background-color: $light-theme;
+        background-color: $gray6;
         width: 100%;
         height: 41.3rem;
 
@@ -535,7 +529,6 @@ main {
             align-items: center;
 
             p {
-                font-family: 'Roboto', sans-serif;
                 font-weight: 400;
                 font-size: 1.4rem;
                 line-height: 1.6rem;
@@ -569,7 +562,6 @@ main {
             cursor: pointer;
             background: none;
             height: 4.8rem;
-            font-family: 'Roboto', sans-serif;
             font-weight: 500;
             color: #fff;
             font-size: 1.4rem;
@@ -595,7 +587,6 @@ main {
             p {
                 text-transform: uppercase;
                 font-weight: 500;
-                font-family: 'Roboto', sans-serif;
                 line-height: 1.4rem;
                 font-size: 1.2rem;
                 width: 9rem;
@@ -620,7 +611,6 @@ main {
             flex-direction: column;
             align-items: center;
             font-size: 1.4rem;
-            font-family: 'Roboto', sans-serif;
             font-weight: 900;
             margin-top: 2.9rem;
             justify-content: space-around;
@@ -700,7 +690,6 @@ main {
              {
                 width: 19.4rem;
                 height: 4.8rem;
-                font-family: 'Roboto', sans-serif;
                 font-weight: 400;
                 color: #fff;
                 font-size: 1.4rem;
@@ -713,7 +702,7 @@ main {
 
     .pay-and-feed {
         height: 75.4rem;
-        background: $light-theme;
+        background: $gray6;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -760,7 +749,6 @@ main {
         p {
             font-size: 1.4rem;
             line-height: 1.6rem;
-            font-family: 'Roboto', sans-serif;
         }
     }
 
@@ -808,7 +796,6 @@ main {
                         font-size: 1.4rem;
                         color: $gray2;
                         width: 44rem;
-                        font-family: 'Roboto', sans-serif;
                     }
 
                     .user-photo {
@@ -836,6 +823,73 @@ main {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        background-color: $gray6;
+
+        .popup {
+            background: $base;
+            visibility: hidden;
+            height: 14.9rem;
+            width: 43.6rem;
+            box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+            border-radius: 8px; 
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+            position: absolute;
+
+
+            img {
+                width: 6.5rem;
+                height: 6.5rem;
+                padding-left: 4.4rem;
+            }
+
+            &__description {
+                margin-left: 2rem;
+
+                .species {
+                    font-size: 1.8rem;
+                    color: $gray1;
+                    font-weight: 900;
+                }
+
+                .facts {
+                    font-size: 1.4rem;
+                    color: $gray2;
+                    line-height: 1.6rem;
+
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+
+                        span {
+                            font-weight: 500;
+                            color: $gray1;
+                        }
+                    }
+                }
+            }
+        }
+
+        #popup0 {
+            top: 15.9rem;
+            left: 96rem;
+        }
+
+        #popup1 {
+            top: 15.9rem;
+            left: -23.3rem;
+        }
+
+        #popup2 {
+            left: -11rem;
+            top: 19rem;
+        }
+
+        #popup3 {
+            left: 22rem;
+            top: 27rem;
+        }
 
         h3 {
             @include h3();
@@ -843,73 +897,93 @@ main {
 
         &__container {
             height: 50rem;
-            width: 60%;
+            width: 130rem;
             background-image: url(../../assets/landing/map.svg);
             background-repeat: no-repeat;
             background-position-x: center;
             background-size: contain;
+            position: absolute;
+            margin-top: 20rem;
         }
 
-        .map-animal:hover {
+        .map-animal-image {
+            z-index: 100;
+        }
+
+        .map-animal:hover,
+        .map-animal-image:hover {
             cursor: pointer;
             path {
-            fill: #eb5757;
+                fill: #eb5757;   
             }
+        }
+
+        #map-panda:hover ~ #popup0,
+        #image0:hover ~ #popup0 {
+            visibility: visible;
+        }
+
+        #map-eagle:hover ~ #popup1 {
+            visibility: visible;
+        }
+
+        #map-crocodile:hover ~ #popup2 {
+            visibility: visible;
+        }
+
+        #map-gorilla:hover ~ #popup3 {
+            visibility: visible;
         }
 
         #map-panda {
             position: absolute;
-            left: 63%;
-            top: 503rem;
+            left: 70%;
+            top: 14%;
+            background: none;
+            border: none;
+            outline: none;
         }
 
         #image0 {
             position: absolute;
-            left: 64.35%;
-            top: 505rem;
+            left: 72%;
+            top: 18.7%;
         }
 
         #map-eagle{
             position: absolute;
-            left: 25%;
-            top: 502rem;
+            left: 12%;
+            top: 14%;
         }
 
         #image1 {
             position: absolute;
-            left: 26.35%;
-            top: 504rem;
+            left: 14%;
+            top: 18.7%;
         }
 
         #map-crocodile {
             position: absolute;
-            left: 31.5%;
-            top: 506rem;
+            left: 21.7%;
+            top: 20%;
         }
 
         #image2 {
             position: absolute;
-            left: 32.85%;
-            top: 508rem;
+            left: 23.7%;
+            top: 24.7%;
         }
 
         #map-gorilla {
             position: absolute;
-            left: 47.84%;
-            top: 513.5rem;
+            left: 46.84%;
+            top: 36%;
         }
 
         #image3 {
             position: absolute;
-            left: 49.19%;
-            top: 515.5rem;
-        }
-
-        &-animal:hover {
-            cursor: pointer;
-                .map-animal path {
-                    fill: yellow;
-            }
+            left: 48.84%;
+            top: 40.7%;
         }
     }
 }
