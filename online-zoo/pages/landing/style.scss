@@ -825,6 +825,15 @@ main {
         width: 100%;
         background-color: $gray6;
 
+        button {
+            @include btn();
+            margin-top: 60rem;
+
+            p {
+                padding-left: 0.5rem;
+            }
+        }
+
         .popup {
             background: $base;
             visibility: hidden;
@@ -904,10 +913,6 @@ main {
             background-size: contain;
             position: absolute;
             margin-top: 20rem;
-        }
-
-        .map-animal-image {
-            z-index: 100;
         }
 
         .map-animal:hover,
