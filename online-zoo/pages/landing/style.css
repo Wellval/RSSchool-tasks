@@ -48,6 +48,8 @@ header .header-wrapper ul {
 header .header-wrapper ul .nav-item-active {
   text-decoration: underline;
   font-weight: 900;
+  pointer-events: none;
+  cursor: none;
 }
 
 header .header-wrapper ul .nav-item {
@@ -1456,6 +1458,8 @@ main footer ul {
 main footer ul .nav-item-active {
   text-decoration: underline;
   font-weight: 900;
+  pointer-events: none;
+  cursor: none;
 }
 
 main footer ul .nav-item {
@@ -1597,6 +1601,10 @@ main footer .footer__container button[type="submit"] {
   font-size: 1.4rem;
   margin-top: 1.6rem;
   margin-left: 30rem;
+}
+
+main footer .footer__container button[type="submit"]:hover {
+  opacity: 0.5;
 }
 
 main footer .footer__container .footer__navbar {
