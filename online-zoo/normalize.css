@@ -42,6 +42,117 @@ h1 {
   margin: 0.67em 0;
 }
 
+h3 {
+  font-weight: 900;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  color: #4f4f4f;
+}
+
+footer input[type="text"],
+footer input[type="email"] {
+  border-bottom: 1px solid #BDBDBD;
+  border-top: rgba(0, 0, 0, 0);
+  border-left: rgba(0, 0, 0, 0);
+  border-right: rgba(0, 0, 0, 0);
+  margin-top: 2rem;
+}
+
+#agree-label {
+  position: relative;
+  padding-left: 2.4rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#agree-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1;
+  left: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+
+#agree-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+#agree-label input:checked ~ .checkmark {
+  background-color: #bdbdbd;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#agree-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#agree-label .checkmark:after {
+  left: 0.1rem;
+  width: 5px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"] {
+  outline: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
+  color: #fefefe;
+  outline: none;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0); 
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+footer textarea {
+  border-color: rgba(0, 0, 0, 0);
+  width: 38.3rem;
+  height: 12.4rem;
+}
+
+
+legend {
+  font-size: 12px;
+  line-height: 14px;
+  color: #bdbdbd;
+}
+
+
+
 /* Grouping content
    ========================================================================== */
 
@@ -157,17 +268,6 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -199,6 +299,30 @@ button,
   -webkit-appearance: button;
 }
 
+button {
+  width: 24.5rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#4BD8B5, #49D6DF);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: linear-gradient(#49D6DF, #4BD8B5);
+}
+
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -227,7 +351,11 @@ button:-moz-focusring,
  */
 
 fieldset {
+  width: 38.3rem;
   padding: 0.35em 0.75em 0.625em;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 3px;
 }
 
 /**
@@ -236,15 +364,6 @@ fieldset {
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
-
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
@@ -257,10 +376,6 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-
-textarea {
-  overflow: auto;
-}
 
 /**
  * 1. Add the correct box sizing in IE 10.
