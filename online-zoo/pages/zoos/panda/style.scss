@@ -230,6 +230,7 @@ main {
         position: sticky;
         margin-top: 6rem;
         top: 0;
+        margin-left: 2.6rem;
 
         .arrow:hover {
             opacity: 0.5;
@@ -248,17 +249,22 @@ main {
             transform: scale(1.1);
         }
 
+        .animal-wrapper {
+            padding-top: 0.2rem;
+        }
+
         .animal-active {
-            width: 15.7rem;
-            height: 15.7rem;
+            width: 15.9rem;
+            height: 15.8rem;
             background-image: url(../../../assets/zoos/ellipse.svg);
             background-size: cover;
+            pointer-events: none;
 
             img {
                 width: 13.7rem;
                 height: 13.7rem;
                 display: block;
-                margin-top: 1rem;
+                padding-top: 1rem;
                 margin-left: auto;
                 margin-right: auto;
             }

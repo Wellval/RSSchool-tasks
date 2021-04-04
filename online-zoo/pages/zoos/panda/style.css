@@ -253,6 +253,7 @@ main aside {
   position: sticky;
   margin-top: 6rem;
   top: 0;
+  margin-left: 2.6rem;
 }
 
 main aside .arrow:hover {
@@ -275,18 +276,23 @@ main aside .animal-round:hover {
           transform: scale(1.1);
 }
 
+main aside .animal-wrapper {
+  padding-top: 0.2rem;
+}
+
 main aside .animal-active {
-  width: 15.7rem;
-  height: 15.7rem;
+  width: 15.9rem;
+  height: 15.8rem;
   background-image: url(../../../assets/zoos/ellipse.svg);
   background-size: cover;
+  pointer-events: none;
 }
 
 main aside .animal-active img {
   width: 13.7rem;
   height: 13.7rem;
   display: block;
-  margin-top: 1rem;
+  padding-top: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
