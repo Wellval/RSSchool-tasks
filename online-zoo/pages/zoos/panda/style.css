@@ -200,10 +200,20 @@ main .content .slider-dot {
   border-radius: 50%;
 }
 
+main .content .slider-dot:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 main .content .slider-dot-active {
   background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
   width: 1.1rem;
   height: 1.1rem;
+}
+
+main .content .slider-dot-active:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 main .description {

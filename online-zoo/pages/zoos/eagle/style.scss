@@ -184,12 +184,22 @@ main {
             width: 0.8rem;
             height: 0.8rem;
             border-radius: 50%;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
         }
 
         .slider-dot-active {
             background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
             width: 1.1rem;
             height: 1.1rem;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
         }
     }
 
