@@ -1,0 +1,460 @@
+$gray1: #333333;
+$gray6: #F2F2F2;
+$gray2: #4F4F4F;
+$gray4: #bdbdbd;
+$gray2-round: #1B1B1B;
+$base: #FEFEFE;
+$gradient-green: #4BD8B5;
+$gradient-blue: #49D6DF;
+
+html { 
+    font-size: 10px; 
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+@mixin navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 57.3rem;
+
+    .nav-item-active {
+        text-decoration: underline;
+        font-weight: 900;
+        pointer-events: none;
+        cursor: none;
+    }
+
+    .nav-item {
+        font-size: 1.6rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: 900;
+        }
+
+        a {
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    height: 9.4rem;
+    align-items: center;
+    display: flex;
+    box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+
+    h1 {
+        display: none;
+    }
+
+    .header-wrapper {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-around;
+
+        ul {
+            @include navbar();
+            .nav-item > a {
+                color: $gray1;
+            }
+        }
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 6rem;
+        height: 3.4rem;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $gray6;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+          
+          .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+          
+          input:checked + .slider {
+            background-color: $gray2;
+          }
+          
+          input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+          }
+        
+          .slider.round {
+            border-radius: 34px;
+          }
+
+          input:checked + .slider.round:before {
+              background-color: $gray2-round;
+          }
+          
+          .slider.round:before {
+            border-radius: 50%;
+          }
+    }
+}
+
+main {
+    display: flex;
+
+    .content {
+        height: 91rem;
+        margin-left: 15.1rem;
+
+        .stream {
+            width: 100%;
+            height: 44.2rem;
+
+            &__container {
+                width: 79rem;
+            }
+        }
+
+        .plug {
+            width: 79rem;
+            height: 14.1rem;
+            position: absolute;
+        }
+
+        .preview {
+            width: 24.6rem;
+            height: 100%;
+
+            &__container {
+                margin-top: 3rem;
+                height: 14.1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                z-index: 1000;
+            }
+        }
+
+        .slider-dots {
+            display: flex;
+            width: 3.7rem;
+            height: 1.3rem;
+            margin: 0 auto;
+            margin-top: 3rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slider-dot {
+            background-color: #c4c4c4;
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+        }
+
+        .slider-dot-active {
+            background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+            width: 1.1rem;
+            height: 1.1rem;
+
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .description {
+        width: 38rem;
+        height: 20.9rem;
+        margin-left: 3rem;
+        margin-top: 15.3rem;
+
+        h3 {
+            font-size: 2rem;
+            line-height: 2.344rem;
+            margin: 0;
+            color: $gray1;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 1.3rem;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $gray2;
+        }
+
+        button {
+            margin-top: 3.5rem;
+            width: 19.4rem;
+        }
+    }
+
+    aside {
+        height: 60rem;
+        width: 15.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: sticky;
+        margin-top: 6rem;
+        top: 0;
+        margin-left: 2.6rem;
+
+        .arrow:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .arrow-top {
+            transform: rotate(-90deg);
+        }
+
+        .arrow-bottom {
+            transform: rotate(90deg);
+        }
+
+        .animal-round:hover {
+            transform: scale(1.1);
+        }
+
+        .animal-wrapper {
+            padding-top: 0.3rem;
+        }
+
+        .animal-active {
+            width: 15.9rem;
+            height: 15.8rem;
+            background-image: url(../../../assets/zoos/ellipse.svg);
+            background-size: cover;
+            pointer-events: none;
+
+            img {
+                width: 13.7rem;
+                height: 13.7rem;
+                display: block;
+                padding-top: 1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            height: 51.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            li {
+                width: 10.8rem;
+                height: 10.8rem;
+                background-size: cover;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 75.1rem;
+    background: $gray1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    ul {
+        @include navbar();
+        width: 40.4rem;
+        li > a {
+            color: $base;
+        }
+    }
+
+    .footer__container {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+
+        .footer__left {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                color: $gray4;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+
+            fieldset {
+                margin-top: 2rem;
+                margin-bottom: 2.6rem;
+            }
+
+            input[type="text"],
+            input[type="email"] {
+                width: 40.4rem;
+                height: 2.6rem;
+            }
+
+            h3 {
+                color: $base;
+                font-size: 2rem;
+                margin-top: 5.7rem;
+            }
+        }
+
+        .footer__right {
+            h4 {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 16px;
+                text-transform: uppercase;
+                color: $base;
+                margin-top: 7.4rem;
+                margin-left: 3.9rem;
+            }
+
+            address {
+                width: 19rem;
+                display: flex;
+                flex-direction: column;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: $base;
+                height: 9.4rem;
+                justify-content: space-between;
+                margin-left: 3.9rem;
+
+                a {
+                    text-decoration: none;
+                    color: $base;
+                }
+            }
+
+            .social-media {
+                flex-direction: row;
+                width: 12.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 2rem;
+                margin-left: 3.9rem;
+
+                img {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                img:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        button[type="submit"] {
+            width: 10.8rem;
+            height: 1.6rem;
+            justify-content: space-between;
+            background: rgba(0,0,0,0);
+            font-size: 1.4rem;
+            margin-top: 1.6rem;
+            margin-left: 30rem;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+    .footer__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            padding-right: 11.2rem;
+        }
+
+        button {
+            width: 27.9rem;
+        }
+    }
+
+    .logo {
+        position: relative;
+        display: inline-block;
+        border-bottom: none;
+      }
+
+        path {
+            fill: $base;
+        }
+    }
+
+    .footer__lower {
+        width: 85%;
+        border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
+        margin-top: 6rem;
+        padding-top: 2.8rem;
+        color: $gray4;
+        font-size: 1.2rem;
+
+        a {
+            pointer-events: none;
+            text-decoration: none;
+            color: $gray4;
+            font-size: 1.2rem;
+        }
+    }
+}
