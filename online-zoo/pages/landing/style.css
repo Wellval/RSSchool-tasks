@@ -250,6 +250,74 @@ main .favorite-animal .carousel__container-animal__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
+}
+
+main .favorite-animal .carousel__container-animal .description {
+  color: #FEFEFE;
+}
+
+main .favorite-animal .carousel__container-animal:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main .favorite-animal .carousel__container-animal:hover .description {
+  color: #FEFEFE;
+  width: 13rem;
+}
+
+main .favorite-animal .carousel__container-animal:hover button,
+main .favorite-animal .carousel__container-animal:hover .description {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(-11rem);
+          transform: translateY(-11rem);
+}
+
+main .favorite-animal .carousel__container-animal button {
+  width: 7rem;
+  font-size: 1rem;
+  background: none;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .favorite-animal .carousel__container-animal button:hover p {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .favorite-animal .carousel__container-animal button:hover circle {
+  stroke: white;
+}
+
+main .favorite-animal .carousel__container-animal button:hover path {
+  fill: white;
+}
+
+main .favorite-animal .carousel__container-animal button p {
+  width: 9rem;
+  text-align: left;
+  background: -webkit-linear-gradient(#4BD8B5, #49D6DF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .favorite-animal .carousel__container-animal button p:hover {
+  color: white;
+}
+
+main .favorite-animal .carousel__container-animal__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .favorite-animal .carousel__container-animal:hover {
@@ -267,6 +335,11 @@ main .favorite-animal .carousel__container-animal-active {
 main .favorite-animal .carousel__container-animal-active:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+main .favorite-animal .carousel__container-animal-active:hover .description {
+  color: #FEFEFE;
+  width: 20rem;
 }
 
 main .favorite-animal .carousel__container-animal-active:hover button,

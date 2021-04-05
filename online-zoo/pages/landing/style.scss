@@ -327,6 +327,68 @@ main {
 
                 &__buttons {
                     display: flex;
+                    margin: 0 auto;
+                }
+
+                .description {
+                    color: $base;
+                }
+
+                &:hover {
+                    transform: scale(1);
+                    transition: all 0.5s ease-in-out;
+
+                    .description {
+                        color: $base;
+                        width: 13rem;
+                    }
+
+                    button,
+                    .description {
+                        opacity: 1;
+                        transition: 1s;
+                        transform: translateY(-11rem);
+                    }
+                }
+
+                button {
+                    width: 7rem;
+                    font-size: 1rem;
+                    background: none;
+                    margin: 0 auto;
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+            
+                        p {
+                            background: white;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+        
+                        circle {
+                            stroke: white;
+                        }
+        
+                        path {
+                            fill: white;
+                        }
+                      }
+                    p {
+                        width: 9rem;
+                        text-align: left;
+                        background: -webkit-linear-gradient($gradient-green, $gradient-blue);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+
+                &__buttons {
+                    display: flex;
                 }
 
                 &:hover {
@@ -340,6 +402,11 @@ main {
 
                     &:hover {
                         transform: scale(1);
+
+                        .description {
+                            color: $base;
+                            width: 20rem;
+                        }
 
                         button,
                         .description {
@@ -1074,8 +1141,8 @@ main {
                 margin-left: 30rem;
 
                 &:hover {
-                    opacity: 0.5;
-                }
+                opacity: 0.5;
+            }
             }
 
         .footer__navbar {
