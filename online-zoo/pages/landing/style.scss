@@ -325,6 +325,11 @@ main {
                 overflow: hidden;
                 transition: all 0.5s ease-in-out;
 
+                a {
+                    list-style: none;
+                    text-decoration: none;
+                }
+
                 &__buttons {
                     display: flex;
                     margin: 0 auto;

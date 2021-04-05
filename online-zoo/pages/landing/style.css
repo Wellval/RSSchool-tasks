@@ -246,6 +246,11 @@ main .favorite-animal .carousel__container-animal {
   transition: all 0.5s ease-in-out;
 }
 
+main .favorite-animal .carousel__container-animal a {
+  list-style: none;
+  text-decoration: none;
+}
+
 main .favorite-animal .carousel__container-animal__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
