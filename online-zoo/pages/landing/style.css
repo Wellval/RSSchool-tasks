@@ -339,8 +339,6 @@ main .favorite-animal .carousel__container-animal:hover {
 main .favorite-animal .carousel__container-animal-active {
   width: 24.5rem;
   height: 35.2rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 main .favorite-animal .carousel__container-animal-active .dollar {
@@ -348,23 +346,19 @@ main .favorite-animal .carousel__container-animal-active .dollar {
   position: absolute;
 }
 
+main .favorite-animal .carousel__container-animal-active button,
+main .favorite-animal .carousel__container-animal-active .description {
+  opacity: 1;
+  margin-top: -11rem;
+}
+
 main .favorite-animal .carousel__container-animal-active:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-main .favorite-animal .carousel__container-animal-active:hover .description {
-  color: #FEFEFE;
-  width: 20rem;
-}
-
-main .favorite-animal .carousel__container-animal-active:hover button,
-main .favorite-animal .carousel__container-animal-active:hover .description {
-  opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: translateY(-11rem);
-          transform: translateY(-11rem);
+main .favorite-animal .carousel__container-animal-active a {
+  text-decoration: none;
 }
 
 main .favorite-animal .carousel__container-animal-active button {
@@ -372,9 +366,7 @@ main .favorite-animal .carousel__container-animal-active button {
   font-size: 1.2rem;
   background: none;
   margin: 0 auto;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 main .favorite-animal .carousel__container-animal-active button:hover p {
@@ -403,6 +395,15 @@ main .favorite-animal .carousel__container-animal-active button p:hover {
   color: white;
 }
 
+main .favorite-animal .carousel__container-animal-active__buttons {
+  margin-top: -11rem;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
 main .favorite-animal .carousel__container-animal-active .description {
   width: 19.4rem;
   height: 4.8rem;
@@ -410,9 +411,7 @@ main .favorite-animal .carousel__container-animal-active .description {
   color: #fff;
   font-size: 1.4rem;
   margin: 0 auto;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  margin-top: -11rem;
 }
 
 main .favorite-animal .social-media {
