@@ -325,6 +325,12 @@ main {
                 overflow: hidden;
                 transition: all 0.5s ease-in-out;
 
+                .dollar {
+                    position: absolute;
+                    margin-left: -4.5rem;
+                    margin-top: 0.25rem;
+                }
+
                 a {
                     list-style: none;
                     text-decoration: none;
@@ -404,6 +410,11 @@ main {
                     width: 24.5rem;
                     height: 35.2rem;
                     transition: all 0.3s ease-in-out;
+
+                    .dollar {
+                        margin-left: -91px;
+                        position: absolute;
+                    }
 
                     &:hover {
                         transform: scale(1);
@@ -597,6 +608,12 @@ main {
     .pets {
         height: 85.4rem;
         width: 100%;
+        
+        .dollar {
+            margin-top: 0.25rem;
+            margin-left: -9.1rem;
+            position: absolute;
+        }
 
         &__buttons {
             position: absolute;
