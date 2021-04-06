@@ -325,6 +325,79 @@ main {
                 overflow: hidden;
                 transition: all 0.5s ease-in-out;
 
+                .dollar {
+                    position: absolute;
+                    margin-left: -4.5rem;
+                    margin-top: 0.25rem;
+                }
+
+                a {
+                    list-style: none;
+                    text-decoration: none;
+                }
+
+                &__buttons {
+                    display: flex;
+                    margin: 0 auto;
+                }
+
+                .description {
+                    color: $base;
+                }
+
+                &:hover {
+                    transform: scale(1);
+                    transition: all 0.5s ease-in-out;
+
+                    .description {
+                        color: $base;
+                        width: 13rem;
+                    }
+
+                    button,
+                    .description {
+                        opacity: 1;
+                        transition: 1s;
+                        transform: translateY(-11rem);
+                    }
+                }
+
+                button {
+                    width: 7rem;
+                    font-size: 1rem;
+                    background: none;
+                    margin: 0 auto;
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+            
+                        p {
+                            background: white;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+        
+                        circle {
+                            stroke: white;
+                        }
+        
+                        path {
+                            fill: white;
+                        }
+                      }
+                    p {
+                        width: 9rem;
+                        text-align: left;
+                        background: -webkit-linear-gradient($gradient-green, $gradient-blue);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+
                 &__buttons {
                     display: flex;
                 }
@@ -338,8 +411,18 @@ main {
                     height: 35.2rem;
                     transition: all 0.3s ease-in-out;
 
+                    .dollar {
+                        margin-left: -91px;
+                        position: absolute;
+                    }
+
                     &:hover {
                         transform: scale(1);
+
+                        .description {
+                            color: $base;
+                            width: 20rem;
+                        }
 
                         button,
                         .description {
@@ -525,6 +608,12 @@ main {
     .pets {
         height: 85.4rem;
         width: 100%;
+        
+        .dollar {
+            margin-top: 0.25rem;
+            margin-left: -9.1rem;
+            position: absolute;
+        }
 
         &__buttons {
             position: absolute;
@@ -1074,8 +1163,8 @@ main {
                 margin-left: 30rem;
 
                 &:hover {
-                    opacity: 0.5;
-                }
+                opacity: 0.5;
+            }
             }
 
         .footer__navbar {
