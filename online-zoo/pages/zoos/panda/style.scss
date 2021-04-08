@@ -48,24 +48,20 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: #fff;
     height: 9.4rem;
     align-items: center;
     display: flex;
-    box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-
-    h1 {
-        display: none;
-    }
 
     .header-wrapper {
         display: flex;
-        width: 100%;
+        width: 84.5%;
         margin: 0 auto;
-        justify-content: space-around;
+        justify-content: space-between;
 
         ul {
+            padding: 0;
+            padding-top: 1rem;
             @include navbar();
             .nav-item > a {
                 color: $gray1;
@@ -138,7 +134,11 @@ main {
 
     .content {
         height: 91rem;
-        margin-left: 15.1rem;
+        margin-left: 17.8rem;
+
+        h3 {
+            margin-top: 5.5rem;
+        }
 
         .stream {
             width: 100%;
@@ -218,7 +218,7 @@ main {
 
         p {
             margin: 0;
-            margin-bottom: 1.3rem;
+            margin-bottom: 2.4rem;
             font-size: 1.4rem;
             line-height: 1.6rem;
             color: $gray2;
@@ -309,7 +309,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
 
     ul {
         @include navbar();
@@ -319,37 +318,43 @@ footer {
         }
     }
 
+    .footer__navbar {
+        margin-top: 2rem;
+    }
+
     .footer__container {
         width: 85%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
 
         .footer__left {
             display: flex;
             flex-direction: column;
+            margin-top: 2rem;
 
             label {
                 color: $gray4;
-                font-weight: 400;
-                font-size: 1.2rem;
                 line-height: 1.4rem;
             }
 
             fieldset {
-                margin-top: 2rem;
-                margin-bottom: 2.6rem;
+                height: 12.4rem;
+                margin-bottom: 2rem;
+                margin-top: 3rem;
             }
 
             input[type="text"],
             input[type="email"] {
                 width: 40.4rem;
-                height: 2.6rem;
+                height: 2.8rem;
+                margin: 0;
             }
 
             h3 {
                 color: $base;
                 font-size: 2rem;
-                margin-top: 5.7rem;
+                margin-top: 5.5rem;
             }
         }
 
@@ -360,7 +365,7 @@ footer {
                 line-height: 16px;
                 text-transform: uppercase;
                 color: $base;
-                margin-top: 7.4rem;
+                margin-top: 6rem;
                 margin-left: 3.9rem;
             }
 
@@ -376,10 +381,10 @@ footer {
                 color: $base;
                 height: 9.4rem;
                 justify-content: space-between;
-                margin-left: 3.9rem;
+                margin-left: 3rem;
+                margin-top: 2.8rem;
 
                 a {
-                    text-decoration: none;
                     color: $base;
                 }
             }
@@ -409,12 +414,12 @@ footer {
             justify-content: space-between;
             background: rgba(0,0,0,0);
             font-size: 1.4rem;
-            margin-top: 1.6rem;
-            margin-left: 30rem;
+            margin-left: 26rem;
+            margin-top: 2rem;
 
             &:hover {
-                opacity: 0.5;
-            }
+            opacity: 0.5;
+        }
         }
 
     .footer__navbar {
@@ -431,12 +436,6 @@ footer {
         }
     }
 
-    .logo {
-        position: relative;
-        display: inline-block;
-        border-bottom: none;
-      }
-
         path {
             fill: $base;
         }
@@ -445,16 +444,14 @@ footer {
     .footer__lower {
         width: 85%;
         border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-        margin-top: 6rem;
-        padding-top: 2.8rem;
+        margin-top: -9rem;
+        padding-top: 6rem;
         color: $gray4;
         font-size: 1.2rem;
 
         a {
             pointer-events: none;
-            text-decoration: none;
             color: $gray4;
-            font-size: 1.2rem;
         }
     }
 }

@@ -10,7 +10,6 @@ body {
 }
 
 header {
-  width: 100%;
   background-color: #fff;
   height: 9.4rem;
   -webkit-box-align: center;
@@ -19,25 +18,22 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-          box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-}
-
-header h1 {
-  display: none;
 }
 
 header .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 84.5%;
   margin: 0 auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .header-wrapper ul {
+  padding: 0;
+  padding-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,7 +137,11 @@ main {
 
 main .content {
   height: 91rem;
-  margin-left: 15.1rem;
+  margin-left: 17.8rem;
+}
+
+main .content h3 {
+  margin-top: 5.5rem;
 }
 
 main .content .stream {
@@ -232,7 +232,7 @@ main .description h3 {
 
 main .description p {
   margin: 0;
-  margin-bottom: 1.3rem;
+  margin-bottom: 2.4rem;
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: #4F4F4F;
@@ -353,7 +353,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
 }
 
 footer ul {
@@ -395,8 +394,13 @@ footer ul li > a {
   color: #FEFEFE;
 }
 
+footer .footer__navbar {
+  margin-top: 2rem;
+}
+
 footer .footer__container {
   width: 85%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,30 +417,31 @@ footer .footer__container .footer__left {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 2rem;
 }
 
 footer .footer__container .footer__left label {
   color: #bdbdbd;
-  font-weight: 400;
-  font-size: 1.2rem;
   line-height: 1.4rem;
 }
 
 footer .footer__container .footer__left fieldset {
-  margin-top: 2rem;
-  margin-bottom: 2.6rem;
+  height: 12.4rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 footer .footer__container .footer__left input[type="text"],
 footer .footer__container .footer__left input[type="email"] {
   width: 40.4rem;
-  height: 2.6rem;
+  height: 2.8rem;
+  margin: 0;
 }
 
 footer .footer__container .footer__left h3 {
   color: #FEFEFE;
   font-size: 2rem;
-  margin-top: 5.7rem;
+  margin-top: 5.5rem;
 }
 
 footer .footer__container .footer__right h4 {
@@ -445,7 +450,7 @@ footer .footer__container .footer__right h4 {
   line-height: 16px;
   text-transform: uppercase;
   color: #FEFEFE;
-  margin-top: 7.4rem;
+  margin-top: 6rem;
   margin-left: 3.9rem;
 }
 
@@ -468,11 +473,11 @@ footer .footer__container .footer__right address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 3.9rem;
+  margin-left: 3rem;
+  margin-top: 2.8rem;
 }
 
 footer .footer__container .footer__right address a {
-  text-decoration: none;
   color: #FEFEFE;
 }
 
@@ -512,8 +517,8 @@ footer .footer__container button[type="submit"] {
           justify-content: space-between;
   background: rgba(0, 0, 0, 0);
   font-size: 1.4rem;
-  margin-top: 1.6rem;
-  margin-left: 30rem;
+  margin-left: 26rem;
+  margin-top: 2rem;
 }
 
 footer .footer__container button[type="submit"]:hover {
@@ -540,12 +545,6 @@ footer .footer__container .footer__navbar button {
   width: 27.9rem;
 }
 
-footer .footer__container .logo {
-  position: relative;
-  display: inline-block;
-  border-bottom: none;
-}
-
 footer .footer__container path {
   fill: #FEFEFE;
 }
@@ -553,16 +552,14 @@ footer .footer__container path {
 footer .footer__lower {
   width: 85%;
   border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-  margin-top: 6rem;
-  padding-top: 2.8rem;
+  margin-top: -9rem;
+  padding-top: 6rem;
   color: #bdbdbd;
   font-size: 1.2rem;
 }
 
 footer .footer__lower a {
   pointer-events: none;
-  text-decoration: none;
   color: #bdbdbd;
-  font-size: 1.2rem;
 }
 /*# sourceMappingURL=style.css.map */
