@@ -9,7 +9,6 @@ body {
 }
 
 header {
-  width: 100%;
   background-color: #fff;
   height: 9.4rem;
   -webkit-box-align: center;
@@ -18,10 +17,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-header h1 {
-  display: none;
 }
 
 header .header-wrapper {
@@ -65,7 +60,6 @@ header .header-wrapper ul .nav-item:hover {
 
 header .header-wrapper ul .nav-item a {
   text-transform: capitalize;
-  text-decoration: none;
 }
 
 header .header-wrapper ul .nav-item > a {
@@ -244,6 +238,7 @@ main .favorite-animal .carousel__container-animal {
   overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 main .favorite-animal .carousel__container-animal .dollar {
@@ -254,30 +249,25 @@ main .favorite-animal .carousel__container-animal .dollar {
 
 main .favorite-animal .carousel__container-animal a {
   list-style: none;
-  text-decoration: none;
 }
 
 main .favorite-animal .carousel__container-animal__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
 }
 
 main .favorite-animal .carousel__container-animal .description {
   color: #FEFEFE;
+  width: 13rem;
 }
 
 main .favorite-animal .carousel__container-animal:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-main .favorite-animal .carousel__container-animal:hover .description {
-  color: #FEFEFE;
-  width: 13rem;
+  cursor: pointer;
 }
 
 main .favorite-animal .carousel__container-animal:hover button,
@@ -331,11 +321,6 @@ main .favorite-animal .carousel__container-animal__buttons {
   display: flex;
 }
 
-main .favorite-animal .carousel__container-animal:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
 main .favorite-animal .carousel__container-animal-active {
   width: 24.5rem;
   height: 35.2rem;
@@ -350,15 +335,6 @@ main .favorite-animal .carousel__container-animal-active button,
 main .favorite-animal .carousel__container-animal-active .description {
   opacity: 1;
   margin-top: -11rem;
-}
-
-main .favorite-animal .carousel__container-animal-active:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-main .favorite-animal .carousel__container-animal-active a {
-  text-decoration: none;
 }
 
 main .favorite-animal .carousel__container-animal-active button {
@@ -587,24 +563,19 @@ main .how-it-works__container {
 }
 
 main .how-it-works__container p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   color: #4F4F4F;
 }
 
 main .how-it-works__container button {
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 main .how-it-works__container button p {
+  color: #FEFEFE;
   padding-left: 0.5rem;
-  color: white;
   font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
 }
 
 main .how-it-works__range-container {
@@ -773,7 +744,6 @@ main .mission .mission__card {
 }
 
 main .mission .mission__card p {
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: #4F4F4F;
@@ -838,7 +808,6 @@ main .pets button:hover path {
 main .pets button p {
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 1.4rem;
   font-size: 1.2rem;
   width: 9rem;
   text-align: left;
@@ -986,6 +955,30 @@ main .pets-range__container input[type=range]:focus::-ms-fill-upper {
 }
 
 main .pets #choose-button {
+  width: 24.5rem;
+  height: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4BD8B5), to(#49D6DF));
+  background: linear-gradient(#4BD8B5, #49D6DF);
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   margin-top: 3rem;
 }
 
@@ -1071,7 +1064,6 @@ main .pets__carousel__items .item:hover .description {
 main .pets__carousel__items .description {
   width: 19.4rem;
   height: 4.8rem;
-  font-weight: 400;
   color: #fff;
   font-size: 1.4rem;
   margin: -2rem auto;
@@ -1097,10 +1089,11 @@ main .pay-and-feed {
 main .pay-and-feed__container {
   text-align: center;
   width: 80%;
+  margin-bottom: 6rem;
 }
 
-main .pay-and-feed__container button {
-  display: inline-block;
+main .pay-and-feed button {
+  margin: 0 auto;
   margin-top: 6rem;
 }
 
@@ -1144,7 +1137,6 @@ main .pay-and-feed .payment-process .payment-step p {
 
 main .pay-and-feed p {
   font-size: 1.4rem;
-  line-height: 1.6rem;
 }
 
 main .testimonials {
@@ -1451,18 +1443,8 @@ main .map .map-animal-image:hover path {
 }
 
 main .map #map-panda:hover ~ #popup0,
-main .map #image0:hover ~ #popup0 {
-  visibility: visible;
-}
-
-main .map #map-eagle:hover ~ #popup1 {
-  visibility: visible;
-}
-
-main .map #map-crocodile:hover ~ #popup2 {
-  visibility: visible;
-}
-
+main .map #map-eagle:hover ~ #popup1,
+main .map #map-crocodile:hover ~ #popup2,
 main .map #map-gorilla:hover ~ #popup3 {
   visibility: visible;
 }
@@ -1569,7 +1551,6 @@ main footer ul .nav-item:hover {
 
 main footer ul .nav-item a {
   text-transform: capitalize;
-  text-decoration: none;
 }
 
 main footer ul li > a {
@@ -1598,8 +1579,6 @@ main footer .footer__container .footer__left {
 
 main footer .footer__container .footer__left label {
   color: #bdbdbd;
-  font-weight: 400;
-  font-size: 1.2rem;
   line-height: 1.4rem;
 }
 
@@ -1653,7 +1632,6 @@ main footer .footer__container .footer__right address {
 }
 
 main footer .footer__container .footer__right address a {
-  text-decoration: none;
   color: #FEFEFE;
 }
 
@@ -1721,12 +1699,6 @@ main footer .footer__container .footer__navbar button {
   width: 27.9rem;
 }
 
-main footer .footer__container .logo {
-  position: relative;
-  display: inline-block;
-  border-bottom: none;
-}
-
 main footer .footer__container path {
   fill: #FEFEFE;
 }
@@ -1742,8 +1714,6 @@ main footer .footer__lower {
 
 main footer .footer__lower a {
   pointer-events: none;
-  text-decoration: none;
   color: #bdbdbd;
-  font-size: 1.2rem;
 }
 /*# sourceMappingURL=style.css.map */

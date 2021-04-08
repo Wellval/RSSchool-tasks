@@ -123,7 +123,6 @@ $gradient-blue: #49D6DF;
 
         a {
             text-transform: capitalize;
-            text-decoration: none;
         }
     }
 }
@@ -139,15 +138,10 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: #fff;
     height: 9.4rem;
     align-items: center;
     display: flex;
-
-    h1 {
-        display: none;
-    }
 
     .header-wrapper {
         display: flex;
@@ -255,7 +249,6 @@ main {
     }
 
     .favorite-animal {
-
         background-image: url(../../assets/landing/landing.png);
         margin: 0 auto;
         height: 94rem;
@@ -324,6 +317,7 @@ main {
                 height: 20.3rem;
                 overflow: hidden;
                 transition: all 0.5s ease-in-out;
+                cursor: pointer;
 
                 .dollar {
                     position: absolute;
@@ -333,26 +327,21 @@ main {
 
                 a {
                     list-style: none;
-                    text-decoration: none;
                 }
 
                 &__buttons {
                     display: flex;
-                    margin: 0 auto;
                 }
 
                 .description {
                     color: $base;
+                    width: 13rem;
                 }
 
                 &:hover {
-                    transform: scale(1);
+                    transform: scale(1.5);
                     transition: all 0.5s ease-in-out;
-
-                    .description {
-                        color: $base;
-                        width: 13rem;
-                    }
+                    cursor: pointer;
 
                     button,
                     .description {
@@ -402,10 +391,6 @@ main {
                     display: flex;
                 }
 
-                &:hover {
-                    transform: scale(1.5);
-                }
-
                 &-active {
                     width: 24.5rem;
                     height: 35.2rem;
@@ -419,14 +404,6 @@ main {
                     .description {
                         opacity: 1;
                         margin-top: -11rem;
-                    }
-
-                    &:hover {
-                         transform: scale(1);
-                    }
-
-                    a {
-                        text-decoration: none;
                     }
 
                     button {
@@ -494,10 +471,10 @@ main {
 
             img {
                 transition: all 0.3s ease-in-out;
-            }
 
-            img:hover {
-                opacity: 0.5;
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }
 
@@ -532,23 +509,18 @@ main {
             margin-top: 5rem;
 
             p {
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: normal;
                 font-size: 14px;
                 line-height: 16px;
                 color: $gray2;
             }
 
             button {
-                margin: 3rem auto;
-                
+                margin: 0 auto;
+
                 p {
+                    color: $base;
                     padding-left: 0.5rem;
-                    color: white;
                     font-size: 1.8rem;
-                    font-family: "Roboto", sans-serif;
-                    font-weight: 900;
                 }
             }
         }
@@ -594,7 +566,6 @@ main {
             align-items: center;
 
             p {
-                font-weight: 400;
                 font-size: 1.4rem;
                 line-height: 1.6rem;
                 color: $gray2;
@@ -638,8 +609,7 @@ main {
             font-size: 1.4rem;
             margin: -2rem auto;
 
-            &:hover {
-                
+            &:hover {    
                 p {
                     background: -webkit-linear-gradient($gradient-green, $gradient-blue);
                     -webkit-background-clip: text;
@@ -658,7 +628,6 @@ main {
             p {
                 text-transform: uppercase;
                 font-weight: 500;
-                line-height: 1.4rem;
                 font-size: 1.2rem;
                 width: 9rem;
                 text-align: left;
@@ -690,6 +659,22 @@ main {
         }
 
         #choose-button {
+            width: 24.5rem;
+            height: 5.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#4BD8B5, #49D6DF);
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.8rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            outline: none;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
             margin-top: 3rem;
         }
 
@@ -764,7 +749,6 @@ main {
              {
                 width: 19.4rem;
                 height: 4.8rem;
-                font-weight: 400;
                 color: #fff;
                 font-size: 1.4rem;
                 margin: -2rem auto;
@@ -785,11 +769,12 @@ main {
         &__container {
             text-align: center;
             width: 80%;
+            margin-bottom: 6rem;
+        }
 
-            button {
-                display: inline-block;
-                margin-top: 6rem;
-            }
+        button {
+            margin: 0 auto;
+            margin-top: 6rem;
         }
 
         .payment-process {
@@ -819,7 +804,6 @@ main {
 
         p {
             font-size: 1.4rem;
-            line-height: 1.6rem;
         }
     }
 
@@ -986,18 +970,8 @@ main {
         }
 
         #map-panda:hover ~ #popup0,
-        #image0:hover ~ #popup0 {
-            visibility: visible;
-        }
-
-        #map-eagle:hover ~ #popup1 {
-            visibility: visible;
-        }
-
-        #map-crocodile:hover ~ #popup2 {
-            visibility: visible;
-        }
-
+        #map-eagle:hover ~ #popup1,
+        #map-crocodile:hover ~ #popup2,
         #map-gorilla:hover ~ #popup3 {
             visibility: visible;
         }
@@ -1082,8 +1056,6 @@ main {
 
                 label {
                     color: $gray4;
-                    font-weight: 400;
-                    font-size: 1.2rem;
                     line-height: 1.4rem;
                 }
 
@@ -1131,7 +1103,6 @@ main {
                     margin-left: 3.9rem;
 
                     a {
-                        text-decoration: none;
                         color: $base;
                     }
                 }
@@ -1183,12 +1154,6 @@ main {
             }
         }
 
-        .logo {
-            position: relative;
-            display: inline-block;
-            border-bottom: none;
-          }
-
             path {
                 fill: $base;
             }
@@ -1204,9 +1169,7 @@ main {
 
             a {
                 pointer-events: none;
-                text-decoration: none;
                 color: $gray4;
-                font-size: 1.2rem;
             }
         }
     }
