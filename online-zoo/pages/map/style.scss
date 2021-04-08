@@ -139,24 +139,20 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: #fff;
     height: 9.4rem;
     align-items: center;
     display: flex;
-    box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-
-    h1 {
-        display: none;
-    }
 
     .header-wrapper {
         display: flex;
-        width: 100%;
+        width: 84.5%;
         margin: 0 auto;
-        justify-content: space-around;
+        justify-content: space-between;
 
         ul {
+            padding: 0;
+            padding-top: 1rem;
             @include navbar();
             .nav-item > a {
                 color: $gray1;
@@ -225,11 +221,15 @@ header {
 }
 
 main {
-    height: 128.7rem;
+    height: 127.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1.2rem;
+
+    h3 {
+        margin-bottom: 0.6rem;
+    }
 
     label {
         color: $gray1;
@@ -256,7 +256,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 5.4rem;
+        margin-top: 3.4rem;
 
         &__container {
             width: 100%;
@@ -283,17 +283,19 @@ main {
             display: flex;
             flex-direction: column;
             text-align: center;
-            margin-top: 5.6rem;
+            margin-top: 3.4rem;
+            margin-left: -4rem;
         }
 
         ul {
             padding: 0;
             list-style: none;
-            width: 100%;
+            width: 90%;
             height: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            padding-left: 3rem;
 
             li {
                 width: 10.8rem;
@@ -302,6 +304,7 @@ main {
                 text-align: center;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
+                padding-left: 3rem;
             }
 
             .animal-round:hover {
@@ -313,6 +316,7 @@ main {
                 height: 15.7rem;
                 background-image: url(../../assets/map/ellipse.svg);
                 background-size: cover;
+                padding-left: 0;
 
                 img {
                     width: 13.7rem;
@@ -321,6 +325,7 @@ main {
                     margin-top: 1rem;
                     margin-left: auto;
                     margin-right: auto;
+                    padding-left: 1rem;
                 }
             }
         }
@@ -332,7 +337,7 @@ main {
         align-items: center;
         width: 100%;
         height: 49.8rem;
-        margin-top: 10rem;
+        margin-top: 8rem;
 
         &__container {
             height: 50rem;
@@ -426,48 +431,55 @@ footer {
         }
     }
 
+    .footer__navbar {
+        margin-top: 2rem;
+    }
+
     .footer__container {
         width: 85%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
 
         .footer__left {
             display: flex;
             flex-direction: column;
+            margin-top: 1.5rem;
 
             label {
                 color: $gray4;
-                font-weight: 400;
-                font-size: 1.2rem;
                 line-height: 1.4rem;
             }
 
             fieldset {
-                margin-top: 2rem;
-                margin-bottom: 2.6rem;
+                height: 12.4rem;
+                margin-bottom: 2rem;
+                margin-top: 3rem;
             }
 
             input[type="text"],
             input[type="email"] {
                 width: 40.4rem;
-                height: 2.6rem;
+                height: 2.8rem;
+                margin: 0;
             }
 
             h3 {
                 color: $base;
                 font-size: 2rem;
-                margin-top: 5.7rem;
+                margin-top: 5.5rem;
             }
         }
 
         .footer__right {
+            
             h4 {
                 font-weight: bold;
                 font-size: 14px;
                 line-height: 16px;
                 text-transform: uppercase;
                 color: $base;
-                margin-top: 7.4rem;
+                margin-top: 6rem;
                 margin-left: 3.9rem;
             }
 
@@ -483,10 +495,10 @@ footer {
                 color: $base;
                 height: 9.4rem;
                 justify-content: space-between;
-                margin-left: 3.9rem;
+                margin-left: 3rem;
+                margin-top: 2.8rem;
 
                 a {
-                    text-decoration: none;
                     color: $base;
                 }
             }
@@ -516,18 +528,19 @@ footer {
             justify-content: space-between;
             background: rgba(0,0,0,0);
             font-size: 1.4rem;
-            margin-top: 1.6rem;
-            margin-left: 30rem;
+            margin-left: 26rem;
+            margin-top: 2rem;
 
             &:hover {
-                opacity: 0.5;
-            }
+            opacity: 0.5;
+        }
         }
 
     .footer__navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 1.5rem;
 
         nav {
             padding-right: 11.2rem;
@@ -538,12 +551,6 @@ footer {
         }
     }
 
-    .logo {
-        position: relative;
-        display: inline-block;
-        border-bottom: none;
-      }
-
         path {
             fill: $base;
         }
@@ -552,16 +559,14 @@ footer {
     .footer__lower {
         width: 85%;
         border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-        margin-top: 6rem;
-        padding-top: 2.8rem;
+        margin-top: -9rem;
+        padding-top: 6rem;
         color: $gray4;
         font-size: 1.2rem;
 
         a {
             pointer-events: none;
-            text-decoration: none;
             color: $gray4;
-            font-size: 1.2rem;
         }
     }
 }
