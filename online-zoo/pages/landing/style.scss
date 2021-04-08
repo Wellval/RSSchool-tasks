@@ -145,11 +145,13 @@ header {
 
     .header-wrapper {
         display: flex;
-        width: 100%;
+        width: 84.5%;
         margin: 0 auto;
-        justify-content: space-around;
+        justify-content: space-between;
 
         ul {
+            padding: 0;
+            padding-top: 1rem;
             @include navbar();
             .nav-item > a {
                 color: $gray1;
@@ -277,12 +279,12 @@ main {
                 font-weight: 900;
                 margin: 0;
                 padding-top: 20.6rem;
-                padding-left: 22rem;
+                padding-left: 21rem;
                 width: 79.3rem;
             }
 
             button {
-                margin-left: 22rem;
+                margin-left: 21rem;
                 
                 p {
                     padding-left: 0.5rem;
@@ -297,8 +299,8 @@ main {
 
         #line {
             position: absolute;
-            top: 60rem;
-            left: 43%;
+            top: 58.8rem;
+            left: 43.7%;
         }
 
         .carousel__container {
@@ -306,7 +308,7 @@ main {
             align-items: center;
             width: 107.4rem;
             height: 42.1rem;
-            top: 39.6rem;
+            top: 38.6rem;
             margin-left: 40.7%;
             position: absolute;
             justify-content: space-evenly;
@@ -394,9 +396,10 @@ main {
                 &-active {
                     width: 24.5rem;
                     height: 35.2rem;
+                    margin-bottom: 3.4rem;
 
                     .dollar {
-                        margin-left: -91px;
+                        margin-left: -9.6rem;
                         position: absolute;
                     }
 
@@ -407,11 +410,13 @@ main {
                     }
 
                     button {
-                        width: 13.4rem;
+                        width: 15.4rem;
                         font-size: 1.2rem;
                         background: none;
                         margin: 0 auto;
+                        margin-top: -1.2rem;
                         opacity: 1;
+                        margin-right: -1.4rem;
 
                         &:hover {
                 
@@ -449,13 +454,13 @@ main {
                     }
 
                     .description {
-                        width: 19.4rem;
+                        width: 18.4rem;
                         height: 4.8rem;
                         font-weight: 400;
                         color: #fff;
                         font-size: 1.4rem;
-                        margin: 0 auto;
-                        margin-top: -11rem;
+                        margin-top: -12.4rem;
+                        margin-left: 2.2rem;
                     }
                 }
             }
@@ -479,13 +484,14 @@ main {
         }
 
         .carousel-range__container {
-            margin-left: 40.5%;
+            margin-left: 40%;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-weight: 900;
             font-size: 2.4rem;
             color: white;
+            margin-top: -4.8rem;
 
             @include range();
             input[type=range]::-webkit-slider-thumb {
@@ -512,15 +518,22 @@ main {
                 font-size: 14px;
                 line-height: 16px;
                 color: $gray2;
+                margin-top: -1.5rem;
+            }
+
+            img {
+                margin-top: 1.4rem;
             }
 
             button {
                 margin: 0 auto;
+                margin-top: 2.3rem;
 
                 p {
                     color: $base;
                     padding-left: 0.5rem;
                     font-size: 1.8rem;
+                    margin: 0;
                 }
             }
         }
@@ -544,14 +557,15 @@ main {
         padding-top: 2rem;
         background-color: $gray6;
         width: 100%;
-        height: 41.3rem;
+        height: 39.3rem;
 
         h3 {
             font-size: 2rem;
+            margin-top: 0;
         }
 
         &__container {
-            width: 65%;
+            width: 62.5%;
             margin: 10rem auto;
             display: flex;
             justify-content: space-between;
@@ -562,18 +576,19 @@ main {
             height: 21.3rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
 
             p {
                 font-size: 1.4rem;
                 line-height: 1.6rem;
                 color: $gray2;
+                margin-top: -2rem;
             }
 
             img {
                 width: 8rem;
                 height: 8rem;
+                margin-top: -2rem;
             }
         }
     }
@@ -652,7 +667,7 @@ main {
             align-items: center;
             font-size: 1.4rem;
             font-weight: 900;
-            margin-top: 2.9rem;
+            margin-top: 4rem;
             justify-content: space-around;
 
             @include range();
@@ -688,6 +703,7 @@ main {
             align-items: center;
             justify-content: space-between;
             width: 130.2rem;
+            height: 37.9rem;
 
             img {
                 width: 100%;
@@ -768,8 +784,16 @@ main {
 
         &__container {
             text-align: center;
-            width: 80%;
+            width: 70%;
             margin-bottom: 6rem;
+
+            h3 {
+                margin-top: 6rem;
+            }
+
+            p {
+                margin-top: -2rem;
+            }
         }
 
         button {
@@ -780,7 +804,7 @@ main {
         .payment-process {
             display: flex;
             justify-content: space-evenly;
-            margin-top: 9.2rem;
+            padding-top: 7rem;
 
             .payment-step {
                 background-image: url(../../assets/landing/ellipse.png);
@@ -791,6 +815,10 @@ main {
                 justify-content: center;
                 align-items: center;
 
+                img {
+                    margin-top: 4rem;
+                }
+
                 p {
                     font-weight: 900;
                     line-height: 5.6rem;
@@ -798,6 +826,7 @@ main {
                     font-size: 2rem;
                     width: 13.5rem;
                     line-height: 2rem;
+                    margin-top: 2rem;
                 }
             }
         }
@@ -808,9 +837,10 @@ main {
     }
 
     .testimonials {
-        height: 81rem;
+        height: 71rem;
         width: 100%;
         text-align: center;
+        margin-top: 9.8rem;
 
         &__range-container {
             display: flex;
@@ -818,17 +848,18 @@ main {
             width: 24.5rem;
             height: 4.9rem;
             margin: 0 auto;
+            margin-top: -1.4rem;
             @include range();
         }
         
         &__carousel {
-                width: 75%;
+                width: 71%;
                 margin: 5rem auto;
                 display: flex;
                 justify-content: space-evenly;
 
                 &-user {
-                    width: 61.5rem;
+                    width: 57.5rem;
                     height: 34rem;
                     background: #FEFEFE;
                     box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
@@ -847,6 +878,8 @@ main {
                         font-size: 1.4rem;
                         color: $gray2;
                         width: 44rem;
+                        text-align: left;
+                        margin-top: -1rem;
                     }
 
                     .user-photo {
@@ -857,6 +890,7 @@ main {
                             align-items: center;
                             display: flex;
                             justify-content: center;
+                            margin-top: -4.6rem;
                         }
                     }
                 }
@@ -875,8 +909,12 @@ main {
         width: 100%;
         background-color: $gray6;
 
+        h3 {
+            margin-top: 10rem;
+        }
+
         button {
-            margin-top: 60rem;
+            margin-top: 55rem;
 
             p {
                 padding-left: 0.5rem;
@@ -958,7 +996,7 @@ main {
             background-position-x: center;
             background-size: contain;
             position: absolute;
-            margin-top: 20rem;
+            margin-top: 22rem;
         }
 
         .map-animal:hover,
@@ -1045,14 +1083,20 @@ main {
             }
         }
 
+        .footer__navbar {
+            margin-top: 2rem;
+        }
+
         .footer__container {
             width: 85%;
+            height: 80%;
             display: flex;
             justify-content: space-between;
 
             .footer__left {
                 display: flex;
                 flex-direction: column;
+                margin-top: 2rem;
 
                 label {
                     color: $gray4;
@@ -1060,20 +1104,22 @@ main {
                 }
 
                 fieldset {
-                    margin-top: 2rem;
-                    margin-bottom: 2.6rem;
+                    height: 12.4rem;
+                    margin-bottom: 2rem;
+                    margin-top: 3rem;
                 }
 
                 input[type="text"],
                 input[type="email"] {
                     width: 40.4rem;
-                    height: 2.6rem;
+                    height: 2.8rem;
+                    margin: 0;
                 }
 
                 h3 {
                     color: $base;
                     font-size: 2rem;
-                    margin-top: 5.7rem;
+                    margin-top: 5.5rem;
                 }
             }
 
@@ -1084,7 +1130,7 @@ main {
                     line-height: 16px;
                     text-transform: uppercase;
                     color: $base;
-                    margin-top: 7.4rem;
+                    margin-top: 6rem;
                     margin-left: 3.9rem;
                 }
 
@@ -1100,7 +1146,8 @@ main {
                     color: $base;
                     height: 9.4rem;
                     justify-content: space-between;
-                    margin-left: 3.9rem;
+                    margin-left: 3rem;
+                    margin-top: 2.8rem;
 
                     a {
                         color: $base;
@@ -1132,8 +1179,8 @@ main {
                 justify-content: space-between;
                 background: rgba(0,0,0,0);
                 font-size: 1.4rem;
-                margin-top: 1.6rem;
-                margin-left: 30rem;
+                margin-left: 26rem;
+                margin-top: 2rem;
 
                 &:hover {
                 opacity: 0.5;
@@ -1162,8 +1209,8 @@ main {
         .footer__lower {
             width: 85%;
             border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-            margin-top: 6rem;
-            padding-top: 2.8rem;
+            margin-top: -9rem;
+            padding-top: 6rem;
             color: $gray4;
             font-size: 1.2rem;
 
