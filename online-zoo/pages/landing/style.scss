@@ -992,7 +992,7 @@ main {
         &__container {
             height: 50rem;
             width: 130rem;
-            background-image: url(../../assets/landing/map.svg);
+            background-image: url(../../assets/landing/map.png);
             background-repeat: no-repeat;
             background-position-x: center;
             background-size: contain;
@@ -1000,18 +1000,15 @@ main {
             margin-top: 22rem;
         }
 
-        .map-animal:hover,
+        #map-panda:hover ~ #popup0,
+        #map-eagle:hover ~ #popup1,
+        #map-crocodile:hover ~ #popup2,
+        #map-gorilla:hover ~ #popup3,
         .map-animal-image:hover {
             cursor: pointer;
             path {
                 fill: #eb5757;   
             }
-        }
-
-        #map-panda:hover ~ #popup0,
-        #map-eagle:hover ~ #popup1,
-        #map-crocodile:hover ~ #popup2,
-        #map-gorilla:hover ~ #popup3 {
             visibility: visible;
         }
 
@@ -1019,9 +1016,7 @@ main {
             position: absolute;
             left: 70%;
             top: 14%;
-            background: none;
-            border: none;
-            outline: none;
+
         }
 
         #image0 {

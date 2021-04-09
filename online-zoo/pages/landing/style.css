@@ -1463,7 +1463,7 @@ main .map #popup3 {
 main .map__container {
   height: 50rem;
   width: 130rem;
-  background-image: url(../../assets/landing/map.svg);
+  background-image: url(../../assets/landing/map.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: contain;
@@ -1471,30 +1471,27 @@ main .map__container {
   margin-top: 22rem;
 }
 
-main .map .map-animal:hover,
-main .map .map-animal-image:hover {
-  cursor: pointer;
-}
-
-main .map .map-animal:hover path,
-main .map .map-animal-image:hover path {
-  fill: #eb5757;
-}
-
 main .map #map-panda:hover ~ #popup0,
 main .map #map-eagle:hover ~ #popup1,
 main .map #map-crocodile:hover ~ #popup2,
-main .map #map-gorilla:hover ~ #popup3 {
+main .map #map-gorilla:hover ~ #popup3,
+main .map .map-animal-image:hover {
+  cursor: pointer;
   visibility: visible;
+}
+
+main .map #map-panda:hover ~ #popup0 path,
+main .map #map-eagle:hover ~ #popup1 path,
+main .map #map-crocodile:hover ~ #popup2 path,
+main .map #map-gorilla:hover ~ #popup3 path,
+main .map .map-animal-image:hover path {
+  fill: #eb5757;
 }
 
 main .map #map-panda {
   position: absolute;
   left: 70%;
   top: 14%;
-  background: none;
-  border: none;
-  outline: none;
 }
 
 main .map #image0 {
