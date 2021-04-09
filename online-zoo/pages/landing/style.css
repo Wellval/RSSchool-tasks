@@ -1178,9 +1178,10 @@ main .pay-and-feed p {
 
 main .testimonials {
   height: 71rem;
-  width: 100%;
+  width: 192rem;
   text-align: center;
   margin-top: 9.8rem;
+  margin: 0 auto;
 }
 
 main .testimonials__range-container {
