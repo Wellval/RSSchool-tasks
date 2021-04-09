@@ -210,6 +210,10 @@ main .carousel__container .arrow-left {
           transform: rotate(180deg);
 }
 
+main .carousel__container .arrow-right {
+  margin-left: 6.4rem;
+}
+
 main .carousel .carousel-range__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -330,7 +334,7 @@ main .carousel .carousel-range__container input[type=range]:focus::-ms-fill-uppe
 main .carousel ul {
   padding: 0;
   list-style: none;
-  width: 90%;
+  width: 87%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

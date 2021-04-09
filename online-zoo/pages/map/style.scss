@@ -277,6 +277,10 @@ main {
             .arrow-left {
                 transform: rotate(180deg);
             }
+
+            .arrow-right {
+                margin-left: 6.4rem;
+            }
         }
 
         .carousel-range__container {
@@ -291,7 +295,7 @@ main {
         ul {
             padding: 0;
             list-style: none;
-            width: 90%;
+            width: 87%;
             height: 100%;
             display: flex;
             justify-content: space-evenly;
