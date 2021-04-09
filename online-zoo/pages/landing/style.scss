@@ -146,7 +146,7 @@ header {
 
     .header-wrapper {
         display: flex;
-        width: 84.5%;
+        width: 162rem;
         margin: 0 auto;
         justify-content: space-between;
 
@@ -222,7 +222,6 @@ header {
 
 main {
     width: 100%;
-    background-color: green;
     height: 100vh;
 
     label {
@@ -252,15 +251,19 @@ main {
     }
 
     .favorite-animal {
-        background-image: url(../../assets/landing/landing.png);
         margin: 0 auto;
         height: 94rem;
         width: 100%;
         overflow: hidden;
         background-size: cover;
-        position: absolute;
+        background-color: none;
+        width: 192rem;
 
         &__container {
+            background-image: url(../../assets/landing/landing.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             width: 100%;
             height: 94rem;
         }
@@ -300,7 +303,7 @@ main {
 
         #line {
             position: absolute;
-            top: 58.8rem;
+            top: 68rem;
             left: 43.7%;
         }
 
@@ -309,8 +312,8 @@ main {
             align-items: center;
             width: 107.4rem;
             height: 42.1rem;
-            top: 38.6rem;
-            margin-left: 40.7%;
+            margin-top: -6.4rem;
+            margin-left: 78rem;
             position: absolute;
             justify-content: space-evenly;
             overflow: hidden;
@@ -526,6 +529,10 @@ main {
                 margin-top: 1.4rem;
             }
 
+            button > img {
+                margin: 0;
+            }
+
             button {
                 margin: 0 auto;
                 margin-top: 2.3rem;
@@ -566,7 +573,7 @@ main {
         }
 
         &__container {
-            width: 62.5%;
+            width: 120rem;
             margin: 10rem auto;
             display: flex;
             justify-content: space-between;
@@ -785,7 +792,7 @@ main {
 
         &__container {
             text-align: center;
-            width: 70%;
+            width: 131rem;
             margin-bottom: 6rem;
 
             h3 {
@@ -1084,7 +1091,7 @@ main {
         }
 
         .footer__container {
-            width: 85%;
+            width: 162rem;
             height: 80%;
             display: flex;
             justify-content: space-between;
@@ -1092,11 +1099,20 @@ main {
             .footer__left {
                 display: flex;
                 flex-direction: column;
-                margin-top: 2rem;
+                margin-top: -0.5rem;
+
+                form {
+                    margin-top: -1.18rem;
+                    width: 38rem;
+                }                
+
+                .logo {
+                    margin-top: 1.6rem;
+                }
 
                 label {
                     color: $gray4;
-                    line-height: 1.4rem;
+                    line-height: 1.72rem;
                 }
 
                 fieldset {
@@ -1105,21 +1121,30 @@ main {
                     margin-top: 3rem;
                 }
 
+                input[type="text"] {
+                    margin-top: 0.6rem;
+                }
+
+                input[type="email"] {
+                    margin-top: 1rem;
+                }
+
                 input[type="text"],
                 input[type="email"] {
-                    width: 40.4rem;
+                    width: 38rem;
                     height: 2.8rem;
-                    margin: 0;
                 }
 
                 h3 {
                     color: $base;
                     font-size: 2rem;
-                    margin-top: 5.5rem;
+                    margin-top: 4.8rem;
                 }
             }
 
             .footer__right {
+                margin-top: -0.9rem;
+
                 h4 {
                     font-weight: bold;
                     font-size: 14px;
@@ -1127,7 +1152,7 @@ main {
                     text-transform: uppercase;
                     color: $base;
                     margin-top: 6rem;
-                    margin-left: 3.9rem;
+                    margin-left: 7.9rem;
                 }
 
                 address {
@@ -1142,8 +1167,14 @@ main {
                     color: $base;
                     height: 9.4rem;
                     justify-content: space-between;
-                    margin-left: 3rem;
-                    margin-top: 2.8rem;
+                    margin-left: 7.9rem;
+                    margin-top: 2.5rem;
+                    height: 9.9rem;
+
+                    p {
+                        margin: 0;
+                        margin-top: 0.9rem;
+                    }
 
                     a {
                         color: $base;
@@ -1156,8 +1187,8 @@ main {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    margin-top: 2rem;
-                    margin-left: 3.9rem;
+                    margin-top: 2.1rem;
+                    margin-left: 7.9rem;
 
                     img {
                         transition: all 0.3s ease-in-out;
@@ -1176,8 +1207,8 @@ main {
                 background: rgba(0,0,0,0);
                 font-size: 1.4rem;
                 margin-left: 26rem;
-                margin-top: 2rem;
-
+                margin-top: 1.8rem;
+                
                 &:hover {
                 opacity: 0.5;
             }
@@ -1189,7 +1220,12 @@ main {
             align-items: center;
 
             nav {
-                padding-right: 11.2rem;
+                padding-right: 9.2rem; 
+                
+                ul {
+                    width: 46.4rem;
+                    justify-content: space-around;
+                }
             }
 
             button {
@@ -1203,10 +1239,10 @@ main {
         }
 
         .footer__lower {
-            width: 85%;
+            width: 162rem;
             border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
             margin-top: -9rem;
-            padding-top: 6rem;
+            padding-top: 4.7rem;
             color: $gray4;
             font-size: 1.2rem;
 

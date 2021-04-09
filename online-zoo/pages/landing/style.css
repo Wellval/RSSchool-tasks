@@ -25,7 +25,7 @@ header .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 84.5%;
+  width: 162rem;
   margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -131,7 +131,6 @@ header .switch .slider.round:before {
 
 main {
   width: 100%;
-  background-color: green;
   height: 100vh;
 }
 
@@ -164,16 +163,20 @@ main .arrow-left {
 }
 
 main .favorite-animal {
-  background-image: url(../../assets/landing/landing.png);
   margin: 0 auto;
   height: 94rem;
   width: 100%;
   overflow: hidden;
   background-size: cover;
-  position: absolute;
+  background-color: none;
+  width: 192rem;
 }
 
 main .favorite-animal__container {
+  background-image: url(../../assets/landing/landing.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
   height: 94rem;
 }
@@ -215,7 +218,7 @@ main .favorite-animal .carousel {
 
 main .favorite-animal #line {
   position: absolute;
-  top: 58.8rem;
+  top: 68rem;
   left: 43.7%;
 }
 
@@ -228,8 +231,8 @@ main .favorite-animal .carousel__container {
           align-items: center;
   width: 107.4rem;
   height: 42.1rem;
-  top: 38.6rem;
-  margin-left: 40.7%;
+  margin-top: -6.4rem;
+  margin-left: 78rem;
   position: absolute;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -582,6 +585,10 @@ main .how-it-works__container img {
   margin-top: 1.4rem;
 }
 
+main .how-it-works__container button > img {
+  margin: 0;
+}
+
 main .how-it-works__container button {
   margin: 0 auto;
   margin-top: 2.3rem;
@@ -732,7 +739,7 @@ main .mission h3 {
 }
 
 main .mission__container {
-  width: 62.5%;
+  width: 120rem;
   margin: 10rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1105,7 +1112,7 @@ main .pay-and-feed {
 
 main .pay-and-feed__container {
   text-align: center;
-  width: 70%;
+  width: 131rem;
   margin-bottom: 6rem;
 }
 
@@ -1598,7 +1605,7 @@ main footer .footer__navbar {
 }
 
 main footer .footer__container {
-  width: 85%;
+  width: 162rem;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1616,12 +1623,21 @@ main footer .footer__container .footer__left {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 2rem;
+  margin-top: -0.5rem;
+}
+
+main footer .footer__container .footer__left form {
+  margin-top: -1.18rem;
+  width: 38rem;
+}
+
+main footer .footer__container .footer__left .logo {
+  margin-top: 1.6rem;
 }
 
 main footer .footer__container .footer__left label {
   color: #bdbdbd;
-  line-height: 1.4rem;
+  line-height: 1.72rem;
 }
 
 main footer .footer__container .footer__left fieldset {
@@ -1630,17 +1646,28 @@ main footer .footer__container .footer__left fieldset {
   margin-top: 3rem;
 }
 
+main footer .footer__container .footer__left input[type="text"] {
+  margin-top: 0.6rem;
+}
+
+main footer .footer__container .footer__left input[type="email"] {
+  margin-top: 1rem;
+}
+
 main footer .footer__container .footer__left input[type="text"],
 main footer .footer__container .footer__left input[type="email"] {
-  width: 40.4rem;
+  width: 38rem;
   height: 2.8rem;
-  margin: 0;
 }
 
 main footer .footer__container .footer__left h3 {
   color: #FEFEFE;
   font-size: 2rem;
-  margin-top: 5.5rem;
+  margin-top: 4.8rem;
+}
+
+main footer .footer__container .footer__right {
+  margin-top: -0.9rem;
 }
 
 main footer .footer__container .footer__right h4 {
@@ -1650,7 +1677,7 @@ main footer .footer__container .footer__right h4 {
   text-transform: uppercase;
   color: #FEFEFE;
   margin-top: 6rem;
-  margin-left: 3.9rem;
+  margin-left: 7.9rem;
 }
 
 main footer .footer__container .footer__right address {
@@ -1672,8 +1699,14 @@ main footer .footer__container .footer__right address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 3rem;
-  margin-top: 2.8rem;
+  margin-left: 7.9rem;
+  margin-top: 2.5rem;
+  height: 9.9rem;
+}
+
+main footer .footer__container .footer__right address p {
+  margin: 0;
+  margin-top: 0.9rem;
 }
 
 main footer .footer__container .footer__right address a {
@@ -1695,8 +1728,8 @@ main footer .footer__container .footer__right .social-media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2rem;
-  margin-left: 3.9rem;
+  margin-top: 2.1rem;
+  margin-left: 7.9rem;
 }
 
 main footer .footer__container .footer__right .social-media img {
@@ -1717,7 +1750,7 @@ main footer .footer__container button[type="submit"] {
   background: rgba(0, 0, 0, 0);
   font-size: 1.4rem;
   margin-left: 26rem;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 main footer .footer__container button[type="submit"]:hover {
@@ -1737,7 +1770,13 @@ main footer .footer__container .footer__navbar {
 }
 
 main footer .footer__container .footer__navbar nav {
-  padding-right: 11.2rem;
+  padding-right: 9.2rem;
+}
+
+main footer .footer__container .footer__navbar nav ul {
+  width: 46.4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 main footer .footer__container .footer__navbar button {
@@ -1749,10 +1788,10 @@ main footer .footer__container path {
 }
 
 main footer .footer__lower {
-  width: 85%;
+  width: 162rem;
   border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
   margin-top: -9rem;
-  padding-top: 6rem;
+  padding-top: 4.7rem;
   color: #bdbdbd;
   font-size: 1.2rem;
 }
