@@ -1182,6 +1182,11 @@ main .testimonials {
   text-align: center;
   margin-top: 9.8rem;
   margin: 0 auto;
+  padding-top: 5rem;
+}
+
+main .testimonials h3 {
+  margin-top: 10rem;
 }
 
 main .testimonials__range-container {
