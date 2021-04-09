@@ -127,13 +127,13 @@ footer textarea {
   outline: none;
   resize: none;
   background-color: rgba(0, 0, 0, 0); 
-  width: 100%;
+  width: 36.3rem;
   font-size: 1.4rem;
 }
 
 footer textarea {
   border-color: rgba(0, 0, 0, 0);
-  width: 38.3rem;
+  width: 36.3rem;
   height: 12.4rem;
 }
 

@@ -15,18 +15,18 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+          box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-          box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
 }
 
 header .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 84.5%;
+  width: 162rem;
   margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -137,6 +137,14 @@ main {
   display: flex;
 }
 
+main .main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 192rem;
+}
+
 main .content {
   height: 91rem;
   margin-left: 17.8rem;
@@ -234,7 +242,7 @@ main .description h3 {
 
 main .description p {
   margin: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.1rem;
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: #4F4F4F;
@@ -401,8 +409,8 @@ footer .footer__navbar {
 }
 
 footer .footer__container {
-  width: 85%;
-  height: 80%;
+  width: 162rem;
+  height: 81%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,12 +427,21 @@ footer .footer__container .footer__left {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 2rem;
+  margin-top: -0.5rem;
+}
+
+footer .footer__container .footer__left form {
+  margin-top: -1.18rem;
+  width: 38rem;
+}
+
+footer .footer__container .footer__left .logo {
+  margin-top: 1.6rem;
 }
 
 footer .footer__container .footer__left label {
   color: #bdbdbd;
-  line-height: 1.4rem;
+  line-height: 1.72rem;
 }
 
 footer .footer__container .footer__left fieldset {
@@ -433,17 +450,28 @@ footer .footer__container .footer__left fieldset {
   margin-top: 3rem;
 }
 
+footer .footer__container .footer__left input[type="text"] {
+  margin-top: 0.6rem;
+}
+
+footer .footer__container .footer__left input[type="email"] {
+  margin-top: 1rem;
+}
+
 footer .footer__container .footer__left input[type="text"],
 footer .footer__container .footer__left input[type="email"] {
-  width: 40.4rem;
+  width: 38rem;
   height: 2.8rem;
-  margin: 0;
 }
 
 footer .footer__container .footer__left h3 {
   color: #FEFEFE;
   font-size: 2rem;
-  margin-top: 5.5rem;
+  margin-top: 4.8rem;
+}
+
+footer .footer__container .footer__right {
+  margin-top: -0.9rem;
 }
 
 footer .footer__container .footer__right h4 {
@@ -453,7 +481,7 @@ footer .footer__container .footer__right h4 {
   text-transform: uppercase;
   color: #FEFEFE;
   margin-top: 6rem;
-  margin-left: 3.9rem;
+  margin-left: 7.9rem;
 }
 
 footer .footer__container .footer__right address {
@@ -475,8 +503,14 @@ footer .footer__container .footer__right address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 3rem;
-  margin-top: 2.8rem;
+  margin-left: 7.9rem;
+  margin-top: 2.5rem;
+  height: 9.9rem;
+}
+
+footer .footer__container .footer__right address p {
+  margin: 0;
+  margin-top: 0.9rem;
 }
 
 footer .footer__container .footer__right address a {
@@ -498,8 +532,8 @@ footer .footer__container .footer__right .social-media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2rem;
-  margin-left: 3.9rem;
+  margin-top: 2.1rem;
+  margin-left: 7.9rem;
 }
 
 footer .footer__container .footer__right .social-media img {
@@ -520,7 +554,7 @@ footer .footer__container button[type="submit"] {
   background: rgba(0, 0, 0, 0);
   font-size: 1.4rem;
   margin-left: 26rem;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 footer .footer__container button[type="submit"]:hover {
@@ -540,7 +574,13 @@ footer .footer__container .footer__navbar {
 }
 
 footer .footer__container .footer__navbar nav {
-  padding-right: 11.2rem;
+  padding-right: 9.2rem;
+}
+
+footer .footer__container .footer__navbar nav ul {
+  width: 46.4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 footer .footer__container .footer__navbar button {
@@ -552,10 +592,10 @@ footer .footer__container path {
 }
 
 footer .footer__lower {
-  width: 85%;
+  width: 162rem;
   border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
   margin-top: -9rem;
-  padding-top: 6rem;
+  padding-top: 4.7rem;
   color: #bdbdbd;
   font-size: 1.2rem;
 }

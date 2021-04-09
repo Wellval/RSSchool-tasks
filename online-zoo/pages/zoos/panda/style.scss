@@ -51,12 +51,12 @@ header {
     background-color: #fff;
     height: 9.4rem;
     align-items: center;
-    display: flex;
     box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+    display: flex;
 
     .header-wrapper {
         display: flex;
-        width: 84.5%;
+        width: 162rem;
         margin: 0 auto;
         justify-content: space-between;
 
@@ -132,6 +132,12 @@ header {
 
 main {
     display: flex;
+
+    .main__container {
+        display: flex;
+        margin: 0 auto;
+        width: 192rem;
+    }
 
     .content {
         height: 91rem;
@@ -219,7 +225,7 @@ main {
 
         p {
             margin: 0;
-            margin-bottom: 2.4rem;
+            margin-bottom: 2.1rem;
             font-size: 1.4rem;
             line-height: 1.6rem;
             color: $gray2;
@@ -324,19 +330,28 @@ footer {
     }
 
     .footer__container {
-        width: 85%;
-        height: 80%;
+        width: 162rem;
+        height: 81%;
         display: flex;
         justify-content: space-between;
 
         .footer__left {
             display: flex;
             flex-direction: column;
-            margin-top: 2rem;
+            margin-top: -0.5rem;
+
+            form {
+                margin-top: -1.18rem;
+                width: 38rem;
+            }                
+
+            .logo {
+                margin-top: 1.6rem;
+            }
 
             label {
                 color: $gray4;
-                line-height: 1.4rem;
+                line-height: 1.72rem;
             }
 
             fieldset {
@@ -345,21 +360,30 @@ footer {
                 margin-top: 3rem;
             }
 
+            input[type="text"] {
+                margin-top: 0.6rem;
+            }
+
+            input[type="email"] {
+                margin-top: 1rem;
+            }
+
             input[type="text"],
             input[type="email"] {
-                width: 40.4rem;
+                width: 38rem;
                 height: 2.8rem;
-                margin: 0;
             }
 
             h3 {
                 color: $base;
                 font-size: 2rem;
-                margin-top: 5.5rem;
+                margin-top: 4.8rem;
             }
         }
 
         .footer__right {
+            margin-top: -0.9rem;
+
             h4 {
                 font-weight: bold;
                 font-size: 14px;
@@ -367,7 +391,7 @@ footer {
                 text-transform: uppercase;
                 color: $base;
                 margin-top: 6rem;
-                margin-left: 3.9rem;
+                margin-left: 7.9rem;
             }
 
             address {
@@ -382,8 +406,14 @@ footer {
                 color: $base;
                 height: 9.4rem;
                 justify-content: space-between;
-                margin-left: 3rem;
-                margin-top: 2.8rem;
+                margin-left: 7.9rem;
+                margin-top: 2.5rem;
+                height: 9.9rem;
+
+                p {
+                    margin: 0;
+                    margin-top: 0.9rem;
+                }
 
                 a {
                     color: $base;
@@ -396,8 +426,8 @@ footer {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 2rem;
-                margin-left: 3.9rem;
+                margin-top: 2.1rem;
+                margin-left: 7.9rem;
 
                 img {
                     transition: all 0.3s ease-in-out;
@@ -416,8 +446,8 @@ footer {
             background: rgba(0,0,0,0);
             font-size: 1.4rem;
             margin-left: 26rem;
-            margin-top: 2rem;
-
+            margin-top: 1.8rem;
+            
             &:hover {
             opacity: 0.5;
         }
@@ -429,7 +459,12 @@ footer {
         align-items: center;
 
         nav {
-            padding-right: 11.2rem;
+            padding-right: 9.2rem; 
+            
+            ul {
+                width: 46.4rem;
+                justify-content: space-around;
+            }
         }
 
         button {
@@ -443,10 +478,10 @@ footer {
     }
 
     .footer__lower {
-        width: 85%;
+        width: 162rem;
         border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
         margin-top: -9rem;
-        padding-top: 6rem;
+        padding-top: 4.7rem;
         color: $gray4;
         font-size: 1.2rem;
 
