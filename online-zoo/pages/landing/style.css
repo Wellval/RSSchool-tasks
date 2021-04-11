@@ -165,11 +165,13 @@ main .arrow-left {
 main .favorite-animal {
   margin: 0 auto;
   height: 94rem;
-  width: 100%;
+  width: 192rem;
   overflow: hidden;
   background-size: cover;
   background-color: none;
   width: 192rem;
+  position: absolute;
+  overflow: hidden;
 }
 
 main .favorite-animal__container {
@@ -179,6 +181,12 @@ main .favorite-animal__container {
   background-size: cover;
   width: 100%;
   height: 94rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .favorite-animal label {
@@ -186,7 +194,7 @@ main .favorite-animal label {
 }
 
 main .favorite-animal__wrapper {
-  width: 84.375%;
+  width: 162rem;
   margin: 0 auto;
   height: 100%;
 }
@@ -218,7 +226,7 @@ main .favorite-animal .carousel {
 
 main .favorite-animal #line {
   position: absolute;
-  top: 68rem;
+  top: 58.6rem;
   left: 43.7%;
 }
 
@@ -1368,7 +1376,7 @@ main .testimonials__carousel-user .user-photo__container {
 }
 
 main .testimonials button {
-  margin: 3rem auto;
+  margin: 2.3rem auto;
 }
 
 main .map {
@@ -1385,6 +1393,7 @@ main .map {
           align-items: center;
   width: 100%;
   background-color: #F2F2F2;
+  margin-top: -5rem;
 }
 
 main .map h3 {
@@ -1401,22 +1410,17 @@ main .map button p {
 
 main .map .popup {
   background: #FEFEFE;
-  visibility: hidden;
   height: 14.9rem;
   width: 43.6rem;
   -webkit-box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
           box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
   border-radius: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  visibility: hidden;
   position: absolute;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  display: none;
+  opacity: 0;
 }
 
 main .map .popup img {
@@ -1451,22 +1455,22 @@ main .map .popup__description .facts ul span {
   color: #333333;
 }
 
-main .map #popup0 {
+main .map #popup-panda {
   top: 15.9rem;
   left: 96rem;
 }
 
-main .map #popup1 {
+main .map #popup-eagle {
   top: 15.9rem;
   left: -23.3rem;
 }
 
-main .map #popup2 {
+main .map #popup-crocodile {
   left: -11rem;
   top: 19rem;
 }
 
-main .map #popup3 {
+main .map #popup-gorilla {
   left: 22rem;
   top: 27rem;
 }
@@ -1482,69 +1486,59 @@ main .map__container {
   margin-top: 22rem;
 }
 
-main .map #map-panda:hover ~ #popup0,
-main .map #map-eagle:hover ~ #popup1,
-main .map #map-crocodile:hover ~ #popup2,
-main .map #map-gorilla:hover ~ #popup3,
-main .map .map-animal-image:hover {
+main .map .map-animal {
+  display: block;
+  content: ' ';
+  background: url(../../assets/landing/test.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 6.7rem;
+  height: 9.3rem;
+}
+
+main .map .map-animal:hover,
+main .map .map-animal .map-animal-image:hover {
   cursor: pointer;
-  visibility: visible;
+  background: url(../../assets/landing/test2.png);
 }
 
-main .map #map-panda:hover ~ #popup0 path,
-main .map #map-eagle:hover ~ #popup1 path,
-main .map #map-crocodile:hover ~ #popup2 path,
-main .map #map-gorilla:hover ~ #popup3 path,
-main .map .map-animal-image:hover path {
-  fill: #eb5757;
+main .map .map-animal:hover + .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
 }
 
-main .map #map-panda {
+main .map .map-crocodile {
   position: absolute;
-  left: 70%;
-  top: 14%;
+  left: 21.6%;
+  top: 19%;
 }
 
-main .map #image0 {
-  position: absolute;
-  left: 72%;
-  top: 18.7%;
-}
-
-main .map #map-eagle {
+main .map .map-eagle {
   position: absolute;
   left: 12%;
-  top: 14%;
+  top: 13.2%;
 }
 
-main .map #image1 {
+main .map .map-panda {
   position: absolute;
-  left: 14%;
-  top: 18.7%;
+  left: 71.39%;
+  top: 16.9%;
 }
 
-main .map #map-crocodile {
+main .map .map-animal-image {
   position: absolute;
-  left: 21.7%;
-  top: 20%;
+  left: 19%;
+  top: 12.7%;
+  width: 4.3rem;
+  height: 4.3rem;
 }
 
-main .map #image2 {
+main .map .map-gorilla {
   position: absolute;
-  left: 23.7%;
-  top: 24.7%;
-}
-
-main .map #map-gorilla {
-  position: absolute;
-  left: 46.84%;
-  top: 36%;
-}
-
-main .map #image3 {
-  position: absolute;
-  left: 48.84%;
-  top: 40.7%;
+  left: 46.7%;
+  top: 36.5%;
 }
 
 main footer {
