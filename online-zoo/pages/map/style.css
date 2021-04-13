@@ -210,10 +210,6 @@ main .carousel__container .arrow-left {
           transform: rotate(180deg);
 }
 
-main .carousel__container .arrow-right {
-  margin-left: 6.4rem;
-}
-
 main .carousel .carousel-range__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,7 +330,7 @@ main .carousel .carousel-range__container input[type=range]:focus::-ms-fill-uppe
 main .carousel ul {
   padding: 0;
   list-style: none;
-  width: 87%;
+  width: 94%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +341,6 @@ main .carousel ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 3rem;
 }
 
 main .carousel ul li {
@@ -356,7 +351,6 @@ main .carousel ul li {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  padding-left: 3rem;
 }
 
 main .carousel ul .animal-round:hover {
@@ -369,7 +363,8 @@ main .carousel ul .animal-active {
   height: 15.7rem;
   background-image: url(../../assets/map/ellipse.svg);
   background-size: cover;
-  padding-left: 0;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
 main .carousel ul .animal-active img {
@@ -379,10 +374,10 @@ main .carousel ul .animal-active img {
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
 }
 
 main .map {
+  height: 90.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,8 +389,84 @@ main .map {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 49.8rem;
-  margin-top: 8rem;
+}
+
+main .map button {
+  margin-top: 62.3rem;
+}
+
+main .map button p {
+  padding-left: 0.5rem;
+  color: white;
+  font-size: 1.8rem;
+  width: 13rem;
+}
+
+main .map .popup {
+  background: #FEFEFE;
+  height: 14.9rem;
+  width: 43.6rem;
+  -webkit-box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+          box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+main .map .popup img {
+  width: 6.5rem;
+  height: 6.5rem;
+  padding-left: 4.4rem;
+}
+
+main .map .popup__description {
+  margin-left: 2rem;
+}
+
+main .map .popup__description .species {
+  font-size: 1.8rem;
+  color: #333333;
+  font-weight: 900;
+}
+
+main .map .popup__description .facts {
+  font-size: 1.4rem;
+  color: #4F4F4F;
+  line-height: 1.6rem;
+}
+
+main .map .popup__description .facts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+main .map .popup__description .facts ul span {
+  font-weight: 500;
+  color: #333333;
+}
+
+main .map #popup-panda {
+  top: 15.9rem;
+  left: 96rem;
+}
+
+main .map #popup-eagle {
+  top: 15.9rem;
+  left: -23.3rem;
+}
+
+main .map #popup-crocodile {
+  left: -11rem;
+  top: 19rem;
+}
+
+main .map #popup-gorilla {
+  left: 22rem;
+  top: 27rem;
 }
 
 main .map__container {
@@ -406,71 +477,62 @@ main .map__container {
   background-position-x: center;
   background-size: contain;
   position: absolute;
+  margin-top: 8rem;
 }
 
 main .map .map-animal {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: none;
-  border: none;
-  outline: none;
+  display: block;
+  content: ' ';
+  background: url(../../assets/landing/test.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 6.7rem;
+  height: 9.3rem;
 }
 
 main .map .map-animal:hover,
-main .map .map-animal-image:hover {
+main .map .map-animal .map-animal-image:hover {
   cursor: pointer;
+  background: url(../../assets/landing/test2.png);
 }
 
-main .map .map-animal:hover path,
-main .map .map-animal-image:hover path {
-  fill: #eb5757;
+main .map .map-animal:hover + .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
 }
 
-main .map .map-animal-active > g > path {
-  fill: #eb5757;
-}
-
-main .map #panda {
+main .map .map-crocodile {
   position: absolute;
-  left: 71%;
-  top: 14%;
-  width: 9.8rem;
-  height: 10.8rem;
+  left: 21.6%;
+  top: 19%;
 }
 
-main .map #eagle {
+main .map .map-eagle {
   position: absolute;
   left: 12%;
-  top: 14%;
-  width: 9.8rem;
-  height: 10.8rem;
+  top: 13.2%;
+}
+
+main .map .map-panda {
+  position: absolute;
+  left: 71.39%;
+  top: 16.9%;
 }
 
 main .map .map-animal-image {
   position: absolute;
-  left: 2.5rem;
-  top: 21.7%;
+  left: 19%;
+  top: 12.7%;
+  width: 4.3rem;
+  height: 4.3rem;
 }
 
-main .map #crocodile {
+main .map .map-gorilla {
   position: absolute;
-  left: 21.7%;
-  top: 20%;
-  width: 9.8rem;
-  height: 10.8rem;
-}
-
-main .map #gorilla {
-  position: absolute;
-  left: 46.84%;
-  top: 36%;
-  width: 9.8rem;
-  height: 10.8rem;
-}
-
-main button {
-  margin-top: 4.6rem;
+  left: 46.7%;
+  top: 36.5%;
 }
 
 footer {

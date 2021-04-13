@@ -277,10 +277,6 @@ main {
             .arrow-left {
                 transform: rotate(180deg);
             }
-
-            .arrow-right {
-                margin-left: 6.4rem;
-            }
         }
 
         .carousel-range__container {
@@ -295,12 +291,11 @@ main {
         ul {
             padding: 0;
             list-style: none;
-            width: 87%;
+            width: 94%;
             height: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            padding-left: 3rem;
 
             li {
                 width: 10.8rem;
@@ -309,7 +304,6 @@ main {
                 text-align: center;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
-                padding-left: 3rem;
             }
 
             .animal-round:hover {
@@ -321,7 +315,8 @@ main {
                 height: 15.7rem;
                 background-image: url(../../assets/map/ellipse.svg);
                 background-size: cover;
-                padding-left: 0;
+                margin-left: -2rem;
+                margin-right: -2rem;
 
                 img {
                     width: 13.7rem;
@@ -330,19 +325,94 @@ main {
                     margin-top: 1rem;
                     margin-left: auto;
                     margin-right: auto;
-                    padding-left: 1rem;
                 }
             }
         }
     }
 
     .map {
+        height: 90.4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 49.8rem;
-        margin-top: 8rem;
+
+        button {
+            margin-top: 62.3rem;
+
+            p {
+                padding-left: 0.5rem;
+                color: white;
+                font-size: 1.8rem;
+                width: 13rem;
+            }
+        }
+
+        .popup {
+            background: $base;
+            height: 14.9rem;
+            width: 43.6rem;
+            box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+            border-radius: 8px; 
+            align-items: center;
+            position: absolute;
+            display: none;
+            opacity: 0;
+
+
+
+            img {
+                width: 6.5rem;
+                height: 6.5rem;
+                padding-left: 4.4rem;
+            }
+
+            &__description {
+                margin-left: 2rem;
+
+                .species {
+                    font-size: 1.8rem;
+                    color: $gray1;
+                    font-weight: 900;
+                }
+
+                .facts {
+                    font-size: 1.4rem;
+                    color: $gray2;
+                    line-height: 1.6rem;
+
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+
+                        span {
+                            font-weight: 500;
+                            color: $gray1;
+                        }
+                    }
+                }
+            }
+        }
+
+        #popup-panda {
+            top: 15.9rem;
+            left: 96rem;
+        }
+
+        #popup-eagle {
+            top: 15.9rem;
+            left: -23.3rem;
+        }
+
+        #popup-crocodile {
+            left: -11rem;
+            top: 19rem;
+        }
+
+        #popup-gorilla {
+            left: 22rem;
+            top: 27rem;
+        }
 
         &__container {
             height: 50rem;
@@ -352,70 +422,61 @@ main {
             background-position-x: center;
             background-size: contain;
             position: absolute;
+            margin-top: 8rem;
         }
 
         .map-animal {
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: none;
-            border: none;
-            outline: none;
-        }
+            display: block;
+            content: ' ';
+            background: url(../../assets/landing/test.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 6.7rem;
+            height: 9.3rem;
 
-        .map-animal:hover,
-        .map-animal-image:hover {
-            cursor: pointer;
-            path {
-                fill: #eb5757;   
+            &:hover,
+            .map-animal-image:hover {
+                cursor: pointer;
+                background: url(../../assets/landing/test2.png);
             }
         }
 
-        .map-animal-active > g > path {
-                fill: #eb5757;
+        .map-animal:hover + .popup {
+            display: flex;
+            opacity: 1;
         }
 
-        #panda {
+        .map-crocodile {
             position: absolute;
-            left: 71%;
-            top: 14%;
-            width: 9.8rem;
-            height: 10.8rem;
+            left: 21.6%;
+            top: 19%;
         }
 
-        #eagle {
+        .map-eagle {
             position: absolute;
             left: 12%;
-            top: 14%;
-            width: 9.8rem;
-            height: 10.8rem;
+            top: 13.2%;
+        }
+
+        .map-panda {
+            position: absolute;
+            left: 71.39%;
+            top: 16.9%;
         }
 
         .map-animal-image {
             position: absolute;
-            left: 2.5rem;
-            top: 21.7%;
+            left: 19%;
+            top: 12.7%;
+            width: 4.3rem;
+            height: 4.3rem;
         }
 
-        #crocodile {
+        .map-gorilla {
             position: absolute;
-            left: 21.7%;
-            top: 20%;
-            width: 9.8rem;
-            height: 10.8rem;
+            left: 46.7%;
+            top: 36.5%;
         }
-
-        #gorilla {
-            position: absolute;
-            left: 46.84%;
-            top: 36%;
-            width: 9.8rem;
-            height: 10.8rem;
-        }
-    }
-
-    button {
-        margin-top: 4.6rem;
     }
 }
 
