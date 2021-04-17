@@ -17,6 +17,11 @@ body {
     width: 100%;
 }
 
+// main {
+//     width: 100%;
+//     height: 100vh;
+// }
+
 @mixin range {
     input[type=range] {
         height: 0.5rem;
@@ -145,10 +150,14 @@ header {
     box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
     display: flex;
 
+    #menu {
+        display: none;
+    }
+
     .header-wrapper {
         display: flex;
         width: 162rem;
-        margin: 0 auto;
+        margin: 0 15rem;
         justify-content: space-between;
 
         ul {
@@ -222,7 +231,7 @@ header {
 }
 
 main {
-    height: 127.4rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -252,12 +261,13 @@ main {
     }
 
     .carousel {
-        width: 119.9rem;
+        max-width: 119.9rem;
+        width: 66%;
         height: 23.8rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 3.4rem;
+        margin-top: 1.5rem;
 
         &__container {
             width: 100%;
@@ -291,7 +301,7 @@ main {
         ul {
             padding: 0;
             list-style: none;
-            width: 94%;
+            width: 91.5%;
             height: 100%;
             display: flex;
             justify-content: space-evenly;
@@ -331,20 +341,32 @@ main {
     }
 
     .map {
-        height: 90.4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-top: -5rem;
+
+        h3 {
+            margin-top: 10rem;
+        }
+
+        form {
+            height: 5.5rem;
+            margin-top: 4.4rem;
+            margin-bottom: 10rem;
+        }
 
         button {
-            margin-top: 62.3rem;
 
             p {
-                padding-left: 0.5rem;
-                color: white;
+                padding-right: 2.5rem;
                 font-size: 1.8rem;
-                width: 13rem;
+                color: #fff;
+            }
+
+            img {
+                padding-left: 3rem;
             }
         }
 
@@ -415,14 +437,14 @@ main {
         }
 
         &__container {
-            height: 50rem;
-            width: 130rem;
-            background-image: url(../../assets/landing/map.png);
-            background-repeat: no-repeat;
-            background-position-x: center;
-            background-size: contain;
-            position: absolute;
-            margin-top: 8rem;
+            width: 63%;
+            margin-top: 13rem;
+            position: relative;
+
+            #map {
+                width: 100%;
+                margin: 0 auto;
+            }
         }
 
         .map-animal {
@@ -430,14 +452,17 @@ main {
             content: ' ';
             background: url(../../assets/landing/test.png);
             background-repeat: no-repeat;
-            background-size: cover;
-            width: 6.7rem;
+            background-size: contain;
+            width: 9.3rem;
             height: 9.3rem;
+            position: absolute;
 
             &:hover,
             .map-animal-image:hover {
                 cursor: pointer;
                 background: url(../../assets/landing/test2.png);
+                background-repeat: no-repeat;
+                background-size: contain;
             }
         }
 
@@ -447,38 +472,35 @@ main {
         }
 
         .map-crocodile {
-            position: absolute;
-            left: 21.6%;
-            top: 19%;
+            left: 20%;
+            top: 17%;
         }
 
         .map-eagle {
-            position: absolute;
-            left: 12%;
-            top: 13.2%;
+            left: 10.5%;
+            top: 16%;
         }
 
         .map-panda {
-            position: absolute;
-            left: 71.39%;
-            top: 16.9%;
+            left: 73.5%;
+            top: 19.9%;
         }
 
         .map-animal-image {
             position: absolute;
-            left: 19%;
+            left: 13%;
             top: 12.7%;
             width: 4.3rem;
             height: 4.3rem;
         }
 
         .map-gorilla {
-            position: absolute;
-            left: 46.7%;
+            left: 47.7%;
             top: 36.5%;
         }
     }
 }
+
 
 footer {
     width: 100%;
@@ -499,10 +521,13 @@ footer {
 
     .footer__navbar {
         margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .footer__container {
-        width: 162rem;
+        max-width: 162rem;
+        width: 85%;
         height: 80%;
         display: flex;
         justify-content: space-between;
@@ -511,6 +536,7 @@ footer {
             display: flex;
             flex-direction: column;
             margin-top: -0.5rem;
+            width: 53%;
 
             form {
                 margin-top: -1.18rem;
@@ -555,6 +581,8 @@ footer {
 
         .footer__right {
             margin-top: -0.9rem;
+            margin-left: 5rem;
+            width: 55%;
 
             h4 {
                 font-weight: bold;
@@ -563,7 +591,6 @@ footer {
                 text-transform: uppercase;
                 color: $base;
                 margin-top: 6rem;
-                margin-left: 7.9rem;
             }
 
             address {
@@ -578,7 +605,6 @@ footer {
                 color: $base;
                 height: 9.4rem;
                 justify-content: space-between;
-                margin-left: 7.9rem;
                 margin-top: 2.5rem;
                 height: 9.9rem;
 
@@ -599,7 +625,6 @@ footer {
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 2.1rem;
-                margin-left: 7.9rem;
 
                 img {
                     transition: all 0.3s ease-in-out;
@@ -631,11 +656,13 @@ footer {
         align-items: center;
 
         nav {
-            padding-right: 9.2rem; 
-            
+            max-width: 79.5rem;            
             ul {
-                width: 46.4rem;
-                justify-content: space-around;
+                max-width: 40.4rem;
+                width: 100%;
+                justify-content: space-between;
+                padding: 0;
+                margin-right: 11rem;
             }
         }
 

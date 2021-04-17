@@ -21,12 +21,16 @@ header {
   display: flex;
 }
 
+header #menu {
+  display: none;
+}
+
 header .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 162rem;
-  margin: 0 auto;
+  margin: 0 15rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -131,7 +135,7 @@ header .switch .slider.round:before {
 }
 
 main {
-  height: 127.4rem;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +173,8 @@ main p {
 }
 
 main .carousel {
-  width: 119.9rem;
+  max-width: 119.9rem;
+  width: 66%;
   height: 23.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,7 +186,7 @@ main .carousel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 3.4rem;
+  margin-top: 1.5rem;
 }
 
 main .carousel__container {
@@ -330,7 +335,7 @@ main .carousel .carousel-range__container input[type=range]:focus::-ms-fill-uppe
 main .carousel ul {
   padding: 0;
   list-style: none;
-  width: 94%;
+  width: 91.5%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,7 +382,6 @@ main .carousel ul .animal-active img {
 }
 
 main .map {
-  height: 90.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,17 +393,27 @@ main .map {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-top: -5rem;
 }
 
-main .map button {
-  margin-top: 62.3rem;
+main .map h3 {
+  margin-top: 10rem;
+}
+
+main .map form {
+  height: 5.5rem;
+  margin-top: 4.4rem;
+  margin-bottom: 10rem;
 }
 
 main .map button p {
-  padding-left: 0.5rem;
-  color: white;
+  padding-right: 2.5rem;
   font-size: 1.8rem;
-  width: 13rem;
+  color: #fff;
+}
+
+main .map button img {
+  padding-left: 3rem;
 }
 
 main .map .popup {
@@ -470,14 +484,14 @@ main .map #popup-gorilla {
 }
 
 main .map__container {
-  height: 50rem;
-  width: 130rem;
-  background-image: url(../../assets/landing/map.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: contain;
-  position: absolute;
-  margin-top: 8rem;
+  width: 63%;
+  margin-top: 13rem;
+  position: relative;
+}
+
+main .map__container #map {
+  width: 100%;
+  margin: 0 auto;
 }
 
 main .map .map-animal {
@@ -485,15 +499,18 @@ main .map .map-animal {
   content: ' ';
   background: url(../../assets/landing/test.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 6.7rem;
+  background-size: contain;
+  width: 9.3rem;
   height: 9.3rem;
+  position: absolute;
 }
 
 main .map .map-animal:hover,
 main .map .map-animal .map-animal-image:hover {
   cursor: pointer;
   background: url(../../assets/landing/test2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 main .map .map-animal:hover + .popup {
@@ -504,34 +521,30 @@ main .map .map-animal:hover + .popup {
 }
 
 main .map .map-crocodile {
-  position: absolute;
-  left: 21.6%;
-  top: 19%;
+  left: 20%;
+  top: 17%;
 }
 
 main .map .map-eagle {
-  position: absolute;
-  left: 12%;
-  top: 13.2%;
+  left: 10.5%;
+  top: 16%;
 }
 
 main .map .map-panda {
-  position: absolute;
-  left: 71.39%;
-  top: 16.9%;
+  left: 73.5%;
+  top: 19.9%;
 }
 
 main .map .map-animal-image {
   position: absolute;
-  left: 19%;
+  left: 13%;
   top: 12.7%;
   width: 4.3rem;
   height: 4.3rem;
 }
 
 main .map .map-gorilla {
-  position: absolute;
-  left: 46.7%;
+  left: 47.7%;
   top: 36.5%;
 }
 
@@ -595,10 +608,16 @@ footer ul li > a {
 
 footer .footer__navbar {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .footer__container {
-  width: 162rem;
+  max-width: 162rem;
+  width: 85%;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,6 +636,7 @@ footer .footer__container .footer__left {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -0.5rem;
+  width: 53%;
 }
 
 footer .footer__container .footer__left form {
@@ -661,6 +681,8 @@ footer .footer__container .footer__left h3 {
 
 footer .footer__container .footer__right {
   margin-top: -0.9rem;
+  margin-left: 5rem;
+  width: 55%;
 }
 
 footer .footer__container .footer__right h4 {
@@ -670,7 +692,6 @@ footer .footer__container .footer__right h4 {
   text-transform: uppercase;
   color: #FEFEFE;
   margin-top: 6rem;
-  margin-left: 7.9rem;
 }
 
 footer .footer__container .footer__right address {
@@ -692,7 +713,6 @@ footer .footer__container .footer__right address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 7.9rem;
   margin-top: 2.5rem;
   height: 9.9rem;
 }
@@ -722,7 +742,6 @@ footer .footer__container .footer__right .social-media {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2.1rem;
-  margin-left: 7.9rem;
 }
 
 footer .footer__container .footer__right .social-media img {
@@ -763,13 +782,17 @@ footer .footer__container .footer__navbar {
 }
 
 footer .footer__container .footer__navbar nav {
-  padding-right: 9.2rem;
+  max-width: 79.5rem;
 }
 
 footer .footer__container .footer__navbar nav ul {
-  width: 46.4rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  max-width: 40.4rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin-right: 11rem;
 }
 
 footer .footer__container .footer__navbar button {
