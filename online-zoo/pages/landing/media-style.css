@@ -1,0 +1,121 @@
+@media (max-width: 1201px) {
+  main .favorite-animal .carousel-range__container {
+    margin-left: 70%;
+    margin-top: -4rem;
+  }
+  main .favorite-animal #line {
+    top: 61.6rem;
+    left: 40%;
+  }
+  main .favorite-animal .social-media {
+    margin-top: 32rem;
+    margin-left: 5.4rem;
+  }
+  main .how-it-works__container {
+    margin-top: 1.74rem;
+  }
+  main .how-it-works__container .how-it-works__range-container {
+    margin-top: 3.4rem;
+  }
+  main .how-it-works__container h3 {
+    padding-left: 2.5rem;
+  }
+  main .how-it-works__container p {
+    margin-top: -2rem;
+    width: 94%;
+  }
+  main .how-it-works__container button p {
+    padding-right: 2.5rem;
+  }
+  main .how-it-works__container button img {
+    width: 3.2rem;
+    height: 3.2rem;
+    padding-left: 3rem;
+  }
+  main .how-it-works__container img {
+    margin-top: 0;
+    width: 94.4%;
+    height: 32.5rem;
+  }
+  main .pets h3 {
+    margin-top: 9rem;
+  }
+  main .pets #choose-button {
+    margin-top: 2.5rem;
+  }
+  main .pets-range__container {
+    margin-top: -0.5rem;
+  }
+  main .pets__carousel {
+    width: 83%;
+    margin-top: -5.7rem;
+  }
+  main .pets__carousel__items {
+    width: 90.6%;
+  }
+  main .pets__carousel__items .item {
+    height: 30.1rem;
+    max-width: 21rem;
+    width: 32%;
+  }
+  main .pets__carousel__items .item .description {
+    width: 18rem;
+    margin: -1rem auto;
+    margin-left: 1rem;
+  }
+  main .pets__carousel__items .item:hover .pets__buttons {
+    opacity: 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform: translateY(-11rem);
+            transform: translateY(-11rem);
+    z-index: 1000;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    top: 47.4rem;
+  }
+  main .pets__carousel__items .item:hover .pets__buttons .item__donate {
+    margin-left: -1.5rem;
+  }
+  main .pets__carousel__items .item:hover .pets__buttons button svg {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  main .pets__carousel__items .item:hover .pets__buttons button p {
+    padding-left: 0;
+  }
+  main .pay-and-feed .payment-process {
+    margin-top: 5rem;
+    padding-top: 0;
+  }
+  main .pay-and-feed__container {
+    margin-top: -2rem;
+  }
+  main .pay-and-feed__container p {
+    margin-top: -2rem;
+  }
+  main .pay-and-feed h3 {
+    margin-top: 4rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper h2 {
+    padding-top: 12.6rem;
+    padding-left: 5.4rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper button {
+    margin-left: 5.4rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper .carousel__container {
+    margin-top: 3.4rem;
+    margin-left: 50.4rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal {
+    width: 18rem;
+    height: 28rem;
+  }
+  .mission .mission__container {
+    margin: 9rem auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/*# sourceMappingURL=media-style.css.map */

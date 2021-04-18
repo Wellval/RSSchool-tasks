@@ -1,0 +1,162 @@
+@media (max-width: 1201px) {
+    main {
+        .favorite-animal {
+            .carousel-range__container {
+                margin-left: 70%;
+                margin-top: -4rem;
+            }
+
+            #line {
+                top: 61.6rem;
+                left: 40%;
+            }
+
+            .social-media {
+                margin-top: 32rem; 
+                margin-left: 5.4rem;
+            }
+        }
+
+        .how-it-works__container {
+            margin-top: 1.74rem;
+
+            .how-it-works__range-container {
+                margin-top: 3.4rem;
+            }
+
+            h3 {
+                padding-left: 2.5rem;
+            }
+
+            p {
+                margin-top: -2rem;
+                width: 94%;
+            }
+
+            button {
+                p {
+                    padding-right: 2.5rem;
+                }
+
+                img {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    padding-left: 3rem;
+                }
+            }
+
+            img {
+                margin-top: 0;
+                width: 94.4%;
+                height: 32.5rem;
+            }
+        }
+
+        .pets {
+            h3 {
+                margin-top: 9rem;
+            }
+            #choose-button {
+                margin-top: 2.5rem;
+            }
+            &-range__container {
+                margin-top: -0.5rem;
+            }
+            &__carousel {
+                width: 83%;
+                margin-top: -5.7rem;
+            }
+            &__carousel__items {
+                width: 90.6%;
+                .item {
+                    height: 30.1rem;
+                    max-width: 21rem;
+                    width: 32%;
+
+                    .description {
+                        width: 18rem;
+                        margin: -1rem auto;
+                        margin-left: 1rem;
+                    }
+                }
+
+                .item:hover {
+                    .pets__buttons {
+                        opacity: 1;
+                        transition: 1s;
+                        transform: translateY(-11rem);
+                        z-index: 1000;
+                        transition: all 1s ease-in-out;
+                        top: 47.4rem;
+
+                        .item__donate {
+                            margin-left: -1.5rem;
+                        }
+
+                        button {
+                            svg {
+                                transform: scale(0.75);
+                            }
+
+                            p {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .pay-and-feed {
+            .payment-process {
+                margin-top: 5rem;
+                padding-top: 0;
+            }
+            &__container {
+                margin-top: -2rem;
+
+                p {
+                    margin-top: -2rem;
+                }
+            }
+
+            h3 {
+                margin-top: 4rem;
+            }
+        }
+    }
+        
+
+    .favorite-animal__container {
+        
+        .favorite-animal__wrapper {
+            h2 {
+                padding-top: 12.6rem;
+                padding-left: 5.4rem;
+            }
+
+            button {
+                margin-left: 5.4rem;
+            }
+
+            .carousel__container {
+                margin-top: 3.4rem;
+                margin-left: 50.4rem;
+
+                &-animal {
+                        width: 18rem;
+                        height: 28rem;
+                }
+            }
+        }
+    }
+
+    .mission {
+        .mission__container {
+            margin: 9rem auto;
+            justify-content: space-around;
+        }
+    }
+}
+
+

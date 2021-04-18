@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../normalize.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="media-style.css">
+
 </head>
 
 <body>
@@ -48,7 +50,7 @@
 
                         <div class="carousel__container">
                             <div class="carousel__container-animal">
-                                <img src="../../assets/landing/eagles.png" alt="">
+                                <img class="animal-item" src="../../assets/landing/eagles.png" alt="">
                                 <p class="description">Panda’s name is Bei Bei. He
                                     is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                 <div class="carousel__container-animal__buttons">
@@ -86,7 +88,7 @@
                                 </div>
                             </div>
                             <div class="carousel__container-animal-active">
-                                <img src="../../assets/landing/panda.png">
+                                <img class="animal-item" src="../../assets/landing/panda.png">
                                 <p class="description">Panda’s name is Bei Bei. He
                                     is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                 <div class="carousel__container-animal-active__buttons">
@@ -117,7 +119,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="carousel__container-animal"><img src="../../assets/landing/gorilla.png">
+                            <div class="carousel__container-animal"><img class="animal-item"
+                                    src="../../assets/landing/gorilla.png">
                                 <p class="description">Panda’s name is Bei Bei. He
                                     is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                 <div class="carousel__container-animal__buttons">
@@ -149,7 +152,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="carousel__container-animal"><img src="../../assets/landing/crocodile.png">
+                            <div class="carousel__container-animal"><img class="animal-item"
+                                    src="../../assets/landing/crocodile.png">
                                 <p class="description">Panda’s name is Bei Bei. He
                                     is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                 <div class="carousel__container-animal__buttons">
@@ -181,7 +185,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="carousel__container-animal"><img src="../../assets/landing/fox.png">
+                            <div class="carousel__container-animal"><img class="animal-item"
+                                    src="../../assets/landing/fox.png">
                                 <p class="description">Panda’s name is Bei Bei. He
                                     is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                 <div class="carousel__container-animal__buttons">
@@ -228,6 +233,7 @@
                 </div>
             </div>
         </div>
+
         <div class="how-it-works">
             <div class="how-it-works__container">
                 <h3>How it works?</h3>
@@ -251,6 +257,7 @@
             </div>
 
         </div>
+
         <div class="mission">
             <div class="mission__container">
                 <div class="mission__card">
@@ -274,14 +281,16 @@
                 </div>
             </div>
         </div>
+
         <div class="pets">
             <div class="pets__container">
                 <h3>Pets in Zoo</h3>
                 <div class="pets__carousel">
-                    <div class="pets__carousel__items">
+                    
                         <div class="arrow arrow-left">
                             <img src="../../assets/landing/arrow.svg" alt="arrow-left">
                         </div>
+                        <div class="pets__carousel__items">
                         <div class="item">
                             <img src="../../assets/landing/panda.png" alt="panda">
 
@@ -296,7 +305,7 @@
                                     </svg>
                                     <p>Watch online</p>
                                 </button>
-                                <button>
+                                <button class="item__donate">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="16" cy="16" r="15.5" stroke="white" />
@@ -327,7 +336,7 @@
                                     </svg>
                                     <p>Watch online</p>
                                 </button>
-                                <button>
+                                <button class="item__donate">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="16" cy="16" r="15.5" stroke="white" />
@@ -358,7 +367,7 @@
                                     </svg>
                                     <p>Watch online</p>
                                 </button>
-                                <button>
+                                <button class="item__donate">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="16" cy="16" r="15.5" stroke="white" />
@@ -389,7 +398,7 @@
                                     </svg>
                                     <p>Watch online</p>
                                 </button>
-                                <button>
+                                <button class="item__donate">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="16" cy="16" r="15.5" stroke="white" />
@@ -406,10 +415,10 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
                         <div class="arrow arrow-right">
                             <img src="../../assets/landing/arrow.svg" alt="arrow-left">
                         </div>
-                    </div>
                 </div>
                 <div class="pets-range__container">
                     <label for="pets-range">01/<span class="range-amount">08</span></label>
@@ -418,6 +427,7 @@
                 <button id="choose-button">Choose your favorite</button>
             </div>
         </div>
+
         <div class="pay-and-feed">
             <div class="pay-and-feed__container">
                 <h3>Pay and feed</h3>
@@ -442,38 +452,42 @@
                 <button>donate</button>
             </div>
         </div>
+
         <div class="testimonials">
-            <h3>Testimonials</h3>
-            <div class="testimonials__carousel">
-                <img class="arrow arrow-left" src="../../assets/landing/arrow.svg" alt="">
-                <div class="testimonials__carousel-user">
-                    <div class="user-photo__container">
-                        <img class="user-photo" src="../../assets/landing/user1.svg" alt="nastya sidorova">
+            <div class="testimonials-container">
+                <h3>Testimonials</h3>
+                <div class="testimonials__carousel">
+                    <img class="arrow arrow-left" src="../../assets/landing/arrow.svg" alt="">
+                    <div class="testimonials__carousel-user">
+                        <div class="user-photo__container">
+                            <img class="user-photo" src="../../assets/landing/user1.svg" alt="nastya sidorova">
+                        </div>
+                        <h3>Nastya Sidorova</h3>
+                        <p>
+                            As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires
+                            on precious species and their habitat.
+                        </p>
                     </div>
-                    <h3>Nastya Sidorova</h3>
-                    <p>
-                        As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires
-                        on precious species and their habitat.
-                    </p>
-                </div>
-                <div class="testimonials__carousel-user">
-                    <div class="user-photo__container">
-                        <img class="user-photo" src="../../assets/landing/user2.svg" alt="vlad kim">
+                    <div class="testimonials__carousel-user">
+                        <div class="user-photo__container">
+                            <img class="user-photo" src="../../assets/landing/user2.svg" alt="vlad kim">
+                        </div>
+                        <h3>Vlad Kim</h3>
+                        <p>
+                            As a voice for wildlife, we are devastated by the impact of the 2020 Australian
+                            bushfires on precious species and their habitat.
+                        </p>
                     </div>
-                    <h3>Vlad Kim</h3>
-                    <p>
-                        As a voice for wildlife, we are devastated by the impact of the 2020 Australian
-                        bushfires on precious species and their habitat.
-                    </p>
+                    <img class="arrow arrow-right" src="../../assets/landing/arrow.svg" alt="">
                 </div>
-                <img class="arrow arrow-right" src="../../assets/landing/arrow.svg" alt="">
+                <div class="testimonials__range-container">
+                    <label for="testimonials__range">01/<span class="range-amount">08</span></label>
+                    <input type="range" name="testimonials__range" id="testimonials__range" min="1" max="8" value="1">
+                </div>
+                <button>leave feedback</button>
             </div>
-            <div class="testimonials__range-container">
-                <label for="testimonials__range">01/<span class="range-amount">08</span></label>
-                <input type="range" name="testimonials__range" id="testimonials__range" min="1" max="8" value="1">
-            </div>
-            <button>leave feedback</button>
         </div>
+
         <div class="map">
             <h3>Map</h3>
             <div class="map__container">
@@ -540,7 +554,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <form action="../zoos/panda/index.html">
                 <button>
                     <img src="../../assets/landing/watch.svg" alt="watch online">
@@ -548,8 +562,10 @@
                 </button>
             </form>
         </div>
-        <footer>
+
+        <!-- <footer>
             <p><a name="contact-us"></a></p>
+
             <div class="footer__container">
                 <div class="footer__left">
                     <div class="logo">
@@ -583,55 +599,62 @@
                         </button>
                     </form>
                 </div>
-                <div class="footer__right">
-                    <div class="footer__navbar">
-                        <nav>
-                            <ul>
-                                <li class="nav-item"><a href="./landing.html">About</a></li>
-                                <li class="nav-item"><a href="../zoos/panda/index.html">Zoos</a></li>
-                                <li class="nav-item"><a href="../map/index.html">Map</a></li>
-                                <!-- <li class="nav-item"><a href="#">Contact us</a></li> -->
-                                <li class="nav-item"><a
-                                        href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a></li>
-                            </ul>
-                        </nav>
-                        <button>
-                            donate for volunteers
-                        </button>
-                    </div>
-                    <h4>ZOO Online Centre</h4>
-                    <address>
-                        <p>
-                            132, Address District, Street
-                            Open Daily 10:00 am - 5:00 pm
-                        </p>
-                        <div class="tel-mail">
-                            <a href="tel:+(702)163-3433">T(702) 163-3433</a>
-                            <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+                <div class="footer-right__wrapper">
+                    <div class="footer__right">
+                        <div class="footer__navbar">
+                            <nav>
+                                <ul>
+                                    <li class="nav-item"><a href="./landing.html">About</a></li>
+                                    <li class="nav-item"><a href="../zoos/panda/index.html">Zoos</a></li>
+                                    <li class="nav-item"><a href="../map/index.html">Map</a></li>
+                                    <li class="nav-item"><a
+                                            href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                         </div>
-                    </address>
-                    <div class="social-media">
-                        <a href="https://www.instagram.com/"><img src="../../assets/landing/instagram.svg" alt=""></a>
-                        <a href="https://twitter.com/"><img src="../../assets/landing/twitter.svg" alt=""></a>
-                        <a href="https://youtube.com/"><img src="../../assets/landing/youtube.svg" alt=""></a>
-                        <a href="https://vk.com/"><img src="../../assets/landing/vk.svg" alt=""></a>
+                        <h4>ZOO Online Centre</h4>
+                        <address>
+                            <p>
+                                132, Address District, Street
+                                Open Daily 10:00 am - 5:00 pm
+                            </p>
+                            <div class="tel-mail">
+                                <a href="tel:+(702)163-3433">T(702) 163-3433</a>
+                                <a href="mailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+                            </div>
+                        </address>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/"><img src="../../assets/landing/instagram.svg"
+                                    alt=""></a>
+                            <a href="https://twitter.com/"><img src="../../assets/landing/twitter.svg" alt=""></a>
+                            <a href="https://youtube.com/"><img src="../../assets/landing/youtube.svg" alt=""></a>
+                            <a href="https://vk.com/"><img src="../../assets/landing/vk.svg" alt=""></a>
+                        </div>
                     </div>
+
+                    <button>
+                        donate for volunteers
+                    </button>
                 </div>
             </div>
             <div class="footer__lower">
-                <span title="Noora Sagnayeva">
-                    <a href="#" title="Noora Sagnayeva">©Noora Sagnayeva</a>
-                </span><br>
-                <span title="RSSchool">
-                    <a href="#" title="Noora Sagnayeva">©RSSchool</a>
-                </span>
-                and
-                <span title="Yem Digital">
-                    <a href="#">©Yem Digital</a>
-                    - 2021
-                </span>
+                <div class="lower__container">
+                    <span title="Noora Sagnayeva">
+                        <a href="#" title="Noora Sagnayeva">©Noora Sagnayeva</a>
+                    </span><br>
+                    <span title="RSSchool">
+                        <a href="#" title="Noora Sagnayeva">©RSSchool</a>
+                    </span>
+                    and
+                    <span title="Yem Digital">
+                        <a href="#">©Yem Digital</a>
+                        - 2021
+                    </span>
+                </div>
             </div>
-        </footer>
+        </footer> -->
     </main>
     <script src="./script.js"></script>
 </body>

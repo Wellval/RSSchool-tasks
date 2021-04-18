@@ -26,7 +26,7 @@ header .header-wrapper {
   display: -ms-flexbox;
   display: flex;
   width: 162rem;
-  margin: 0 auto;
+  margin: 0 15rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -169,7 +169,7 @@ main .favorite-animal {
   overflow: hidden;
   background-size: cover;
   background-color: none;
-  width: 192rem;
+  width: 100%;
   position: absolute;
   overflow: hidden;
 }
@@ -194,9 +194,10 @@ main .favorite-animal label {
 }
 
 main .favorite-animal__wrapper {
-  width: 162rem;
+  max-width: 162rem;
   margin: 0 auto;
   height: 100%;
+  width: 84%;
 }
 
 main .favorite-animal__wrapper h2 {
@@ -240,7 +241,7 @@ main .favorite-animal .carousel__container {
   width: 107.4rem;
   height: 42.1rem;
   margin-top: -6.4rem;
-  margin-left: 78rem;
+  margin-left: 40.7%;
   position: absolute;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -255,6 +256,11 @@ main .favorite-animal .carousel__container-animal {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+
+main .favorite-animal .carousel__container-animal .animal-item {
+  width: 100%;
+  height: 100%;
 }
 
 main .favorite-animal .carousel__container-animal .dollar {
@@ -279,8 +285,8 @@ main .favorite-animal .carousel__container-animal .description {
 }
 
 main .favorite-animal .carousel__container-animal:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -576,10 +582,31 @@ main .how-it-works {
 }
 
 main .how-it-works__container {
-  width: 79rem;
-  height: 68.2rem;
+  max-width: 79rem;
+  width: 100%;
   margin: auto;
   margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+}
+
+main .how-it-works__container h3 {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  padding-left: 0;
+  margin-top: 7rem;
 }
 
 main .how-it-works__container p {
@@ -743,11 +770,12 @@ main .mission {
 
 main .mission h3 {
   font-size: 2rem;
-  margin-top: 0;
+  margin-top: -0.6rem;
 }
 
 main .mission__container {
-  width: 120rem;
+  width: 76.5%;
+  max-width: 120rem;
   margin: 10rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -758,7 +786,8 @@ main .mission__container {
 }
 
 main .mission .mission__card {
-  width: 38rem;
+  width: 31%;
+  max-width: 38rem;
   height: 21.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,7 +815,6 @@ main .mission .mission__card img {
 }
 
 main .pets {
-  height: 85.4rem;
   width: 100%;
 }
 
@@ -859,6 +887,8 @@ main .pets__container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 134rem;
+  margin: 0 auto;
 }
 
 main .pets-range__container {
@@ -1011,11 +1041,22 @@ main .pets #choose-button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin-top: 3rem;
+  margin-bottom: 10rem;
 }
 
 main .pets h3 {
   font-size: 4.8rem;
   margin-top: 10rem;
+}
+
+main .pets__carousel {
+  width: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .pets__carousel__items {
@@ -1028,7 +1069,8 @@ main .pets__carousel__items {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 130.2rem;
+  width: 92%;
+  margin: 0 auto;
   height: 37.9rem;
 }
 
@@ -1039,7 +1081,8 @@ main .pets__carousel__items img {
 
 main .pets__carousel__items .item {
   height: 39.9rem;
-  width: 27.8rem;
+  max-width: 27.8rem;
+  width: 32%;
   overflow: hidden;
   display: block;
   position: relative;
@@ -1120,7 +1163,7 @@ main .pay-and-feed {
 
 main .pay-and-feed__container {
   text-align: center;
-  width: 131rem;
+  width: 80%;
   margin-bottom: 6rem;
 }
 
@@ -1186,8 +1229,13 @@ main .pay-and-feed p {
 
 main .testimonials {
   height: 76rem;
-  width: 192rem;
+  width: 100%;
   text-align: center;
+  margin: 0 auto;
+}
+
+main .testimonials__container {
+  width: 136rem;
   margin: 0 auto;
 }
 
@@ -1314,7 +1362,7 @@ main .testimonials__range-container input[type=range]:focus::-ms-fill-upper {
 }
 
 main .testimonials__carousel {
-  width: 71%;
+  max-width: 136rem;
   margin: 5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1477,13 +1525,14 @@ main .map #popup-gorilla {
 
 main .map__container {
   height: 50rem;
-  width: 130rem;
+  width: 84%;
+  max-width: 130rem;
   background-image: url(../../assets/landing/map.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: contain;
   position: absolute;
-  margin-top: 22rem;
+  margin-top: 21rem;
 }
 
 main .map .map-animal {
@@ -1511,19 +1560,19 @@ main .map .map-animal:hover + .popup {
 
 main .map .map-crocodile {
   position: absolute;
-  left: 21.6%;
+  left: 22.6%;
   top: 19%;
 }
 
 main .map .map-eagle {
   position: absolute;
-  left: 12%;
+  left: 13%;
   top: 13.2%;
 }
 
 main .map .map-panda {
   position: absolute;
-  left: 71.39%;
+  left: 72.39%;
   top: 16.9%;
 }
 
@@ -1537,12 +1586,11 @@ main .map .map-animal-image {
 
 main .map .map-gorilla {
   position: absolute;
-  left: 46.7%;
+  left: 47.7%;
   top: 36.5%;
 }
 
 main footer {
-  width: 100%;
   height: 75.1rem;
   background: #333333;
   display: -webkit-box;
@@ -1603,7 +1651,6 @@ main footer .footer__navbar {
 }
 
 main footer .footer__container {
-  width: 162rem;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1611,6 +1658,10 @@ main footer .footer__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 162rem;
+  width: 84%;
+  margin: 0 15rem;
+  padding-left: 0.8rem;
 }
 
 main footer .footer__container .footer__left {
@@ -1622,6 +1673,7 @@ main footer .footer__container .footer__left {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -0.5rem;
+  margin-left: -1rem;
 }
 
 main footer .footer__container .footer__left form {
@@ -1664,8 +1716,17 @@ main footer .footer__container .footer__left h3 {
   margin-top: 4.8rem;
 }
 
-main footer .footer__container .footer__right {
-  margin-top: -0.9rem;
+main footer .footer__container .footer-right__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main footer .footer__container .footer-right__wrapper button {
+  width: 27.5rem;
+  margin-top: 1rem;
 }
 
 main footer .footer__container .footer__right h4 {
@@ -1674,8 +1735,8 @@ main footer .footer__container .footer__right h4 {
   line-height: 16px;
   text-transform: uppercase;
   color: #FEFEFE;
-  margin-top: 6rem;
-  margin-left: 7.9rem;
+  margin-top: 6.4rem;
+  margin-left: 7.4rem;
 }
 
 main footer .footer__container .footer__right address {
@@ -1697,7 +1758,7 @@ main footer .footer__container .footer__right address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 7.9rem;
+  margin-left: 7.4rem;
   margin-top: 2.5rem;
   height: 9.9rem;
 }
@@ -1727,7 +1788,7 @@ main footer .footer__container .footer__right .social-media {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2.1rem;
-  margin-left: 7.9rem;
+  margin-left: 7.4rem;
 }
 
 main footer .footer__container .footer__right .social-media img {
@@ -1765,10 +1826,12 @@ main footer .footer__container .footer__navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main footer .footer__container .footer__navbar nav {
-  padding-right: 9.2rem;
+  padding-right: 9.3rem;
 }
 
 main footer .footer__container .footer__navbar nav ul {
@@ -1777,21 +1840,21 @@ main footer .footer__container .footer__navbar nav ul {
       justify-content: space-around;
 }
 
-main footer .footer__container .footer__navbar button {
-  width: 27.9rem;
-}
-
 main footer .footer__container path {
   fill: #FEFEFE;
 }
 
 main footer .footer__lower {
-  width: 162rem;
+  width: 100%;
   border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
   margin-top: -9rem;
   padding-top: 4.7rem;
   color: #bdbdbd;
   font-size: 1.2rem;
+}
+
+main footer .footer__lower .lower__container {
+  margin: 0 15rem;
 }
 
 main footer .footer__lower a {
