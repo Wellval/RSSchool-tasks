@@ -23,6 +23,7 @@ header {
 
 header #menu {
   display: none;
+  margin-left: 4rem;
 }
 
 header .header-wrapper {
@@ -76,11 +77,29 @@ header .header-wrapper ul .nav-item > a {
   color: #333333;
 }
 
+header #menu {
+  height: 2.1rem;
+  width: 4rem;
+}
+
+header .switch-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 12.8rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header .switch {
   position: relative;
   display: inline-block;
-  width: 6rem;
-  height: 3.4rem;
+  width: 5.4rem;
+  height: 3rem;
 }
 
 header .switch input {
@@ -99,15 +118,17 @@ header .switch .slider {
   background-color: #F2F2F2;
   -webkit-transition: .4s;
   transition: .4s;
+  width: 5.4rem;
+  height: 3rem;
 }
 
 header .switch .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 2rem;
+  width: 2rem;
+  left: 7px;
+  bottom: 6px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -118,12 +139,12 @@ header .switch input:checked + .slider {
 }
 
 header .switch input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(2rem);
+  transform: translateX(2rem);
 }
 
 header .switch .slider.round {
-  border-radius: 34px;
+  border-radius: 3.4rem;
 }
 
 header .switch input:checked + .slider.round:before {
@@ -550,7 +571,6 @@ main .map .map-gorilla {
 
 footer {
   width: 100%;
-  height: 75.1rem;
   background: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,6 +645,7 @@ footer .footer__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 7rem;
 }
 
 footer .footer__container .footer__left {
@@ -793,6 +814,7 @@ footer .footer__container .footer__navbar nav ul {
           justify-content: space-between;
   padding: 0;
   margin-right: 11rem;
+  width: 140%;
 }
 
 footer .footer__container .footer__navbar button {
@@ -804,12 +826,14 @@ footer .footer__container path {
 }
 
 footer .footer__lower {
-  width: 162rem;
+  max-width: 162rem;
+  width: 85%;
   border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-  margin-top: -9rem;
-  padding-top: 4.7rem;
+  margin-top: 6rem;
+  padding-top: 3.1rem;
   color: #bdbdbd;
   font-size: 1.2rem;
+  margin-bottom: 10rem;
 }
 
 footer .footer__lower a {

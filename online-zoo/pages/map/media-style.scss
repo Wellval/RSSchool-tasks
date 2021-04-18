@@ -35,27 +35,42 @@
             }
         }
     }
-
-    footer {
-        .footer__container {
-            width: 75%;
-
-            .footer__right {
-                margin-top: 0.6rem;
-                margin-right: 4rem;
-                margin-left: 8rem;
-
-                h4 {
-                    margin-top: 5rem;
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 950px) {
     .carousel {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        p {
+            width: 60rem;
+        }
+
+        .map {
+            form {
+                margin-top: 4.4rem;
+                margin-bottom: 8rem;
+            }
+        }
+
+        .map__container {
+            width: 100%;
+        } 
+
+        .carousel__container {
+            .arrow-right {
+                padding-left: 0;
+                margin-left: 1rem;
+                padding-right: 0.5rem
+            }
+
+            .arrow-left {
+                margin-left: 1.5rem;
+            }
+        }
     }
 }
 
@@ -92,15 +107,6 @@
     }
 }
 
-@media (max-width: 1480px) {
-    .footer__navbar {
-        button {
-            position: absolute;
-            margin-top: 64rem;
-        }
-    }
-}
-
 @media (min-width: 1501px) and (max-width: 1700px) {
     main {
         .carousel {
@@ -117,12 +123,45 @@
     .tiger {
         display: none;
     }
+}
 
-    header nav {
-        opacity: 0;
+@media (max-width: 505px) {
+    main {
+        .carousel {
+            ul {
+                justify-content: space-around;
+
+                .animal-round {
+                    width: 6rem;
+                    height: 6rem;
+
+                    img {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+
+                .animal-active {
+                    img {
+                        width: 8.5rem;
+                        height: 8.5rem;
+                        margin-top: 0.5rem;
+                    }
+
+                    width: 9.5rem;
+                    height: 9.5rem;
+                }
+            }
+        }
     }
+}
 
-    header #menu {
-        display: block;
+@media (max-width: 380px) {
+    main {
+        .carousel {
+            ul {
+                justify-content: space-between;
+            }
+        }
     }
 }

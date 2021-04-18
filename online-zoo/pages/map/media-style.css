@@ -24,22 +24,32 @@
     width: 8.3rem;
     height: 8.3rem;
   }
-  footer .footer__container {
-    width: 75%;
-  }
-  footer .footer__container .footer__right {
-    margin-top: 0.6rem;
-    margin-right: 4rem;
-    margin-left: 8rem;
-  }
-  footer .footer__container .footer__right h4 {
-    margin-top: 5rem;
-  }
 }
 
 @media (max-width: 950px) {
   .carousel {
     width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  main p {
+    width: 60rem;
+  }
+  main .map form {
+    margin-top: 4.4rem;
+    margin-bottom: 8rem;
+  }
+  main .map__container {
+    width: 100%;
+  }
+  main .carousel__container .arrow-right {
+    padding-left: 0;
+    margin-left: 1rem;
+    padding-right: 0.5rem;
+  }
+  main .carousel__container .arrow-left {
+    margin-left: 1.5rem;
   }
 }
 
@@ -64,13 +74,6 @@
   }
 }
 
-@media (max-width: 1480px) {
-  .footer__navbar button {
-    position: absolute;
-    margin-top: 64rem;
-  }
-}
-
 @media (min-width: 1501px) and (max-width: 1700px) {
   main .carousel ul .zebra {
     display: none;
@@ -81,11 +84,37 @@
   .tiger {
     display: none;
   }
-  header nav {
-    opacity: 0;
+}
+
+@media (max-width: 505px) {
+  main .carousel ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  header #menu {
-    display: block;
+  main .carousel ul .animal-round {
+    width: 6rem;
+    height: 6rem;
+  }
+  main .carousel ul .animal-round img {
+    width: 6rem;
+    height: 6rem;
+  }
+  main .carousel ul .animal-active {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+  main .carousel ul .animal-active img {
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  main .carousel ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=media-style.css.map */
