@@ -118,4 +118,89 @@
         justify-content: space-around;
   }
 }
+
+@media (max-width: 1000px) {
+  .pets__carousel {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  main .pets__carousel {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 930px) {
+  main .arrow {
+    display: none;
+  }
+  main .pets__carousel {
+    position: absolute;
+    overflow: hidden;
+    margin-top: 18rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 96%;
+  }
+  main .pets__carousel__items {
+    min-width: 90rem;
+  }
+  main .pets-range__container {
+    margin-top: 39.5rem;
+  }
+}
+
+@media (max-width: 1190px) {
+  main .pay-and-feed .payment-process {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .pay-and-feed__container .blue-arrow {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    width: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  main .testimonials-arrow {
+    display: none;
+  }
+  main .testimonials__carousel > div:nth-child(3) {
+    display: none;
+  }
+  .favorite-animal .carousel {
+    margin-top: 3.7rem;
+    margin-left: -3rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper {
+    width: 100%;
+  }
+  .favorite-animal__container .favorite-animal__wrapper h2 {
+    padding-top: 12.6rem;
+    padding-left: 2rem;
+    width: 100%;
+    font-size: 6rem;
+    letter-spacing: 0.2rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper .carousel__container {
+    margin-left: 22%;
+    margin-top: 8.4rem;
+  }
+  .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal {
+    height: 61%;
+  }
+}
 /*# sourceMappingURL=media-style.css.map */
