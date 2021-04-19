@@ -1,0 +1,120 @@
+@media (max-width: 1201px) {
+  main .carousel {
+    margin-top: 1.8rem;
+    width: 66%;
+  }
+  main .carousel__container .arrow-right {
+    padding-left: 2rem;
+  }
+  main .carousel .carousel-range__container {
+    margin-top: 3rem;
+    margin-left: 0rem;
+  }
+  main .map form {
+    margin-top: 8.4rem;
+  }
+  main .map__container {
+    width: 67%;
+    margin-top: 9.6rem;
+  }
+  main .map__container #map {
+    height: 114%;
+  }
+  main .map__container .map-animal {
+    width: 8.3rem;
+    height: 8.3rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .carousel {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  main p {
+    width: 60rem;
+  }
+  main .map form {
+    margin-top: 4.4rem;
+    margin-bottom: 8rem;
+  }
+  main .map__container {
+    width: 100%;
+  }
+  main .carousel__container .arrow-right {
+    padding-left: 0;
+    margin-left: 1rem;
+    padding-right: 0.5rem;
+  }
+  main .carousel__container .arrow-left {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 630px) {
+  .eagle {
+    display: none;
+  }
+}
+
+@media (max-width: 1301px) {
+  main .carousel ul .zebra,
+  main .carousel ul .lion,
+  main .carousel ul .elephant {
+    display: none;
+  }
+}
+
+@media (min-width: 1302px) and (max-width: 1500px) {
+  main .carousel ul .zebra,
+  main .carousel ul .lion {
+    display: none;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1700px) {
+  main .carousel ul .zebra {
+    display: none;
+  }
+}
+
+@media (max-width: 1140px) {
+  .tiger {
+    display: none;
+  }
+}
+
+@media (max-width: 505px) {
+  main .carousel ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .carousel ul .animal-round {
+    width: 6rem;
+    height: 6rem;
+  }
+  main .carousel ul .animal-round img {
+    width: 6rem;
+    height: 6rem;
+  }
+  main .carousel ul .animal-active {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+  main .carousel ul .animal-active img {
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  main .carousel ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=media-style.css.map */
