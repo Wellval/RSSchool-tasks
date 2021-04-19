@@ -24,7 +24,7 @@
 
             .map-gorilla {
                 left: 46.7%;
-                top: 39.5%;
+                top: 34.5%;
             }
 
             .map-panda {
@@ -33,14 +33,14 @@
             }
 
             form {
-                margin-top: 8.4rem;
+                margin-top: 2.7rem;
             }
             &__container {
                 width: 67%;
                 margin-top: 9.6rem;
 
                 #map {
-                    height: 114%;
+                    height: 39rem;
                 }
 
                 .map-animal {
@@ -99,6 +99,10 @@
 
         .map__container {
             width: 94%;
+
+            #map {
+                height: 29rem;
+            }
         } 
 
         .map__wrapper {
@@ -224,7 +228,8 @@
 
         p {
             font-size: 1.2rem;
-            width: 88%;
+            width: 28rem;
+            margin-top: 0.7rem;
         }
 
         .carousel__container {
@@ -242,6 +247,14 @@
         }
 
         .map {
+            button {
+                margin-top: -21.3rem;
+
+                p {
+                    margin-top: 2rem;
+                }
+            }
+
             .map-eagle {
                 left: 8.7%;
                 top: -36%;
@@ -259,7 +272,7 @@
             .map-panda {
                 top: -33.1%;
             }
-            
+
             .map-animal {
                 width: 3.4rem;
                 height: 4.7rem;

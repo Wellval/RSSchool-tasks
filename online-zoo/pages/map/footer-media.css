@@ -71,9 +71,6 @@
 }
 
 @media (max-width: 630px) {
-  main p {
-    width: 90%;
-  }
   footer .footer__container .footer__navbar button {
     margin-top: 149rem;
     margin-left: 50%;
@@ -127,7 +124,7 @@
     margin-top: -24.1rem;
   }
   footer .footer__container {
-    margin-top: 2.2rem;
+    margin-top: 2.7rem;
   }
   footer .footer__container .footer__right address p {
     width: 100%;

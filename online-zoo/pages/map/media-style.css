@@ -16,21 +16,21 @@
   }
   main .map .map-gorilla {
     left: 46.7%;
-    top: 39.5%;
+    top: 34.5%;
   }
   main .map .map-panda {
     left: 73%;
     top: 16.9%;
   }
   main .map form {
-    margin-top: 8.4rem;
+    margin-top: 2.7rem;
   }
   main .map__container {
     width: 67%;
     margin-top: 9.6rem;
   }
   main .map__container #map {
-    height: 114%;
+    height: 39rem;
   }
   main .map__container .map-animal {
     width: 8.3rem;
@@ -73,6 +73,9 @@
   }
   main .map__container {
     width: 94%;
+  }
+  main .map__container #map {
+    height: 29rem;
   }
   main .map__wrapper {
     height: 26rem;
@@ -163,7 +166,8 @@
   }
   main p {
     font-size: 1.2rem;
-    width: 88%;
+    width: 28rem;
+    margin-top: 0.7rem;
   }
   main .carousel__container {
     margin-top: -3rem;
@@ -174,6 +178,12 @@
   main .map__container #map {
     height: 57%;
     margin-top: -7.5rem;
+  }
+  main .map button {
+    margin-top: -21.3rem;
+  }
+  main .map button p {
+    margin-top: 2rem;
   }
   main .map .map-eagle {
     left: 8.7%;
