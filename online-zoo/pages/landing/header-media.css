@@ -15,4 +15,11 @@
     display: block;
   }
 }
+
+@media (max-width: 450px) {
+  header .header-wrapper {
+    width: 100%;
+    margin: 0 0.9rem;
+  }
+}
 /*# sourceMappingURL=header-media.css.map */
