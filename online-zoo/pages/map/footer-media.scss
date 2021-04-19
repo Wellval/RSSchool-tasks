@@ -1,8 +1,10 @@
 @media (max-width: 1480px) {
-    .footer__navbar {
-        button {
-            position: absolute;
-            margin-top: 64rem;
+    footer {
+        .footer__navbar {
+            button {
+                position: absolute;
+                margin-top: 64rem;
+            }
         }
     }
 }
@@ -23,6 +25,10 @@
                 }
             }
         }
+
+        .footer__lower {
+            width: 75%;
+        }
     }
 }
 
@@ -31,7 +37,7 @@
         .footer__container {
             flex-direction: column;
             width: 93%;
-            margin-top: 6.5rem;
+            margin-top: 6.8rem;
 
             .footer__left {
                 h3 {
@@ -73,7 +79,9 @@
 
         .footer__lower {
             max-width: 162rem;
-            width: 90%;
+            width: 93%;
+            margin-bottom: 6rem;
+            margin-top: 7rem;
         }
     }
 }
@@ -157,4 +165,45 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+    footer {
+        margin-top: -24.1rem;
+
+        .footer__container {
+            margin-top: 2.2rem;
+            
+            .footer__right {
+                address {
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .footer__left {
+                input[type="email"],
+                input[type="text"] {
+                    width: 29rem;
+                }
+            }
+            .footer__navbar {
+                button {
+                    margin-top: 148rem;
+                }
+                nav {
+                    ul {
+                        margin-top: 3.3rem;
+                    }
+                }
+            }
+        }
+
+        .footer__lower {
+            margin-top: 18rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
 

@@ -10,6 +10,18 @@
     margin-top: 3rem;
     margin-left: 0rem;
   }
+  main .map .map-eagle {
+    left: 9.7%;
+    top: 13%;
+  }
+  main .map .map-gorilla {
+    left: 46.7%;
+    top: 39.5%;
+  }
+  main .map .map-panda {
+    left: 73%;
+    top: 16.9%;
+  }
   main .map form {
     margin-top: 8.4rem;
   }
@@ -24,6 +36,9 @@
     width: 8.3rem;
     height: 8.3rem;
   }
+  footer .footer__wrapper {
+    height: 34rem;
+  }
 }
 
 @media (max-width: 950px) {
@@ -37,11 +52,32 @@
     width: 60rem;
   }
   main .map form {
-    margin-top: 4.4rem;
+    margin-top: 6.4rem;
     margin-bottom: 8rem;
   }
+  main .map .map-eagle {
+    left: 9.7%;
+    top: 0%;
+  }
+  main .map .map-crocodile {
+    left: 18%;
+    top: 3%;
+  }
+  main .map .map-gorilla {
+    left: 45.7%;
+    top: 26.5%;
+  }
+  main .map .map-panda {
+    left: 72%;
+    top: 1.9%;
+  }
   main .map__container {
+    width: 94%;
+  }
+  main .map__wrapper {
+    height: 26rem;
     width: 100%;
+    margin-top: -1.5rem;
   }
   main .carousel__container .arrow-right {
     padding-left: 0;
@@ -111,10 +147,56 @@
 }
 
 @media (max-width: 380px) {
+  main .carousel .carousel-range__container {
+    margin-top: -1.3rem;
+    margin-left: 2.4rem;
+  }
   main .carousel ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  main h3 {
+    font-size: 2.4rem;
+    margin-bottom: -1.4rem;
+    margin-top: 1rem;
+  }
+  main p {
+    font-size: 1.2rem;
+    width: 88%;
+  }
+  main .carousel__container {
+    margin-top: -3rem;
+  }
+  main .carousel__container .arrow-right {
+    padding-right: 1.5rem;
+  }
+  main .map__container #map {
+    height: 57%;
+    margin-top: -7.5rem;
+  }
+  main .map .map-eagle {
+    left: 8.7%;
+    top: -36%;
+  }
+  main .map .map-crocodile {
+    top: -33%;
+  }
+  main .map .map-gorilla {
+    left: 44.7%;
+    top: -21.5%;
+  }
+  main .map .map-panda {
+    top: -33.1%;
+  }
+  main .map .map-animal {
+    width: 3.4rem;
+    height: 4.7rem;
+  }
+  main .map .map-animal-image {
+    left: 17%;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 }
 /*# sourceMappingURL=media-style.css.map */
