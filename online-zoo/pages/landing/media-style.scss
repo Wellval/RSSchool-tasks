@@ -407,7 +407,7 @@
             height: 84.3rem;
 
             .mission__card {
-                width: 56%;
+                width: 58%;
                 margin-bottom: 5rem;
 
                 h3 {
@@ -418,6 +418,12 @@
             &__container {
                 flex-direction: column;
                 align-items: center;
+            }
+        }
+
+        .how-it-works__range-container {
+            input[type=range]::-webkit-slider-thumb {
+                width: 8rem;
             }
         }
 
@@ -433,9 +439,56 @@
             margin-top: 33.15rem;
         }
 
+        .pay-and-feed {
+            h3 {
+                margin-top: 4.5rem;
+            }
+
+            button {
+                margin-top: 5.5rem;
+            }
+        }
+
+        .testimonials__carousel-user {
+            margin-top: 0rem;
+        }
+
+        .testimonials__carousel {
+            margin-bottom: 4rem;
+        }
+
+        .map {
+            .map-eagle {
+                left: 4%;
+                top: 1.2%;
+            }
+
+            .map-crocodile {
+                left: 13.6%;
+                top: 3%;
+            }
+
+            .map-gorilla {
+                left: 44.7%;
+                top: 12.5%;
+            }
+
+            .map-panda {
+                left: 75.39%;
+                top: 1.9%;
+            }
+        }
+
         .pay-and-feed__container {
             .blue-arrow {
                 margin-top: 6rem;
+            }
+
+            p {
+                margin-top: -3.2rem;
+                width: 92%;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
