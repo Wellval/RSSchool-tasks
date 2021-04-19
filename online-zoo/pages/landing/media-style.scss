@@ -1,5 +1,8 @@
 @media (max-width: 1201px) {
     main {
+        .mission {
+            height: 100%;
+        }
         .favorite-animal {
             .carousel-range__container {
                 margin-left: 70%;
@@ -54,7 +57,7 @@
 
         .pets {
             h3 {
-                margin-top: 9rem;
+                margin-top: 10.5rem;
             }
             #choose-button {
                 margin-top: 2.5rem;
@@ -108,12 +111,28 @@
         }
 
         .pay-and-feed {
+            button {
+                margin-top: 5rem;
+                margin-bottom: 4rem;
+            }
+
             .payment-process {
                 margin-top: 5rem;
                 padding-top: 0;
+
+                .payment-step {
+                    p {
+                        margin-top: 1.3rem;
+                    }
+                }
             }
             &__container {
-                margin-top: -2rem;
+                margin-top: 6rem;
+                width: 90%;
+
+                .blue-arrow {
+                    width: 5rem;
+                }
 
                 p {
                     margin-top: -2rem;
@@ -122,6 +141,48 @@
 
             h3 {
                 margin-top: 4rem;
+            }
+        }
+
+        .testimonials-range__container {
+            margin-top: 5.5rem;
+        }
+
+        .testimonials__carousel {
+            width: 83%;
+
+            .arrow-left {
+                margin-right: 2rem;
+            }
+
+            .arrow-right {
+                margin-left: 2rem;
+            }
+        }
+
+        .testimonials__carousel-user {
+            width: 54%;
+            .user-photo__container {
+                margin-top: -1.6rem;
+            }
+            p {
+                width: 75%;
+            }
+        }
+
+        .testimonials {
+            button {
+                margin: 2.7rem auto;
+            }
+
+            #testimonials__title {
+                margin-top: 10rem;
+            }
+        }
+
+        .map {
+            button {
+                margin-top: 48.5rem;
             }
         }
     }
@@ -179,30 +240,6 @@
     }
 }
 
-@media (max-width: 930px) {
-    main {
-        .arrow {
-            display: none;
-        }
-
-        .pets__carousel {
-            position: absolute;
-            overflow: hidden;
-            margin-top: 18rem;
-            justify-content: flex-start;
-            width: 96%;
-        }
-
-        .pets__carousel__items {
-            min-width: 90rem;
-        }
-
-        .pets-range__container {
-            margin-top: 39.5rem;
-        }
-    }
-}
-
 @media (max-width: 1190px) {
     main {
         .pay-and-feed {
@@ -224,8 +261,33 @@
             display: none;
         }
 
-        .testimonials__carousel > div:nth-child(3) {
+        .testimonials__carousel-user {
+            width: 100%;
+
+            .user-photo__container {
+                margin-top: -6.6rem;
+            }
+        }
+
+        .testimonials__carousel > div:nth-child(2) {
             display: none;
+        }
+
+        .testimonials__carousel {
+            width: 51%;
+        }
+
+        .map {
+            height: 66.4rem;
+            button {
+                margin-top: 32.5rem;
+            }
+        }
+    }
+
+    footer {
+        .footer__lower {
+            margin-top: 7rem;
         }
     }
 
@@ -244,9 +306,10 @@
             h2 {
                 padding-top: 12.6rem;
                 padding-left: 2rem;
-                width: 100%;
+                width: 90%;
                 font-size: 6rem;
                 letter-spacing: 0.2rem;
+
             }
             .carousel__container {
                 margin-left: 22%;
@@ -260,3 +323,120 @@
     }
 }
 
+@media (max-width: 930px) {
+    main {
+        .arrow {
+            display: none;
+        }
+
+        .pets__carousel {
+            position: absolute;
+            overflow: hidden;
+            margin-top: 18rem;
+            justify-content: flex-start;
+            width: 96%;
+        }
+
+        .pets__carousel__items {
+            min-width: 90rem;
+        }
+
+        .pets-range__container {
+            margin-top: 39.5rem;
+        }
+
+        .testimonials__carousel {
+            width: 91%;
+        }
+
+        .testimonials-range__container {
+            margin-top: -1rem;
+        }
+
+        .favorite-animal {
+            .carousel__container {
+                width: 109.4rem;
+            }
+
+            #line {
+                top: 59rem;
+                left: 8.5%;
+            }
+
+            .carousel-range__container {
+                margin-left: 45%;
+                margin-top: -4.5rem;
+            }
+
+            .social-media {
+                margin-top: 36.8rem;
+                margin-left: 2.4rem;
+            }
+        }
+
+        .how-it-works__container {
+            margin-top: 2.5rem;
+
+            p {
+                width: 93%;
+            }
+
+            img {
+                height: 32.5rem;
+                margin-top: 1.4rem;
+            }
+        }
+
+        .map {
+            margin-top: -6.5rem;
+        }
+    }
+
+    .favorite-animal__container {
+        .favorite-animal__wrapper {
+            .carousel__container-animal {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        .mission {
+            height: 84.3rem;
+
+            .mission__card {
+                width: 56%;
+                margin-bottom: 5rem;
+
+                h3 {
+                    margin-top: 0.4rem;
+                }
+            }
+
+            &__container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .pets__carousel {
+            margin-top: 16rem;
+
+            &__items {
+                margin-left: 1rem;
+            }
+        }
+
+        .pets-range__container {
+            margin-top: 33.15rem;
+        }
+
+        .pay-and-feed__container {
+            .blue-arrow {
+                margin-top: 6rem;
+            }
+        }
+    }
+}

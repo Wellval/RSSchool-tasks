@@ -13,7 +13,7 @@
     footer {
         .footer__container {
             width: 75%;
-            margin-top: 7rem;
+            margin-top: 1rem;
 
             .footer__right {
                 margin-top: 0rem;
@@ -24,6 +24,10 @@
                     margin-top: 5rem;
                 }
             }
+        }
+
+        .footer__lower {
+            width: 75%;
         }
     }
 }

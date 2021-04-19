@@ -158,6 +158,7 @@ header {
         ul {
             padding: 0;
             padding-top: 1rem;
+            margin-left: 3rem;
             @include navbar();
             .nav-item > a {
                 color: $gray1;
@@ -175,6 +176,7 @@ header {
         width: 12.8rem;
         justify-content: space-evenly;
         align-items: center;
+        margin-right: -4rem;
     }
 
     .switch {
@@ -606,7 +608,7 @@ main {
         padding-top: 2rem;
         background-color: $gray6;
         width: 100%;
-        height: 39.3rem;
+        height: 73%;
 
         h3 {
             font-size: 2rem;
@@ -624,7 +626,6 @@ main {
         .mission__card {
             width: 31%;
             max-width: 38rem;
-            height: 21.3rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -849,7 +850,7 @@ main {
             margin-bottom: 6rem;
 
             h3 {
-                margin-top: 6rem;
+                margin-top: 10rem;
             }
 
             p {
@@ -866,6 +867,8 @@ main {
             display: flex;
             justify-content: space-evenly;
             padding-top: 7rem;
+            width: 86%;
+            margin: 0 auto;
 
             .payment-step {
                 background-image: url(../../assets/landing/ellipse.png);
@@ -908,8 +911,12 @@ main {
             margin: 0 auto;
         }
 
+        #testimonials__title {
+            margin-top: 15rem;
+        }
+
         h3 {
-            margin-top: 10rem;
+            margin-top: 1.8rem;
         }
 
         &__range-container {
@@ -918,7 +925,6 @@ main {
             width: 24.5rem;
             height: 4.9rem;
             margin: 0 auto;
-            margin-top: -1.4rem;
             @include range();
         }
         
@@ -930,7 +936,7 @@ main {
 
                 &-user {
                     width: 57.5rem;
-                    height: 34rem;
+                    height: 32rem;
                     background: #FEFEFE;
                     box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
                     border-radius: 5px;
@@ -985,7 +991,7 @@ main {
         }
 
         button {
-            margin-top: 55rem;
+            margin-top: 54rem;
 
             p {
                 padding-left: 0.5rem;
@@ -1094,7 +1100,7 @@ main {
         .map-crocodile {
             position: absolute;
             left: 22.6%;
-            top: 19%;
+            top: 16%;
         }
 
         .map-eagle {
@@ -1154,7 +1160,7 @@ footer {
         height: 80%;
         display: flex;
         justify-content: space-between;
-        margin-top: 7rem;
+        margin-top: 6.6rem;
 
         .footer__left {
             display: flex;

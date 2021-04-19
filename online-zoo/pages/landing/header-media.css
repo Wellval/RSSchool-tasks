@@ -2,6 +2,9 @@
   header .header-wrapper {
     margin: 0px 2rem;
   }
+  header .switch-menu {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 1140px) {
