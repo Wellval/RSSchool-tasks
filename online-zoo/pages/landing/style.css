@@ -40,6 +40,7 @@ header .header-wrapper {
 header .header-wrapper ul {
   padding: 0;
   padding-top: 1rem;
+  margin-left: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,6 +93,7 @@ header .switch-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: -4rem;
 }
 
 header .switch {
@@ -790,7 +792,7 @@ main .mission {
   padding-top: 2rem;
   background-color: #F2F2F2;
   width: 100%;
-  height: 39.3rem;
+  height: 73%;
 }
 
 main .mission h3 {
@@ -813,7 +815,6 @@ main .mission__container {
 main .mission .mission__card {
   width: 31%;
   max-width: 38rem;
-  height: 21.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1192,7 +1193,7 @@ main .pay-and-feed__container {
 }
 
 main .pay-and-feed__container h3 {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 main .pay-and-feed__container p {
@@ -1212,6 +1213,8 @@ main .pay-and-feed .payment-process {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding-top: 7rem;
+  width: 86%;
+  margin: 0 auto;
 }
 
 main .pay-and-feed .payment-process .payment-step {
@@ -1263,8 +1266,12 @@ main .testimonials__container {
   margin: 0 auto;
 }
 
+main .testimonials #testimonials__title {
+  margin-top: 15rem;
+}
+
 main .testimonials h3 {
-  margin-top: 10rem;
+  margin-top: 1.8rem;
 }
 
 main .testimonials__range-container {
@@ -1278,7 +1285,6 @@ main .testimonials__range-container {
   width: 24.5rem;
   height: 4.9rem;
   margin: 0 auto;
-  margin-top: -1.4rem;
 }
 
 main .testimonials__range-container input[type=range] {
@@ -1398,7 +1404,7 @@ main .testimonials__carousel {
 
 main .testimonials__carousel-user {
   width: 57.5rem;
-  height: 34rem;
+  height: 32rem;
   background: #FEFEFE;
   -webkit-box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
           box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
@@ -1473,7 +1479,7 @@ main .map h3 {
 }
 
 main .map button {
-  margin-top: 55rem;
+  margin-top: 54rem;
 }
 
 main .map button p {
@@ -1585,7 +1591,7 @@ main .map .map-animal:hover + .popup {
 main .map .map-crocodile {
   position: absolute;
   left: 22.6%;
-  top: 19%;
+  top: 16%;
 }
 
 main .map .map-eagle {
@@ -1689,7 +1695,7 @@ footer .footer__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 7rem;
+  margin-top: 6.6rem;
 }
 
 footer .footer__container .footer__left {
