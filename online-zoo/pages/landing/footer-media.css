@@ -119,4 +119,30 @@
     width: 30rem;
   }
 }
+
+@media (max-width: 450px) {
+  footer {
+    margin-top: -25.1rem;
+  }
+  footer .footer__container {
+    margin-top: 1.8rem;
+  }
+  footer .footer__container .footer__right address p {
+    width: 100%;
+  }
+  footer .footer__container .footer__left input[type="email"],
+  footer .footer__container .footer__left input[type="text"] {
+    width: 29rem;
+  }
+  footer .footer__container .footer__navbar button {
+    margin-top: 148rem;
+  }
+  footer .footer__container .footer__navbar nav ul {
+    margin-top: 3.3rem;
+  }
+  footer .footer__lower {
+    margin-top: 18rem;
+    margin-bottom: 3rem;
+  }
+}
 /*# sourceMappingURL=footer-media.css.map */

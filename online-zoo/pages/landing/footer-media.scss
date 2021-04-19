@@ -164,3 +164,43 @@
     }
 }
 
+@media (max-width: 450px) {
+    footer {
+        margin-top: -25.1rem;
+
+        .footer__container {
+            margin-top: 1.8rem;
+            
+            .footer__right {
+                address {
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .footer__left {
+                input[type="email"],
+                input[type="text"] {
+                    width: 29rem;
+                }
+            }
+            .footer__navbar {
+                button {
+                    margin-top: 148rem;
+                }
+                nav {
+                    ul {
+                        margin-top: 3.3rem;
+                    }
+                }
+            }
+        }
+
+        .footer__lower {
+            margin-top: 18rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+

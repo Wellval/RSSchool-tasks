@@ -440,3 +440,329 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+    main {
+        .favorite-animal {
+            .carousel__container-animal-active {
+                margin-left: -17rem;
+                width: 14rem;
+                height: 20.2rem;
+
+                img {
+                    width: 14rem;
+                    height: 20.2rem;
+                    margin-left: 2rem;
+                }
+
+                .description {
+                    margin-left: 3.5rem;
+                    width: 12rem;
+                    font-size: 1.2rem;
+                    letter-spacing: 0rem;
+                    margin-top: -13rem;
+                }
+
+                button {
+                    padding-right: 2.4rem;
+                    height: 3rem;
+                    margin-bottom: 1.5rem;
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .social-media {
+                display: none;
+            }
+
+            .carousel__container {
+                height: 27.1rem;
+                width: 101.4rem;
+            }
+
+            .carousel__container-animal {
+                .animal-item {
+                    width: 11.3rem;
+                }
+            }
+
+            .carousel__container-animal:hover {
+                .description {
+                    width: 10rem;
+                }
+            }
+
+            .carousel__container-animal__buttons {
+                width: 10rem;
+                flex-direction: column;
+                margin-top: -5rem;
+                height: 1.9rem;
+
+                button {
+                    width: 12rem;
+                }
+            }
+
+            .carousel__container-animal-active__buttons {
+                flex-direction: column;
+                font-size: 1rem;
+                margin-top: 2rem;
+                margin-left: 2.5rem;
+            }
+
+            #line {
+                top: 45rem;
+                left: 1.5%;
+            }
+
+            .carousel-range__container {
+                margin-left: 45%;
+                margin-top: 23.7rem;
+                width: 15rem;
+
+                input[type="range"] {
+                    width: 13.5rem;
+                    margin-top: 0rem;
+                }
+
+                input[type=range]::-webkit-slider-thumb {
+                    width: 1.7rem;
+                }
+            }
+
+            label {
+                margin-top: 1rem;
+            }
+        }
+
+        .favorite-animal__container {
+            height: 66.2rem;
+        }
+        
+        .how-it-works__container {
+            h3 {
+                padding-left: 1rem;
+                font-size: 3.8rem;
+                margin-top: 2.3rem;
+                letter-spacing: -0.09rem;
+            }
+
+            button {
+                margin-top: 1.3rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                margin-top: -2.7rem;
+                width: 30rem;
+                letter-spacing: 0rem;
+            }
+
+            .how-it-works__range-container {
+                margin-top: 2.8rem;
+
+                input[type=range]::-webkit-slider-thumb {
+                    width: 8rem;
+                }
+
+                input[type="range"] {
+                    width: 23.5rem;
+                }
+            }
+        }
+
+        .mission {
+            height: 71.9rem;
+            .mission__container {
+                width: 100%;
+                margin: 5rem auto;
+
+                .mission__card {
+                    width: 33rem;
+                    margin-bottom: 3.03rem;
+                }
+            }
+        }
+
+        .pets {
+            h3 {
+                font-size: 3.6rem;
+            }
+
+            #choose-button {
+                margin-top: 2rem;
+            }
+        }
+
+        .pets__container {
+            margin-top: -2.6rem;
+        }
+
+        .pets__carousel__items {
+            margin-left: 0.4rem;
+            margin-top: -1.6rem;
+        }
+
+        .pets-range__container {
+            margin-top: 32.3rem;
+        }
+
+        .pay-and-feed {
+            margin-top: -5rem;
+
+            .payment-process {
+                margin-top: -4rem;
+                .payment-step {
+                    margin-top: 3rem;
+
+                    img {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+            button {
+                margin-top: 2.5rem;
+                margin-bottom: -1rem;
+            }
+        }
+
+        .pay-and-feed__container {
+            h3 {
+                font-size: 3.6rem;
+                margin-top: -1.7rem;
+            }
+
+            .blue-arrow {
+                margin-top: 4rem;
+            }
+
+            #payment-description {
+                display: none;
+            }
+        }
+
+        .testimonials {
+            #testimonials__title {
+                margin-top: 4.5rem;
+                font-size: 3.6rem;
+            }
+
+            button {
+                margin: 1.6rem auto;
+            }
+        }
+
+        .testimonials__range-container {
+            margin-top: -0.6rem;
+        }
+
+        .testimonials__carousel-user {
+            margin-top: -2rem;
+            height: 36rem;
+
+            h3 {
+                font-size: 1.6rem;
+                padding-top: 4rem;
+                margin: 0;
+            }
+
+            .user-photo__container {
+                margin-top: -4.6rem;
+            }
+
+            p {
+                width: 93%;
+                margin-top: 2rem;
+            }
+        }
+
+        .pets__carousel__user {
+            margin-top: -2rem;
+        }
+
+        .map {
+            margin-top: -10rem;
+
+            .map-animal {
+                width: 3.4rem;
+                height: 4.7rem;
+            }
+
+            .map-animal-image {
+                width: 2.2rem;
+                height: 2.2rem;
+            }
+
+            .map-eagle {
+                left: 4%;
+                top: 1.2%;
+            }
+
+            .map-crocodile {
+                left: 13.6%;
+                top: 4%;
+            }
+
+            .map-gorilla {
+                left: 44.7%;
+                top: 8.5%;
+            }
+
+            .map-panda {
+                left: 74.39%;
+                top: 1.9%;
+            }
+
+            button {
+                margin-top: 16.2rem;
+                
+                p {
+                    width: 13rem;
+                }
+            }
+
+            h3 {
+                margin-top: 4.4rem;
+                font-size: 3.6rem;
+            }
+        }
+
+        .map__container {
+            height: 20rem;
+            margin-top: 12.5rem;
+        }
+    }
+   
+    .favorite-animal__container {        
+        .favorite-animal__wrapper {
+            h2 {
+                font-size: 4.8rem;
+                padding-top: 9rem;
+                padding-left: 1rem;
+                width: 95%;
+                letter-spacing: 0;
+            }
+
+            button {
+                margin-left: 4.1rem;
+                margin-top: -2.4rem;
+
+                p {
+                    width: 56%;
+                }
+            }
+
+            .carousel__container {
+                margin-left: 4%;
+                margin-top: 4.4rem;
+            }
+
+            .carousel__container-animal {
+                margin-left: -6rem;
+            }
+        }
+    }
+}
