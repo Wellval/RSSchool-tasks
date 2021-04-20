@@ -182,7 +182,7 @@ main .content {
   height: 91rem;
   height: 91rem;
   margin-left: 9.3%;
-  width: 44%;
+  width: 50%;
 }
 
 main .content h3 {
@@ -195,7 +195,7 @@ main .content .stream {
 }
 
 main .content .stream__container {
-  width: 100%;
+  width: 93%;
 }
 
 main .content .plug {
@@ -264,7 +264,7 @@ main .content .slider-dot-active:hover {
 main .description {
   width: 19.792%;
   height: 20.9rem;
-  margin-left: 3rem;
+  margin-left: -3rem;
   margin-top: 15.3rem;
 }
 
