@@ -80,9 +80,6 @@
 }
 
 @media (max-width: 400px) {
-  footer {
-    margin-top: -30.1rem;
-  }
   footer .footer__container {
     margin-top: -0.2rem;
   }
@@ -129,7 +126,7 @@
 
 @media (max-width: 450px) {
   footer {
-    margin-top: -24.1rem;
+    margin-top: -30.1rem;
   }
   footer .footer__container .footer__right address p {
     width: 100%;
