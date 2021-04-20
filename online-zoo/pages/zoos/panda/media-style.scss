@@ -1,8 +1,15 @@
 @media (max-width: 1210px) {
     main {
         .content {
-            margin-left: 3.8%;
+            margin-left: 2.5rem;
             height: 71.6rem;
+            margin-left: 3rem;
+            width: 52rem;
+
+            h3 {
+                margin-left: 4rem;
+                width: 50rem;
+            }
 
             .stream {
                 height: 29rem;
@@ -10,11 +17,13 @@
 
             .preview__container {
                 height: 9.1rem;
+                margin-left: 2.5rem;
+                width: 53rem;
             }
         }
 
         aside {
-            margin-left: 0;
+            margin-left: 1.4rem;
             ul {
                 li {
                     img {
@@ -38,8 +47,8 @@
 
         .description {
             margin-left: 0.7rem;
-            margin-top: -8.5rem;
-            width: 94%;
+            margin-top: 15.3rem;
+            width: 25%;
             height: 34.9rem;
         }
     }
