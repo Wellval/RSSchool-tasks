@@ -1,0 +1,218 @@
+@media (max-width: 1210px) {
+  main .content {
+    margin-left: 5.8%;
+    height: 71.6rem;
+    margin-left: 3rem;
+    width: 52rem;
+  }
+  main .content h3 {
+    margin-left: 4rem;
+    width: 50rem;
+  }
+  main .content .stream {
+    height: 29rem;
+  }
+  main .content .stream__container {
+    width: 53rem;
+    margin-left: 3rem;
+  }
+  main .content .preview__container {
+    height: 9.1rem;
+    margin-left: 0.5rem;
+    width: 53rem;
+  }
+  main aside {
+    margin-left: 1.5rem;
+  }
+  main aside ul li img {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+  main aside .animal-active {
+    width: 12rem;
+    height: 12rem;
+  }
+  main aside .animal-active > img {
+    width: 10.4rem;
+    height: 10.4rem;
+    padding-top: 0.8rem;
+  }
+  main .description {
+    margin-left: 7.7rem;
+    margin-top: 15.5rem;
+    width: 25%;
+    height: 34.9rem;
+  }
+  main .description button {
+    margin-top: 9.5rem;
+    margin-top: 3rem;
+    width: 19.4rem;
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 1210px) and (max-width: 900px) {
+  main {
+    height: 98.3rem;
+  }
+  main .main__container {
+    height: 67.3rem;
+  }
+  main .main__container .content__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .content {
+    width: 93%;
+    margin-left: 6.8%;
+  }
+  main .content h3 {
+    margin-left: -2.9rem;
+  }
+  main .content .stream {
+    height: 27rem;
+    width: 49rem;
+    margin-left: 0rem;
+  }
+  main .content .stream__container {
+    width: 100%;
+    margin-left: -3.5rem;
+  }
+  main .content .plug {
+    width: 78%;
+  }
+  main .content .preview__container {
+    margin-top: 1rem;
+    width: 50rem;
+    margin-left: 0rem;
+  }
+  main .description {
+    margin-top: 5rem;
+    margin-left: -0.3rem;
+    width: 49rem;
+  }
+  main .description button {
+    margin-top: 3.5rem;
+    width: 18.4rem;
+    margin-left: 0rem;
+  }
+  main aside {
+    height: 39rem;
+    margin-left: -3rem;
+  }
+  main aside ul {
+    height: 100%;
+  }
+  main aside ul li {
+    width: 7rem;
+    height: 7rem;
+  }
+  main aside ul li img {
+    width: 7rem;
+    height: 7rem;
+  }
+  main aside .animal-active {
+    width: 9rem;
+    height: 9rem;
+  }
+  main aside .animal-active > img {
+    width: 7.8rem;
+    height: 7.8rem;
+    padding-top: 0.6rem;
+  }
+}
+
+@media (max-width: 1210px) and (max-width: 700px) {
+  main .content .stream {
+    width: 21rem;
+  }
+  main .content .preview__container {
+    width: 21rem;
+  }
+}
+
+@media (max-width: 1210px) and (max-width: 500px) {
+  main .main__container .content__wrapper {
+    width: 73%;
+  }
+  main .content {
+    width: 66%;
+    margin-left: 9.8%;
+  }
+  main .content h3 {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    width: 20rem;
+    margin-left: 2rem;
+  }
+  main .content .stream {
+    height: 12rem;
+    margin-top: -2rem;
+    margin-left: 3rem;
+  }
+  main .content .preview__container {
+    margin-top: 0.5rem;
+    height: 6rem;
+  }
+  main .content iframe:nth-child(4) {
+    display: none;
+  }
+  main .content .preview {
+    width: 43.5%;
+    margin-left: 3rem;
+  }
+  main .content .plug {
+    height: 71%;
+  }
+  main .content .slider-dots {
+    margin-top: 1.5rem;
+    margin-left: 9.5rem;
+  }
+  main .content .stream__container {
+    width: 20rem;
+    margin-left: -1.5rem;
+  }
+  main aside {
+    height: 21rem;
+    width: 5rem;
+    margin-left: 0.5rem;
+  }
+  main aside ul {
+    height: 100%;
+  }
+  main aside ul li {
+    width: 4rem;
+    height: 4rem;
+  }
+  main aside ul li img {
+    width: 4rem;
+    height: 4rem;
+  }
+  main aside .animal-active {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  main aside .animal-active > img {
+    width: 5.5rem;
+    height: 5.5rem;
+    padding-top: 0.5rem;
+  }
+  main .description {
+    margin-top: -39.3rem;
+    margin-left: 3.8rem;
+    width: 21rem;
+  }
+  main .description h3 {
+    font-size: 1.4rem;
+  }
+  main .description p {
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+  main .description button {
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=media-style.css.map */
