@@ -1,6 +1,6 @@
 @media (max-width: 1210px) {
   main .content {
-    margin-left: 2.5rem;
+    margin-left: 5.8%;
     height: 71.6rem;
     margin-left: 3rem;
     width: 52rem;
@@ -12,13 +12,16 @@
   main .content .stream {
     height: 29rem;
   }
+  main .content .stream__container {
+    width: 53rem;
+  }
   main .content .preview__container {
     height: 9.1rem;
     margin-left: 2.5rem;
     width: 53rem;
   }
   main aside {
-    margin-left: 1.4rem;
+    margin-left: 1.5rem;
   }
   main aside ul li img {
     width: 9.6rem;
@@ -34,10 +37,15 @@
     padding-top: 0.8rem;
   }
   main .description {
-    margin-left: 0.7rem;
-    margin-top: 15.3rem;
+    margin-left: 7.7rem;
+    margin-top: 15.5rem;
     width: 25%;
     height: 34.9rem;
+  }
+  main .description button {
+    margin-top: 9.5rem;
+    width: 19.4rem;
+    margin-left: 0rem;
   }
 }
 
@@ -83,11 +91,13 @@
     margin-left: 2.7rem;
   }
   main .description button {
-    margin-left: -1rem;
+    margin-top: 3.5rem;
+    width: 18.4rem;
+    margin-left: 0rem;
   }
   main aside {
     height: 39rem;
-    margin-left: 1rem;
+    margin-left: -1rem;
   }
   main aside ul {
     height: 100%;
@@ -155,6 +165,7 @@
   main aside {
     height: 21rem;
     width: 5rem;
+    margin-left: 0.5rem;
   }
   main aside ul {
     height: 100%;

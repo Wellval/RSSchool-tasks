@@ -1,7 +1,7 @@
 @media (max-width: 1210px) {
     main {
         .content {
-            margin-left: 2.5rem;
+            margin-left: 5.8%;
             height: 71.6rem;
             margin-left: 3rem;
             width: 52rem;
@@ -15,6 +15,10 @@
                 height: 29rem;
             }
 
+            .stream__container {
+                width: 53rem;
+            }
+
             .preview__container {
                 height: 9.1rem;
                 margin-left: 2.5rem;
@@ -23,7 +27,7 @@
         }
 
         aside {
-            margin-left: 1.4rem;
+            margin-left: 1.5rem;
             ul {
                 li {
                     img {
@@ -46,10 +50,16 @@
         }
 
         .description {
-            margin-left: 0.7rem;
-            margin-top: 15.3rem;
+            margin-left: 7.7rem;
+            margin-top: 15.5rem;
             width: 25%;
             height: 34.9rem;
+
+            button {
+                margin-top: 9.5rem;
+                width: 19.4rem;
+                margin-left: 0rem;
+            }
         }
     }
 }
@@ -100,13 +110,15 @@
             margin-left: 2.7rem;
 
             button {
-                margin-left: -1rem;
+                margin-top: 3.5rem;
+                width: 18.4rem;
+                margin-left: 0rem;
             }
         }
 
         aside {
             height: 39rem;
-            margin-left: 1rem;
+            margin-left: -1rem;
             ul {
                 height: 100%;
                 li {
@@ -187,6 +199,7 @@
         aside {
             height: 21rem;
             width: 5rem;
+            margin-left: 0.5rem;
             ul {
                 height: 100%;
                 li {
