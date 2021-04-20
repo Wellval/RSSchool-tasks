@@ -29,7 +29,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 93%;
-    margin-top: 12.5rem;
+    margin-top: 6.5rem;
   }
   footer .footer__container .footer__left h3 {
     margin-top: 18.6rem;
@@ -126,7 +126,7 @@
 
 @media (max-width: 450px) {
   footer {
-    margin-top: -24.1rem;
+    margin-top: -30.1rem;
   }
   footer .footer__container .footer__right address p {
     width: 100%;

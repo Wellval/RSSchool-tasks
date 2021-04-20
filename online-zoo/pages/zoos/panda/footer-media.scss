@@ -36,7 +36,7 @@
         .footer__container {
             flex-direction: column;
             width: 93%;
-            margin-top: 12.5rem;
+            margin-top: 6.5rem;
 
             .footer__left {
                 h3 {
@@ -104,7 +104,7 @@
 
 @media (max-width: 400px) {
     footer {
-        .footer__container {
+            .footer__container {
             margin-top: -0.2rem;
 
             button[type="submit"] {
@@ -170,7 +170,7 @@
 
 @media (max-width: 450px) {
     footer {
-        margin-top: -24.1rem;
+        margin-top: -30.1rem;
 
         .footer__container {
                         
