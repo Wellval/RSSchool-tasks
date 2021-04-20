@@ -22,12 +22,17 @@ header {
   display: flex;
 }
 
+header #menu {
+  display: none;
+  margin-left: 4rem;
+}
+
 header .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 162rem;
-  margin: 0 auto;
+  margin: 0 15rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -36,6 +41,7 @@ header .header-wrapper {
 header .header-wrapper ul {
   padding: 0;
   padding-top: 1rem;
+  margin-left: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,11 +79,30 @@ header .header-wrapper ul .nav-item > a {
   color: #333333;
 }
 
+header #menu {
+  height: 2.1rem;
+  width: 4rem;
+}
+
+header .switch-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 12.8rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: -4rem;
+}
+
 header .switch {
   position: relative;
   display: inline-block;
-  width: 6rem;
-  height: 3.4rem;
+  width: 5.4rem;
+  height: 3rem;
 }
 
 header .switch input {
@@ -96,15 +121,17 @@ header .switch .slider {
   background-color: #F2F2F2;
   -webkit-transition: .4s;
   transition: .4s;
+  width: 5.4rem;
+  height: 3rem;
 }
 
 header .switch .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 2rem;
+  width: 2rem;
+  left: 7px;
+  bottom: 6px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -115,12 +142,12 @@ header .switch input:checked + .slider {
 }
 
 header .switch input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(2rem);
+  transform: translateX(2rem);
 }
 
 header .switch .slider.round {
-  border-radius: 34px;
+  border-radius: 3.4rem;
 }
 
 header .switch input:checked + .slider.round:before {
@@ -145,9 +172,17 @@ main .main__container {
   width: 192rem;
 }
 
+main .main__container .content__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main .content {
   height: 91rem;
-  margin-left: 17.8rem;
+  height: 91rem;
+  margin-left: 9.3%;
+  width: 44%;
 }
 
 main .content h3 {
@@ -160,17 +195,17 @@ main .content .stream {
 }
 
 main .content .stream__container {
-  width: 79rem;
+  width: 100%;
 }
 
 main .content .plug {
-  width: 79rem;
+  width: 60%;
   height: 14.1rem;
   position: absolute;
 }
 
 main .content .preview {
-  width: 24.6rem;
+  width: 30.5%;
   height: 100%;
 }
 
@@ -227,7 +262,7 @@ main .content .slider-dot-active:hover {
 }
 
 main .description {
-  width: 38rem;
+  width: 19.792%;
   height: 20.9rem;
   margin-left: 3rem;
   margin-top: 15.3rem;
@@ -348,7 +383,6 @@ main aside ul li {
 
 footer {
   width: 100%;
-  height: 75.1rem;
   background: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,17 +440,24 @@ footer ul li > a {
 
 footer .footer__navbar {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .footer__container {
-  width: 162rem;
-  height: 81%;
+  max-width: 162rem;
+  width: 85%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 6.5rem;
 }
 
 footer .footer__container .footer__left {
@@ -428,6 +469,7 @@ footer .footer__container .footer__left {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -0.5rem;
+  width: 53%;
 }
 
 footer .footer__container .footer__left form {
@@ -472,6 +514,8 @@ footer .footer__container .footer__left h3 {
 
 footer .footer__container .footer__right {
   margin-top: -0.9rem;
+  margin-left: 5rem;
+  width: 55%;
 }
 
 footer .footer__container .footer__right h4 {
@@ -481,7 +525,6 @@ footer .footer__container .footer__right h4 {
   text-transform: uppercase;
   color: #FEFEFE;
   margin-top: 6rem;
-  margin-left: 7.9rem;
 }
 
 footer .footer__container .footer__right address {
@@ -503,7 +546,6 @@ footer .footer__container .footer__right address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 7.9rem;
   margin-top: 2.5rem;
   height: 9.9rem;
 }
@@ -533,7 +575,6 @@ footer .footer__container .footer__right .social-media {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2.1rem;
-  margin-left: 7.9rem;
 }
 
 footer .footer__container .footer__right .social-media img {
@@ -574,13 +615,18 @@ footer .footer__container .footer__navbar {
 }
 
 footer .footer__container .footer__navbar nav {
-  padding-right: 9.2rem;
+  max-width: 79.5rem;
 }
 
 footer .footer__container .footer__navbar nav ul {
-  width: 46.4rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  max-width: 40.4rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin-right: 11rem;
+  width: 140%;
 }
 
 footer .footer__container .footer__navbar button {
@@ -592,12 +638,14 @@ footer .footer__container path {
 }
 
 footer .footer__lower {
-  width: 162rem;
+  max-width: 162rem;
+  width: 85%;
   border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-  margin-top: -9rem;
-  padding-top: 4.7rem;
+  margin-top: 6rem;
+  padding-top: 3.1rem;
   color: #bdbdbd;
   font-size: 1.2rem;
+  margin-bottom: 10rem;
 }
 
 footer .footer__lower a {

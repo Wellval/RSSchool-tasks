@@ -1,0 +1,149 @@
+@media (max-width: 1480px) {
+  footer .footer__navbar button {
+    position: absolute;
+    margin-top: 64rem;
+  }
+}
+
+@media (max-width: 1201px) {
+  footer .footer__container {
+    width: 75%;
+  }
+  footer .footer__container .footer__right {
+    margin-top: 0rem;
+    margin-right: 4rem;
+  }
+  footer .footer__container .footer__right h4 {
+    margin-top: 5rem;
+  }
+  footer .footer__lower {
+    width: 75%;
+    padding-top: 3.7rem;
+  }
+}
+
+@media (max-width: 960px) {
+  footer .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 93%;
+    margin-top: 6.8rem;
+  }
+  footer .footer__container .footer__left h3 {
+    margin-top: 18.6rem;
+    position: absolute;
+  }
+  footer .footer__container .footer__left form {
+    position: absolute;
+    margin-top: 25rem;
+  }
+  footer .footer__container .footer__right {
+    margin-top: 51.4rem;
+    margin-right: 4rem;
+    margin-left: 0rem;
+  }
+  footer .footer__navbar {
+    position: absolute;
+    margin-top: -50.1rem;
+  }
+  footer .footer__navbar nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer__navbar nav ul .nav-item {
+    margin-top: 0.5rem;
+  }
+  footer .footer__navbar button {
+    margin-top: -18rem;
+    margin-left: 32.2rem;
+  }
+  footer .footer__lower {
+    max-width: 162rem;
+    width: 93%;
+    margin-bottom: 6rem;
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 630px) {
+  footer .footer__container .footer__navbar button {
+    margin-top: 149rem;
+    margin-left: 50%;
+  }
+  footer .footer__lower {
+    margin-top: 14rem;
+  }
+}
+
+@media (max-width: 400px) {
+  footer .footer__container {
+    margin-top: -0.2rem;
+  }
+  footer .footer__container button[type="submit"] {
+    margin-left: 18.4rem;
+  }
+  footer .footer__container .footer__navbar nav ul {
+    margin-top: 2rem;
+  }
+  footer .footer__container .footer__navbar button {
+    margin-left: 6%;
+  }
+  footer .footer__container .footer__right {
+    margin-top: 50.3rem;
+  }
+  footer .footer__container .footer__left input[type="text"],
+  footer .footer__container .footer__left input[type="email"] {
+    width: 27rem;
+    height: 2.8rem;
+  }
+  footer .footer__container .footer__left h3 {
+    margin-top: 19.6rem;
+  }
+  footer .footer__container .footer__left form {
+    margin-top: 26rem;
+  }
+  footer .footer__container .footer__left fieldset {
+    height: 12.4rem;
+    width: 27rem;
+  }
+  footer .footer__container .footer__left textarea {
+    width: 27rem;
+  }
+  footer .footer__container .footer__left form {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .footer__container {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  footer {
+    margin-top: -24.1rem;
+  }
+  footer .footer__container .footer__right address p {
+    width: 100%;
+  }
+  footer .footer__container .footer__left input[type="email"],
+  footer .footer__container .footer__left input[type="text"] {
+    width: 29rem;
+  }
+  footer .footer__container .footer__navbar button {
+    margin-top: 148rem;
+  }
+  footer .footer__container .footer__navbar nav ul {
+    margin-top: 3.3rem;
+  }
+  footer .footer__lower {
+    margin-top: 18rem;
+    margin-bottom: 3rem;
+  }
+}
+/*# sourceMappingURL=footer-media.css.map */
