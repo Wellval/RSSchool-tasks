@@ -1,20 +1,33 @@
 @media (max-width: 1210px) {
     main {
         .content {
-            margin-left: 3.8%;
+            margin-left: 5.8%;
             height: 71.6rem;
+            margin-left: 3rem;
+            width: 52rem;
+
+            h3 {
+                margin-left: 4rem;
+                width: 50rem;
+            }
 
             .stream {
                 height: 29rem;
             }
 
+            .stream__container {
+                width: 53rem;
+            }
+
             .preview__container {
                 height: 9.1rem;
+                margin-left: 2.5rem;
+                width: 53rem;
             }
         }
 
         aside {
-            margin-left: 0;
+            margin-left: 1.5rem;
             ul {
                 li {
                     img {
@@ -37,10 +50,16 @@
         }
 
         .description {
-            margin-left: 0.7rem;
-            margin-top: -8.5rem;
-            width: 94%;
+            margin-left: 7.7rem;
+            margin-top: 15.5rem;
+            width: 25%;
             height: 34.9rem;
+
+            button {
+                margin-top: 9.5rem;
+                width: 19.4rem;
+                margin-left: 0rem;
+            }
         }
     }
 }
@@ -60,8 +79,14 @@
             width: 93%;
             margin-left: 6.8%;
 
+            h3 {
+                margin-left: -0.9rem;
+            }
+
             .stream {
                 height: 27rem;
+                width: 49rem;
+                margin-left: 0rem;
             }
 
             .stream__container {
@@ -75,17 +100,25 @@
 
             .preview__container {
                 margin-top: 1rem;
+                width: 50rem;
+                margin-left: 0rem;
             }
         }
 
         .description {
-            margin-top: -9rem;
+            margin-top: 5rem;
             margin-left: 2.7rem;
+
+            button {
+                margin-top: 3.5rem;
+                width: 18.4rem;
+                margin-left: 0rem;
+            }
         }
 
         aside {
             height: 39rem;
-            margin-left: 1rem;
+            margin-left: -1rem;
             ul {
                 height: 100%;
                 li {
@@ -154,7 +187,7 @@
 
             .slider-dots {
                 margin-top: 1.5rem;
-                margin-left: 7rem;
+                margin-left: 9.5rem;
             }
 
             .stream__container {
@@ -166,6 +199,7 @@
         aside {
             height: 21rem;
             width: 5rem;
+            margin-left: 0.5rem;
             ul {
                 height: 100%;
                 li {
