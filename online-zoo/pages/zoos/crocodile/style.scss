@@ -54,15 +54,21 @@ header {
     box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
     display: flex;
 
+    #menu {
+        display: none;
+        margin-left: 4rem;
+    }
+
     .header-wrapper {
         display: flex;
         width: 162rem;
-        margin: 0 auto;
+        margin: 0 15rem;
         justify-content: space-between;
 
         ul {
             padding: 0;
             padding-top: 1rem;
+            margin-left: 3rem;
             @include navbar();
             .nav-item > a {
                 color: $gray1;
@@ -70,11 +76,24 @@ header {
         }
     }
 
+    #menu {
+        height: 2.1rem;
+        width: 4rem;
+    }
+
+    .switch-menu {
+        display: flex;
+        width: 12.8rem;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: -4rem;
+    }
+
     .switch {
         position: relative;
         display: inline-block;
-        width: 6rem;
-        height: 3.4rem;
+        width: 5.4rem;
+        height: 3rem;
 
         input {
             opacity: 0;
@@ -92,15 +111,17 @@ header {
             background-color: $gray6;
             -webkit-transition: .4s;
             transition: .4s;
+            width: 5.4rem;
+            height: 3rem;
           }
           
           .slider:before {
             position: absolute;
             content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
+            height: 2rem;
+            width: 2rem;
+            left: 7px;
+            bottom: 6px;
             background-color: white;
             -webkit-transition: .4s;
             transition: .4s;
@@ -111,13 +132,13 @@ header {
           }
           
           input:checked + .slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
+            -webkit-transform: translateX(2rem);
+            -ms-transform: translateX(2rem);
+            transform: translateX(2rem);
           }
         
           .slider.round {
-            border-radius: 34px;
+            border-radius: 3.4rem;
           }
 
           input:checked + .slider.round:before {
@@ -130,7 +151,6 @@ header {
     }
 }
 
-
 main {
     display: flex;
 
@@ -138,11 +158,17 @@ main {
         display: flex;
         margin: 0 auto;
         width: 192rem;
+
+        .content__wrapper {
+            display: flex;
+        }
     }
 
     .content {
         height: 91rem;
-        margin-left: 17.8rem;
+        height: 91rem;
+        margin-left: 9.3%;
+        width: 44%;
 
         h3 {
             margin-top: 5.5rem;
@@ -153,18 +179,18 @@ main {
             height: 44.2rem;
 
             &__container {
-                width: 79rem;
+                width: 100%;
             }
         }
 
         .plug {
-            width: 79rem;
+            width: 60%;
             height: 14.1rem;
             position: absolute;
         }
 
         .preview {
-            width: 24.6rem;
+            width: 30.5%;
             height: 100%;
 
             &__container {
@@ -212,7 +238,7 @@ main {
     }
 
     .description {
-        width: 38rem;
+        width: 19.792%;
         height: 20.9rem;
         margin-left: 3rem;
         margin-top: 15.3rem;
@@ -226,7 +252,7 @@ main {
 
         p {
             margin: 0;
-            margin-bottom: 2.4rem;
+            margin-bottom: 2.1rem;
             font-size: 1.4rem;
             line-height: 1.6rem;
             color: $gray2;
@@ -311,7 +337,7 @@ main {
 
 footer {
     width: 100%;
-    height: 75.1rem;
+    // height: 75.1rem;
     background: $gray1;
     display: flex;
     flex-direction: column;
@@ -328,18 +354,23 @@ footer {
 
     .footer__navbar {
         margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .footer__container {
-        width: 162rem;
-        height: 81%;
+        max-width: 162rem;
+        width: 85%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
+        margin-top: 6.5rem;
 
         .footer__left {
             display: flex;
             flex-direction: column;
             margin-top: -0.5rem;
+            width: 53%;
 
             form {
                 margin-top: -1.18rem;
@@ -384,6 +415,8 @@ footer {
 
         .footer__right {
             margin-top: -0.9rem;
+            margin-left: 5rem;
+            width: 55%;
 
             h4 {
                 font-weight: bold;
@@ -392,7 +425,6 @@ footer {
                 text-transform: uppercase;
                 color: $base;
                 margin-top: 6rem;
-                margin-left: 7.9rem;
             }
 
             address {
@@ -407,7 +439,6 @@ footer {
                 color: $base;
                 height: 9.4rem;
                 justify-content: space-between;
-                margin-left: 7.9rem;
                 margin-top: 2.5rem;
                 height: 9.9rem;
 
@@ -428,7 +459,6 @@ footer {
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 2.1rem;
-                margin-left: 7.9rem;
 
                 img {
                     transition: all 0.3s ease-in-out;
@@ -460,11 +490,14 @@ footer {
         align-items: center;
 
         nav {
-            padding-right: 9.2rem; 
-            
+            max-width: 79.5rem;            
             ul {
-                width: 46.4rem;
-                justify-content: space-around;
+                max-width: 40.4rem;
+                width: 100%;
+                justify-content: space-between;
+                padding: 0;
+                margin-right: 11rem;
+                width: 140%;
             }
         }
 
@@ -479,12 +512,14 @@ footer {
     }
 
     .footer__lower {
-        width: 162rem;
+        max-width: 162rem;
+        width: 85%;
         border-top: 0.05rem solid rgba(254, 254, 254, 0.5);
-        margin-top: -9rem;
-        padding-top: 4.7rem;
+        margin-top: 6rem;
+        padding-top: 3.1rem;
         color: $gray4;
         font-size: 1.2rem;
+        margin-bottom: 10rem;
 
         a {
             pointer-events: none;
