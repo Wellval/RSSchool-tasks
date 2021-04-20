@@ -69,8 +69,14 @@
             width: 93%;
             margin-left: 6.8%;
 
+            h3 {
+                margin-left: -0.9rem;
+            }
+
             .stream {
                 height: 27rem;
+                width: 49rem;
+                margin-left: 0rem;
             }
 
             .stream__container {
@@ -84,12 +90,18 @@
 
             .preview__container {
                 margin-top: 1rem;
+                width: 50rem;
+                margin-left: 0rem;
             }
         }
 
         .description {
-            margin-top: -9rem;
+            margin-top: 5rem;
             margin-left: 2.7rem;
+
+            button {
+                margin-left: -1rem;
+            }
         }
 
         aside {
@@ -163,7 +175,7 @@
 
             .slider-dots {
                 margin-top: 1.5rem;
-                margin-left: 7rem;
+                margin-left: 9.5rem;
             }
 
             .stream__container {

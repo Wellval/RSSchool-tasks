@@ -58,8 +58,13 @@
     width: 93%;
     margin-left: 6.8%;
   }
+  main .content h3 {
+    margin-left: -0.9rem;
+  }
   main .content .stream {
     height: 27rem;
+    width: 49rem;
+    margin-left: 0rem;
   }
   main .content .stream__container {
     width: 100%;
@@ -70,10 +75,15 @@
   }
   main .content .preview__container {
     margin-top: 1rem;
+    width: 50rem;
+    margin-left: 0rem;
   }
   main .description {
-    margin-top: -9rem;
+    margin-top: 5rem;
     margin-left: 2.7rem;
+  }
+  main .description button {
+    margin-left: -1rem;
   }
   main aside {
     height: 39rem;
@@ -136,7 +146,7 @@
   }
   main .content .slider-dots {
     margin-top: 1.5rem;
-    margin-left: 7rem;
+    margin-left: 9.5rem;
   }
   main .content .stream__container {
     width: 20rem;
