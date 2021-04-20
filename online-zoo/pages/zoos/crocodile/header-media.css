@@ -1,0 +1,25 @@
+@media (max-width: 800px) {
+  header .header-wrapper {
+    margin: 0px 2rem;
+  }
+  header .switch-menu {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  header nav {
+    display: none;
+  }
+  header #menu {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  header .header-wrapper {
+    width: 100%;
+    margin: 0 0.9rem;
+  }
+}
+/*# sourceMappingURL=header-media.css.map */

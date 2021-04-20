@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-style.css">
+    <link rel="stylesheet" href="header-media.css">
+    <link rel="stylesheet" href="footer-media.css">
     <title>Document</title>
 </head>
 
@@ -15,107 +18,113 @@
         <div class="header-wrapper">
             <div class="logo">
                 <h1>Online Zoo</h1>
-                <a href="../../landing/landing.html"><img src="../../../assets/landing/logo.svg" alt="zoo online"></a>
+                <a href="../landing/landing.html"><img src="../../../assets/landing/logo.svg" alt="zoo online"></a>
             </div>
             <nav>
                 <ul>
-                    <li class="nav-item"><a href="../../landing/landing.html">About</a></li>
-                    <li class="nav-item nav-item-active"><a href="#">Zoos</a></li>
-                    <li class="nav-item"><a href="../../map/index.html">Map</a></li>
+                    <li class="nav-item"><a href="../landing/landing.html">About</a></li>
+                    <li class="nav-item"><a href="../zoos/panda/index.html">Zoos</a></li>
+                    <li class="nav-item nav-item-active"><a href="#">Map</a></li>
                     <li class="nav-item"><a href="#">Contact us</a></li>
                     <li class="nav-item"><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a>
                     </li>
                 </ul>
             </nav>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
+            <div class="switch-menu">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <img id="menu" src="../../../assets/landing/menu.svg" alt="" srcset="">
+            </div>
         </div>
     </header>
     <main>
         <div class="main__container">
-        <aside>
-            <div class="arrow arrow-top">
-                <img src="../../../assets/zoos/arrow.svg" alt="arrow-top">
-            </div>
-            <ul>
-                <span class="animal-wrapper" title="Panda">
-                    <li class="animal-round">
-                        <a href="../panda/index.html">
-                            <img src="../../../assets/zoos/panda-round.png" alt="">
-                        </a>
-                    </li>
-                </span>
-                <span class="animal-wrapper" title="Gorilla">
-                    <li class="animal-round">
-                        <a href="../gorilla/index.html">
-                            <img src="../../../assets/zoos/gorilla-round.png" alt="">
-                        </a>
-                    </li>
-                </span>
-                <span class="animal-wrapper" title="Crocodile">
-                    <li class="animal-active">
-                        <a href="../../zoos/crocodile/index.html">
-                            <img src="../../../assets/zoos/crocodile-round.png" alt="">
-                        </a>
-                    </li>
-                </span>
-                <span class="animal-wrapper" title="Eagle">
-                    <a href="../eagle/index.html">
-                        <li class="animal-round">
-                            <img src="../../../assets/zoos/eagle-round.png" alt="">
-                        </li>
-                    </a>
-                </span>
-            </ul>
-            <div class="arrow arrow-bottom">
-                <img src="../../../assets/zoos/arrow.svg" alt="arrow-bottom">
-            </div>
-        </aside>
-        <section class="content">
-            <h3>Alligator and Spoonbill Swamp Webcam</h3>
-            <div class="stream__container">
-                <iframe class="stream" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="preview__container">
-                    <div class="plug"></div>
-                    <iframe class="preview" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-
-                    <iframe class="preview" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-
-                    <iframe class="preview" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <aside>
+                <div class="arrow arrow-top">
+                    <img src="../../../assets/zoos/arrow.svg" alt="arrow-top">
                 </div>
+                <ul>
+                    <span class="animal-wrapper" title="Panda">
+                        <li class="animal-round">
+                            <img src="../../../assets/zoos/panda-round.png" alt="">
+                        </li>
+                    </span>
+                    <span class="animal-wrapper" title="Gorilla">
+                        <li class="animal-round">
+                            <a href="../gorilla/index.html">
+                                <img src="../../../assets/zoos/gorilla-round.png" alt="">
+                            </a>
+                        </li>
+                    </span>
+                    <span class="animal-wrapper" title="Crocodile">
+                        <li class="animal-active">
+                            <a href="../crocodile/index.html">
+                                <img src="../../../assets/zoos/crocodile-round.png" alt="">
+                            </a>
+                        </li>
+                    </span>
+                    <span class="animal-wrapper" title="Eagle">
+                        <li class="animal-round">
+                            <a href="../eagle/index.html">
+                                <img src="../../../assets/zoos/eagle-round.png" alt="">
+                            </a>
+                        </li>
+                    </span>
+                </ul>
+                <div class="arrow arrow-bottom">
+                    <img src="../../../assets/zoos/arrow.svg" alt="arrow-bottom">
+                </div>
+            </aside>
+            <div class="content__wrapper">
+                <section class="content">
+                    <h3>Alligator and Spoonbill Swamp Webcam</h3>
+                    <div class="stream__container">
+                        <iframe class="stream" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+
+                        <div class="preview__container">
+                            <div class="plug"></div>
+                            <iframe class="preview" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+
+                            <iframe class="preview" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+
+                            <iframe class="preview" width="560" height="315" src="https://www.youtube.com/embed/EnxRJii_dp8" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="slider-dots">
+                        <div class="slider-dot slider-dot-active"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                    </div>
+                </section>
+                <section class="description">
+                    <h3>Population:</h3>
+                    <p>Over 100,000 western lowland gorillas</p>
+                    <h3>Habitat:</h3>
+                    <p>Gorillas primarily inhabit tropical forest habitats.Tropical forests are
+                        characterized as having little variance in temperature (around 23°C) and
+                        length of daylight (around 12 hours).</p>
+                    <h3>Diet:</h3>
+                    <p>Gorillas stick to a mainly vegetarian diet, feeding on stems, bamboo shoots
+                        and fruits. Western lowland gorillas, however, also have an appetite for termites
+                        and ants, and break open termite nests to eat the larvae.</p>
+                    <button>feed</button>
+                </section>
             </div>
-            <div class="slider-dots">
-                <div class="slider-dot slider-dot-active"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-            </div>
-        </section>
-        <section class="description">
-            <h3>Population:</h3>
-            <p>Roughly 1.25 million </p>
-            <h3>Habitat:</h3>
-            <p>Alligators can be found in slow-moving rivers, ponds, lakes and swamps.</p>
-            <h3>Diet:</h3>
-            <p>Their diets include prey species that are abundant and easily accessible. 
-                Juvenile alligators eat primarily insects, amphibians, small fish, and other invertebrates. 
-                Adult alligators eat rough fish, snakes, turtles, small mammals, and birds.</p>
-            <button>feed</button>
-        </section>
-    </div>
+        </div>
     </main>
     <footer>
         <p><a name="contact-us"></a></p>
