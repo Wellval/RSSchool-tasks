@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-style.css">
+    <link rel="stylesheet" href="header-media.css">
+    <link rel="stylesheet" href="footer-media.css">
     <title>Document</title>
 </head>
 
@@ -15,22 +18,25 @@
         <div class="header-wrapper">
             <div class="logo">
                 <h1>Online Zoo</h1>
-                <a href="../../landing/landing.html"><img src="../../../assets/landing/logo.svg" alt="zoo online"></a>
+                <a href="../landing/landing.html"><img src="../../../assets/landing/logo.svg" alt="zoo online"></a>
             </div>
             <nav>
                 <ul>
-                    <li class="nav-item"><a href="../../landing/landing.html">About</a></li>
-                    <li class="nav-item nav-item-active"><a href="#">Zoos</a></li>
-                    <li class="nav-item"><a href="../../map/index.html">Map</a></li>
+                    <li class="nav-item"><a href="../landing/landing.html">About</a></li>
+                    <li class="nav-item"><a href="../zoos/panda/index.html">Zoos</a></li>
+                    <li class="nav-item nav-item-active"><a href="#">Map</a></li>
                     <li class="nav-item"><a href="#">Contact us</a></li>
                     <li class="nav-item"><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Design</a>
                     </li>
                 </ul>
             </nav>
+            <div class="switch-menu">
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
+            <img id="menu" src="../../../assets/landing/menu.svg" alt="" srcset="">
+        </div>
         </div>
     </header>
     <main>
@@ -71,6 +77,7 @@
                 <img src="../../../assets/zoos/arrow.svg" alt="arrow-bottom">
             </div>
         </aside>
+        <div class="content__wrapper">
         <section class="content">
             <h3>The Beijing Zoo</h3>
             <div class="stream__container">
@@ -113,6 +120,7 @@
                 nutritional value so pandas must eat 12-38kg every day to meet their energy needs.</p>
             <button>feed</button>
         </section>
+    </div>
     </div>
     </main>
     <footer>

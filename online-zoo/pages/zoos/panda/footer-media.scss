@@ -13,12 +13,10 @@
     footer {
         .footer__container {
             width: 75%;
-            margin-top: 1rem;
 
             .footer__right {
                 margin-top: 0rem;
                 margin-right: 4rem;
-                margin-left: 8rem;
 
                 h4 {
                     margin-top: 5rem;
@@ -28,6 +26,7 @@
 
         .footer__lower {
             width: 75%;
+            padding-top: 3.7rem;
         }
     }
 }
@@ -79,18 +78,14 @@
 
         .footer__lower {
             max-width: 162rem;
-            width: 90%;
-            margin-bottom: 5rem;
+            width: 93%;
+            margin-bottom: 6rem;
+            margin-top: 7rem;
         }
     }
 }
 
 @media (max-width: 630px) {
-    main {
-        p {
-            width: 90%;
-        }
-    }
     footer {
         .footer__container {
             .footer__navbar {
@@ -165,13 +160,20 @@
     }
 }
 
+@media (max-width: 500px) {
+    footer {
+        .footer__container {
+            margin-top: 2rem;
+        }
+    }
+}
+
 @media (max-width: 450px) {
     footer {
-        margin-top: -25.1rem;
+        margin-top: -24.1rem;
 
         .footer__container {
-            margin-top: 1.8rem;
-            
+                        
             .footer__right {
                 address {
                     p {
@@ -204,4 +206,5 @@
         }
     }
 }
+
 

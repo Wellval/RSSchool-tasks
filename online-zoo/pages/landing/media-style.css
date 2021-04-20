@@ -308,7 +308,7 @@
     height: 84.3rem;
   }
   main .mission .mission__card {
-    width: 56%;
+    width: 58%;
     margin-bottom: 5rem;
   }
   main .mission .mission__card h3 {
@@ -323,6 +323,9 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  main .how-it-works__range-container input[type=range]::-webkit-slider-thumb {
+    width: 8rem;
+  }
   main .pets__carousel {
     margin-top: 16rem;
   }
@@ -332,8 +335,42 @@
   main .pets-range__container {
     margin-top: 33.15rem;
   }
+  main .pay-and-feed h3 {
+    margin-top: 4.5rem;
+  }
+  main .pay-and-feed button {
+    margin-top: 5.5rem;
+  }
+  main .testimonials__carousel-user {
+    margin-top: 0rem;
+  }
+  main .testimonials__carousel {
+    margin-bottom: 4rem;
+  }
+  main .map .map-eagle {
+    left: 4%;
+    top: 1.2%;
+  }
+  main .map .map-crocodile {
+    left: 13.6%;
+    top: 3%;
+  }
+  main .map .map-gorilla {
+    left: 44.7%;
+    top: 12.5%;
+  }
+  main .map .map-panda {
+    left: 75.39%;
+    top: 1.9%;
+  }
   main .pay-and-feed__container .blue-arrow {
     margin-top: 6rem;
+  }
+  main .pay-and-feed__container p {
+    margin-top: -3.2rem;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

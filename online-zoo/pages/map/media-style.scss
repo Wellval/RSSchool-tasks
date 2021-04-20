@@ -17,15 +17,30 @@
         }
 
         .map {
+            .map-eagle {
+                left: 9.7%;
+                top: 13%;
+            }
+
+            .map-gorilla {
+                left: 46.7%;
+                top: 34.5%;
+            }
+
+            .map-panda {
+                left: 73%;
+                top: 16.9%;
+            }
+
             form {
-                margin-top: 8.4rem;
+                margin-top: 2.7rem;
             }
             &__container {
                 width: 67%;
                 margin-top: 9.6rem;
 
                 #map {
-                    height: 114%;
+                    height: 39rem;
                 }
 
                 .map-animal {
@@ -33,6 +48,12 @@
                     height: 8.3rem;
                 }
             }
+        }
+    }
+
+    footer {
+        .footer__wrapper {
+            height: 34rem;
         }
     }
 }
@@ -51,14 +72,44 @@
 
         .map {
             form {
-                margin-top: 4.4rem;
+                margin-top: 6.4rem;
                 margin-bottom: 8rem;
+            }
+
+            .map-eagle {
+                left: 9.7%;
+                top: 0%;
+            }
+    
+            .map-crocodile {
+                left: 18%;
+                top: 3%;
+            }
+    
+            .map-gorilla {
+                left: 45.7%;
+                top: 26.5%;
+            }
+    
+            .map-panda {
+                left: 72%;
+                top: 1.9%;
             }
         }
 
         .map__container {
-            width: 100%;
+            width: 94%;
+
+            #map {
+                height: 29rem;
+            }
         } 
+
+        .map__wrapper {
+            height: 26rem;
+            width: 100%;
+            margin-top: -1.5rem;
+        }
 
         .carousel__container {
             .arrow-right {
@@ -159,8 +210,77 @@
 @media (max-width: 380px) {
     main {
         .carousel {
+            .carousel-range__container {
+                margin-top: -1.3rem;
+                margin-left: 2.4rem;
+            }
+
             ul {
                 justify-content: space-between;
+            }
+        }
+
+        h3 {
+            font-size: 2.4rem;
+            margin-bottom: -1.4rem;
+            margin-top: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 28rem;
+            margin-top: 0.7rem;
+        }
+
+        .carousel__container {
+            margin-top: -3rem;
+            .arrow-right {
+                padding-right: 1.5rem;
+            }
+        }
+
+        .map__container {
+            #map {
+                height: 57%;
+                margin-top: -7.5rem;
+            }
+        }
+
+        .map {
+            button {
+                margin-top: -21.3rem;
+
+                p {
+                    margin-top: 2rem;
+                }
+            }
+
+            .map-eagle {
+                left: 8.7%;
+                top: -36%;
+            }
+
+            .map-crocodile {
+                top: -33%;
+            }
+
+            .map-gorilla {
+                left: 44.7%;
+                top: -21.5%;
+            }
+
+            .map-panda {
+                top: -33.1%;
+            }
+
+            .map-animal {
+                width: 3.4rem;
+                height: 4.7rem;
+            }
+            .map-animal-image {
+                left: 17%;
+                width: 2.2rem;
+                height: 2.2rem;
             }
         }
     }
