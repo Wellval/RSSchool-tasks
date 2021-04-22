@@ -6,9 +6,12 @@
 }
 
 @media (max-width: 1201px) {
+  footer {
+    height: 73.7rem;
+  }
   footer .footer__container {
     width: 75%;
-    margin-top: 1rem;
+    margin-top: 12rem;
   }
   footer .footer__container .footer__right {
     margin-top: 0rem;

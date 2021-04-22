@@ -1,8 +1,5 @@
 @media (max-width: 1201px) {
     main {
-        .mission {
-            height: 100%;
-        }
         .favorite-animal {
             .carousel-range__container {
                 margin-left: 70%;
@@ -57,7 +54,7 @@
 
         .pets {
             h3 {
-                margin-top: 10.5rem;
+                margin-top: 8.8rem;
             }
             #choose-button {
                 margin-top: 2.5rem;
@@ -181,6 +178,7 @@
         }
 
         .map {
+            height: 84.4rem;
             button {
                 margin-top: 48.5rem;
             }
