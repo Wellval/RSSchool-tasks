@@ -433,6 +433,12 @@
             }
         }
 
+        .pets {
+            h3 {
+                margin-top: 10.8rem;
+            }
+        }
+
         .pets-range__container {
             margin-top: 33.15rem;
         }
@@ -458,22 +464,22 @@
         .map {
             .map-eagle {
                 left: 4%;
-                top: 1.2%;
+                top: -5.8%;
             }
 
             .map-crocodile {
                 left: 13.6%;
-                top: 3%;
+                top: -4%;
             }
 
             .map-gorilla {
                 left: 44.7%;
-                top: 12.5%;
+                top: 6.5%;
             }
 
             .map-panda {
-                left: 75.39%;
-                top: 1.9%;
+                left: 74.39%;
+                top: -5.1%;
             }
         }
 
@@ -631,8 +637,9 @@
                 margin: 5rem auto;
 
                 .mission__card {
-                    width: 33rem;
+                    width: 32rem;
                     margin-bottom: 3.03rem;
+                    letter-spacing: -0.03rem;
                 }
             }
         }
