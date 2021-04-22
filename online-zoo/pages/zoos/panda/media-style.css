@@ -11,6 +11,7 @@
   }
   main .content .stream {
     height: 29rem;
+    width: 50rem;
   }
   main .content .stream__container {
     width: 53rem;
@@ -38,7 +39,7 @@
     padding-top: 0.8rem;
   }
   main .description {
-    margin-left: 7.7rem;
+    margin-left: 6.7rem;
     margin-top: 15.5rem;
     width: 25%;
     height: 34.9rem;
@@ -126,10 +127,10 @@
 
 @media (max-width: 1210px) and (max-width: 700px) {
   main .content .stream {
-    width: 21rem;
+    width: 50rem;
   }
   main .content .preview__container {
-    width: 21rem;
+    width: 50rem;
   }
 }
 
