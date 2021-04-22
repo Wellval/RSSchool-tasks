@@ -1,7 +1,4 @@
 @media (max-width: 1201px) {
-  main .mission {
-    height: 100%;
-  }
   main .favorite-animal .carousel-range__container {
     margin-left: 70%;
     margin-top: -4rem;
@@ -41,7 +38,7 @@
     height: 32.5rem;
   }
   main .pets h3 {
-    margin-top: 10.5rem;
+    margin-top: 8.8rem;
   }
   main .pets #choose-button {
     margin-top: 2.5rem;
@@ -137,6 +134,9 @@
   }
   main .testimonials #testimonials__title {
     margin-top: 10rem;
+  }
+  main .map {
+    height: 84.4rem;
   }
   main .map button {
     margin-top: 48.5rem;
@@ -332,6 +332,9 @@
   main .pets__carousel__items {
     margin-left: 1rem;
   }
+  main .pets h3 {
+    margin-top: 10.8rem;
+  }
   main .pets-range__container {
     margin-top: 33.15rem;
   }
@@ -349,19 +352,19 @@
   }
   main .map .map-eagle {
     left: 4%;
-    top: 1.2%;
+    top: -5.8%;
   }
   main .map .map-crocodile {
     left: 13.6%;
-    top: 3%;
+    top: -4%;
   }
   main .map .map-gorilla {
     left: 44.7%;
-    top: 12.5%;
+    top: 6.5%;
   }
   main .map .map-panda {
-    left: 75.39%;
-    top: 1.9%;
+    left: 74.39%;
+    top: -5.1%;
   }
   main .pay-and-feed__container .blue-arrow {
     margin-top: 6rem;
@@ -488,8 +491,9 @@
     margin: 5rem auto;
   }
   main .mission .mission__container .mission__card {
-    width: 33rem;
+    width: 32rem;
     margin-bottom: 3.03rem;
+    letter-spacing: -0.03rem;
   }
   main .pets h3 {
     font-size: 3.6rem;
