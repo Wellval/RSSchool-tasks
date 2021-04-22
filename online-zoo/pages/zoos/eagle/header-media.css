@@ -18,8 +18,10 @@
 
 @media (max-width: 641px) {
   header {
-    position: fixed;
-    z-index: 1000;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
   }
 }
 
