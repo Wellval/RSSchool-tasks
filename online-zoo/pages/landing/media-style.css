@@ -537,6 +537,9 @@
   main .pay-and-feed__container #payment-description {
     display: none;
   }
+  main .testimonials {
+    margin-top: -5rem;
+  }
   main .testimonials #testimonials__title {
     margin-top: 4.5rem;
     font-size: 3.6rem;

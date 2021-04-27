@@ -34,7 +34,7 @@ function setDark() {
         });
         h3.forEach(h3 => {
             if (!h3.classList.contains('contact-us')) {
-                h3.style.color = '#fff';
+                h3.style.color = '#fefefe';
             }
         });
         map.style.backgroundImage = "url('../../assets/landing/light-map.png')";
@@ -69,7 +69,7 @@ function setLight() {
         });
         h3.forEach(h3 => {
             if (!h3.classList.contains('contact-us')) {
-                h3.style.color = '#fefefe';
+                h3.style.color = '#333';
             }
         });
         map.style.backgroundImage = "url('../../assets/landing/map.png')";
