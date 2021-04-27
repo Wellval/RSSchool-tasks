@@ -17,7 +17,10 @@
     }
 
     header #menu {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 }
 

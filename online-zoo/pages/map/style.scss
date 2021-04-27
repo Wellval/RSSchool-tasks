@@ -152,6 +152,18 @@ header {
     #menu {
         display: none;
         margin-left: 4rem;
+        height: 2.1rem;
+        width: 4rem;
+
+        .line {
+            width: 100%;
+            height: 3px;
+            background: #49D6DF;
+        }
+
+        .line3 {
+            width: 90%;
+        }
     }
 
     .header-wrapper {
@@ -252,10 +264,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.2rem;
 
     h3 {
         margin-bottom: 0.6rem;
+        margin-top: 6.2rem;
     }
 
     label {
@@ -301,6 +313,14 @@ main {
                     opacity: 0.5;
                 }
             }
+
+            .arrow-dark {
+                svg {
+                    path {
+                        fill: #e0e0e0;
+                    }
+                }
+            }
         
             .arrow-left {
                 transform: rotate(180deg);
@@ -314,6 +334,16 @@ main {
             text-align: center;
             margin-top: 3.4rem;
             margin-left: -4rem;
+        }
+
+            .dark {
+            input[type=range]::-webkit-slider-thumb {
+                background: $base;
+            }
+
+            label {
+                color: $base;
+            }
         }
 
         ul {
@@ -378,13 +408,12 @@ main {
         button {
 
             p {
-                padding-right: 2.5rem;
                 font-size: 1.8rem;
                 color: #fff;
             }
 
             img {
-                padding-left: 3rem;
+                padding-right: 0.5rem;
             }
         }
 
@@ -455,9 +484,15 @@ main {
         }
 
         &__container {
-            width: 63%;
-            margin-top: 13rem;
+            width: 120rem;
+            height: 50rem;
+            margin-top: 14rem;
             position: relative;
+            background-image: url(../../assets/landing/map.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
 
             #map {
                 width: 100%;

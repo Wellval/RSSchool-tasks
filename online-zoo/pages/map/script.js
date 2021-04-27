@@ -3,7 +3,6 @@ const whiteBack = document.querySelectorAll('.white-back');
 const logo = document.querySelector('body > header > div > div.logo > a > svg > path:nth-child(2)');
 const menuItems = document.querySelectorAll('body > header > div > nav > ul > li:nth-child(n) > a');
 const allP = document.querySelectorAll('p');
-const howItWorks = document.querySelector('.how-it-works');
 const ranges = document.querySelectorAll('.change-thumb');
 const grayBack = document.querySelectorAll('.gray-back'); 
 const h3 = document.querySelectorAll('h3');
@@ -20,12 +19,11 @@ function setDark() {
             back.style.background = '#4f4f4f';
         });
         document.querySelector('body > header > div > div.logo > a > svg > path:nth-child(1)').style.fill = '#fff';
-        document.querySelector('body > header > div > div.logo > a > svg > path:nth-child(2)').style.fill = '#fff';
+        logo.style.fill = '#fff';
         document.querySelector('.nav-item > a').style.color = '#fff';
         menuItems.forEach(item => {
             item.style.color = '#fff';
         });
-        howItWorks.style.background = '#333';
         allP.forEach(item => {
             item.style.color = '#f2f2f2'
         });
@@ -34,7 +32,7 @@ function setDark() {
         });
         h3.forEach(h3 => {
             if (!h3.classList.contains('contact-us')) {
-                h3.style.color = '#fff';
+                h3.style.color = '#fefefe';
             }
         });
         map.style.backgroundImage = "url('../../assets/landing/light-map.png')";
@@ -59,17 +57,16 @@ function setLight() {
             }
         });
         document.querySelector('body > header > div > div.logo > a > svg > path:nth-child(1)').style.fill = '#333';
-        document.querySelector('body > header > div > div.logo > a > svg > path:nth-child(2)').style.fill = '#333';
+        logo.style.fill = '#333';
         menuItems.forEach(item => {
             item.style.color = '#333';
         });
-        howItWorks.style.background = '#fff';
         ranges.forEach(range => {
             range.classList.remove('dark');
         });
         h3.forEach(h3 => {
             if (!h3.classList.contains('contact-us')) {
-                h3.style.color = '#fefefe';
+                h3.style.color = '#333';
             }
         });
         map.style.backgroundImage = "url('../../assets/landing/map.png')";
@@ -79,7 +76,6 @@ function setLight() {
         burgerLines.forEach(line => {
             line.style.background = '#333';
         });
-
 }
 
 function toggleTheme() {
@@ -99,5 +95,6 @@ function toggleTheme() {
         }
 
 checkbox.addEventListener('change', toggleTheme);
+
 
 

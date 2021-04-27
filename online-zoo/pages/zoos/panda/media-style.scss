@@ -8,7 +8,7 @@
 
             h3 {
                 margin-left: 4rem;
-                width: 50rem;
+                width: 35rem;
             }
 
             .stream {
@@ -24,7 +24,7 @@
             .preview__container {
                 height: 9.1rem;
                 margin-left: 0.5rem;
-                width: 53rem;
+                width: 49.5rem;
             }
         }
 
@@ -67,7 +67,7 @@
     }
 
 
-@media (max-width: 900px) {
+@media (max-width: 985px) {
     main {
         height: 98.3rem;
             .main__container {
@@ -103,7 +103,7 @@
 
             .preview__container {
                 margin-top: 1rem;
-                width: 50rem;
+                width: 49rem;
                 margin-left: 0rem;
             }
         }
@@ -163,6 +163,28 @@
     }
 }
 
+@media (max-width: 630px) {
+    main {
+        .content {
+            .stream__container {
+                width: 40rem;
+            }
+
+            .stream {
+                width: 100%;
+            }
+
+            .preview__container {
+                width: 100%;
+            }
+        }
+
+        .description {
+            width: 30rem;
+        }
+    }
+}
+
 @media (max-width: 500px) {
     main {
         .main__container {
@@ -184,11 +206,13 @@
                 height: 12rem;
                 margin-top: -2rem;
                 margin-left: 3rem;
+                width: 100%;
             }
 
             .preview__container {
                 margin-top: 0.5rem;
                 height: 6rem;
+                width: 98%;
             }
 
             iframe:nth-child(4) {
