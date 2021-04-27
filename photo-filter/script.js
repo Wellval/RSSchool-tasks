@@ -16,6 +16,7 @@ let dayTime;
 let n = 1;
 let filters = {};
 let image = new Image();
+//image.crossOrigin = 'anonymous';
 image.onload = renderCanvas;
 image.src = "assets/img/img.jpg";
 window.onresize = renderCanvas.bind(image)
@@ -69,15 +70,15 @@ function reset() {
 }
 
 function nextImage() {
-    console.log(n)
     if (n < 10) {
         image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${dayTime}/0${n++}.jpg`;
     } else if (n <= 20) {
         image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${dayTime}/${n++}.jpg`;
     } else {
         n = 1;
-        nextPicture();
+        nextImage();
     }
+    image.setAttribute('crossOrigin', 'anonymous');
 }
 
 function loadImage(e) {
