@@ -144,6 +144,10 @@ body {
     height: 100vh;
 }
 
+body.not-scrollable {
+    overflow: hidden;
+}
+
 header {
     background-color: #fff;
     height: 9.4rem;
@@ -862,7 +866,7 @@ main {
                         opacity: 1;
                         transition: 1s;
                         transform: translateY(-11rem);
-                        z-index: 1000;
+                        z-index: 100;
                         transition: all 1s ease-in-out;
                     }
                 }
@@ -876,7 +880,7 @@ main {
                 font-size: 1.4rem;
                 margin: -2rem auto;
                 opacity: 0;
-                z-index: 1000;
+                z-index: 100;
             }
         }
     }
@@ -887,6 +891,23 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .cover {
+            width: 120rem;
+            height: 79.5rem;
+            background-color: #fff;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -39.75rem; 
+            margin-left: -60rem;
+            z-index: 10000;
+            display: flex;
+        }
+
+        .cover.hidden {
+            display: none;
+        }
 
         &__container {
             text-align: center;

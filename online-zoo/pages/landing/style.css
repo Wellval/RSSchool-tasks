@@ -13,6 +13,10 @@ body {
   height: 100vh;
 }
 
+body.not-scrollable {
+  overflow: hidden;
+}
+
 header {
   background-color: #fff;
   height: 9.4rem;
@@ -1192,7 +1196,7 @@ main .pets__carousel__items .item:hover .description {
   transition: 1s;
   -webkit-transform: translateY(-11rem);
           transform: translateY(-11rem);
-  z-index: 1000;
+  z-index: 100;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -1204,7 +1208,7 @@ main .pets__carousel__items .description {
   font-size: 1.4rem;
   margin: -2rem auto;
   opacity: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 main .pay-and-feed {
@@ -1219,6 +1223,25 @@ main .pay-and-feed {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .pay-and-feed .cover {
+  width: 120rem;
+  height: 79.5rem;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -39.75rem;
+  margin-left: -60rem;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .pay-and-feed .cover.hidden {
+  display: none;
 }
 
 main .pay-and-feed__container {
