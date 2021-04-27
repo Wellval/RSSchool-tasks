@@ -16,6 +16,7 @@ let dayTime;
 let n = 1;
 let filters = {};
 let image = new Image();
+//image.crossOrigin = 'anonymous';
 image.onload = renderCanvas;
 image.src = "assets/img/img.jpg";
 window.onresize = renderCanvas.bind(image)
@@ -77,6 +78,7 @@ function nextImage() {
         n = 1;
         nextImage();
     }
+    image.setAttribute('crossOrigin', 'anonymous');
 }
 
 function loadImage(e) {
