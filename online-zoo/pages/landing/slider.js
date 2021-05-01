@@ -27,8 +27,26 @@ class SliderCarousel {
     controlSlider() {
         this.prev.addEventListener('click', this.prevSlider.bind(this));
         this.next.addEventListener('click', this.nextSlider.bind(this));
-        let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position + 1})`);
+        this.range.addEventListener('input', this.changeHandler.bind(this))
     };
+
+    changeHandler() {
+        this.options.position = this.range.value;
+        document.querySelector('#pets-range__label').innerHTML = `0${this.options.position}/`;
+        let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position})`);
+        document.querySelectorAll('.pets__carousel__wrapper > div > div:nth-child(n)').forEach(el => {
+            el.classList.remove('active');
+        });
+        activeEl.classList.add('active');
+        if (this.options.position > 4) {
+            this.wrap.style.transform = `translateX(-${(this.options.position - 4) * 25}%)`; 
+        }
+        if (this.options.position < 5) {
+            this.wrap.style.transform = `translateX(-${(this.options.position - 4) * 25}%)`; 
+        }
+
+        console.log(this.range.value)
+    }
 
     prevSlider() {
         if (this.options.infinity || this.options.position > 0) {
@@ -49,7 +67,7 @@ class SliderCarousel {
             let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position + 1})`);
             document.querySelectorAll('.pets__carousel__wrapper > div > div:nth-child(n)').forEach(el => {
                 el.classList.remove('active');
-            })
+            });
             activeEl.classList.add('active');
         } 
     };
@@ -90,3 +108,4 @@ const options = {
 let carousel = new SliderCarousel(options);
 
 carousel.init();
+
