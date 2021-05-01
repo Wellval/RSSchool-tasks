@@ -82,43 +82,52 @@
                 margin-top: -0.5rem;
             }
             &__carousel {
-                width: 83%;
+                width: 100%;
                 margin-top: -5.7rem;
+                justify-content: center;
             }
-            &__carousel__items {
-                width: 90.6%;
-                .item {
-                    height: 30.1rem;
-                    max-width: 21rem;
-                    width: 32%;
 
-                    .description {
-                        width: 18rem;
-                        margin: -1rem auto;
-                        margin-left: 1rem;
-                    }
-                }
+            &__carousel__wrapper {
+                width: 92rem;
+                .pets__carousel__items {
+                    .item {
+                        height: 30.1rem;
+                        max-width: 21rem;
+                        width: 21rem;
+                        margin: 0 1rem;
 
-                .item:hover {
-                    .pets__buttons {
-                        opacity: 1;
-                        transition: 1s;
-                        transform: translateY(-11rem);
-                        z-index: 1000;
-                        transition: all 1s ease-in-out;
-                        top: 47.4rem;
-
-                        .item__donate {
-                            margin-left: -1.5rem;
+                        .description {
+                            width: 18rem;
+                            margin: -1rem auto;
+                            margin-left: 1rem;
                         }
+                    }
 
-                        button {
-                            svg {
-                                transform: scale(0.75);
+                    .item {
+                        margin: 0 1rem;
+                    }
+
+                    .item:hover {
+                        .pets__buttons {
+                            opacity: 1;
+                            transition: 1s;
+                            transform: translateY(-11rem);
+                            z-index: 1000;
+                            transition: all 1s ease-in-out;
+                            top: 47.4rem;
+
+                            .item__donate {
+                                margin-left: -1.5rem;
                             }
 
-                            p {
-                                padding-left: 0;
+                            button {
+                                svg {
+                                    transform: scale(0.75);
+                                }
+
+                                p {
+                                    padding-left: 0;
+                                }
                             }
                         }
                     }

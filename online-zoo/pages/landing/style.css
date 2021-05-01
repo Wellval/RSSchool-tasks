@@ -883,7 +883,7 @@ main .pets .dollar {
 
 main .pets__buttons {
   position: absolute;
-  top: 45.6rem;
+  top: 45rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,7 +1124,17 @@ main .pets #carousel {
   color: #FEFEFE;
 }
 
-main .pets__carousel__items {
+main .pets__carousel__wrapper {
+  width: 123rem;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  will-change: transform;
+}
+
+main .pets__carousel__wrapper .pets__carousel__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,20 +1144,26 @@ main .pets__carousel__items {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 92%;
-  margin: 0 auto;
   height: 37.9rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-main .pets__carousel__items img {
+main .pets__carousel__wrapper .pets__carousel__items img {
   width: 100%;
   height: 100%;
 }
 
-main .pets__carousel__items .item {
+main .pets__carousel__wrapper .pets__carousel__items .item {
   height: 39.9rem;
   max-width: 27.8rem;
   width: 32%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  margin: 0 1.5rem;
   overflow: hidden;
   display: block;
   position: relative;
@@ -1155,7 +1171,7 @@ main .pets__carousel__items .item {
   transition: all 0.3s ease-in-out;
 }
 
-main .pets__carousel__items .item:after {
+main .pets__carousel__wrapper .pets__carousel__items .item:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1168,7 +1184,7 @@ main .pets__carousel__items .item:after {
   transition: all 1s ease-in-out;
 }
 
-main .pets__carousel__items .item:before {
+main .pets__carousel__wrapper .pets__carousel__items .item:before {
   content: '';
   position: absolute;
   top: 0;
@@ -1179,18 +1195,18 @@ main .pets__carousel__items .item:before {
   opacity: 0;
 }
 
-main .pets__carousel__items .item:hover {
+main .pets__carousel__wrapper .pets__carousel__items .item.active {
   -webkit-transform: scale(1);
           transform: scale(1);
   cursor: pointer;
 }
 
-main .pets__carousel__items .item:hover:before, main .pets__carousel__items .item:hover:after {
+main .pets__carousel__wrapper .pets__carousel__items .item.active:before, main .pets__carousel__wrapper .pets__carousel__items .item.active:after {
   opacity: 1;
 }
 
-main .pets__carousel__items .item:hover button,
-main .pets__carousel__items .item:hover .description {
+main .pets__carousel__wrapper .pets__carousel__items .item.active .pets__buttons,
+main .pets__carousel__wrapper .pets__carousel__items .item.active .description {
   opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
@@ -1201,7 +1217,7 @@ main .pets__carousel__items .item:hover .description {
   transition: all 1s ease-in-out;
 }
 
-main .pets__carousel__items .description {
+main .pets__carousel__wrapper .pets__carousel__items .description {
   width: 19.4rem;
   height: 4.8rem;
   color: #fff;
@@ -1238,6 +1254,126 @@ main .pay-and-feed .cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main .pay-and-feed .cover .popup-main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .pay-and-feed .cover .popup-main .donate-btn {
+  margin-top: 0;
+  margin-bottom: 5rem;
+}
+
+main .pay-and-feed .cover .popup-main .donate__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 74%;
+  margin: 0 auto;
+  height: 27.6rem;
+  margin-top: 4rem;
+}
+
+main .pay-and-feed .cover .popup-main .donate__about-you,
+main .pay-and-feed .cover .popup-main .donate__checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: initial;
+}
+
+main .pay-and-feed .cover .popup-main .donate__about-you .popup-h,
+main .pay-and-feed .cover .popup-main .donate__checkout .popup-h {
+  color: #828282;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 116.5%;
+}
+
+main .pay-and-feed .cover .popup-main .animal-to-donate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 74%;
+  margin: 0 auto;
+}
+
+main .pay-and-feed .cover .popup-main .animal-to-donate legend {
+  margin-left: -11.7rem;
+}
+
+main .pay-and-feed .cover .popup-main #subscr {
+  font-weight: 500;
+  font-size: 13px;
+  width: 47.8rem;
+  color: #828282;
+  margin: 0 auto;
+}
+
+main .pay-and-feed .cover h4 {
+  font-size: 24px;
+  line-height: 116.5%;
+  color: #313131;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+main .pay-and-feed .cover fieldset {
+  width: 33.5rem;
+  height: 5.9rem;
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .pay-and-feed .cover #exp-month, main .pay-and-feed .cover #exp-day {
+  width: 17rem;
+}
+
+main .pay-and-feed .cover input, main .pay-and-feed .cover select {
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  width: 33.5rem;
+}
+
+main .pay-and-feed .darken {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main .pay-and-feed .darken.hidden {
+  display: none;
 }
 
 main .pay-and-feed .cover.hidden {

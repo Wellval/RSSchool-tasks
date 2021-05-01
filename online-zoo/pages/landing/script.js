@@ -11,7 +11,9 @@ const map = document.querySelector('.map__container');
 const arrows = document.querySelectorAll('.arrow');
 const burgerLines = document.querySelectorAll('.line');
 const coverElem = document.getElementById('cover');
+const darkenElem = document.getElementById('darken');
 const feedbackButton = document.querySelector('.donate-btn');
+// const arrowLeft = document.querySelector('.pets__carousel > .arrow-left');
 let localStorage = window.localStorage;
 
 function setDark() {
@@ -29,7 +31,12 @@ function setDark() {
     });
     howItWorks.style.background = '#333';
     allP.forEach(item => {
-        item.style.color = '#f2f2f2'
+        if (!item.classList.contains('description')) {
+            item.style.color = '#f2f2f2';
+        }
+        if (item.id == 'subscr') {
+            item.style.color = '#4f4f4f';
+        }
     });
     ranges.forEach(range => {
         range.classList.add('dark');
@@ -57,6 +64,9 @@ function setLight() {
     });
     allP.forEach(item => {
         if (!item.classList.contains('description')) {
+            item.style.color = '#4f4f4f';
+        }
+        if (item.id == 'subscr') {
             item.style.color = '#4f4f4f';
         }
     });
@@ -103,12 +113,19 @@ if (checkbox.checked) {
 checkbox.addEventListener('change', toggleTheme);
 feedbackButton.addEventListener('click', () => {
     coverElem.classList.remove('hidden');
+    darkenElem.classList.remove('hidden');
     document.body.classList.add('not-scrollable');
 });
 
 document.addEventListener('click', (e) => {
     if (!coverElem.contains(e.target) && !feedbackButton.contains(e.target)) {
         coverElem.classList.add('hidden');
+        darkenElem.classList.add('hidden');
         document.body.classList.remove('not-scrollable');
     }
-}, )
+});
+
+// arrowLeft.addEventListener('click', (e) => {
+//     let counter = document.querySelector('.pets__carousel__items').childElementCount;
+//     document.querySelector(`body > main > div.pets.white-back > div > div.pets__carousel > div.pets__carousel__items > div:nth-child(${counter})`).style.display = 'none';
+// })

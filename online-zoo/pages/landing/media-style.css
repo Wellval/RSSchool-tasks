@@ -66,23 +66,30 @@
     margin-top: -0.5rem;
   }
   main .pets__carousel {
-    width: 83%;
+    width: 100%;
     margin-top: -5.7rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  main .pets__carousel__items {
-    width: 90.6%;
+  main .pets__carousel__wrapper {
+    width: 92rem;
   }
-  main .pets__carousel__items .item {
+  main .pets__carousel__wrapper .pets__carousel__items .item {
     height: 30.1rem;
     max-width: 21rem;
-    width: 32%;
+    width: 21rem;
+    margin: 0 1rem;
   }
-  main .pets__carousel__items .item .description {
+  main .pets__carousel__wrapper .pets__carousel__items .item .description {
     width: 18rem;
     margin: -1rem auto;
     margin-left: 1rem;
   }
-  main .pets__carousel__items .item:hover .pets__buttons {
+  main .pets__carousel__wrapper .pets__carousel__items .item {
+    margin: 0 1rem;
+  }
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons {
     opacity: 1;
     -webkit-transition: 1s;
     transition: 1s;
@@ -93,14 +100,14 @@
     transition: all 1s ease-in-out;
     top: 47.4rem;
   }
-  main .pets__carousel__items .item:hover .pets__buttons .item__donate {
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons .item__donate {
     margin-left: -1.5rem;
   }
-  main .pets__carousel__items .item:hover .pets__buttons button svg {
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons button svg {
     -webkit-transform: scale(0.75);
             transform: scale(0.75);
   }
-  main .pets__carousel__items .item:hover .pets__buttons button p {
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons button p {
     padding-left: 0;
   }
   main .pay-and-feed button {
