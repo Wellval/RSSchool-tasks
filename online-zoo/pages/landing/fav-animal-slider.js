@@ -42,6 +42,7 @@ class sliderClicker {
                 }
                 this.position = arr.indexOf(e.target)
                 this.rangeLabel.innerHTML = `0${this.position + 1}/`;
+                this.range.value = this.position + 1;
                 parent.classList.add('carousel__container-animal-active');
             })
         });
@@ -62,14 +63,11 @@ class sliderClicker {
         if (this.position > -1) {
             if (this.position - 1 === 0) {
                 this.main.style.transform = `translateX(19rem)`;   
-                console.log('aaa')
             } else {
                 this.main.style.transform = `translateX(-${(this.position - 2) * 19}rem)`;
-                console.log(this.position);
             }
         }
         else {
-            console.log(33)
             this.main.style.transform = `translateX(${(this.position + 2) * 19}rem)`;
         }
         let parent = arr[this.position - 1].parentElement;
