@@ -23,7 +23,7 @@
     margin-top: -4rem;
   }
   main .favorite-animal #line {
-    top: 61.6rem;
+    top: 54rem;
     left: 40%;
   }
   main .favorite-animal .social-media {
@@ -58,6 +58,12 @@
   }
   main .pets h3 {
     margin-top: 8.8rem;
+  }
+  main .pets__buttons {
+    top: 37rem;
+  }
+  main .pets button {
+    margin: -2rem -0.5rem;
   }
   main .pets #choose-button {
     margin-top: 2.5rem;
@@ -173,7 +179,6 @@
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container {
     margin-top: 3.4rem;
-    margin-left: 50.4rem;
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal {
     width: 18rem;

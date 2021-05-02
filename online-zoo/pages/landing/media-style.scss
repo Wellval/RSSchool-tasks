@@ -26,7 +26,7 @@
             }
 
             #line {
-                top: 61.6rem;
+                top: 54rem;
                 left: 40%;
             }
 
@@ -74,6 +74,13 @@
         .pets {
             h3 {
                 margin-top: 8.8rem;
+            }
+            &__buttons {
+                top: 37rem;
+            }
+            button {
+                margin: -2rem -0.5rem;
+
             }
             #choose-button {
                 margin-top: 2.5rem;
@@ -224,7 +231,6 @@
 
             .carousel__container {
                 margin-top: 3.4rem;
-                margin-left: 50.4rem;
 
                 &-animal {
                         width: 18rem;

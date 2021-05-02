@@ -272,10 +272,79 @@ main .favorite-animal .carousel {
   margin-top: 3.7rem;
 }
 
+main .favorite-animal .carousel .carousel-dots {
+  position: absolute;
+  top: 36%;
+  left: 43.5%;
+  width: 156rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 main .favorite-animal #line {
   position: absolute;
   top: 58.6rem;
   left: 43.7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .favorite-animal .line-dot {
+  position: absolute;
+}
+
+main .favorite-animal .inner-dot {
+  position: absolute;
+  margin-top: 0.4rem;
+}
+
+main .favorite-animal .dot1 {
+  margin-left: 21rem;
+}
+
+main .favorite-animal .inner-dot1 {
+  margin-left: 21.4rem;
+}
+
+main .favorite-animal .inner-dot2 {
+  margin-left: 68.4rem;
+}
+
+main .favorite-animal .inner-dot3 {
+  margin-left: 85.4rem;
+}
+
+main .favorite-animal .inner-dot4 {
+  margin-left: 104.4rem;
+}
+
+main .favorite-animal .dot2 {
+  margin-left: 68rem;
+}
+
+main .favorite-animal .dot3 {
+  margin-left: 85rem;
+}
+
+main .favorite-animal .dot4 {
+  margin-left: 104rem;
+}
+
+main .favorite-animal .carousel__wrapper {
+  width: 85%;
+  height: 42.1rem;
+  margin-top: -6.4rem;
+  margin-left: 40.7%;
+  position: absolute;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: hidden;
 }
 
 main .favorite-animal .carousel__container {
@@ -285,15 +354,13 @@ main .favorite-animal .carousel__container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 107.4rem;
-  height: 42.1rem;
-  margin-top: -6.4rem;
-  margin-left: 40.7%;
-  position: absolute;
+  width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 38.5rem;
 }
 
 main .favorite-animal .carousel__container-animal {
@@ -329,23 +396,6 @@ main .favorite-animal .carousel__container-animal__buttons {
 main .favorite-animal .carousel__container-animal .description {
   color: #FEFEFE;
   width: 13rem;
-}
-
-main .favorite-animal .carousel__container-animal:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-main .favorite-animal .carousel__container-animal:hover button,
-main .favorite-animal .carousel__container-animal:hover .description {
-  opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: translateY(-11rem);
-          transform: translateY(-11rem);
 }
 
 main .favorite-animal .carousel__container-animal button {
@@ -391,8 +441,8 @@ main .favorite-animal .carousel__container-animal__buttons {
 }
 
 main .favorite-animal .carousel__container-animal-active {
-  width: 24.5rem;
-  height: 35.2rem;
+  width: 24.5rem !important;
+  height: 35.2rem !important;
   margin-bottom: 3.4rem;
 }
 
@@ -1208,8 +1258,8 @@ main .pets__carousel__wrapper .pets__carousel__items .item.active:before, main .
 main .pets__carousel__wrapper .pets__carousel__items .item.active .pets__buttons,
 main .pets__carousel__wrapper .pets__carousel__items .item.active .description {
   opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   -webkit-transform: translateY(-11rem);
           transform: translateY(-11rem);
   z-index: 100;

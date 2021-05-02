@@ -13,7 +13,6 @@ const burgerLines = document.querySelectorAll('.line');
 const coverElem = document.getElementById('cover');
 const darkenElem = document.getElementById('darken');
 const feedbackButton = document.querySelector('.donate-btn');
-// const arrowLeft = document.querySelector('.pets__carousel > .arrow-left');
 let localStorage = window.localStorage;
 
 function setDark() {
@@ -125,7 +124,3 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// arrowLeft.addEventListener('click', (e) => {
-//     let counter = document.querySelector('.pets__carousel__items').childElementCount;
-//     document.querySelector(`body > main > div.pets.white-back > div > div.pets__carousel > div.pets__carousel__items > div:nth-child(${counter})`).style.display = 'none';
-// })

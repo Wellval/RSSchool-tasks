@@ -352,24 +352,83 @@ main {
         .carousel {
             display: flex;
             margin-top: 3.7rem;
+
+            .carousel-dots {
+                position: absolute;
+                top: 36%;    
+                left: 43.5%;
+                width: 156rem;
+                display: flex;
+                justify-content: space-evenly;
+
+            }
         }
 
         #line {
             position: absolute;
             top: 58.6rem;
             left: 43.7%;
+            display: flex;
         }
 
-        .carousel__container {
-            display: flex;
-            align-items: center;
-            width: 107.4rem;
+        .line-dot {
+            position: absolute;
+        }
+
+        .inner-dot {
+            position: absolute;
+            margin-top: 0.4rem;
+        }
+
+        .dot1 {
+            margin-left: 21rem;
+        }
+
+        .inner-dot1 {
+            margin-left: 21.4rem;
+        }
+
+        .inner-dot2 {
+            margin-left: 68.4rem;
+        }
+
+        .inner-dot3 {
+            margin-left: 85.4rem;
+        }
+
+        .inner-dot4 {
+            margin-left: 104.4rem;
+        }
+
+        .dot2 {
+            margin-left: 68rem;
+        }
+
+        .dot3 {
+            margin-left: 85rem;
+        }
+
+        .dot4 {
+            margin-left: 104rem;
+        }
+
+        .carousel__wrapper {
+            width: 85%;
             height: 42.1rem;
             margin-top: -6.4rem;
             margin-left: 40.7%;
             position: absolute;
             justify-content: space-evenly;
             overflow: hidden;
+        }
+
+        .carousel__container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-evenly;
+            transition: 0.5s;
+            height: 38.5rem;
 
             &-animal {
                 width: 14rem;
@@ -402,18 +461,18 @@ main {
                     width: 13rem;
                 }
 
-                &:hover {
-                    transform: scale(1.1);
-                    transition: all 0.5s ease-in-out;
-                    cursor: pointer;
+                // &:hover {
+                //     transform: scale(1.1);
+                //     transition: all 0.5s ease-in-out;
+                //     cursor: pointer;
 
-                    button,
-                    .description {
-                        opacity: 1;
-                        transition: 1s;
-                        transform: translateY(-11rem);
-                    }
-                }
+                //     button,
+                //     .description {
+                //         opacity: 1;
+                //         transition: 1s;
+                //         transform: translateY(-11rem);
+                //     }
+                // }
 
                 button {
                     width: 7rem;
@@ -456,8 +515,8 @@ main {
                 }
 
                 &-active {
-                    width: 24.5rem;
-                    height: 35.2rem;
+                    width: 24.5rem !important;
+                    height: 35.2rem !important;
                     margin-bottom: 3.4rem;
 
                     .dollar {
@@ -872,7 +931,7 @@ main {
                     .pets__buttons,
                     .description {
                         opacity: 1;
-                        transition: 1s;
+                        transition: all 1s;
                         transform: translateY(-11rem);
                         z-index: 100;
                         transition: all 1s ease-in-out;
