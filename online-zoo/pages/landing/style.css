@@ -1245,18 +1245,23 @@ main .pets__carousel__wrapper .pets__carousel__items .item:before {
   opacity: 0;
 }
 
-main .pets__carousel__wrapper .pets__carousel__items .item.active {
+main .pets__carousel__wrapper .pets__carousel__items .item.active,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
   cursor: pointer;
 }
 
-main .pets__carousel__wrapper .pets__carousel__items .item.active:before, main .pets__carousel__wrapper .pets__carousel__items .item.active:after {
+main .pets__carousel__wrapper .pets__carousel__items .item.active:before, main .pets__carousel__wrapper .pets__carousel__items .item.active:after,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover:before,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover:after {
   opacity: 1;
 }
 
 main .pets__carousel__wrapper .pets__carousel__items .item.active .pets__buttons,
-main .pets__carousel__wrapper .pets__carousel__items .item.active .description {
+main .pets__carousel__wrapper .pets__carousel__items .item.active .description,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover .description {
   opacity: 1;
   -webkit-transition: all 1s;
   transition: all 1s;

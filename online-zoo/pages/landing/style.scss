@@ -919,7 +919,8 @@ main {
                 }
                 }
 
-                .item.active {
+                .item.active,
+                .item:hover {
                     transform: scale(1);
                     cursor: pointer;
 
