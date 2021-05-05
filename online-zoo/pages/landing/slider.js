@@ -66,7 +66,6 @@ class SliderCarousel {
                     let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position + 2})`);
                 }
             }
-            //this.wrap.style.transform = `translateX(-${(this.options.position - 3) * 25}%)`;
             let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position + 1})`);
             document.querySelectorAll('.pets__carousel__wrapper > div > div:nth-child(n)').forEach(el => {
                 el.classList.remove('active');
@@ -109,12 +108,6 @@ const options = {
     range: '#pets-range',
     rangeLabel: '#pets-range__label',
 }
-
-// const options = {
-//     main: '.how-it-works__container',
-//     wrap: '.how-it-works__carousel-wrapper',
-//     infinity: true,
-// }
 
 let carousel = new SliderCarousel(options);
 

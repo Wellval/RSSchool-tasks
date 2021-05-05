@@ -58,17 +58,18 @@
             of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian
             bushfires on precious species and their habitat.</p>
         <div class="carousel">
+            <div class="arrow arrow-left">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#333333"/>
+                </svg>
+            </div>
             <div class="carousel__container">
-                <div class="arrow arrow-left">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#333333"/>
-                    </svg>
-                </div>
+                
                 <ul>
                     <li class="animal-round gorilla">
                         <img src="../../assets/map/gorilla-round.png" alt="">
                     </li>
-                    <li class="animal-active panda">
+                    <li class="animal-round animal-active panda">
                         <img src="../../assets/map/panda-round.png" alt="">
                     </li>
                     <li class="animal-round crocodile">
@@ -90,16 +91,19 @@
                         <img src="../../assets/map/zebra-round.png" alt="">
                     </li>
                 </ul>
-                <div class="arrow arrow-right">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#333333"/>
-                    </svg>
-                </div>
             </div>
-            <div class="carousel-range__container change-thumb">
-                <label for="carousel-range">02/<span class="range-amount">08</span></label>
-                <input type="range" name="carousel-range" id="carousel-range" min="1" max="8" value="2">
+            <div class="arrow arrow-right">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#333333"/>
+                </svg>
             </div>
+        </div>
+        <div class="carousel-range__container change-thumb">
+            <div class="label-wrapper">
+            <label for="carousel-range" id="carousel-range-label">02/</label>
+            <span class="range-amount">08</span>
+        </div>
+            <input type="range" name="carousel-range" id="carousel-range" min="1" max="8" value="2">
         </div>
         <div class="map">
             <div class="map__container">
@@ -258,6 +262,7 @@
         </div>
     </footer> 
     <script src="./script.js"></script>
+    <script src="./map-slider.js"></script>
 </body>
 
 </html>

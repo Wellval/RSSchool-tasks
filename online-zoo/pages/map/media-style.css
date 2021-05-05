@@ -1,15 +1,7 @@
-@media (max-width: 1301px) {
-  main .carousel ul .zebra,
-  main .carousel ul .lion,
-  main .carousel ul .elephant {
-    display: none;
-  }
-}
-
-@media (min-width: 1302px) and (max-width: 1500px) {
-  main .carousel ul .zebra,
-  main .carousel ul .lion {
-    display: none;
+@media (max-width: 1600px) {
+  main .map #popup-panda {
+    top: 19.9rem;
+    left: 54rem;
   }
 }
 
@@ -18,12 +10,12 @@
     margin-top: 1.8rem;
     width: 66%;
   }
-  main .carousel__container .arrow-right {
-    padding-left: 2rem;
-  }
   main .carousel .carousel-range__container {
     margin-top: 3rem;
     margin-left: 0rem;
+  }
+  main .map {
+    margin-top: 0;
   }
   main .map .map-eagle {
     left: 9.7%;
@@ -41,12 +33,16 @@
     left: 19.5%;
     top: 27%;
   }
+  main .map .map-animal-image {
+    left: 10%;
+    top: 10.7%;
+  }
   main .map form {
     margin-top: 2.7rem;
   }
   main .map__container {
     width: 80rem;
-    margin-top: 9.6rem;
+    margin-top: 4.6rem;
   }
   main .map__container #map {
     height: 39rem;
@@ -101,20 +97,9 @@
     width: 100%;
     margin-top: -1.5rem;
   }
-  main .carousel__container .arrow-right {
-    padding-left: 0;
-    margin-left: 1rem;
-    padding-right: 0.5rem;
-  }
-  main .carousel__container .arrow-left {
-    margin-left: 1.5rem;
-  }
 }
 
 @media (max-width: 630px) {
-  .eagle {
-    display: none;
-  }
   main p {
     width: 28rem;
   }
@@ -146,18 +131,6 @@
   main .map .map-panda {
     left: 72%;
     top: 36.9%;
-  }
-}
-
-@media (min-width: 1501px) and (max-width: 1700px) {
-  main .carousel ul .zebra {
-    display: none;
-  }
-}
-
-@media (max-width: 1140px) {
-  .tiger {
-    display: none;
   }
 }
 

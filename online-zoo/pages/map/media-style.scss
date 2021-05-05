@@ -1,41 +1,46 @@
-@media (max-width: 1301px) {
+@media (max-width: 1600px) {
     main {
-        .carousel {
-            ul {
-                .zebra,
-                .lion,
-                .elephant {
-                    display: none;
-                }
+        .map {
+            #popup-panda {
+                top: 19.9rem;
+                left: 54rem;
             }
         }
     }
 }
 
-@media (min-width: 1302px) and (max-width: 1500px) {
-    main {
-        .carousel {
-            ul {
-                .zebra,
-                .lion {
-                    display: none;
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 1301px) {
+//     main {
+//         .carousel {
+//             ul {
+//                 .zebra,
+//                 .lion,
+//                 .elephant {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width: 1302px) and (max-width: 1500px) {
+//     main {
+//         .carousel {
+//             ul {
+//                 .zebra,
+//                 .lion {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media (max-width: 1201px) {
     main {
         .carousel {
             margin-top: 1.8rem;
             width: 66%;
-
-            &__container {
-                .arrow-right {
-                    padding-left: 2rem;
-                }
-            }
 
             .carousel-range__container {
                 margin-top: 3rem;
@@ -44,6 +49,7 @@
         }
 
         .map {
+            margin-top: 0;
             .map-eagle {
                 left: 9.7%;
                 top: 23%;
@@ -63,13 +69,18 @@
                 left: 19.5%;
                 top: 27%;
             }
+            
+            .map-animal-image {
+                left: 10%;
+                top: 10.7%;
+            }
 
             form {
                 margin-top: 2.7rem;
             }
             &__container {
                 width: 80rem;
-                margin-top: 9.6rem;
+                margin-top: 4.6rem;
 
                 #map {
                     height: 39rem;
@@ -144,25 +155,13 @@
             width: 100%;
             margin-top: -1.5rem;
         }
-
-        .carousel__container {
-            .arrow-right {
-                padding-left: 0;
-                margin-left: 1rem;
-                padding-right: 0.5rem
-            }
-
-            .arrow-left {
-                margin-left: 1.5rem;
-            }
-        }
     }
 }
 
 @media (max-width: 630px) {
-    .eagle {
-        display: none;
-    }
+    // .eagle {
+    //     display: none;
+    // }
 
     main {
         p {
@@ -209,23 +208,23 @@
     } 
 }
 
-@media (min-width: 1501px) and (max-width: 1700px) {
-    main {
-        .carousel {
-            ul {
-                .zebra {
-                    display: none;
-                }
-            }
-        }
-    }
-}
+// @media (min-width: 1501px) and (max-width: 1700px) {
+//     main {
+//         .carousel {
+//             ul {
+//                 .zebra {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 1140px) {
-    .tiger {
-        display: none;
-    }
-}
+// @media (max-width: 1140px) {
+//     .tiger {
+//         display: none;
+//     }
+// }
 
 @media (max-width: 505px) {
     main {
