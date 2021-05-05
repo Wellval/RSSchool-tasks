@@ -1,3 +1,22 @@
+@media (max-width: 1400px) {
+    main {
+        .pay-and-feed {
+            .payment-process {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .pay-and-feed__container {
+            .blue-arrow {
+                transform: rotate(90deg);
+                width: 4rem;
+                margin-bottom: 3rem;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
 @media (max-width: 1201px) {
     main {
         .favorite-animal {
@@ -7,7 +26,7 @@
             }
 
             #line {
-                top: 61.6rem;
+                top: 54rem;
                 left: 40%;
             }
 
@@ -56,6 +75,13 @@
             h3 {
                 margin-top: 8.8rem;
             }
+            &__buttons {
+                top: 37rem;
+            }
+            button {
+                margin: -2rem -0.5rem;
+
+            }
             #choose-button {
                 margin-top: 2.5rem;
             }
@@ -63,43 +89,52 @@
                 margin-top: -0.5rem;
             }
             &__carousel {
-                width: 83%;
+                width: 100%;
                 margin-top: -5.7rem;
+                justify-content: center;
             }
-            &__carousel__items {
-                width: 90.6%;
-                .item {
-                    height: 30.1rem;
-                    max-width: 21rem;
-                    width: 32%;
 
-                    .description {
-                        width: 18rem;
-                        margin: -1rem auto;
-                        margin-left: 1rem;
-                    }
-                }
+            &__carousel__wrapper {
+                width: 92rem;
+                .pets__carousel__items {
+                    .item {
+                        height: 30.1rem;
+                        max-width: 21rem;
+                        width: 21rem;
+                        margin: 0 1rem;
 
-                .item:hover {
-                    .pets__buttons {
-                        opacity: 1;
-                        transition: 1s;
-                        transform: translateY(-11rem);
-                        z-index: 1000;
-                        transition: all 1s ease-in-out;
-                        top: 47.4rem;
-
-                        .item__donate {
-                            margin-left: -1.5rem;
+                        .description {
+                            width: 18rem;
+                            margin: -1rem auto;
+                            margin-left: 1rem;
                         }
+                    }
 
-                        button {
-                            svg {
-                                transform: scale(0.75);
+                    .item {
+                        margin: 0 1rem;
+                    }
+
+                    .item:hover {
+                        .pets__buttons {
+                            opacity: 1;
+                            transition: 1s;
+                            transform: translateY(-11rem);
+                            z-index: 1000;
+                            transition: all 1s ease-in-out;
+                            top: 47.4rem;
+
+                            .item__donate {
+                                margin-left: -1.5rem;
                             }
 
-                            p {
-                                padding-left: 0;
+                            button {
+                                svg {
+                                    transform: scale(0.75);
+                                }
+
+                                p {
+                                    padding-left: 0;
+                                }
                             }
                         }
                     }
@@ -171,10 +206,6 @@
             button {
                 margin: 2.7rem auto;
             }
-
-            #testimonials__title {
-                margin-top: 10rem;
-            }
         }
 
         .map {
@@ -200,7 +231,6 @@
 
             .carousel__container {
                 margin-top: 3.4rem;
-                margin-left: 50.4rem;
 
                 &-animal {
                         width: 18rem;
@@ -240,21 +270,6 @@
 
 @media (max-width: 1190px) {
     main {
-        .pay-and-feed {
-            .payment-process {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        .pay-and-feed__container {
-            .blue-arrow {
-                transform: rotate(90deg);
-                width: 4rem;
-                margin-bottom: 3rem;
-                margin-top: 3rem;
-            }
-        }
-
         .testimonials-arrow {
             display: none;
         }
@@ -703,6 +718,7 @@
         }
 
         .testimonials {
+            margin-top: -5rem;
             #testimonials__title {
                 margin-top: 4.5rem;
                 font-size: 3.6rem;

@@ -1,33 +1,48 @@
+@media (max-width: 1600px) {
+  main .map #popup-panda {
+    top: 19.9rem;
+    left: 54rem;
+  }
+}
+
 @media (max-width: 1201px) {
   main .carousel {
     margin-top: 1.8rem;
     width: 66%;
   }
-  main .carousel__container .arrow-right {
-    padding-left: 2rem;
-  }
   main .carousel .carousel-range__container {
     margin-top: 3rem;
     margin-left: 0rem;
   }
+  main .map {
+    margin-top: 0;
+  }
   main .map .map-eagle {
     left: 9.7%;
-    top: 13%;
+    top: 23%;
   }
   main .map .map-gorilla {
     left: 46.7%;
-    top: 34.5%;
+    top: 37.5%;
   }
   main .map .map-panda {
     left: 73%;
-    top: 16.9%;
+    top: 23.9%;
+  }
+  main .map .map-crocodile {
+    left: 19.5%;
+    top: 27%;
+  }
+  main .map .map-animal-image {
+    left: 10%;
+    top: 10.7%;
   }
   main .map form {
     margin-top: 2.7rem;
   }
   main .map__container {
-    width: 67%;
-    margin-top: 9.6rem;
+    width: 80rem;
+    margin-top: 4.6rem;
   }
   main .map__container #map {
     height: 39rem;
@@ -45,6 +60,9 @@
   .carousel {
     width: 100% !important;
   }
+  main .map__container {
+    width: 60rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -56,25 +74,22 @@
     margin-bottom: 8rem;
   }
   main .map .map-eagle {
-    left: 9.7%;
-    top: 0%;
+    left: 7.7%;
+    top: 25%;
   }
   main .map .map-crocodile {
-    left: 18%;
-    top: 3%;
+    left: 18.3%;
+    top: 29%;
   }
   main .map .map-gorilla {
     left: 45.7%;
-    top: 26.5%;
+    top: 36.5%;
   }
   main .map .map-panda {
     left: 72%;
-    top: 1.9%;
+    top: 25.9%;
   }
-  main .map__container {
-    width: 94%;
-  }
-  main .map__container #map {
+  main #map {
     height: 29rem;
   }
   main .map__wrapper {
@@ -82,50 +97,52 @@
     width: 100%;
     margin-top: -1.5rem;
   }
-  main .carousel__container .arrow-right {
-    padding-left: 0;
-    margin-left: 1rem;
-    padding-right: 0.5rem;
-  }
-  main .carousel__container .arrow-left {
-    margin-left: 1.5rem;
-  }
 }
 
 @media (max-width: 630px) {
-  .eagle {
-    display: none;
+  main p {
+    width: 28rem;
   }
-}
-
-@media (max-width: 1301px) {
-  main .carousel ul .zebra,
-  main .carousel ul .lion,
-  main .carousel ul .elephant {
-    display: none;
+  main .map__container {
+    width: 28rem;
+    margin-top: -5.4rem;
+    margin-bottom: -14rem;
   }
-}
-
-@media (min-width: 1302px) and (max-width: 1500px) {
-  main .carousel ul .zebra,
-  main .carousel ul .lion {
-    display: none;
+  main .map .map-animal {
+    width: 3.4rem;
+    height: 4.8rem;
   }
-}
-
-@media (min-width: 1501px) and (max-width: 1700px) {
-  main .carousel ul .zebra {
-    display: none;
+  main .map .map-animal-image {
+    width: 2.1rem;
+    height: 2.1rem;
+    left: 21%;
   }
-}
-
-@media (max-width: 1140px) {
-  .tiger {
-    display: none;
+  main .map .map-eagle {
+    left: 8.7%;
+    top: 37%;
+  }
+  main .map .map-crocodile {
+    top: 40%;
+  }
+  main .map .map-gorilla {
+    left: 44.7%;
+    top: 42.5%;
+  }
+  main .map .map-panda {
+    left: 72%;
+    top: 36.9%;
   }
 }
 
 @media (max-width: 505px) {
+  main .map form {
+    margin-top: -9.6rem;
+    margin-bottom: 33rem;
+  }
+  main .map__container {
+    margin-top: -5.4rem;
+    margin-bottom: 0rem;
+  }
   main .carousel ul {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -150,6 +167,9 @@
 }
 
 @media (max-width: 380px) {
+  main .carousel {
+    margin-top: 2.8rem;
+  }
   main .carousel .carousel-range__container {
     margin-top: -1.3rem;
     margin-left: 2.4rem;
@@ -162,7 +182,7 @@
   main h3 {
     font-size: 2.4rem;
     margin-bottom: -1.4rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   main p {
     font-size: 1.2rem;
@@ -175,38 +195,26 @@
   main .carousel__container .arrow-right {
     padding-right: 1.5rem;
   }
+  main .map__container {
+    width: 28rem;
+    margin-top: -10.4rem;
+  }
   main .map__container #map {
     height: 57%;
     margin-top: -7.5rem;
   }
+  main .map {
+    margin-top: -10.5rem;
+  }
+  main .map form {
+    margin-top: 5.4rem;
+    margin-bottom: 9rem;
+  }
   main .map button {
-    margin-top: -21.3rem;
+    margin-top: 7.4rem;
   }
   main .map button p {
     margin-top: 2rem;
-  }
-  main .map .map-eagle {
-    left: 8.7%;
-    top: -36%;
-  }
-  main .map .map-crocodile {
-    top: -33%;
-  }
-  main .map .map-gorilla {
-    left: 44.7%;
-    top: -21.5%;
-  }
-  main .map .map-panda {
-    top: -33.1%;
-  }
-  main .map .map-animal {
-    width: 3.4rem;
-    height: 4.7rem;
-  }
-  main .map .map-animal-image {
-    left: 17%;
-    width: 2.2rem;
-    height: 2.2rem;
   }
 }
 /*# sourceMappingURL=media-style.css.map */

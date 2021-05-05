@@ -127,6 +127,12 @@ $gradient-blue: #49D6DF;
     }
 }
 
+.dark-theme {
+    header {
+        background: #333;
+    }
+}
+
 html { 
     font-size: 10px; 
     font-family: 'Roboto', sans-serif;
@@ -136,6 +142,10 @@ body {
     margin: 0;
     width: 100%;
     height: 100vh;
+}
+
+body.not-scrollable {
+    overflow: hidden;
 }
 
 header {
@@ -148,6 +158,18 @@ header {
     #menu {
         display: none;
         margin-left: 4rem;
+        height: 2.1rem;
+        width: 4rem;
+
+        .line {
+            width: 100%;
+            height: 3px;
+            background: #49D6DF;
+        }
+
+        .line3 {
+            width: 90%;
+        }
     }
 
     .header-wrapper {
@@ -165,11 +187,6 @@ header {
                 color: $gray1;
             }
         }
-    }
-
-    #menu {
-        height: 2.1rem;
-        width: 4rem;
     }
 
     .switch-menu {
@@ -269,6 +286,14 @@ main {
         }
     }
 
+    .arrow-dark {
+         svg {
+            path {
+                fill: #e0e0e0;
+            }
+        }
+    }
+
     .arrow-left {
         transform: rotate(180deg);
     }
@@ -318,8 +343,8 @@ main {
             button {
                 margin-left: 21rem;
                 
-                p {
-                    padding-left: 0.5rem;
+                img {
+                    padding-right: 0.5rem;
                 }
             }
         }
@@ -327,24 +352,83 @@ main {
         .carousel {
             display: flex;
             margin-top: 3.7rem;
+
+            .carousel-dots {
+                position: absolute;
+                top: 36%;    
+                left: 43.5%;
+                width: 156rem;
+                display: flex;
+                justify-content: space-evenly;
+
+            }
         }
 
         #line {
             position: absolute;
             top: 58.6rem;
             left: 43.7%;
+            display: flex;
         }
 
-        .carousel__container {
-            display: flex;
-            align-items: center;
-            width: 107.4rem;
+        .line-dot {
+            position: absolute;
+        }
+
+        .inner-dot {
+            position: absolute;
+            margin-top: 0.4rem;
+        }
+
+        .dot1 {
+            margin-left: 21rem;
+        }
+
+        .inner-dot1 {
+            margin-left: 21.4rem;
+        }
+
+        .inner-dot2 {
+            margin-left: 68.4rem;
+        }
+
+        .inner-dot3 {
+            margin-left: 85.4rem;
+        }
+
+        .inner-dot4 {
+            margin-left: 104.4rem;
+        }
+
+        .dot2 {
+            margin-left: 68rem;
+        }
+
+        .dot3 {
+            margin-left: 85rem;
+        }
+
+        .dot4 {
+            margin-left: 104rem;
+        }
+
+        .carousel__wrapper {
+            width: 159.2rem;
             height: 42.1rem;
             margin-top: -6.4rem;
             margin-left: 40.7%;
             position: absolute;
             justify-content: space-evenly;
             overflow: hidden;
+        }
+
+        .carousel__container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-evenly;
+            transition: 0.5s;
+            height: 38.5rem;
 
             &-animal {
                 width: 14rem;
@@ -377,18 +461,18 @@ main {
                     width: 13rem;
                 }
 
-                &:hover {
-                    transform: scale(1.1);
-                    transition: all 0.5s ease-in-out;
-                    cursor: pointer;
+                // &:hover {
+                //     transform: scale(1.1);
+                //     transition: all 0.5s ease-in-out;
+                //     cursor: pointer;
 
-                    button,
-                    .description {
-                        opacity: 1;
-                        transition: 1s;
-                        transform: translateY(-11rem);
-                    }
-                }
+                //     button,
+                //     .description {
+                //         opacity: 1;
+                //         transition: 1s;
+                //         transform: translateY(-11rem);
+                //     }
+                // }
 
                 button {
                     width: 7rem;
@@ -431,8 +515,8 @@ main {
                 }
 
                 &-active {
-                    width: 24.5rem;
-                    height: 35.2rem;
+                    width: 24.5rem !important;
+                    height: 35.2rem !important;
                     margin-bottom: 3.4rem;
 
                     .dollar {
@@ -581,9 +665,12 @@ main {
                 margin: 0 auto;
                 margin-top: 2.3rem;
 
+                img {
+                    padding-right: 0.5rem;
+                }
+
                 p {
                     color: $base;
-                    padding-left: 0.5rem;
                     font-size: 1.8rem;
                     margin: 0;
                 }
@@ -601,7 +688,16 @@ main {
             input[type=range]::-webkit-slider-thumb {
                 width: 6rem;
             }
+        }
+    }
 
+    .dark {
+        input[type=range]::-webkit-slider-thumb {
+            background: $base;
+        }
+
+        label {
+            color: $base;
         }
     }
 
@@ -657,7 +753,7 @@ main {
 
         &__buttons {
             position: absolute;
-            top: 45.6rem;
+            top: 45rem;
             display: flex;
             width: 100%;
         }
@@ -728,6 +824,12 @@ main {
             @include range();
         }
 
+        .dark {
+            input[type=range]::-webkit-slider-thumb {
+                background: $base;
+            }
+        }
+
         #choose-button {
             width: 24.5rem;
             height: 5.5rem;
@@ -760,52 +862,64 @@ main {
             align-items: center;
         }
 
-        &__carousel__items {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 92%;
-            margin: 0 auto;
-            height: 37.9rem;
+        #carousel {
+            color: $base;
+        }
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
+        &__carousel__wrapper {
+            width: 123rem;
+            overflow: hidden;
+            transition: transform 0.5s;
+            will-change: transform;
 
-            .item {
-                height: 39.9rem;
-                max-width: 27.8rem;
-                width: 32%;
-                overflow: hidden;
-                display: block; 
-                position: relative; 
-                transition: all 0.3s ease-in-out;
+            .pets__carousel__items {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 37.9rem;
+                transition: transform 0.5s;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+    
+                .item {
+                    height: 39.9rem;
+                    max-width: 27.8rem;
+                    width: 32%;
+                    flex: 0 0 33%;
+                    margin: 0 1.5rem;
+                    overflow: hidden;
+                    display: block; 
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+    
+                &:after { 
+                    content: ''; 
+                    position: absolute; 
+                    top: 0; 
+                    left: 0; 
+                    right: 0; 
+                    bottom: 0; 
+                    background: rgba(0,0,0,.2);  
+                    opacity: 0; 
+                    transition: all 1s ease-in-out;
+                }
+    
+                &:before { 
+                    content: ''; 
+                    position: absolute; 
+                    top: 0; 
+                    left: 0; 
+                    right: 0; 
+                    bottom: 0; 
+                    background: url(icon-path); 
+                    opacity: 0; 
+                }
+                }
 
-            &:after { 
-                content: ''; 
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                right: 0; 
-                bottom: 0; 
-                background: rgba(0,0,0,.2);  
-                opacity: 0; 
-                transition: all 1s ease-in-out;
-            }
-
-            &:before { 
-                content: ''; 
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                right: 0; 
-                bottom: 0; 
-                background: url(icon-path); 
-                opacity: 0; 
-            }
-
-                &:hover {
+                .item.active {
                     transform: scale(1);
                     cursor: pointer;
 
@@ -814,26 +928,26 @@ main {
                         opacity: 1;
                     }
 
-                    button,
+                    .pets__buttons,
                     .description {
                         opacity: 1;
-                        transition: 1s;
+                        transition: all 1s;
                         transform: translateY(-11rem);
-                        z-index: 1000;
+                        z-index: 100;
                         transition: all 1s ease-in-out;
                     }
                 }
-            }
-
-            .description
-             {
-                width: 19.4rem;
-                height: 4.8rem;
-                color: #fff;
-                font-size: 1.4rem;
-                margin: -2rem auto;
-                opacity: 0;
-                z-index: 1000;
+    
+                .description
+                 {
+                    width: 19.4rem;
+                    height: 4.8rem;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    margin: -2rem auto;
+                    opacity: 0;
+                    z-index: 100;
+                }
             }
         }
     }
@@ -845,10 +959,123 @@ main {
         justify-content: center;
         align-items: center;
 
+        .cover {
+            width: 120rem;
+            height: 79.5rem;
+            background-color: #fff;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -39.75rem; 
+            margin-left: -60rem;
+            z-index: 10000;
+            display: flex;
+
+            .popup-main {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .donate-btn {
+                    margin-top: 0;
+                    margin-bottom: 5rem;
+                }
+
+                .donate__info {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 74%;
+                    margin: 0 auto;
+                    height: 27.6rem;
+                    margin-top: 4rem;
+                }
+
+                .donate__about-you,
+                .donate__checkout {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    text-align: initial;
+
+                    .popup-h {
+                        color: #828282;
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                        line-height: 116.5%;
+                    }
+                }
+
+                .animal-to-donate {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 74%;
+                    margin: 0 auto;
+                    
+                    legend {
+                        margin-left: -11.7rem;
+                    }
+                }
+
+                #subscr {
+                    font-weight: 500;
+                    font-size: 13px;
+                    width: 47.8rem;
+                    color: #828282;
+                    margin: 0 auto;
+                }
+            }
+
+            h4 {
+                font-size: 24px;
+                line-height: 116.5%;
+                color: #313131;
+                text-transform: uppercase;
+                margin-top: 5rem;
+            }
+
+            fieldset {
+                width: 33.5rem;
+                height: 5.9rem;
+                outline: none;
+                position: relative;
+                display: flex;
+            }
+
+            #exp-month, #exp-day {
+                width: 17rem;
+            }
+
+            input, select {
+                font-size: 2rem;
+                outline: none;
+                border: none;
+                width: 33.5rem;
+            }
+        }
+
+        .darken {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            opacity: 0.7;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .darken.hidden {
+            display: none;
+        }
+
+        .cover.hidden {
+            display: none;
+        }
+
         &__container {
             text-align: center;
             width: 80%;
-            margin-bottom: 6rem;
+            margin-bottom: 10rem;
 
             h3 {
                 margin-top: 10rem;
@@ -879,6 +1106,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                background-repeat: no-repeat;
 
                 img {
                     margin-top: 4rem;
@@ -902,10 +1130,11 @@ main {
     }
 
     .testimonials {
-        height: 76rem;
+        height: 86rem;
         width: 100%;
         text-align: center;
         margin: 0 auto;
+        margin-top: -2rem;
 
         &__container {
             width: 136rem;
@@ -913,7 +1142,7 @@ main {
         }
 
         #testimonials__title {
-            margin-top: 15rem;
+            padding-top: 10rem;
         }
 
         h3 {
@@ -928,12 +1157,19 @@ main {
             margin: 0 auto;
             @include range();
         }
+
+        .dark {
+            input[type=range]::-webkit-slider-thumb {
+                background: $base;
+            }
+        }
         
         &__carousel {
                 max-width: 136rem;
                 margin: 5rem auto;
                 display: flex;
                 justify-content: space-evenly;
+                align-items: center;
 
                 &-user {
                     width: 57.5rem;
@@ -994,8 +1230,8 @@ main {
         button {
             margin-top: 54rem;
 
-            p {
-                padding-left: 0.5rem;
+            img {
+                padding-right: 0.5rem;
             }
         }
 
@@ -1074,7 +1310,7 @@ main {
             background-position-x: center;
             background-size: contain;
             position: absolute;
-            margin-top: 24rem;
+            margin-top: 22rem;
         }
 
         .map-animal {
@@ -1324,5 +1560,3 @@ footer {
         }
     }
 }
-
-

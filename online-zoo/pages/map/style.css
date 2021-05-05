@@ -24,6 +24,18 @@ header {
 header #menu {
   display: none;
   margin-left: 4rem;
+  height: 2.1rem;
+  width: 4rem;
+}
+
+header #menu .line {
+  width: 100%;
+  height: 3px;
+  background: #49D6DF;
+}
+
+header #menu .line3 {
+  width: 90%;
 }
 
 header .header-wrapper {
@@ -39,6 +51,8 @@ header .header-wrapper {
 
 header .header-wrapper ul {
   padding: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   padding-top: 0rem;
   margin-left: 3rem;
   display: -webkit-box;
@@ -169,11 +183,136 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1.2rem;
+}
+
+main .carousel-range__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: 3.4rem;
+  margin-left: -4rem;
+}
+
+main .carousel-range__container input[type=range] {
+  height: 0.5rem;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 24.5rem;
+}
+
+main .carousel-range__container input[type=range]:focus {
+  outline: none;
+}
+
+main .carousel-range__container input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  -webkit-box-shadow: 0px 0px 0px #000000;
+          box-shadow: 0px 0px 0px #000000;
+  background: #B6B6B6;
+  border-radius: 0px;
+}
+
+main .carousel-range__container input[type=range]::-webkit-slider-thumb {
+  height: 10px;
+  width: 30px;
+  border-radius: 0px;
+  background: #333333;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -2.5px;
+}
+
+main .carousel-range__container input[type="range"]::-webkit-slider-container {
+  height: 0.5rem;
+}
+
+main .carousel-range__container input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #B6B6B6;
+}
+
+main .carousel-range__container input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #B6B6B6;
+  border-radius: 0px;
+  border: 0px solid #8A8A8A;
+}
+
+main .carousel-range__container input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #828282;
+  border: 0px solid #8A8A8A;
+  height: 10px;
+  width: 30px;
+  border-radius: 0px;
+  background: #FEFEFE;
+  cursor: pointer;
+}
+
+main .carousel-range__container input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+main .carousel-range__container input[type=range]::-ms-fill-lower {
+  background: #B6B6B6;
+  border: 0px solid #8A8A8A;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+main .carousel-range__container input[type=range]::-ms-fill-upper {
+  background: #B6B6B6;
+  border: 0px solid #8A8A8A;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+main .carousel-range__container input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #828282;
+  border: 0px solid #8A8A8A;
+  height: 10px;
+  width: 30px;
+  border-radius: 0px;
+  background: #FEFEFE;
+  cursor: pointer;
+}
+
+main .carousel-range__container input[type=range]:focus::-ms-fill-lower {
+  background: #B6B6B6;
+}
+
+main .carousel-range__container input[type=range]:focus::-ms-fill-upper {
+  background: #B6B6B6;
+}
+
+main .dark input[type=range]::-webkit-slider-thumb {
+  background: #FEFEFE;
+}
+
+main .dark label {
+  color: #FEFEFE;
 }
 
 main h3 {
   margin-bottom: 0.6rem;
+  margin-top: 6.2rem;
 }
 
 main label {
@@ -196,8 +335,8 @@ main p {
 }
 
 main .carousel {
-  max-width: 119.9rem;
-  width: 66%;
+  max-width: 132rem;
+  width: 100%;
   height: 23.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,6 +349,32 @@ main .carousel {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2.9rem;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+main .carousel .arrow {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .carousel .arrow:hover {
+  opacity: 0.5;
+}
+
+main .carousel .arrow-dark svg path {
+  fill: #e0e0e0;
+}
+
+main .carousel .arrow-left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 2rem;
+}
+
+main .carousel .arrow-right {
+  margin-left: 2rem;
 }
 
 main .carousel__container {
@@ -224,154 +389,23 @@ main .carousel__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-main .carousel__container .arrow {
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-main .carousel__container .arrow:hover {
-  opacity: 0.5;
-}
-
-main .carousel__container .arrow-left {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-main .carousel .carousel-range__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  margin-top: 3.4rem;
-  margin-left: -4rem;
-}
-
-main .carousel .carousel-range__container input[type=range] {
-  height: 0.5rem;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 24.5rem;
-}
-
-main .carousel .carousel-range__container input[type=range]:focus {
-  outline: none;
-}
-
-main .carousel .carousel-range__container input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  -webkit-box-shadow: 0px 0px 0px #000000;
-          box-shadow: 0px 0px 0px #000000;
-  background: #B6B6B6;
-  border-radius: 0px;
-}
-
-main .carousel .carousel-range__container input[type=range]::-webkit-slider-thumb {
-  height: 10px;
-  width: 30px;
-  border-radius: 0px;
-  background: #333333;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -2.5px;
-}
-
-main .carousel .carousel-range__container input[type="range"]::-webkit-slider-container {
-  height: 0.5rem;
-}
-
-main .carousel .carousel-range__container input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #B6B6B6;
-}
-
-main .carousel .carousel-range__container input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000;
-  background: #B6B6B6;
-  border-radius: 0px;
-  border: 0px solid #8A8A8A;
-}
-
-main .carousel .carousel-range__container input[type=range]::-moz-range-thumb {
-  box-shadow: 0px 0px 0px #828282;
-  border: 0px solid #8A8A8A;
-  height: 10px;
-  width: 30px;
-  border-radius: 0px;
-  background: #FEFEFE;
-  cursor: pointer;
-}
-
-main .carousel .carousel-range__container input[type=range]::-ms-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-
-main .carousel .carousel-range__container input[type=range]::-ms-fill-lower {
-  background: #B6B6B6;
-  border: 0px solid #8A8A8A;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px #000000;
-}
-
-main .carousel .carousel-range__container input[type=range]::-ms-fill-upper {
-  background: #B6B6B6;
-  border: 0px solid #8A8A8A;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px #000000;
-}
-
-main .carousel .carousel-range__container input[type=range]::-ms-thumb {
-  margin-top: 1px;
-  box-shadow: 0px 0px 0px #828282;
-  border: 0px solid #8A8A8A;
-  height: 10px;
-  width: 30px;
-  border-radius: 0px;
-  background: #FEFEFE;
-  cursor: pointer;
-}
-
-main .carousel .carousel-range__container input[type=range]:focus::-ms-fill-lower {
-  background: #B6B6B6;
-}
-
-main .carousel .carousel-range__container input[type=range]:focus::-ms-fill-upper {
-  background: #B6B6B6;
+  overflow: hidden;
 }
 
 main .carousel ul {
   padding: 0;
   list-style: none;
-  width: 91.5%;
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 main .carousel ul li {
@@ -382,6 +416,7 @@ main .carousel ul li {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: block;
 }
 
 main .carousel ul .animal-round:hover {
@@ -389,13 +424,23 @@ main .carousel ul .animal-round:hover {
           transform: scale(1.1);
 }
 
+main .carousel ul .animal-round {
+  width: 15.7rem;
+  height: 15.7rem;
+  margin-left: 1.8rem;
+}
+
+main .carousel ul .animal-round img {
+  width: 10.8rem;
+  height: 10.8rem;
+  margin-top: 18%;
+}
+
 main .carousel ul .animal-active {
   width: 15.7rem;
   height: 15.7rem;
   background-image: url(../../assets/map/ellipse.svg);
   background-size: cover;
-  margin-left: -2rem;
-  margin-right: -2rem;
 }
 
 main .carousel ul .animal-active img {
@@ -403,6 +448,8 @@ main .carousel ul .animal-active img {
   height: 13.7rem;
   display: block;
   margin-top: 1rem;
+  padding-right: 2rem;
+  padding-left: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -419,7 +466,6 @@ main .map {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-top: -5rem;
 }
 
 main .map h3 {
@@ -433,13 +479,12 @@ main .map form {
 }
 
 main .map button p {
-  padding-right: 2.5rem;
   font-size: 1.8rem;
   color: #fff;
 }
 
 main .map button img {
-  padding-left: 3rem;
+  padding-right: 0.5rem;
 }
 
 main .map .popup {
@@ -454,7 +499,7 @@ main .map .popup {
           align-items: center;
   position: absolute;
   display: none;
-  opacity: 0;
+  z-index: 1;
 }
 
 main .map .popup img {
@@ -492,6 +537,10 @@ main .map .popup__description .facts ul span {
 main .map #popup-panda {
   top: 15.9rem;
   left: 96rem;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .map #popup-eagle {
@@ -510,9 +559,14 @@ main .map #popup-gorilla {
 }
 
 main .map__container {
-  width: 63%;
-  margin-top: 13rem;
+  width: 120rem;
+  height: 50rem;
+  margin-top: 9rem;
   position: relative;
+  background-image: url(../../assets/landing/map.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 main .map__container #map {
@@ -559,6 +613,7 @@ main .map .map-eagle {
 main .map .map-panda {
   left: 75.5%;
   top: 19.9%;
+  background-image: url(../../assets/landing/test2.png);
 }
 
 main .map .map-animal-image {

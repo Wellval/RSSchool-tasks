@@ -1,10 +1,29 @@
+@media (max-width: 1400px) {
+  main .pay-and-feed .payment-process {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .pay-and-feed__container .blue-arrow {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    width: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+
 @media (max-width: 1201px) {
   main .favorite-animal .carousel-range__container {
     margin-left: 70%;
     margin-top: -4rem;
   }
   main .favorite-animal #line {
-    top: 61.6rem;
+    top: 54rem;
     left: 40%;
   }
   main .favorite-animal .social-media {
@@ -40,6 +59,12 @@
   main .pets h3 {
     margin-top: 8.8rem;
   }
+  main .pets__buttons {
+    top: 37rem;
+  }
+  main .pets button {
+    margin: -2rem -0.5rem;
+  }
   main .pets #choose-button {
     margin-top: 2.5rem;
   }
@@ -47,23 +72,30 @@
     margin-top: -0.5rem;
   }
   main .pets__carousel {
-    width: 83%;
+    width: 100%;
     margin-top: -5.7rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  main .pets__carousel__items {
-    width: 90.6%;
+  main .pets__carousel__wrapper {
+    width: 92rem;
   }
-  main .pets__carousel__items .item {
+  main .pets__carousel__wrapper .pets__carousel__items .item {
     height: 30.1rem;
     max-width: 21rem;
-    width: 32%;
+    width: 21rem;
+    margin: 0 1rem;
   }
-  main .pets__carousel__items .item .description {
+  main .pets__carousel__wrapper .pets__carousel__items .item .description {
     width: 18rem;
     margin: -1rem auto;
     margin-left: 1rem;
   }
-  main .pets__carousel__items .item:hover .pets__buttons {
+  main .pets__carousel__wrapper .pets__carousel__items .item {
+    margin: 0 1rem;
+  }
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons {
     opacity: 1;
     -webkit-transition: 1s;
     transition: 1s;
@@ -74,14 +106,14 @@
     transition: all 1s ease-in-out;
     top: 47.4rem;
   }
-  main .pets__carousel__items .item:hover .pets__buttons .item__donate {
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons .item__donate {
     margin-left: -1.5rem;
   }
-  main .pets__carousel__items .item:hover .pets__buttons button svg {
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons button svg {
     -webkit-transform: scale(0.75);
             transform: scale(0.75);
   }
-  main .pets__carousel__items .item:hover .pets__buttons button p {
+  main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons button p {
     padding-left: 0;
   }
   main .pay-and-feed button {
@@ -132,9 +164,6 @@
   main .testimonials button {
     margin: 2.7rem auto;
   }
-  main .testimonials #testimonials__title {
-    margin-top: 10rem;
-  }
   main .map {
     height: 84.4rem;
   }
@@ -150,7 +179,6 @@
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container {
     margin-top: 3.4rem;
-    margin-left: 50.4rem;
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal {
     width: 18rem;
@@ -182,22 +210,6 @@
 }
 
 @media (max-width: 1190px) {
-  main .pay-and-feed .payment-process {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main .pay-and-feed__container .blue-arrow {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    width: 4rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-  }
   main .testimonials-arrow {
     display: none;
   }
@@ -536,6 +548,9 @@
   }
   main .pay-and-feed__container #payment-description {
     display: none;
+  }
+  main .testimonials {
+    margin-top: -5rem;
   }
   main .testimonials #testimonials__title {
     margin-top: 4.5rem;
