@@ -28,6 +28,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header #menu {
@@ -236,6 +239,12 @@ main .favorite-animal__container {
           justify-content: center;
 }
 
+main .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal-active {
+  width: 24.5rem;
+  height: 35.2rem;
+  margin-bottom: 3.4rem;
+}
+
 main .favorite-animal label {
   color: #FEFEFE;
 }
@@ -339,7 +348,7 @@ main .favorite-animal .carousel__wrapper {
   width: 159.2rem;
   height: 42.1rem;
   margin-top: -6.4rem;
-  margin-left: 40.7%;
+  left: 46.7%;
   position: absolute;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -441,8 +450,8 @@ main .favorite-animal .carousel__container-animal__buttons {
 }
 
 main .favorite-animal .carousel__container-animal-active {
-  width: 24.5rem !important;
-  height: 35.2rem !important;
+  width: 24.5rem;
+  height: 35.2rem;
   margin-bottom: 3.4rem;
 }
 
@@ -1245,18 +1254,23 @@ main .pets__carousel__wrapper .pets__carousel__items .item:before {
   opacity: 0;
 }
 
-main .pets__carousel__wrapper .pets__carousel__items .item.active {
+main .pets__carousel__wrapper .pets__carousel__items .item.active,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
   cursor: pointer;
 }
 
-main .pets__carousel__wrapper .pets__carousel__items .item.active:before, main .pets__carousel__wrapper .pets__carousel__items .item.active:after {
+main .pets__carousel__wrapper .pets__carousel__items .item.active:before, main .pets__carousel__wrapper .pets__carousel__items .item.active:after,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover:before,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover:after {
   opacity: 1;
 }
 
 main .pets__carousel__wrapper .pets__carousel__items .item.active .pets__buttons,
-main .pets__carousel__wrapper .pets__carousel__items .item.active .description {
+main .pets__carousel__wrapper .pets__carousel__items .item.active .description,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover .pets__buttons,
+main .pets__carousel__wrapper .pets__carousel__items .item:hover .description {
   opacity: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -1432,7 +1446,7 @@ main .pay-and-feed .cover.hidden {
 
 main .pay-and-feed__container {
   text-align: center;
-  width: 80%;
+  width: 150rem;
   margin-bottom: 10rem;
 }
 

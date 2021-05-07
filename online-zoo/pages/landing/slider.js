@@ -34,6 +34,7 @@ class SliderCarousel {
 
     // TO-DO: make range from 8 to 1 work correct
     changeHandler() {
+        let prevPosition = this.options.position;
         this.options.position = this.range.value;
         document.querySelector('#pets-range__label').innerHTML = `0${this.options.position}/`;
         let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position})`);
@@ -47,23 +48,30 @@ class SliderCarousel {
         if (this.options.position < 5) {
             this.wrap.style.transform = `translateX(-${(this.options.position - 4) * 25}%)`; 
         }
-
-        console.log(this.range.value)
     }
 
     prevSlider() {
+        let prevPosition = this.options.position;
         if (this.options.infinity || this.options.position > 0) {
             --this.options.position;
             this.range.value = this.options.position + 1;
             this.rangeLabel.innerHTML = `0${this.options.position + 1}/`;
-            if (this.options.position < this.slides.length - 4) {
-                this.wrap.style.transform = `translateX(-${(this.options.position) * 25}%)`;
+            if (this.options.position < this.slides.length - 3) {
+                if (this.options.position === 3 && prevPosition !== 4) {
+                        this.wrap.style.transform = `translateX(-${(this.options.position) * 25}%)`;
+                } 
                 if (this.options.position < this.slides.length - this.slides.length) {
                     this.options.position = this.slides.length - 1;
                     this.range.value = this.options.position + 1;
                     this.rangeLabel.innerHTML = `0${this.options.position + 1}/`;
                     this.wrap.style.transform = `translateX(-${(this.options.position - 3) * 25}%)`;
                     let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position + 2})`);
+                }
+                if (this.options.position >= 0 && prevPosition > this.options.position && prevPosition < 5) {
+                    if (this.options.position < 4) {
+                            this.wrap.style.transform = `translateX(-${(this.options.position) * 25}%)`;
+                    }
+                    
                 }
             }
             let activeEl = document.querySelector(`.pets__carousel__wrapper > div > div:nth-child(${this.options.position + 1})`);

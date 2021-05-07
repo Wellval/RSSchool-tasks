@@ -23,7 +23,7 @@
     margin-top: -4rem;
   }
   main .favorite-animal #line {
-    top: 54rem;
+    top: 53rem;
     left: 40%;
   }
   main .favorite-animal .social-media {
@@ -191,15 +191,6 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .pets__carousel {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
-}
-
 @media (max-width: 1100px) {
   main .pets__carousel {
     -webkit-box-pack: justify;
@@ -231,12 +222,15 @@
   main .map button {
     margin-top: 32.5rem;
   }
-  footer .footer__lower {
-    margin-top: 7rem;
-  }
-  .favorite-animal .carousel {
+  main .favorite-animal .carousel {
     margin-top: 3.7rem;
     margin-left: -3rem;
+  }
+  main .favorite-animal #line {
+    top: 44rem;
+  }
+  footer .footer__lower {
+    margin-top: 7rem;
   }
   .favorite-animal__container .favorite-animal__wrapper {
     width: 100%;
@@ -249,11 +243,22 @@
     letter-spacing: 0.2rem;
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container {
-    margin-left: 22%;
     margin-top: 8.4rem;
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal {
     height: 61%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .pets__carousel {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  main .favorite-animal #line {
+    top: 51rem;
   }
 }
 
@@ -282,8 +287,9 @@
   main .testimonials-range__container {
     margin-top: -1rem;
   }
-  main .favorite-animal .carousel__container {
-    width: 109.4rem;
+  main .favorite-animal .carousel__wrapper {
+    left: 26.7%;
+    margin-top: 4.6rem;
   }
   main .favorite-animal #line {
     top: 59rem;
@@ -389,9 +395,17 @@
   }
 }
 
+@media (max-width: 650px) {
+  main .favorite-animal #line {
+    top: 69rem;
+  }
+}
+
 @media (max-width: 450px) {
+  main .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal-active {
+    margin-bottom: -1.6rem;
+  }
   main .favorite-animal .carousel__container-animal-active {
-    margin-left: -17rem;
     width: 14rem;
     height: 20.2rem;
   }
@@ -641,7 +655,7 @@
     margin-top: 4.4rem;
   }
   .favorite-animal__container .favorite-animal__wrapper .carousel__container-animal {
-    margin-left: -6rem;
+    margin-bottom: 12rem;
   }
 }
 /*# sourceMappingURL=media-style.css.map */
