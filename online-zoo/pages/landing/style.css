@@ -1239,8 +1239,8 @@ main .pets__carousel__wrapper .pets__carousel__items .item:after {
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 main .pets__carousel__wrapper .pets__carousel__items .item:before {

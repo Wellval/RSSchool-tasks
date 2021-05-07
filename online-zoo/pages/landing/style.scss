@@ -913,7 +913,7 @@ main {
                     bottom: 0; 
                     background: rgba(0,0,0,.2);  
                     opacity: 0; 
-                    transition: all 1s ease-in-out;
+                    transition: all 0.5s ease-in-out;
                 }
     
                 &:before { 
@@ -945,6 +945,7 @@ main {
                         transform: translateY(-11rem);
                         z-index: 100;
                         transition: all 1s ease-in-out;
+                        
                     }
                 }
     
