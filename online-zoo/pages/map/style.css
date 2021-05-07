@@ -420,14 +420,14 @@ main .carousel ul li {
 }
 
 main .carousel ul .animal-round:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  cursor: pointer;
 }
 
 main .carousel ul .animal-round {
   width: 15.7rem;
   height: 15.7rem;
   margin-left: 1.8rem;
+  outline: none;
 }
 
 main .carousel ul .animal-round img {
