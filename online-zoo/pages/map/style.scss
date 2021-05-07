@@ -375,13 +375,14 @@ main {
             }
 
             .animal-round:hover {
-                transform: scale(1.1);
+                cursor: pointer;
             }
 
             .animal-round {
                 width: 15.7rem;
                 height: 15.7rem;
                 margin-left: 1.8rem;
+                outline: none;
                 img {
                     width: 10.8rem;
                     height: 10.8rem;

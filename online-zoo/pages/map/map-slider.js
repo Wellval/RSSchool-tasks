@@ -27,7 +27,24 @@ class MapSlider {
         this.prev.addEventListener('click', this.prevSlider.bind(this));
         this.next.addEventListener('click', this.nextSlider.bind(this));
         this.range.addEventListener('input', this.changeHandler.bind(this));
+        this.activeOnClick();
     };
+
+    activeOnClick() {
+        document.querySelectorAll("body > main > div.carousel > div.carousel__container > ul > li:nth-child(n)").forEach(slide => {
+            slide.addEventListener('click', (e) => {
+                document.querySelectorAll("body > main > div.carousel > div.carousel__container > ul > li:nth-child(n)").forEach(el => {
+                    el.classList.remove('animal-active');
+                });
+                this.position = Array.from(this.slides).indexOf(e.target.parentElement);
+                this.range.value = this.position + 1;
+                this.rangeLabel.innerHTML = `0${this.range.value}/`;
+                let activeEl = document.querySelector(`.carousel__container > ul > li:nth-child(${this.position + 1})`);
+                activeEl.classList.add('animal-active');
+                this.activatePopup();
+            });
+        })
+    }
 
     prevSlider() {
         let prevPosition = this.position;
@@ -66,6 +83,11 @@ class MapSlider {
         this.range.value = this.position + 1;
         this.rangeLabel.innerHTML = `0${this.range.value}/`;
         activeEl.classList.add('animal-active');
+        this.activatePopup();
+    }
+
+    activatePopup() {
+        let activeEl = document.querySelector(`.carousel__container > ul > li:nth-child(${this.position + 1})`);
         if (activeEl.classList.contains('gorilla')) {
             document.querySelectorAll('.map-animal').forEach(item => {
                 item.style.backgroundImage = "url('../../assets/landing/test.png')";
@@ -134,50 +156,7 @@ class MapSlider {
         if (activeEl.classList.contains('gorilla')) {
             document.querySelector("body > main > div.map > div > div > div.map-eagle.map-animal").style.backgroundImage = "url('../../assets/landing/test2.png')";
         }
-        if (activeEl.classList.contains('gorilla')) {
-            document.querySelectorAll('.map-animal').forEach(item => {
-                item.style.backgroundImage = "url('../../assets/landing/test.png')";
-            })
-            document.querySelectorAll('.popup').forEach(item => {
-            item.style.display = 'none';
-            });
-            document.querySelector('.map-gorilla').style.backgroundImage = "url('../../assets/landing/test2.png')";
-            document.querySelector('#popup-gorilla').style.display = 'flex';
-        }  else if (activeEl.classList.contains('panda')) {
-            document.querySelectorAll('.map-animal').forEach(item => {
-                item.style.backgroundImage = "url('../../assets/landing/test.png')";
-            })
-            document.querySelectorAll('.popup').forEach(item => {
-            item.style.display = 'none';
-            });
-            document.querySelector('.map-panda').style.backgroundImage = "url('../../assets/landing/test2.png')";
-            document.querySelector('#popup-panda').style.display = 'flex';
-        }  else if (activeEl.classList.contains('eagle')) {
-            document.querySelectorAll('.map-animal').forEach(item => {
-                item.style.backgroundImage = "url('../../assets/landing/test.png')";
-            })
-            document.querySelectorAll('.popup').forEach(item => {
-            item.style.display = 'none';
-            });
-            document.querySelector('.map-eagle').style.backgroundImage = "url('../../assets/landing/test2.png')";
-            document.querySelector('#popup-eagle').style.display = 'flex';
-        }  else if (activeEl.classList.contains('crocodile')) {
-            document.querySelectorAll('.map-animal').forEach(item => {
-                item.style.backgroundImage = "url('../../assets/landing/test.png')";
-            })
-            document.querySelectorAll('.popup').forEach(item => {
-            item.style.display = 'none';
-            });
-            document.querySelector('.map-crocodile').style.backgroundImage = "url('../../assets/landing/test2.png')";
-            document.querySelector('#popup-crocodile').style.display = 'flex';
-        } else {
-            document.querySelectorAll('.map-animal').forEach(item => {
-                item.style.backgroundImage = "url('../../assets/landing/test.png')";
-            })
-            document.querySelectorAll('.popup').forEach(item => {
-            item.style.display = 'none';
-            });
-        }
+        this.activatePopup();
     }
 
     changeHandler() {
