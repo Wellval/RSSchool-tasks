@@ -1,0 +1,15 @@
+.card-overlay {
+    opacity: 0.3;
+    position: fixed;
+    width: 7rem;
+    max-width: inherit;
+    height: 10rem;
+    max-height: inherit;
+    border-radius: .5rem;
+    transition: all 0.5s;
+}
+
+.card-container:hover > .card-overlay {
+    transform: translateZ(2rem);
+    box-shadow: 0 0.25rem 1.7rem rgba(0, 0, 0, 0.5);
+}
