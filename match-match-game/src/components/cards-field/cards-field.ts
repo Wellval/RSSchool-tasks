@@ -1,14 +1,17 @@
 import './cards-field.scss';
 import { BaseComponent } from '../base-component';
 import { Card } from '../card/card';
+import { Congratulation } from '../congratulation/congratulation'
 
 const SHOW_TIME = 3;
 
 export class CardsField extends BaseComponent {
     private cards: Card[] = [];
+    private readonly congratulation: Congratulation;
 
     constructor() {
         super('div', ['cards-field']);
+        this.congratulation = new Congratulation();
     }
 
     clear() {
@@ -28,7 +31,7 @@ export class CardsField extends BaseComponent {
 
     congratulate() {
         if (this.cards.every(card => !card.isFlipped)) {
-            console.log('win');
+            this.element.appendChild(this.congratulation.element);
         } 
     }
 }

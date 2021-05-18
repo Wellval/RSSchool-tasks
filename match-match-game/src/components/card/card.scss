@@ -42,13 +42,13 @@
     }
 
     &__front {
-        background-color: #A3B9CF;
+        background-color: rgb(229, 216, 206);
         background-repeat: no-repeat;
     }
 
     &__back {
         background-color: darkslateblue;
-        background-image: url('../../assets/back1.png');
+        background-image: url('../../assets/back2.png');
         transform: rotateY(180deg);
     }
 }

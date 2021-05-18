@@ -11,6 +11,7 @@ body {
     height: 100vh;
     color: darkgray;
     font-family: sans-serif;
+    background: #f9f9fd;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #FFDBA9;
+    background-color: rgb(65, 90, 151);
     box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.20);
 }
 
@@ -38,7 +39,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #7E7A74;
+    color: white;
 }
 
 .logo img {
