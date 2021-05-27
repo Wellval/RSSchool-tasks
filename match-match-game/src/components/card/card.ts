@@ -1,19 +1,17 @@
-import './card.scss'
+import './card.scss';
 import { BaseComponent } from '../base-component';
 import { CardOverlay } from '../card-overlay/card-overlay';
 import { delay } from '../../shared/delay';
-import { CardsField } from '../cards-field/cards-field';
 
 const FLIP_CLASS = 'flipped';
 
 export class Card extends BaseComponent {
     isFlipped = false;
+
     private readonly cardOverlay: CardOverlay;
-    private readonly cardsField: CardsField;
 
     constructor(readonly image: string) {
         super('div', ['card-container']);
-        this.cardsField = new CardsField();
         this.cardOverlay = new CardOverlay();
         this.element.innerHTML = `
         <div class="card">

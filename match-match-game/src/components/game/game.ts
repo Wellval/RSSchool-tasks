@@ -1,18 +1,22 @@
-import { delay } from '../../shared/delay';
 import { BaseComponent } from '../base-component';
-import { Card } from '../card/card'
+import { Card } from '../card/card';
 import { CardsField } from '../cards-field/cards-field';
-
-const FLIP_DELAY = 1000;
+import { Header } from '../header/header';
+import { MoveCounter } from '../move-counter/move-counter';
 
 export class Game extends BaseComponent {
     private readonly cardsField: CardsField;
+
     private activeCard?: Card;
+
     private isAnimation = false;
 
-    constructor() {
+    private readonly header: Header;
+
+    constructor(moveCounter: MoveCounter) {
         super();
-        this.cardsField = new CardsField();
+        this.header = new Header();
+        this.cardsField = new CardsField(moveCounter);
         this.element.appendChild(this.cardsField.element);
     }
 
@@ -20,10 +24,10 @@ export class Game extends BaseComponent {
         this.cardsField.clear();
         const cards = images
             .concat(images)
-            .map(url => new Card(url))
+            .map((url) => new Card(url))
             .sort(() => Math.random() - 0.5);
 
-        cards.forEach(card => {
+        cards.forEach((card) => {
             card.element.addEventListener('click', () => this.cardHandler(card));
         });
 
@@ -36,7 +40,7 @@ export class Game extends BaseComponent {
         this.isAnimation = true;
 
         await card.flipToFront();
-        
+
         if (!this.activeCard) {
             this.activeCard = card;
             this.isAnimation = false;
@@ -45,13 +49,11 @@ export class Game extends BaseComponent {
 
         if (this.activeCard.image !== card.image) {
             await Promise.all([this.activeCard.wrongChoiceState(), card.wrongChoiceState()]);
-            await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]); 
-        } 
-        else {
-            this.activeCard.rightChoiceState(); //TODO implement funcs in card
+            await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
+        } else {
+            this.activeCard.rightChoiceState(); //  TODO implement funcs in card
             card.rightChoiceState();
         }
-
 
         this.activeCard = undefined;
         this.isAnimation = false;

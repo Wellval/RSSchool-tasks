@@ -5,8 +5,4 @@ export class CardOverlay extends BaseComponent {
     constructor() {
         super('div', ['card-overlay']);
     }
-
-    changeColor() {
-        
-    }
 }
