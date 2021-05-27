@@ -16,6 +16,7 @@ export class CardsField extends BaseComponent {
         super('div', ['cards-field']);
         this.congratulation = new Congratulation();
         this.moveCounter = moveCounter;
+        this.clear();
     }
 
     clear() {

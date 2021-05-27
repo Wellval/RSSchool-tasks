@@ -41,7 +41,7 @@ export class Navigation extends BaseComponent {
         }
         this.aboutGameLink.element.innerHTML = '<i class="fas fa-question-circle"></i> About Game';
         this.bestScoreLink.element.innerHTML = '<i class="fas fa-star"></i> Best Score';
-        this.gameSettingsLink.element.innerHTML = '<i class="fas fa-cogs"> Game Settings';
+        this.gameSettingsLink.element.innerHTML = '<i class="fas fa-cogs"></i> Game Settings';
 
         this.element.appendChild(this.aboutGameItem.element);
         this.element.appendChild(this.bestScoreItem.element);

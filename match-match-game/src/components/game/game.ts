@@ -1,3 +1,4 @@
+import './game.scss';
 import { BaseComponent } from '../base-component';
 import { Card } from '../card/card';
 import { CardsField } from '../cards-field/cards-field';
@@ -17,6 +18,7 @@ export class Game extends BaseComponent {
         super();
         this.header = new Header();
         this.cardsField = new CardsField(moveCounter);
+        this.element.classList.add('game');
         this.element.appendChild(this.cardsField.element);
     }
 

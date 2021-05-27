@@ -1,0 +1,14 @@
+.game-step {
+    width: 25rem;
+    height: 5rem;
+    margin: 0 auto;
+    background-color: #415a97;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .fas {
+        margin-right: 1rem;
+    }
+}

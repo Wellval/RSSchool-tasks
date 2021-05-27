@@ -15,7 +15,7 @@ export class Card extends BaseComponent {
         this.cardOverlay = new CardOverlay();
         this.element.innerHTML = `
         <div class="card">
-            <div class="card__front" style="background-image: url('./images/${image}')"></div>
+            <div class="card__front" style="background-image: url('./animals/${image}')"></div>
             <div class="card__back"></div>
         </div>
         `;
