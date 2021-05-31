@@ -1,6 +1,7 @@
 import { BaseComponent } from '../base-component';
 import './header.scss';
 import { Navigation } from '../navigation/navigation';
+import { HeaderButton } from '../header-button/header-button';
 
 export class Header extends BaseComponent {
     private nav: Navigation;

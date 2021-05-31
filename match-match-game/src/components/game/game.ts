@@ -4,6 +4,7 @@ import { Card } from '../card/card';
 import { CardsField } from '../cards-field/cards-field';
 import { Header } from '../header/header';
 import { MoveCounter } from '../move-counter/move-counter';
+import { Timer } from '../timer/timer';
 
 export class Game extends BaseComponent {
     private readonly cardsField: CardsField;
@@ -14,11 +15,12 @@ export class Game extends BaseComponent {
 
     private readonly header: Header;
 
-    constructor(moveCounter: MoveCounter) {
-        super();
+    isStarted = false;
+
+    constructor(moveCounter: MoveCounter, timer: Timer) {
+        super('div', ['game']);
         this.header = new Header();
-        this.cardsField = new CardsField(moveCounter);
-        this.element.classList.add('game');
+        this.cardsField = new CardsField(moveCounter, timer);
         this.element.appendChild(this.cardsField.element);
     }
 
@@ -32,8 +34,8 @@ export class Game extends BaseComponent {
         cards.forEach((card) => {
             card.element.addEventListener('click', () => this.cardHandler(card));
         });
-
         this.cardsField.addCards(cards);
+        this.isStarted = true;
     }
 
     private async cardHandler(card: Card) {
@@ -42,7 +44,6 @@ export class Game extends BaseComponent {
         this.isAnimation = true;
 
         await card.flipToFront();
-
         if (!this.activeCard) {
             this.activeCard = card;
             this.isAnimation = false;
@@ -53,7 +54,7 @@ export class Game extends BaseComponent {
             await Promise.all([this.activeCard.wrongChoiceState(), card.wrongChoiceState()]);
             await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
         } else {
-            this.activeCard.rightChoiceState(); //  TODO implement funcs in card
+            this.activeCard.rightChoiceState();
             card.rightChoiceState();
         }
 

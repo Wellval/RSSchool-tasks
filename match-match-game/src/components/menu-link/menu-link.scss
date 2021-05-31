@@ -1,5 +1,7 @@
 .menu-link {
+    transition: all 0.5s ease-in-out;
+
     &:hover {
-        color: darkgray;
+        color: rgb(209, 205, 205);
     }
 }

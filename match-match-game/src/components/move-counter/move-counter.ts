@@ -2,7 +2,7 @@ import './move-counter.scss';
 import { BaseComponent } from '../base-component';
 
 export class MoveCounter extends BaseComponent {
-    private movesMade;
+    public movesMade;
 
     private cardsClicked;
 

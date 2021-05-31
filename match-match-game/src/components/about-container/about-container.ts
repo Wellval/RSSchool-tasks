@@ -1,10 +1,12 @@
-import './about-container.scss'
+import './about-container.scss';
 import { BaseComponent } from '../base-component';
 import { GameStep } from '../game-step/game-step';
 
 export class AboutContainer extends BaseComponent {
     private readonly gameStepOne: GameStep;
+
     private readonly gameStepTwo: GameStep;
+
     private readonly gameStepThree: GameStep;
 
     constructor() {

@@ -1,9 +1,7 @@
 import './styles.scss';
-import { App } from './app';
-import { AboutPage } from './about';
+import { Router } from './routing';
 
-window.onload = () => {
-  const appElement = document.getElementById('app');
-  if (!appElement) throw Error('App root element not found');
-  new AboutPage(appElement);
-};
+const router = new Router();
+
+window.onload = () => router.resolveLocation();
+window.onpopstate = () => router.resolveLocation();

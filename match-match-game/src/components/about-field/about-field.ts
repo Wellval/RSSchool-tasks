@@ -1,6 +1,6 @@
-import './about-field.scss'
+import './about-field.scss';
 import { BaseComponent } from '../base-component';
-import { AboutContainer } from '../about-container/about-container'
+import { AboutContainer } from '../about-container/about-container';
 
 export class AboutField extends BaseComponent {
     private readonly aboutContainer: AboutContainer;

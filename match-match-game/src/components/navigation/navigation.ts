@@ -2,53 +2,51 @@ import { BaseComponent } from '../base-component';
 import { MenuItem } from '../menu-item/menu-item';
 import { MenuLink } from '../menu-link/menu-link';
 import './navigation.scss';
+import { Router } from '../../routing';
 
 export class Navigation extends BaseComponent {
-    private readonly aboutGameItem;
-
-    private readonly bestScoreItem;
-
-    private readonly gameSettingsItem;
-
     private readonly aboutGameLink;
 
     private readonly bestScoreLink;
 
     private readonly gameSettingsLink;
 
+    private readonly router: Router;
+
     constructor() {
         super('ul', ['nav']);
-        this.aboutGameItem = new MenuItem();
-        this.bestScoreItem = new MenuItem();
-        this.gameSettingsItem = new MenuItem();
+        this.router = new Router();
 
-        this.aboutGameLink = new MenuLink();
-        this.bestScoreLink = new MenuLink();
-        this.gameSettingsLink = new MenuLink();
+        this.aboutGameLink = new MenuLink('<i class="fas fa-question-circle"></i> About Game');
+        this.bestScoreLink = new MenuLink('<i class="fas fa-star"></i> Best Score');
+        this.gameSettingsLink = new MenuLink('<i class="fas fa-cogs"></i> Game Settings');
+
+        const menuItems = [
+            new MenuItem(this.aboutGameLink.element),
+            new MenuItem(this.bestScoreLink.element),
+            new MenuItem(this.gameSettingsLink.element),
+        ];
+
+        menuItems.forEach((item) => {
+           this.element.appendChild(item.element);
+        });
 
         this.appendLinks();
     }
 
     appendLinks() {
         if (this.aboutGameLink.element instanceof HTMLAnchorElement) {
-            this.aboutGameLink.element.href = '/about';
+            this.aboutGameLink.element.addEventListener('click', () => {
+                this.router.navigateTo('/about');
+            });
         }
         if (this.bestScoreLink.element instanceof HTMLAnchorElement) {
-            this.bestScoreLink.element.href = '/best-score';
+            this.bestScoreLink.element.addEventListener('click', () => {
+                this.router.navigateTo('/score');
+            });
         }
         if (this.gameSettingsLink.element instanceof HTMLAnchorElement) {
             this.gameSettingsLink.element.href = '/settings';
         }
-        this.aboutGameLink.element.innerHTML = '<i class="fas fa-question-circle"></i> About Game';
-        this.bestScoreLink.element.innerHTML = '<i class="fas fa-star"></i> Best Score';
-        this.gameSettingsLink.element.innerHTML = '<i class="fas fa-cogs"></i> Game Settings';
-
-        this.element.appendChild(this.aboutGameItem.element);
-        this.element.appendChild(this.bestScoreItem.element);
-        this.element.appendChild(this.gameSettingsItem.element);
-
-        this.aboutGameItem.element.appendChild(this.aboutGameLink.element);
-        this.bestScoreItem.element.appendChild(this.bestScoreLink.element);
-        this.gameSettingsItem.element.appendChild(this.gameSettingsLink.element);
     }
 }

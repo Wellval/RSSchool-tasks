@@ -3,42 +3,26 @@ import './timer.scss';
 import { SHOW_TIME } from '../../shared/constants';
 
 export class Timer extends BaseComponent {
-    constructor(public seconds = 0, public minutes = 0, public hours = 0) {
+    constructor(public time = 0) {
         super('div', ['timer']);
         this.element.innerHTML = '00:00:00';
-        const intervalId = setInterval(() => {
-            this.countTime();
-        }, 1000);
+    }
+
+    intervalId: NodeJS.Timeout | undefined = undefined;
+
+    setTimer() {
+        setTimeout(() => {
+            this.intervalId = setInterval(() => {
+                this.countTime();
+            }, 1000);
+        }, 1000 * SHOW_TIME);
     }
 
     countTime() {
-        setTimeout(() => {
-            this.seconds++;
-            if (this.seconds === 60) {
-                this.minutes++;
-                this.seconds = 0;
-            }
-            if (this.minutes === 60) {
-                this.hours++;
-                this.minutes = 0;
-            }
-            if (this.seconds < 10 && this.minutes >= 10) {
-                this.element.innerHTML = `${this.hours}:${this.minutes}:0${this.seconds}`;
-            } else if (this.hours < 10 && this.minutes < 10 && this.seconds < 10) {
-                this.element.innerHTML = `0${this.hours}:0${this.minutes}:0${this.seconds}`;
-            } else if (this.hours < 10 && this.minutes < 10) {
-                this.element.innerHTML = `0${this.hours}:0${this.minutes}:${this.seconds}`;
-            } else if (this.hours < 10) {
-                this.element.innerHTML = `0${this.hours}:${this.minutes}:${this.seconds}`;
-            } else if (this.hours >= 10) {
-                if (this.seconds >= 10 && this.minutes >= 10) {
-                    this.element.innerHTML = `${this.hours}:${this.minutes}:${this.seconds}`;
-                } else if (this.seconds >= 10) {
-                    this.element.innerHTML = `${this.hours}:0${this.minutes}:${this.seconds}`;
-                } else if (this.minutes < 10) {
-                    this.element.innerHTML = `${this.hours}:0${this.minutes}:0${this.seconds}`;
-                } else this.element.innerHTML = `${this.hours}:${this.minutes}:0${this.seconds}`;
-            }
-        }, SHOW_TIME * 1000);
+        this.time++;
+        const seconds = this.time % 60;
+        const minutes = Math.floor(this.time / 60);
+        const hours = Math.floor(this.time / 3600);
+        this.element.innerText = `${(hours < 10) ? `0${hours}` : hours}:${(minutes < 10) ? `0${minutes}` : minutes}:${(seconds < 10) ? `0${seconds}` : seconds}`;
     }
 }
