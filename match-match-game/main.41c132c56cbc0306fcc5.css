@@ -20,3 +20,4 @@
 .timer{width:5rem;height:3rem;display:flex;justify-content:center;align-items:center}
 .move-counter{width:5rem;height:3rem;display:flex;justify-content:center;align-items:center;font-size:1.7rem}
 .score-field{box-shadow:0px 5px 10px 2px rgba(34,60,80,.2);width:90%;height:75%;color:#415a97;align-items:center;justify-content:space-around;display:flex;flex-direction:column}
+.settings-field{box-shadow:0px 5px 10px 2px rgba(34,60,80,.2);width:90%;height:75%;color:#415a97;align-items:center;justify-content:space-around;display:flex;flex-direction:column}
