@@ -24,7 +24,7 @@ module.exports = ({develop}) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'assets/[hash][ext]'
+    assetModuleFilename: 'assets/[hash][ext]',
   },
   module: {
       rules: [
@@ -52,7 +52,7 @@ module.exports = ({develop}) => ({
       ]
   },
   resolve: {
-      extensions: ['', '.ts', '.js'],
+      extensions: ['.ts', '.tsx', '.js', '.jsx', ''],
   },
   plugins: [
       new HtmlWebpackPlugin({
