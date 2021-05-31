@@ -1,7 +1,6 @@
 import { AboutPage } from './about';
 import { App } from './app';
 import { ScorePage } from './score';
-import { SettingsPage } from './settings';
 
 export class Router {
     public static instance: Router | null = null;
@@ -31,7 +30,7 @@ export class Router {
                 new ScorePage(rootElement);
                 break;
             case '/settings':
-                new SettingsPage(rootElement);
+                new ScorePage(rootElement);
                 break;
             default:
                 // def

@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .fas {
+        margin-right: 0.3rem;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

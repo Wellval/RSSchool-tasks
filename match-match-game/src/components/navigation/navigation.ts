@@ -35,21 +35,6 @@ export class Navigation extends BaseComponent {
     }
 
     appendLinks() {
-        switch (window.location.pathname) {
-            case '/about':
-                this.aboutGameLink.element.style.color = 'lightslategrey';
-                this.aboutGameLink.element.style.cursor = 'default';
-                break;
-            case '/score':
-                this.bestScoreLink.element.style.color = 'lightslategrey';
-                this.bestScoreLink.element.style.cursor = 'default';
-                break;
-            default:
-                this.gameSettingsLink.element.style.color = 'lightslategrey';
-                this.gameSettingsLink.element.style.cursor = 'default';
-                break;
-        }
-
         if (this.aboutGameLink.element instanceof HTMLAnchorElement) {
             this.aboutGameLink.element.addEventListener('click', () => {
                 this.router.navigateTo('/about');
@@ -61,9 +46,7 @@ export class Navigation extends BaseComponent {
             });
         }
         if (this.gameSettingsLink.element instanceof HTMLAnchorElement) {
-            this.gameSettingsLink.element.addEventListener('click', () => {
-                this.router.navigateTo('/settings');
-            });
+            this.gameSettingsLink.element.href = '/settings';
         }
     }
 }
