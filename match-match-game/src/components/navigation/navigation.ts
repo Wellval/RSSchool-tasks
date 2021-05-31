@@ -46,7 +46,9 @@ export class Navigation extends BaseComponent {
             });
         }
         if (this.gameSettingsLink.element instanceof HTMLAnchorElement) {
-            this.gameSettingsLink.element.href = '/settings';
+            this.gameSettingsLink.element.addEventListener('click', () => {
+                this.router.navigateTo('/settings');
+            });
         }
     }
 }
