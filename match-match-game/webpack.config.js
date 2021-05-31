@@ -24,8 +24,7 @@ module.exports = ({develop}) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'assets/[hash][ext]',
-    assetsPublicPath: '/',
+    assetModuleFilename: 'assets/[hash][ext]'
   },
 
   module: {
