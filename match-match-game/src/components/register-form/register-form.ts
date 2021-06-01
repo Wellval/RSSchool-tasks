@@ -71,7 +71,7 @@ export class RegisterForm extends BaseComponent {
         this.element.appendChild(this.submitButton.element);
         this.element.appendChild(this.cancelRegisterBtn.element);
         this.submitButton.element.addEventListener('click', () => {
-                this.router.navigateTo('/about');
+                this.router.navigateTo('about');
         });
         this.cancelRegisterBtn.element.addEventListener('click', () => {
             registerInputs.forEach((input) => {

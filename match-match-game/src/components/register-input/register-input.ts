@@ -10,14 +10,14 @@ export class RegisterInput extends BaseComponent {
         private readonly placeholder: string,
         private readonly type: string,
         private readonly validate: Validator,
-        callback: any,
+        callback: () => void,
     ) {
         super('input', ['register-input']);
         this.element.setAttribute('required', '');
         this.placeholder = placeholder;
         this.validate = validate;
         this.element.addEventListener('input', (e: Event) => {
-            this.lastValid = this.validate((e.target as any).value);
+            this.lastValid = this.validate((e.target as HTMLInputElement).value);
             callback();
         });
         this.element.setAttribute('placeholder', this.placeholder as string);

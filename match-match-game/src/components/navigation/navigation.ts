@@ -31,23 +31,31 @@ export class Navigation extends BaseComponent {
            this.element.appendChild(item.element);
         });
 
+        if (window.location.pathname.includes('/about')) {
+                this.aboutGameLink.element.style.color = 'lightslategray';
+        } else if (window.location.pathname.includes('/score')) {
+            this.bestScoreLink.element.style.color = 'lightslategray';
+        } else if (window.location.pathname.includes('/settings')) {
+            this.gameSettingsLink.element.style.color = 'lightslategray';
+        }
+
         this.appendLinks();
     }
 
     appendLinks() {
         if (this.aboutGameLink.element instanceof HTMLAnchorElement) {
             this.aboutGameLink.element.addEventListener('click', () => {
-                this.router.navigateTo('/about');
+                this.router.navigateTo('about');
             });
         }
         if (this.bestScoreLink.element instanceof HTMLAnchorElement) {
             this.bestScoreLink.element.addEventListener('click', () => {
-                this.router.navigateTo('/score');
+                this.router.navigateTo('score');
             });
         }
         if (this.gameSettingsLink.element instanceof HTMLAnchorElement) {
             this.gameSettingsLink.element.addEventListener('click', () => {
-                this.router.navigateTo('/settings');
+                this.router.navigateTo('settings');
             });
         }
     }

@@ -4,8 +4,11 @@ import { Timer } from './components/timer/timer';
 import { MoveCounter } from './components/move-counter/move-counter';
 import { Header } from './components/header/header';
 import { HeaderButton } from './components/header-button/header-button';
-
-export class App {
+import Page from './Page';
+import { WindowOverlay } from './components/window-overlay/window-overlay';
+import { RegisterWindow } from './components/register-window/register-window';
+import { myStorage } from './settings';
+export class App extends Page {
     private readonly game: Game;
 
     private readonly timer: Timer;
@@ -16,25 +19,44 @@ export class App {
 
     private headerButton: HeaderButton;
 
+    private registerButton: HeaderButton;
+
+    private readonly windowOverlay: WindowOverlay;
+
+    private readonly registerWindow: RegisterWindow;
+
+    public static urlPattern = '';
+
     constructor(private readonly rootElement: HTMLElement) {
+        super();
         this.timer = new Timer();
+        this.windowOverlay = new WindowOverlay();
+        this.registerWindow = new RegisterWindow();
         this.moveCounter = new MoveCounter();
         this.game = new Game(this.moveCounter, this.timer);
         this.header = new Header();
+        this.registerButton = new HeaderButton('Register');
         this.headerButton = new HeaderButton('Start Game');
-        this.headerButton.element.innerText = 'Start game';
         this.rootElement.appendChild(this.header.element);
         this.header.element.appendChild(this.headerButton.element);
+        this.header.element.appendChild(this.registerButton.element);
         this.rootElement.appendChild(this.timer.element);
         this.rootElement.appendChild(this.moveCounter.element);
         this.rootElement.appendChild(this.game.element);
+        this.start();
     }
 
-    async start() {
+    protected async start() {
+        let n = (myStorage.getItem('cardsNumber'));
+        let number = parseInt(n as string) ** 2 / 2;
         const res = await fetch('./images.json');
         const categories: ImageCategoryModel[] = await res.json();
         const cat = categories[0];
-        const images = cat.images.map((name) => `../${cat.category}/${name}`);
+        const images = cat.images.slice(0, number).map((name) => `../${cat.category}/${name}`);
+        this.registerButton.element.addEventListener('click', () => {
+            this.rootElement.appendChild(this.windowOverlay.element);
+            this.game.element.appendChild(this.registerWindow.element);
+        })
         this.headerButton.element.addEventListener('click', () => {
             if (!this.game.isStarted) {
                 this.game.newGame(images);
@@ -49,5 +71,17 @@ export class App {
                 this.game.isStarted = false;
             }
         });
+        this.windowOverlay.element.addEventListener('click', () => {
+            this.rootElement.removeChild(this.windowOverlay.element);
+            this.game.element.removeChild(this.registerWindow.element);
+        });
+
+        if (number === 4 * 2) {
+            (document.querySelector('.cards-field') as HTMLElement).style.width = '53%';
+        } 
+        if (number === 8 ** 2 / 2) {
+            console.log(document.getElementsByClassName('card'));
+            (document.querySelector('.cards-field') as HTMLElement).style.width = '95%';
+        }
     }
 }
