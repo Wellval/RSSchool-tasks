@@ -1,24 +1,25 @@
 import { BaseComponent } from '../base-component';
-import { SettingOption } from '../setting-option/setting-option'
+import { SettingOption } from '../setting-option/setting-option';
 import { SelectSetting } from '../select-setting/select-setting';
 import { myStorage } from '../../settings';
 import './settings-field.scss';
 
 export class SettingsField extends BaseComponent {
     private readonly difficulty: SelectSetting;
+
     private readonly type: SelectSetting;
 
     constructor() {
         super('div', ['settings-field']);
         this.difficulty = new SelectSetting();
         this.type = new SelectSetting();
-        this.element.appendChild(this.difficulty.element);
-        this.element.appendChild(this.type.element);
+        const container = document.createElement('div');
+        this.element.appendChild(container);
+        container.appendChild(this.difficulty.element);
+        container.appendChild(this.type.element);
         this.initDifficulty();
         this.initCardsType();
     }
-
-    
 
     initDifficulty() {
         const n = (myStorage.getItem('cardsNumber'));

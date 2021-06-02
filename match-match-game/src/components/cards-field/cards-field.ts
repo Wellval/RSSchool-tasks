@@ -60,14 +60,14 @@ export class CardsField extends BaseComponent {
             new Results(`Your moves: ${this.moveCounter.element.innerText}`).element,
             new Results(`Your score: ${((this.cards.length / 2) * 100 - (this.timer.time * 10))}`).element,
         ];
-        /* eslint-disable-next-line */
-        for (let result of results) {
-            this.congratulation.element.appendChild(result);
+
+        for (let i = 0; i < results.length; i++) {
+            this.congratulation.element.appendChild(results[i]);
         }
     }
 
     setFieldWidth() {
-        let a = myStorage.getItem('cardsNumber');
+        const a = myStorage.getItem('cardsNumber');
         if (a === '4') {
             this.element.style.width = '53%';
         } else if (a === '8') {

@@ -4,8 +4,8 @@ import './header-button.scss';
 export class HeaderButton extends BaseComponent {
     constructor(private readonly innerText: string) {
         super('a', ['header-button']);
-        const btn = document.createElement('a');
-        btn.innerText = innerText;
-        this.element.appendChild(btn);
+        // let a = document.createElement('a');
+        this.element.innerText = innerText;
+        // this.element.appendChild(a);
     }
 }

@@ -1,9 +1,8 @@
 import './register-form.scss';
 import { BaseComponent } from '../base-component';
 import { RegisterInput, Validator } from '../register-input/register-input';
-import { SubmitButton } from '../submit-button/submit-button';
-import { CancelRegisterBtn } from '../cancel-register-btn/cancel-register-btn';
 import { Router } from '../../routing';
+import { HeaderButton } from '../header-button/header-button';
 
 const ValidateText: Validator = (value: string) => {
     const regexp = new RegExp('^[a-zA-Zа-яА-Я]+$');
@@ -22,9 +21,9 @@ const ValidateEmail: Validator = (value: string) => {
 };
 
 export class RegisterForm extends BaseComponent {
-    private readonly submitButton: SubmitButton;
+    private readonly submitButton: HeaderButton;
 
-    private readonly cancelRegisterBtn: CancelRegisterBtn;
+    private readonly cancelRegisterBtn: HeaderButton;
 
     private readonly router: Router;
 
@@ -32,8 +31,11 @@ export class RegisterForm extends BaseComponent {
         super('form', ['register-form']);
         this.router = new Router();
         const registerInputs: RegisterInput[] = [];
-        this.submitButton = new SubmitButton();
-        this.cancelRegisterBtn = new CancelRegisterBtn();
+        this.submitButton = new HeaderButton('Add User');
+        this.submitButton.element.setAttribute('disabled', 'disabled');
+        this.submitButton.element.style.pointerEvents = 'none';
+        (this.submitButton.element as HTMLAnchorElement).href = '#';
+        this.cancelRegisterBtn = new HeaderButton('Cancel');
 
         const callback = () => {
             registerInputs.forEach((input) => {
@@ -52,9 +54,15 @@ export class RegisterForm extends BaseComponent {
                 }
             });
             if (registerInputs.every((input) => input.lastValid)) {
+                console.log(this.submitButton.element)
                 this.submitButton.element.removeAttribute('disabled');
+                this.submitButton.element.style.pointerEvents = 'auto';
+                this.submitButton.element.addEventListener('click', () => {
+                    this.router.navigateTo('');
+                })
             } else {
                 this.submitButton.element.setAttribute('disabled', 'disabled');
+                this.submitButton.element.style.pointerEvents = 'none';
             }
         };
 
@@ -64,9 +72,8 @@ export class RegisterForm extends BaseComponent {
             new RegisterInput('email', 'email', ValidateEmail, callback),
         ]);
 
-        /* eslint-disable-next-line */
-        for (let input of registerInputs) {
-            this.element.appendChild(input.element);
+        for (let i = 0; i < registerInputs.length; i++) {
+            this.element.appendChild(registerInputs[i].element);
         }
         this.element.appendChild(this.submitButton.element);
         this.element.appendChild(this.cancelRegisterBtn.element);
