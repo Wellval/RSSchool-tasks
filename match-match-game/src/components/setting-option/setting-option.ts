@@ -2,10 +2,9 @@ import { BaseComponent } from '../base-component';
 import { myStorage } from '../../settings';
 
 export class SettingOption extends BaseComponent {
-    constructor(private readonly cardsNum: string) {
+    constructor(private readonly storageItem: string, private readonly innerText: string) {
         super('option');
-        const cardsNumber = myStorage.getItem('cardsNumber');
-        this.element.innerText = `${cardsNum} x ${cardsNum}`;
-        (this.element as HTMLSelectElement).value = cardsNum.toString();
+        this.element.innerText = `${innerText}`;
+        (this.element as HTMLSelectElement).value = storageItem.toString();
     }
 }

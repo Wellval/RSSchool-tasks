@@ -2,8 +2,6 @@ import { Router } from './routing';
 import { HeaderButton } from './components/header-button/header-button';
 import { Header } from './components/header/header';
 import { RegisterWindow } from './components/register-window/register-window';
-import { SelectSetting } from './components/select-setting/select-setting';
-import { SettingOption } from './components/setting-option/setting-option';
 import { SettingsField } from './components/settings-field/settings-field';
 import { WindowOverlay } from './components/window-overlay/window-overlay';
 import Page from './Page';

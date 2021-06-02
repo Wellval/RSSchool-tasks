@@ -47,12 +47,13 @@ export class App extends Page {
     }
 
     protected async start() {
-        const n = (myStorage.getItem('cardsNumber'));
+        const n = myStorage.getItem('cardsNumber');
         const number = parseInt(n as string, 10) ** 2 / 2;
+        const cardsType = myStorage.getItem('type');
         const res = await fetch('./images.json');
         const categories: ImageCategoryModel[] = await res.json();
-        const cat = categories[0];
-        const images = cat.images.slice(0, number).map((name) => `../${cat.category}/${name}`);
+        const typeIndex = categories.findIndex(x => x.category === cardsType);
+        const images = categories[typeIndex].images.slice(0, number).map((name) => `../${categories[typeIndex].category}/${name}`);
         this.registerButton.element.addEventListener('click', () => {
             this.rootElement.appendChild(this.windowOverlay.element);
             this.windowOverlay.element.appendChild(this.registerWindow.element);
