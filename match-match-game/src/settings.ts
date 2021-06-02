@@ -36,7 +36,7 @@ export class SettingsPage extends Page {
         this.difficulty = new SelectSetting();
         this.windowOverlay = new WindowOverlay();
         this.router = new Router();
-        this.registerWindow = new RegisterWindow()
+        this.registerWindow = new RegisterWindow();
         this.rootElement.appendChild(this.header.element);
         this.registerButton = new HeaderButton('Register');
         this.headerButton = new HeaderButton('Start Game');
@@ -46,7 +46,7 @@ export class SettingsPage extends Page {
         this.settingsField.element.appendChild(this.difficulty.element);
 
         this.headerButton.element.addEventListener('click', () => {
-            (this.headerButton.element.firstChild as HTMLAnchorElement).href = ''; 
+            (this.headerButton.element.firstChild as HTMLAnchorElement).href = '';
             this.router.navigateTo('');
         });
 
@@ -69,8 +69,8 @@ export class SettingsPage extends Page {
             new SettingOption(8),
         ];
 
-        let n = (myStorage.getItem('cardsNumber'));
-        let number = parseInt(n as string);
+        const n = (myStorage.getItem('cardsNumber'));
+        const number = parseInt(n as string, 10);
 
         this.difficulty.element.addEventListener('change', () => {
             const cardsNum = (this.difficulty.element as HTMLSelectElement).value;

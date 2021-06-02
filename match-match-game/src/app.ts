@@ -8,6 +8,7 @@ import Page from './Page';
 import { WindowOverlay } from './components/window-overlay/window-overlay';
 import { RegisterWindow } from './components/register-window/register-window';
 import { myStorage } from './settings';
+
 export class App extends Page {
     private readonly game: Game;
 
@@ -42,13 +43,12 @@ export class App extends Page {
         this.header.element.appendChild(this.registerButton.element);
         this.rootElement.appendChild(this.timer.element);
         this.rootElement.appendChild(this.moveCounter.element);
-        this.rootElement.appendChild(this.game.element);
         this.start();
     }
 
     protected async start() {
-        let n = (myStorage.getItem('cardsNumber'));
-        let number = parseInt(n as string) ** 2 / 2;
+        const n = (myStorage.getItem('cardsNumber'));
+        const number = parseInt(n as string, 10) ** 2 / 2;
         const res = await fetch('./images.json');
         const categories: ImageCategoryModel[] = await res.json();
         const cat = categories[0];
@@ -56,9 +56,10 @@ export class App extends Page {
         this.registerButton.element.addEventListener('click', () => {
             this.rootElement.appendChild(this.windowOverlay.element);
             this.game.element.appendChild(this.registerWindow.element);
-        })
+        });
         this.headerButton.element.addEventListener('click', () => {
             if (!this.game.isStarted) {
+                this.rootElement.appendChild(this.game.element);
                 this.game.newGame(images);
                 this.timer.time = 0;
                 this.timer.element.innerText = '00:00:00';
@@ -69,6 +70,8 @@ export class App extends Page {
                 this.headerButton.element.innerText = 'Start Game';
                 clearTimeout(this.timer.intervalId!);
                 this.game.isStarted = false;
+                this.rootElement.removeChild(this.game.element);
+                this.timer.element.innerText = '00:00:00';
             }
         });
         this.windowOverlay.element.addEventListener('click', () => {
@@ -78,9 +81,8 @@ export class App extends Page {
 
         if (number === 4 * 2) {
             (document.querySelector('.cards-field') as HTMLElement).style.width = '53%';
-        } 
+        }
         if (number === 8 ** 2 / 2) {
-            console.log(document.getElementsByClassName('card'));
             (document.querySelector('.cards-field') as HTMLElement).style.width = '95%';
         }
     }
