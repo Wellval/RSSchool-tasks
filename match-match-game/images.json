@@ -35,5 +35,42 @@
             "hippo.png",
             "monkey.png"
         ]
+    },
+    {
+        "category": "food",
+        "images": [
+            "baguette.png",
+            "baklava.png",
+            "barbecue.png",
+            "boba.png",
+            "borscht.png",
+            "bowl.png",
+            "bread.png",
+            "brioche.png",
+            "bruschetta.png",
+            "burger.png",
+            "burrito.png",
+            "chicken-rice.png",
+            "churros.png",
+            "chutney.png",
+            "clam-chowder.png",
+            "cookie.png",
+            "coriander.png",
+            "cornbread.png",
+            "coxinha.png",
+            "croissant.png",
+            "curry.png",
+            "dim-sum.png",
+            "egg.png",
+            "doughnut.png",
+            "empanada.png",
+            "enchilada.png",
+            "falafel.png",
+            "fish-and-chips.png",
+            "fondue.png",
+            "fried-chicken.png",
+            "goulash.png",
+            "maple-syrup.png"
+        ]
     }
 ]
