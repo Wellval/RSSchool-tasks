@@ -55,7 +55,7 @@ export class App extends Page {
         const images = cat.images.slice(0, number).map((name) => `../${cat.category}/${name}`);
         this.registerButton.element.addEventListener('click', () => {
             this.rootElement.appendChild(this.windowOverlay.element);
-            this.game.element.appendChild(this.registerWindow.element);
+            this.windowOverlay.element.appendChild(this.registerWindow.element);
         });
         this.headerButton.element.addEventListener('click', () => {
             if (!this.game.isStarted) {

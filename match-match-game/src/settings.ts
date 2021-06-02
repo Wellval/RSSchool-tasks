@@ -17,8 +17,6 @@ export class SettingsPage extends Page {
 
     private readonly settingsField: SettingsField;
 
-    private readonly difficulty: SelectSetting;
-
     private headerButton: HeaderButton;
 
     private registerButton: HeaderButton;
@@ -33,7 +31,6 @@ export class SettingsPage extends Page {
         super();
         this.header = new Header();
         this.settingsField = new SettingsField();
-        this.difficulty = new SelectSetting();
         this.windowOverlay = new WindowOverlay();
         this.router = new Router();
         this.registerWindow = new RegisterWindow();
@@ -43,7 +40,6 @@ export class SettingsPage extends Page {
         this.header.element.appendChild(this.headerButton.element);
         this.header.element.appendChild(this.registerButton.element);
         this.rootElement.appendChild(this.settingsField.element);
-        this.settingsField.element.appendChild(this.difficulty.element);
 
         this.headerButton.element.addEventListener('click', () => {
             (this.headerButton.element.firstChild as HTMLAnchorElement).href = '';
@@ -58,29 +54,5 @@ export class SettingsPage extends Page {
             this.rootElement.removeChild(this.windowOverlay.element);
             this.settingsField.element.removeChild(this.registerWindow.element);
         });
-
-        this.initDifficulty();
-    }
-
-    initDifficulty() {
-        const levels = [
-            new SettingOption(4),
-            new SettingOption(6),
-            new SettingOption(8),
-        ];
-
-        const n = (myStorage.getItem('cardsNumber'));
-        const number = parseInt(n as string, 10);
-
-        this.difficulty.element.addEventListener('change', () => {
-            const cardsNum = (this.difficulty.element as HTMLSelectElement).value;
-            myStorage.setItem('cardsNumber', cardsNum);
-        });
-
-        for (let i = 0; i < levels.length; i++) {
-            this.difficulty.element.appendChild(levels[i].element);
-        }
-
-        (this.difficulty.element as HTMLSelectElement).value = number.toString();
     }
 }
