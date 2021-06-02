@@ -8,6 +8,13 @@
     display: flex;
     flex-direction: column;
     margin: auto;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 35%;
+    }
 }
 
 .container {

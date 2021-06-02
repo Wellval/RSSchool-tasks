@@ -15,7 +15,7 @@ export class SettingsPage extends Page {
 
     private readonly settingsField: SettingsField;
 
-    private headerButton: HeaderButton;
+    private startButton: HeaderButton;
 
     private registerButton: HeaderButton;
 
@@ -34,13 +34,16 @@ export class SettingsPage extends Page {
         this.registerWindow = new RegisterWindow();
         this.rootElement.appendChild(this.header.element);
         this.registerButton = new HeaderButton('Register');
-        this.headerButton = new HeaderButton('Start Game');
-        this.header.element.appendChild(this.headerButton.element);
+        this.startButton = new HeaderButton('Start Game');
+        this.header.element.appendChild(this.startButton.element);
         this.header.element.appendChild(this.registerButton.element);
         this.rootElement.appendChild(this.settingsField.element);
+        this.handleButtons();
+    }
 
-        this.headerButton.element.addEventListener('click', () => {
-            (this.headerButton.element.firstChild as HTMLAnchorElement).href = '';
+    handleButtons() {
+        this.startButton.element.addEventListener('click', () => {
+            (this.startButton.element as HTMLAnchorElement).href = '';
             this.router.navigateTo('');
         });
 

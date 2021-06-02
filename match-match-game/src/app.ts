@@ -56,7 +56,7 @@ export class App extends Page {
         const images = categories[typeIndex].images.slice(0, number).map((name) => `../${categories[typeIndex].category}/${name}`);
         this.registerButton.element.addEventListener('click', () => {
             this.rootElement.appendChild(this.windowOverlay.element);
-            this.windowOverlay.element.appendChild(this.registerWindow.element);
+            this.rootElement.appendChild(this.registerWindow.element);
         });
         this.headerButton.element.addEventListener('click', () => {
             if (!this.game.isStarted) {
@@ -77,7 +77,7 @@ export class App extends Page {
         });
         this.windowOverlay.element.addEventListener('click', () => {
             this.rootElement.removeChild(this.windowOverlay.element);
-            this.game.element.removeChild(this.registerWindow.element);
+            this.rootElement.removeChild(this.registerWindow.element);
         });
 
         if (number === 4 * 2) {

@@ -54,7 +54,6 @@ export class RegisterForm extends BaseComponent {
                 }
             });
             if (registerInputs.every((input) => input.lastValid)) {
-                console.log(this.submitButton.element)
                 this.submitButton.element.removeAttribute('disabled');
                 this.submitButton.element.style.pointerEvents = 'auto';
                 this.submitButton.element.addEventListener('click', () => {

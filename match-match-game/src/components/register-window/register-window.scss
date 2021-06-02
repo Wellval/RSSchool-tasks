@@ -1,6 +1,6 @@
 .register-window {
     width: 27rem;
-    height: 21rem;
+    height: 21rem !important;
     position: absolute;
     background-color: white;
     box-shadow: 0px 5px 10px 2px rgb(34 60 80 / 20%);
@@ -12,6 +12,6 @@
     z-index: 2;
 
     h2 {
-        margin-bottom: -3rem;
+        margin-top: 2rem;
     }
 }
