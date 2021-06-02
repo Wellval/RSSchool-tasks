@@ -1,7 +1,7 @@
 import { BaseComponent } from '../base-component';
 import { SettingOption } from '../setting-option/setting-option'
 import { SelectSetting } from '../select-setting/select-setting';
-import { myStorage } from '../../settings'
+import { myStorage } from '../../settings';
 import './settings-field.scss';
 
 export class SettingsField extends BaseComponent {
@@ -16,9 +16,9 @@ export class SettingsField extends BaseComponent {
 
     initDifficulty() {
         const levels = [
-            new SettingOption(4),
-            new SettingOption(6),
-            new SettingOption(8),
+            new SettingOption('4'),
+            new SettingOption('6'),
+            new SettingOption('8'),
         ];
 
         const n = (myStorage.getItem('cardsNumber'));
@@ -34,5 +34,11 @@ export class SettingsField extends BaseComponent {
         }
 
         (this.difficulty.element as HTMLSelectElement).value = number.toString();
+    }
+
+    initCardsType() {
+        const types = [
+            new SettingOption('animals')
+        ]
     }
 }

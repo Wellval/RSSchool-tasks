@@ -6,6 +6,7 @@ import { SHOW_TIME } from '../../shared/constants';
 import { MoveCounter } from '../move-counter/move-counter';
 import { Timer } from '../timer/timer';
 import { Results } from '../results/results';
+import { myStorage } from '../../settings';
 
 export class CardsField extends BaseComponent {
     private cards: Card[] = [];
@@ -22,6 +23,7 @@ export class CardsField extends BaseComponent {
         this.timer = timer;
         this.moveCounter = moveCounter;
         this.clear();
+        this.setFieldWidth();
     }
 
     clear() {
@@ -61,6 +63,15 @@ export class CardsField extends BaseComponent {
         /* eslint-disable-next-line */
         for (let result of results) {
             this.congratulation.element.appendChild(result);
+        }
+    }
+
+    setFieldWidth() {
+        let a = myStorage.getItem('cardsNumber');
+        if (a === '4') {
+            this.element.style.width = '53%';
+        } else if (a === '8') {
+            this.element.style.width = '95%';
         }
     }
 }
