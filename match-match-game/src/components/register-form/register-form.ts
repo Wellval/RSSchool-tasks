@@ -3,6 +3,9 @@ import { BaseComponent } from '../base-component';
 import { RegisterInput, Validator } from '../register-input/register-input';
 import { Router } from '../../routing';
 import { HeaderButton } from '../header-button/header-button';
+import { myStorage } from '../../settings';
+
+export let counter = 0;
 
 const ValidateText: Validator = (value: string) => {
     const regexp = new RegExp('^[a-zA-Zа-яА-Я]+$');
@@ -77,7 +80,13 @@ export class RegisterForm extends BaseComponent {
         this.element.appendChild(this.submitButton.element);
         this.element.appendChild(this.cancelRegisterBtn.element);
         this.submitButton.element.addEventListener('click', () => {
-                this.router.navigateTo('about');
+            counter++;
+            console.log(counter)
+            for (let i = 0; i < registerInputs.length; i++) {
+                let storageKey = (registerInputs[i].element as HTMLSelectElement).getAttribute('placeholder')?.toString();
+                myStorage.setItem(storageKey as string + `${counter}`, (registerInputs[i].element as HTMLSelectElement).value);
+            }
+            this.router.navigateTo('about');
         });
         this.cancelRegisterBtn.element.addEventListener('click', () => {
             registerInputs.forEach((input) => {

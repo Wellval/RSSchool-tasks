@@ -47,9 +47,9 @@ export class App extends Page {
     }
 
     protected async start() {
-        const n = myStorage.getItem('cardsNumber');
+        const n = myStorage.getItem('cardsNumber') || 4;
         const number = parseInt(n as string, 10) ** 2 / 2;
-        const cardsType = myStorage.getItem('type');
+        const cardsType = myStorage.getItem('type') || 'animals';
         const res = await fetch('./images.json');
         const categories: ImageCategoryModel[] = await res.json();
         const typeIndex = categories.findIndex((x) => x.category === cardsType);
@@ -62,6 +62,12 @@ export class App extends Page {
             if (!this.game.isStarted) {
                 this.rootElement.appendChild(this.game.element);
                 this.game.newGame(images);
+                if (number === 4 * 2) {
+                    (document.querySelector('.cards-field') as HTMLElement).style.width = '53%';
+                }
+                if (number === 8 ** 2 / 2) {
+                    (document.querySelector('.cards-field') as HTMLElement).style.width = '95%';
+                }
                 this.timer.time = 0;
                 this.timer.element.innerText = '00:00:00';
                 this.timer.setTimer();
@@ -79,12 +85,5 @@ export class App extends Page {
             this.rootElement.removeChild(this.windowOverlay.element);
             this.rootElement.removeChild(this.registerWindow.element);
         });
-
-        if (number === 4 * 2) {
-            (document.querySelector('.cards-field') as HTMLElement).style.width = '53%';
-        }
-        if (number === 8 ** 2 / 2) {
-            (document.querySelector('.cards-field') as HTMLElement).style.width = '95%';
-        }
     }
 }
