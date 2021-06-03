@@ -4,8 +4,9 @@ import { RegisterInput, Validator } from '../register-input/register-input';
 import { Router } from '../../routing';
 import { HeaderButton } from '../header-button/header-button';
 import { myStorage } from '../../settings';
+import Page from '../../Page';
 
-export let counter = 0;
+let counter = myStorage.getItem('counter') || 0;
 
 const ValidateText: Validator = (value: string) => {
     const regexp = new RegExp('^[a-zA-Zа-яА-Я]+$');
@@ -57,11 +58,10 @@ export class RegisterForm extends BaseComponent {
                 }
             });
             if (registerInputs.every((input) => input.lastValid)) {
-                this.submitButton.element.removeAttribute('disabled');
                 this.submitButton.element.style.pointerEvents = 'auto';
                 this.submitButton.element.addEventListener('click', () => {
                     this.router.navigateTo('');
-                })
+                });
             } else {
                 this.submitButton.element.setAttribute('disabled', 'disabled');
                 this.submitButton.element.style.pointerEvents = 'none';
@@ -80,11 +80,11 @@ export class RegisterForm extends BaseComponent {
         this.element.appendChild(this.submitButton.element);
         this.element.appendChild(this.cancelRegisterBtn.element);
         this.submitButton.element.addEventListener('click', () => {
-            counter++;
-            console.log(counter)
+            (counter as number)++;
             for (let i = 0; i < registerInputs.length; i++) {
-                let storageKey = (registerInputs[i].element as HTMLSelectElement).getAttribute('placeholder')?.toString();
-                myStorage.setItem(storageKey as string + `${counter}`, (registerInputs[i].element as HTMLSelectElement).value);
+                const storageKey = (registerInputs[i].element as HTMLSelectElement).getAttribute('placeholder')?.toString();
+                myStorage.setItem(`${storageKey as string}${counter}`, (registerInputs[i].element as HTMLSelectElement).value);
+                myStorage.setItem('counter', counter as unknown as string);
             }
             this.router.navigateTo('about');
         });
