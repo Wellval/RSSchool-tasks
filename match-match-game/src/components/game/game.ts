@@ -5,7 +5,7 @@ import { CardsField } from '../cards-field/cards-field';
 import { Header } from '../header/header';
 import { MoveCounter } from '../move-counter/move-counter';
 import { Timer } from '../timer/timer';
-
+import _ from 'lodash';
 export class Game extends BaseComponent {
     private readonly cardsField: CardsField;
 

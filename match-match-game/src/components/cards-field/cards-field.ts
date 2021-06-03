@@ -7,6 +7,7 @@ import { MoveCounter } from '../move-counter/move-counter';
 import { Timer } from '../timer/timer';
 import { Results } from '../results/results';
 import { myStorage } from '../../settings';
+import { UserEntry } from '../../models/userEntry';
 
 export class CardsField extends BaseComponent {
     private cards: Card[] = [];
@@ -56,12 +57,13 @@ export class CardsField extends BaseComponent {
 
     getScore() {
         let c = myStorage.getItem('counter');
-        const score = ((this.cards.length / 2) * 100 - (this.timer.time * 10));
-        myStorage.setItem(`score${c}`, score.toString());
+        let user: UserEntry = JSON.parse(myStorage.getItem(`user${c}`)!);
+        user.score = ((this.cards.length / 2) * 100 - (this.timer.time * 10));
+        myStorage.setItem(`user${c}`, JSON.stringify(user));
         const results = [
             new Results(`Your time: ${this.timer.element.innerText}`).element,
             new Results(`Your moves: ${this.moveCounter.element.innerText}`).element,
-            new Results(`Your score: ${score}`).element,
+            new Results(`Your score: ${user.score}`).element,
         ];
 
         for (let i = 0; i < results.length; i++) {

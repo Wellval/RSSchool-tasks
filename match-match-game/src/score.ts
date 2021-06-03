@@ -2,6 +2,8 @@ import { Header } from './components/header/header';
 import { ScoreField } from './components/score-field/score-field';
 import { myStorage } from './settings';
 import Page from './Page';
+import _ from 'lodash';
+import { UserEntry } from './models/userEntry';
 
 export class ScorePage extends Page {
     private readonly header: Header;
@@ -20,15 +22,18 @@ export class ScorePage extends Page {
     }
 
     handleScore() {
-        for (let i = 1; i < 10; i++) {
-            let c = myStorage.getItem('counter')?.toString();
-            if ((myStorage.getItem(`name${i}`) as string && myStorage.getItem(`score${i}`))) {
-                this.scoreField.element.append(myStorage.getItem(`name${i}`) as string + ' ');
-                this.scoreField.element.append(myStorage.getItem(`last name${i}`) as string + ' ');
-                this.scoreField.element.append(myStorage.getItem(`email${i}`) as string + ' ');
-                this.scoreField.element.append(myStorage.getItem(`score${i}`) as string + ' ');
-                this.scoreField.element.appendChild(document.createElement('br'));
-            }
+        let users: UserEntry[] = [];
+        let count = Number.parseInt(myStorage.getItem('counter') || "0");
+        for (let i = 1; i <= (count < 10 ? count : 10); ++i) {
+            users.push(JSON.parse(myStorage.getItem(`user${i}`)!));
         }
+
+        users = _.sortBy(users.filter(x => !!x), ['score']).reverse();
+
+        for (let i = 0; i < users.length; ++i) {
+            this.scoreField.element.append(`${users[i].name} ${users[i]['last name']} ${users[i].email} ${users[i].score}`);
+            this.scoreField.element.appendChild(document.createElement('br'));
+        }
+
     }
 }

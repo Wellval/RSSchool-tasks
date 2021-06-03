@@ -32,7 +32,7 @@ export class Navigation extends BaseComponent {
         });
 
         if (window.location.pathname.includes('/about')) {
-                this.aboutGameLink.element.style.color = 'lightslategray';
+            this.aboutGameLink.element.style.color = 'lightslategray';
         } else if (window.location.pathname.includes('/score')) {
             this.bestScoreLink.element.style.color = 'lightslategray';
         } else if (window.location.pathname.includes('/settings')) {

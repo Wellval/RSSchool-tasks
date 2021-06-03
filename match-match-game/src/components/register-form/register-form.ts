@@ -5,8 +5,9 @@ import { Router } from '../../routing';
 import { HeaderButton } from '../header-button/header-button';
 import { myStorage } from '../../settings';
 import Page from '../../Page';
+import { UserEntry } from '../../models/userEntry';
 
-let counter = myStorage.getItem('counter') || 0;
+let counter = Number.parseInt(myStorage.getItem('counter') || '0');
 
 const ValidateText: Validator = (value: string) => {
     const regexp = new RegExp('^[a-zA-Zа-яА-Я]+$');
@@ -80,12 +81,14 @@ export class RegisterForm extends BaseComponent {
         this.element.appendChild(this.submitButton.element);
         this.element.appendChild(this.cancelRegisterBtn.element);
         this.submitButton.element.addEventListener('click', () => {
-            (counter as number)++;
+            counter++;
+            let user: UserEntry = {};
             for (let i = 0; i < registerInputs.length; i++) {
-                const storageKey = (registerInputs[i].element as HTMLSelectElement).getAttribute('placeholder')?.toString();
-                myStorage.setItem(`${storageKey as string}${counter}`, (registerInputs[i].element as HTMLSelectElement).value);
-                myStorage.setItem('counter', counter as unknown as string);
+                const storageKey = (registerInputs[i].element as HTMLSelectElement).getAttribute('placeholder')!.toString();
+                user[storageKey] = (registerInputs[i].element as HTMLSelectElement).value;
             }
+            myStorage.setItem(`user${counter}`, JSON.stringify(user));
+            myStorage.setItem('counter', counter.toString());
             this.router.navigateTo('about');
         });
         this.cancelRegisterBtn.element.addEventListener('click', () => {
