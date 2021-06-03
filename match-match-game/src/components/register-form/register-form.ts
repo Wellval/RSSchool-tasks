@@ -7,7 +7,7 @@ import { myStorage } from '../../settings';
 import Page from '../../Page';
 import { UserEntry } from '../../models/userEntry';
 
-let counter = Number.parseInt(myStorage.getItem('counter') || '0');
+let counter = Number.parseInt(myStorage.getItem('counter') || '0', 10);
 
 const ValidateText: Validator = (value: string) => {
     const regexp = new RegExp('^[a-zA-Zа-яА-Я]+$');
@@ -82,7 +82,7 @@ export class RegisterForm extends BaseComponent {
         this.element.appendChild(this.cancelRegisterBtn.element);
         this.submitButton.element.addEventListener('click', () => {
             counter++;
-            let user: UserEntry = {};
+            const user: UserEntry = {};
             for (let i = 0; i < registerInputs.length; i++) {
                 const storageKey = (registerInputs[i].element as HTMLSelectElement).getAttribute('placeholder')!.toString();
                 user[storageKey] = (registerInputs[i].element as HTMLSelectElement).value;

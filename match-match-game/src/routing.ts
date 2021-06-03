@@ -17,10 +17,10 @@ export class Router {
     }
 
     navigateTo = (pathname: string) => {
-        window.history.pushState({}, pathname as string, 
-            this.rootPath.endsWith('#') ? 
-                this.rootPath.substr(0, this.rootPath.length - 2) :
-                this.rootPath
+        window.history.pushState({}, pathname as string,
+            this.rootPath.endsWith('#')
+                ? this.rootPath.substr(0, this.rootPath.length - 2)
+                : this.rootPath
             + pathname);
     };
 

@@ -1,8 +1,8 @@
+import _ from 'lodash';
 import { Header } from './components/header/header';
 import { ScoreField } from './components/score-field/score-field';
 import { myStorage } from './settings';
 import Page from './Page';
-import _ from 'lodash';
 import { UserEntry } from './models/userEntry';
 
 export class ScorePage extends Page {
@@ -23,17 +23,20 @@ export class ScorePage extends Page {
 
     handleScore() {
         let users: UserEntry[] = [];
-        let count = Number.parseInt(myStorage.getItem('counter') || "0");
+        const count = Number.parseInt(myStorage.getItem('counter') || '0', 10);
         for (let i = 1; i <= (count < 10 ? count : 10); ++i) {
             users.push(JSON.parse(myStorage.getItem(`user${i}`)!));
         }
 
-        users = _.sortBy(users.filter(x => !!x), ['score']).reverse();
+        users = _.sortBy(users.filter((x) => !!x), ['score']).reverse();
+
+        if (users.length === 0) {
+            this.scoreField.element.append('Register to see score table');
+        }
 
         for (let i = 0; i < users.length; ++i) {
             this.scoreField.element.append(`${users[i].name} ${users[i]['last name']} ${users[i].email} ${users[i].score}`);
             this.scoreField.element.appendChild(document.createElement('br'));
         }
-
     }
 }

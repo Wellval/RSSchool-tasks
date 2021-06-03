@@ -56,8 +56,8 @@ export class CardsField extends BaseComponent {
     }
 
     getScore() {
-        let c = myStorage.getItem('counter');
-        let user: UserEntry = JSON.parse(myStorage.getItem(`user${c}`)!);
+        const c = myStorage.getItem('counter');
+        const user: UserEntry = JSON.parse(myStorage.getItem(`user${c}`)!);
         user.score = ((this.cards.length / 2) * 100 - (this.timer.time * 10));
         myStorage.setItem(`user${c}`, JSON.stringify(user));
         const results = [

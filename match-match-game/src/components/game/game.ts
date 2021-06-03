@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import './game.scss';
 import { BaseComponent } from '../base-component';
 import { Card } from '../card/card';
@@ -5,7 +6,7 @@ import { CardsField } from '../cards-field/cards-field';
 import { Header } from '../header/header';
 import { MoveCounter } from '../move-counter/move-counter';
 import { Timer } from '../timer/timer';
-import _ from 'lodash';
+
 export class Game extends BaseComponent {
     private readonly cardsField: CardsField;
 
