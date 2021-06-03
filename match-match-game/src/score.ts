@@ -35,8 +35,10 @@ export class ScorePage extends Page {
         }
 
         for (let i = 0; i < users.length; ++i) {
-            this.scoreField.element.append(`${users[i].name} ${users[i]['last name']} ${users[i].email} ${users[i].score}`);
-            this.scoreField.element.appendChild(document.createElement('br'));
+            if (users[i].score !== undefined) {
+                this.scoreField.element.append(`${users[i].name} ${users[i]['last name']} ${users[i].email} ${users[i].score}`);
+                this.scoreField.element.appendChild(document.createElement('br'));
+            }
         }
     }
 }
