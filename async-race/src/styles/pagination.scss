@@ -1,0 +1,11 @@
+.pagination-wrapper {
+    margin: 0 auto;
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+        width: 25%;
+        height: 27px;
+    }
+}

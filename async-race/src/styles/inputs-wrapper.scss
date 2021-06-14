@@ -1,0 +1,26 @@
+.inputs-wrapper {
+    display: flex;
+    width: 20rem;
+    flex-wrap: wrap;
+    margin: 5%;
+
+    input[type="text"]{
+        width: 50%;
+        margin-bottom: 1rem;
+        height: 21px;
+        outline: none;
+    }
+
+    input[type="color"] {
+        width: 15%;
+    }
+
+    button {
+        width: 25%;
+        height: 27px;
+    }
+
+    .generate {
+        width: 45%;
+    }
+}
