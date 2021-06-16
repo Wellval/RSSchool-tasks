@@ -1,0 +1,11 @@
+{
+    "names": [
+        "Model S", "X class", "A5", "Model A", "Model C", "Model R", "Model X", "C class", "B class"
+    ],
+    "brands": [
+        "Tesla", "BMW", "Lexus", "Mercedes", "VW", "Lamborgini", "Mazda", "Skoda", "Renault", "Opel"
+    ],
+    "colors": [
+        "black", "red", "green", "blue", "white", "yellow", "orange", "#845EC2", "#D65DB1", "#FF6F91", "#FF9671", "#940000", "#FFE6D9"
+    ]
+}

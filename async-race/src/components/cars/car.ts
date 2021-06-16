@@ -9,9 +9,9 @@ export class Car extends BaseComponent {
 
     moveCar = this.element.animate([
         { left: '0%' },
-        { left: '90%' }
+        { left: `calc(100% - 5rem)` }
       ], {
-        duration: 3000,
+        duration: 1000,
         fill: 'forwards'
       });
 
