@@ -1,5 +1,6 @@
 import { GaragePage } from './containers/Garage';
 import { WinnersPage } from './containers/Winners';
+import { Garage } from './models/Garage';
 
 export class Router {
     public static instance: Router | null = null;

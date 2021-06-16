@@ -9,6 +9,7 @@ import { Car } from '../models/Car';
 import { Headline } from '../components/headline';
 import templates from '../carTemplates.json'
 import { Overlay } from '../components/winMessage';
+import { Winners } from '../models/Winners';
 
 let localStorage = window.localStorage;
 
@@ -16,6 +17,8 @@ export class GaragePage extends Page {
     public static urlPattern = '';
 
     private garage = new Garage();
+
+    private winners = new Winners();
 
     private readonly navBar: NavBar;
 
@@ -47,9 +50,7 @@ export class GaragePage extends Page {
 
     private readonly overlay = new Overlay(this);
 
-    public winner: string | null = null;
-    
-    public winnerId: number | null = null;
+    public winner: number | null = null;
 
     public isRacing: Boolean = false;
 
@@ -61,6 +62,8 @@ export class GaragePage extends Page {
         super();
         this.navBar = new NavBar();
 
+        (this.resetBtn.element as HTMLInputElement).disabled = true;
+
         this.updateBtn.element.addEventListener('click', this.updateCar);
 
         const pageNum = Number.parseInt(localStorage.getItem('page number')!) || 1;
@@ -68,6 +71,7 @@ export class GaragePage extends Page {
 
         this.winWindow = document.createElement('div');
         this.winWindow.classList.add('win-container');
+
 
         (this.createBtn.element as HTMLInputElement).disabled = true;
         (this.updateBtn.element as HTMLInputElement).disabled = true;
@@ -97,13 +101,26 @@ export class GaragePage extends Page {
         this.updateBtn.element.addEventListener('click', this.updateCar.bind(this));
         this.generateBtn.element.addEventListener('click', this.generateCars.bind(this));
 
-        this.raceBtn.element.addEventListener('click', async () => {
-            (this.raceBtn.element as HTMLInputElement).disabled = true;
-            this.isRacing = true;
+        this.resetBtn.element.addEventListener('click', async () => {
+            (this.resetBtn.element as HTMLInputElement).disabled = true;
+            this.isRacing = false;
             this.winner = null;
             for (let car of this.carRoutes) {
-                await car.reset();
+                car.reset();
             }
+
+            for (let car of this.garage.cars) {
+                await car.stop();
+            }
+            (this.raceBtn.element as HTMLInputElement).disabled = false;
+
+        });
+
+        this.raceBtn.element.addEventListener('click', async () => {
+            (this.raceBtn.element as HTMLInputElement).disabled = true;
+            (this.resetBtn.element as HTMLInputElement).disabled = false;
+            this.isRacing = true;
+            this.winner = null;
             for (let car of this.carRoutes) {
                 car.race();
             }
@@ -129,11 +146,27 @@ export class GaragePage extends Page {
         localStorage.setItem('page number', (this.garage.page).toString());
     }
 
-    public handleWinner() {
-        console.log('winner', this.garage.cars.find(x => x.name == this.winner));
-        this.rootElement.appendChild(this.overlay.element);
-        this.overlay.element.appendChild(this.winWindow);
-        this.winWindow.append(`The winner is ${(this.winner!).toString()}!`);
+    public async handleWinner() {
+        if (this.winner) {
+            const carObj = this.garage.cars.find(x => x.id == this.winner)!;
+            this.rootElement.appendChild(this.overlay.element);
+            this.overlay.element.appendChild(this.winWindow);
+            this.winWindow.innerText = `The winner is ${carObj.name}!`;
+
+            const winnerObj = await this.winners.getSingle(carObj.id);
+
+            console.log(carObj)
+
+            const time = carObj.distance / carObj.velocity / 1000;
+
+            if (winnerObj) {
+                winnerObj.wins++;
+                winnerObj.time = Math.min(winnerObj.time, time);
+                console.log(winnerObj)
+            } else {
+                console.log(await this.winners.create(carObj.id, 1, time, carObj.name, carObj.color));
+            }
+        }
     }
 
     async render() {

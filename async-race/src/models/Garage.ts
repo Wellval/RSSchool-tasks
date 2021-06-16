@@ -68,6 +68,10 @@ export class Garage {
             url: '/garage/' + id,
             method: 'delete',
         });
+        await api({
+            url: '/winners/' + id,
+            method: 'delete',
+        });
         await this.load();
     }
 }

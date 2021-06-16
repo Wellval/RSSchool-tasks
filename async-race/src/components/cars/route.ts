@@ -60,11 +60,9 @@ export class CarRoute extends BaseComponent {
         (this.startBtn.element as HTMLInputElement).disabled = true;
         (this.toStartBtn.element as HTMLInputElement).disabled = false;
         const carData = await this.car.start();
-        console.log(carData)
         this.carEl.moveCar.play();
         this.carEl.moveCar.playbackRate = 1000 / (carData.distance / carData.velocity);
         const result = await this.car.drive();
-        console.log(result)
         if (result === false) {
             this.carEl.moveCar.pause();
         } else if (result === null) {
@@ -72,8 +70,7 @@ export class CarRoute extends BaseComponent {
             this.car.stop();
         } else if (result === true) {
             if (this.garagePage.isRacing && this.garagePage.winner === null) {
-                this.garagePage.winner = this.car.name;
-                this.garagePage.winnerId = this.car.id;
+                this.garagePage.winner = this.car.id;
                 this.garagePage.handleWinner();
             }
         }
@@ -82,7 +79,6 @@ export class CarRoute extends BaseComponent {
     async toStart() {
         (this.startBtn.element as HTMLInputElement).disabled = false;
         const data = await this.car.stop();
-        console.log(data)
         this.carEl.moveCar.cancel();
         (this.toStartBtn.element as HTMLInputElement).disabled = true;
     }

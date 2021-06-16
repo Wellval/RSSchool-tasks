@@ -35,14 +35,16 @@ export class Winners {
         return this.winners;
     }
 
-    public async create(id: number, wins: number, time: number): Promise<void> {
+    public async create(id: number, wins: number, time: number, name: string, color: string): Promise<void> {
         await api({
             url: '/winners',
             method: 'post',
-            params: {
+            data: {
                 id: id,
                 wins: wins,
-                time: time
+                time: time,
+                name: name,
+                color: color
             }
         });
         await this.load();
@@ -53,11 +55,11 @@ export class Winners {
             url: '/winners',
             method: 'get',
             params: {
-                page: this._page,
-                limit: this.pageSize,
+                _page: this._page,
+                _limit: this.pageSize
             }
         });
-        this._total = Number.parseInt(result.headers["x-total-count"].toString());
+        this._total = Number.parseInt(result.headers["x-total-count"]?.toString());
         if (typeof result.response !== 'string') {
             this._winners = result.response.map(x => new Winner(x));
         }
@@ -67,10 +69,18 @@ export class Winners {
         api({
             url: '/winners/' + id,
             method: 'delete',
-            params: {
-                id: id
-            }
         });
         await this.load();
+    }
+
+    public async getSingle(id: number): Promise<Winner | null> {
+        const result = await api<Dictionary>({
+            url: '/winners/' + id,
+            method: 'get',
+        });
+
+        console.log(result)
+
+        return result.code === 404 ? null : new Winner(result.response as Dictionary);
     }
 }

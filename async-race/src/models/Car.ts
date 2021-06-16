@@ -11,6 +11,16 @@ export class Car {
     protected _name: string;
     protected _color: string;
     protected _id: number;
+    protected _velocity: number = 0;
+    protected _distance: number = 0;
+
+    public get distance(): number {
+        return this._distance;
+    }
+
+    public get velocity(): number {
+        return this._velocity;
+    }
 
     public get name(): string {
         return this._name;
@@ -58,7 +68,10 @@ export class Car {
 
     public async start(): Promise<EngineState> {
         const result = await this.requestEngine('started');
-        return result.response as EngineState;
+        const data = result.response as EngineState;
+        this._velocity = data.velocity;
+        this._distance = data.distance;
+        return data;
     }
 
     public async stop(): Promise<EngineState> {
