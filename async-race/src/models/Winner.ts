@@ -2,61 +2,65 @@ import { api } from '../utils/apiWrapper';
 import { Dictionary } from '../utils/Dictionary';
 
 export class Winner {
-    protected _id: number;
-    protected _wins: number;
-    protected _time: number;
-    protected _name: string;
-    protected _color: string;
+  protected _id: number;
 
-    public get id() {
-        return this._id;
-    }
+  protected _wins: number;
 
-    public get wins() {
-        return this._wins;
-    }
+  protected _time: number;
 
-    public get name() {
-        return this._name;
-    }
+  protected _name: string;
 
-    public get color() {
-        return this._color;
-    }
+  protected _color: string;
 
-    public get time() {
-        return this._time;
-    }
+  public get id() {
+    return this._id;
+  }
 
-    public set time(value: number) {
-        this._time = value;
-        this.update();
-    }
+  public get name() {
+    return this._name;
+  }
 
-    public set wins(value: number) {
-        this._wins = value;
-        this.update();
-    }
+  public get color() {
+    return this._color;
+  }
 
-    public async update(): Promise<void> {
-        api({
-            url: '/winners/' + this._id,
-            method: 'put',
-            data: {
-                id: this._id,
-                wins: this._wins,
-                time: this._time,
-                name: this._name,
-                color: this._color
-            }
-        })
-    }
+  public get time() {
+    return this._time;
+  }
 
-    constructor(values: Dictionary) {
-        this._id = values.id as number;
-        this._wins = values.wins as number;
-        this._time = values.time as number;
-        this._name = values.name as string;
-        this._color = values.color as string;
-    }
+  public set time(value: number) {
+    this._time = value;
+    this.update();
+  }
+
+  public set wins(value: number) {
+    this._wins = value;
+    this.update();
+  }
+
+  public get wins() {
+    return this._wins;
+  }
+
+  public async update(): Promise<void> {
+    api({
+      url: `/winners/${this._id}`,
+      method: 'put',
+      data: {
+        id: this._id,
+        wins: this._wins,
+        time: this._time,
+        name: this._name,
+        color: this._color,
+      },
+    });
+  }
+
+  constructor(values: Dictionary) {
+    this._id = values.id as number;
+    this._wins = values.wins as number;
+    this._time = values.time as number;
+    this._name = values.name as string;
+    this._color = values.color as string;
+  }
 }

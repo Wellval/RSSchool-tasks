@@ -17,6 +17,10 @@
     ],
     "ignorePatterns": ["*.config.js", "node_modules/", "dist/"],
     "rules": {
+      "class-methods-use-this": "off",
+      "no-underscore-dangle": "off",
+      "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+      "no-new": 0,
       "no-plusplus": "off",
       "no-console": "warn",
       "max-len": ["warn", { "code": 120 }],

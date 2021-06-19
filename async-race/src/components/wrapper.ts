@@ -1,7 +1,7 @@
-import { BaseComponent } from "./base-component";
+import { BaseComponent } from './base-component';
 
 export class Wrapper extends BaseComponent {
-    constructor() {
-        super('div', ['wrapper']);
-    }
+  constructor() {
+    super('div', ['wrapper']);
+  }
 }
