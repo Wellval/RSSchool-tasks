@@ -1,0 +1,166 @@
+header {
+    height: 7rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.466);
+
+    .checkbox {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .label {
+        width: 95px;
+        height: 26px;
+        background-color: #FECDE9;
+        display: flex;
+        border-radius: 50px;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #F89ED1;
+            box-shadow: 0px 0px 40px -2px #f89ed1;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .play-mode {
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .train-mode {
+        margin-right: 12px;
+        transition: 0.5s;
+    }
+
+    .ball {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        transition: 0.5s;
+    }
+}
+
+.navbar {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    left: -300px;
+    top: 0px;
+    background-color: #F89ED1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 20% 20% 0;
+    transition: left 0.8s cubic-bezier(1, 0, 0, 1), background-color 0.5s linear;
+
+    .nav-item, .nav-link {
+        list-style: none;
+        margin: 23px;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.466);
+        font-size: 25px;
+        letter-spacing: 1px;
+        position: relative;
+        padding: 3px 0;
+        cursor: pointer;
+    }
+}
+
+.navbar.blue {
+    background-color: blue;
+}
+
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: #FECDE9;
+    transition: all 0.5s;
+}
+
+.line-1.cross  {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.line-2.cross {
+    opacity: 0;
+}
+
+.line-3.cross  {
+    transform: rotateZ(405deg) translate(-11px, -10px);
+}
+
+.checkbox:checked + .label {
+    background-color: #D1E6FE;
+    box-shadow: 0px 0px 40px -2px #A2C9F3;
+}
+  
+.checkbox:checked + .label .ball {
+    transform: translateX(65px);
+}
+
+header .checkbox:checked + .label .train-mode {
+    opacity: 0;
+}
+header .checkbox:checked + .label .play-mode {
+    opacity: 1;
+    margin-left: 20px;
+}
+
+header .nav-item .nav-link::before, header .nav-item .nav-link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  
+  header .nav-item .nav-link::after {
+    bottom: 0;
+  }
+  
+  header .nav-item .nav-link::before {
+    top: 0;
+  }
+  
+  header .nav-item .nav-link:hover::before, header .nav-item .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+.active {
+    left: 0px;
+    color: white;
+}
+
+.hamburger-menu {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+    z-index: 2;
+
+    &:hover > .line {
+        box-shadow: 0px 0px 40px -2px #f89ed1;
+    }
+}
