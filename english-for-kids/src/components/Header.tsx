@@ -1,63 +1,109 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { images } from '../shared/categoryImages';
 import { data } from '../shared/images';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    NavLink
+    NavLink,
+    useLocation
 } from "react-router-dom";
+import { useEffect } from 'react';
 
-export const Header = () => {
-    const [menuVisibility, setMenuVisibility] = React.useState(false);
-    const [themeColor, setThemeColor] = React.useState('pink');
+import { GameActions } from '../models/GameActions';
 
-    function changeThemeColor() {
-        console.log('clicked')
-        if (themeColor === 'pink') {
-            setThemeColor('blue')
-        } else setThemeColor('pink');
-        console.log(themeColor)
+interface Props {
+    name: string;
+    currentAction: GameActions;
+    setCurrentAction: (value: GameActions) => void;
+    audios: Array<string>;
+    setAudios: (value: Array<string>) => void;
+    shuffledAudios: Array<string>
+}
+
+export const Header = ({ name, currentAction, setCurrentAction, audios, setAudios, shuffledAudios } : Props) => {
+    const category = images.filter((x) => x.category === name)[0];
+    const [menuVisibility, setMenuVisibility] = useState(false);
+    const [themeColor, setThemeColor] = useState('pink');
+  
+    const wrapperRef = useRef<any>();
+
+    const location = useLocation();
+
+    const changeMode = () => {
+        if (themeColor === 'blue') {
+            setThemeColor('pink');
+        } else setThemeColor('blue');
+       setCurrentAction(currentAction === GameActions.Train ? GameActions.Play : GameActions.Train);
+    }
+    
+    const openMenu = () => {
+        setMenuVisibility(!menuVisibility);
     }
 
-    function openMenu() {
-        let lines = document.getElementsByClassName('line');
-        for (let line of lines) {
-            line.classList.toggle('cross');
+    const handleClickOutside = (e: Event) => {
+        if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+            setMenuVisibility(false);
         }
-        const currentState = menuVisibility;
-        setMenuVisibility(!currentState);
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    });
+
+    useEffect(() => {
+        if (category) {
+            setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
+        } 
+    }, [location.pathname])
+
+    useEffect(() => {
+        setMenuVisibility(false);
+    }, [location]);
+
+    const changeStartButton = (e: React.MouseEvent) => {
+        if (currentAction === GameActions.Started) {
+            new Audio(shuffledAudios[shuffledAudios.length - 1]).play();
+        }
+        setCurrentAction(GameActions.Started);
     }
 
     return (
         <header>
-            <div className="hamburger-menu" onClick={openMenu}>
-                <div className="line line-1"></div>
-                <div className="line line-2"></div>
-                <div className="line line-3"></div>
-            </div>
-                <nav className={menuVisibility === true ? "navbar active" : "navbar"}>
+            <span ref={wrapperRef}>
+                <div className="hamburger-menu" onClick={openMenu}>
+                    {[1, 2, 3].map(index => <div key={"line-" + index} className={`line line-${index} 
+                    ${menuVisibility ? "cross": ""} ${themeColor === 'blue' ? "light-blue" : ""}`}></div>)}
+                </div>
+                <nav className={`${menuVisibility === true ? "navbar active" : "navbar"} ${themeColor === 'blue' ? "blue" : ""}`}>
                     <ul className="nav-list">
                         <li className="nav-item">
-                            <NavLink to="/" className="nav-link">Main Page</NavLink>
+                            <NavLink to="/" exact={true} className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>Main Page</NavLink>
                         </li>
                         {
                             data.map((x, index) =>
-                                <li key={index} className="nav-item">
-                                    <NavLink to={"/category/" + x.category} className="nav-link">{x.category}</NavLink>
+                                <li key={index} className={`nav-item`}>
+                                    <NavLink to={"/category/" + x.category} className={`nav-link 
+                                    ${location.pathname.includes("/category/" + x.category) ? "active" : ""}`}>{x.category}</NavLink>
                                 </li>
                             )
                         }
                     </ul>
                 </nav>
-            <div className="toggler">
-                <input type="checkbox" className="checkbox" id="checkbox" onChange={changeThemeColor} />
-                <label htmlFor="checkbox" className="label">
-                    <div className="play-mode">Play</div>
-                    <div className="train-mode">Train</div>
-                    <div className="ball"></div>
-                </label>
+            </span>
+            <div className="buttons">
+                <div className="toggler">
+                    <input type="checkbox" className="checkbox" id="checkbox" onChange={changeMode} />
+                    <label htmlFor="checkbox" className="label">
+                        <div className="play-mode">Play</div>
+                        <div className="train-mode">Train</div>
+                        <div className="ball"></div>
+                    </label>
+                </div>
+                {
+                    currentAction !== GameActions.Train ? 
+                    <button className="start-game" onClick={(e) => changeStartButton(e)}>{ currentAction === GameActions.Started ? 'repeat' : 'play'}</button> :
+                    <div></div>
+                }
             </div>
         </header>
     );
