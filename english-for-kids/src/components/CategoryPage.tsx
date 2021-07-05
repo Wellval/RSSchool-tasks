@@ -1,8 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
-import { images } from '../shared/categoryImages';
 import ReactCardFlip from 'react-card-flip';
 import { GameActions } from '../models/GameActions';
-import { last } from "lodash";
 
 
 interface Props {
@@ -30,7 +28,7 @@ interface Category {
 export const CategoryPage = ({ setCurrentAction, currentAction, category, audios, setAudios, shuffledAudios, setShuffledAudios }: Props) => {
     const [cards, setCards] = useState<Array<Cards>>([]);
     let failures: Array<string> = [];
-    //const [shuffledAudios, setShuffledAudios] = useState<Array<string>>([]);
+    const ratingWrapper = document.querySelector('.rating');
 
     useEffect(() => {
         if (category.images) {
@@ -41,12 +39,15 @@ export const CategoryPage = ({ setCurrentAction, currentAction, category, audios
 
     useEffect(() => {
         if (currentAction !== GameActions.Started) {
+            if (ratingWrapper) {
+                ratingWrapper.innerHTML = '';
+            }
             let cardsDisabled = document.getElementsByClassName('guessed');
             Array.from(cardsDisabled).forEach(card => {
             card.classList.remove('guessed');
             }) 
         } 
-    }, [currentAction])
+    }, [currentAction]);
 
     const handleFlip = (name: string, e: React.MouseEvent) => {
         if (localStorage.getItem('action') === GameActions.Train.toString()) {
@@ -70,18 +71,11 @@ export const CategoryPage = ({ setCurrentAction, currentAction, category, audios
         else return;
     }
 
-    // useEffect(() => {
-    //     if (currentAction === GameActions.Started) {
-    //         setShuffledAudios(audios.slice().sort(() => Math.random() - 0.5));
-    //     }
-    // }, [currentAction])
-
-
     useEffect(() => {
-        async function playSound() {
-            await new Audio(shuffledAudios[shuffledAudios.length - 1]).play()
-        }
-        playSound();
+            async function playSound() {
+                await new Audio(shuffledAudios[shuffledAudios.length - 1]).play()
+            }
+            playSound();
     }, [shuffledAudios])
 
     const guessWord = (name: string, e: React.MouseEvent) => {
@@ -90,18 +84,34 @@ export const CategoryPage = ({ setCurrentAction, currentAction, category, audios
             if (lastShuffled.includes(name)) {
                 document.getElementById(name)!.classList.add('guessed')
                 shuffledAudios.pop();
-                console.log(shuffledAudios)
                 new Audio('/well-done.mp3').play();
+                let star = document.createElement('i');
+                star.className = 'fas fa-star';
+                ratingWrapper!.append(star);
                 setTimeout(() => {
                     new Audio(lastShuffled).play();
                 }, 2000)
                 lastShuffled = shuffledAudios[shuffledAudios.length - 1];
             } else {
                 new Audio('/error.mp3').play();
-                failures.push('failure')
+                failures.push('failure');
+                let brokenHeart = document.createElement('i');
+                brokenHeart.className = 'fas fa-heart-broken';
+                ratingWrapper!.append(brokenHeart);
             }
             if (shuffledAudios.length === 0) {
-                failures.length === 0 ? console.log('Good job!') : console.log('Work more!')
+                if( failures.length === 0) {
+                    document.querySelector('main')!.innerHTML = `<div class='overlay'><h2 class='win'>Success!</h2></div>`;
+                    new Audio('/success.wav').play();
+                } else {
+                    document.querySelector('main')!.innerHTML = `<div class='overlay'>
+                    <h2 class='loose'>Work more!</h2>
+                    <p>Number of mistakes: ${failures.length}</p>
+                    </div>`; 
+                    new Audio('/failure.mp3').play();
+                }
+                //console.log('Work more!');
+                setTimeout(() => { location.pathname = '/' }, 2000);
             }
         } 
     }
@@ -109,6 +119,7 @@ export const CategoryPage = ({ setCurrentAction, currentAction, category, audios
     return (
         <main>
             <h2>{category.category}</h2>
+            <div className="rating"></div>
             <div className="main-wrapper">
             {
                 cards.map((x, index) => 

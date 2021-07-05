@@ -20,7 +20,7 @@ interface Props {
 }
 
 export const Header = ({ name, currentAction, setCurrentAction, audios, setAudios, shuffledAudios } : Props) => {
-    const category = images.filter((x) => x.category === name)[0];
+    // const category = images.filter((x) => x.category === name)[0];
     const [menuVisibility, setMenuVisibility] = useState(false);
     const [themeColor, setThemeColor] = useState('pink');
   
@@ -51,14 +51,13 @@ export const Header = ({ name, currentAction, setCurrentAction, audios, setAudio
     });
 
     useEffect(() => {
-        if (category) {
-            setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
-        } 
-    }, [location.pathname])
-
-    useEffect(() => {
+    //     if (category) {
+    //         setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
+    //     } 
+    //     document.querySelector('#checkbox')?.setAttribute('checked', 'false');
+        setCurrentAction(GameActions.Train);
         setMenuVisibility(false);
-    }, [location]);
+    }, [location.pathname])
 
     const changeStartButton = (e: React.MouseEvent) => {
         if (currentAction === GameActions.Started) {
@@ -92,7 +91,10 @@ export const Header = ({ name, currentAction, setCurrentAction, audios, setAudio
             </span>
             <div className="buttons">
                 <div className="toggler">
-                    <input type="checkbox" className="checkbox" id="checkbox" onChange={changeMode} />
+                    <input type="checkbox" className="checkbox" id="checkbox" checked={currentAction === GameActions.Train ?
+                    false :
+                    true
+                    } onChange={changeMode} />
                     <label htmlFor="checkbox" className="label">
                         <div className="play-mode">Play</div>
                         <div className="train-mode">Train</div>

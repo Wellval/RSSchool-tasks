@@ -13,12 +13,22 @@ export const App = () => {
     const [currentAction, setCurrentAction] = useState(GameActions.Train);
     const [audios, setAudios] = useState<Array<string>>([]);
     const [shuffledAudios, setShuffledAudios] = useState<Array<string>>([]);
+    const category = images.filter((x) => x.category === location.pathname.slice(10))[0];
+
+
+    useEffect(() => {
+        if (category) {
+            setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
+        } 
+        document.querySelector('#checkbox')?.setAttribute('checked', 'false');
+        console.log(category)
+    }, [location.pathname])
 
     useEffect(() => {
         if (currentAction === GameActions.Started) {
             setShuffledAudios(audios.slice().sort(() => Math.random() - 0.5));
         }
-    }, [currentAction])
+    }, [currentAction]);
 
 
     useEffect(() => {
