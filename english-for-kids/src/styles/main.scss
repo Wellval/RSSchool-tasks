@@ -1,0 +1,142 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: lightslategrey;
+    text-transform: uppercase;
+}
+
+.overlay {
+    height: 74vh;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+    flex-direction: column;
+    
+    .win {
+        font-size: 50px;
+        background: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        padding: 0.3em 0.6em ;
+        border: 3px solid transparent;
+        border-image: linear-gradient(135deg, #12BCB0 20%, #FABE0E 70%);
+        border-image-slice: 1;
+        height: 10%;
+    }
+
+    .loose {
+        font-size: 50px;
+        background: lightslategray;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        padding: 0.3em 0.6em ;
+        border: 3px solid transparent;
+        border-image: lightslategray;
+        border-image-slice: 1;
+        height: 10%;
+    }
+}
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+    .react-card-back, .react-card-front, .pink-card {
+        background-color: #FECDE9;
+    }
+
+    .guessed {
+        pointer-events: none;
+        opacity: 0.5;
+        background-color: gray;
+    }
+
+    .react-card-flip {
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .card-container, .main-card-container {
+        width: 260px;
+        height: 260px;
+        margin: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.466);
+        font-size: 25px;
+        transition: 0.5s;
+        cursor: pointer;
+        background-color: white;
+
+        img {
+            margin: 20px auto;
+            width: 160px;
+            height: 160px;
+            display: block;
+            padding-top: 5px;
+        }
+
+        img.play-mode {
+            padding-top: 40px;
+        }
+    }
+
+    .main-card-container {
+        background-color: #FECDE9;
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.466);
+        }
+    }
+}
+
+.game-over {
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+}
+
+.card-container:hover > .react-card-flip,
+.main-card-container:hover {
+    transform: scale(1.07);
+}
+
+.rating {
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: calc(100% - 100px);
+    height: 43px;
+    font-size: 28px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .fa-star {
+        color: gold;
+        width: calc(100% / 32);
+        margin-left: 20px;
+    }
+
+    .fa-heart-broken {
+        color: lightslategray;
+        width: calc(100% / 32);
+        margin-left: 20px;
+    }
+}
+
+
