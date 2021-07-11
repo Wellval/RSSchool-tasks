@@ -40,7 +40,7 @@ h2 {
         border: 3px solid transparent;
         border-image: lightslategray;
         border-image-slice: 1;
-        height: 10%;
+        height: 20%;
     }
 }
 
@@ -59,6 +59,7 @@ h2 {
         pointer-events: none;
         opacity: 0.5;
         background-color: gray;
+        cursor: none;
     }
 
     .react-card-flip {
@@ -76,11 +77,10 @@ h2 {
         color: rgba(0, 0, 0, 0.466);
         font-size: 25px;
         transition: 0.5s;
-        cursor: pointer;
         background-color: white;
 
         img {
-            margin: 20px auto;
+            margin: 0 auto;
             width: 160px;
             height: 160px;
             display: block;
@@ -88,7 +88,11 @@ h2 {
         }
 
         img.play-mode {
-            padding-top: 40px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
         }
     }
 
@@ -108,8 +112,15 @@ h2 {
     background-color: yellow;
 }
 
-.card-container:hover > .react-card-flip,
-.main-card-container:hover {
+.pink-card {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.pink-card:hover {
     transform: scale(1.07);
 }
 

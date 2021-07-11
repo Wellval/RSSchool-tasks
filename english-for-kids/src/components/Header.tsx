@@ -11,16 +11,14 @@ import { useEffect } from 'react';
 import { GameActions } from '../models/GameActions';
 
 interface Props {
-    name: string;
     currentAction: GameActions;
     setCurrentAction: (value: GameActions) => void;
-    audios: Array<string>;
-    setAudios: (value: Array<string>) => void;
-    shuffledAudios: Array<string>
+    shuffledAudios: Array<string>;
+    count: number;
+    setCount: (value: number) => void;
 }
 
-export const Header = ({ name, currentAction, setCurrentAction, audios, setAudios, shuffledAudios } : Props) => {
-    // const category = images.filter((x) => x.category === name)[0];
+export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count, setCount } : Props) => {
     const [menuVisibility, setMenuVisibility] = useState(false);
     const [themeColor, setThemeColor] = useState('pink');
   
@@ -51,17 +49,13 @@ export const Header = ({ name, currentAction, setCurrentAction, audios, setAudio
     });
 
     useEffect(() => {
-    //     if (category) {
-    //         setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
-    //     } 
-    //     document.querySelector('#checkbox')?.setAttribute('checked', 'false');
         setCurrentAction(GameActions.Train);
         setMenuVisibility(false);
     }, [location.pathname])
 
     const changeStartButton = (e: React.MouseEvent) => {
         if (currentAction === GameActions.Started) {
-            new Audio(shuffledAudios[shuffledAudios.length - 1]).play();
+            new Audio(shuffledAudios[count]).play();
         }
         setCurrentAction(GameActions.Started);
     }

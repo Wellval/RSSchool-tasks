@@ -12,22 +12,24 @@ import { GameActions } from './models/GameActions';
 export const App = () => {
     const [currentAction, setCurrentAction] = useState(GameActions.Train);
     const [audios, setAudios] = useState<Array<string>>([]);
+    const [choices, setChoices] = useState<Array<boolean>>([]);
+    let [failures, setFailures] = useState<number>(0);
+    let [count, setCount] = useState<number>(0);
     const [shuffledAudios, setShuffledAudios] = useState<Array<string>>([]);
     const category = images.filter((x) => x.category === location.pathname.slice(10))[0];
-
 
     useEffect(() => {
         if (category) {
             setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
         } 
         document.querySelector('#checkbox')?.setAttribute('checked', 'false');
-        console.log(category)
     }, [location.pathname])
 
     useEffect(() => {
         if (currentAction === GameActions.Started) {
             setShuffledAudios(audios.slice().sort(() => Math.random() - 0.5));
         }
+        setCount(0)
     }, [currentAction]);
 
 
@@ -41,22 +43,23 @@ export const App = () => {
                 <Header 
                     currentAction={currentAction} 
                     setCurrentAction={setCurrentAction}
-                    name={location.pathname.slice(10)}
-                    audios={audios}
-                    setAudios={setAudios}
                     shuffledAudios={shuffledAudios}
+                    count={count}
+                    setCount={setCount}
                 />
                 <Switch>
                     <Route path="/category/:name" render={(props) => 
                         <CategoryPage 
                             name={props.match.params.name}
-                            setCurrentAction={setCurrentAction}
                             currentAction={currentAction}
                             category={images.filter((x) => x.category === props.match.params.name)[0]}
-                            audios={audios}
-                            setAudios={setAudios}
                             shuffledAudios={shuffledAudios}
-                            setShuffledAudios={setShuffledAudios}
+                            count={count}
+                            setCount={setCount}
+                            failures={failures}
+                            setFailures={setFailures}
+                            choices={choices}
+                            setChoices={setChoices}
                         />
                     } />
                     <Route exact path="/" render={HomePage} />
