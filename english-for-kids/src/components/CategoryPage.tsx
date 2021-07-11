@@ -1,5 +1,4 @@
-import { last } from "lodash";
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactCardFlip from 'react-card-flip';
 import { GameActions } from '../models/GameActions';
 import { Rating } from "./Rating";

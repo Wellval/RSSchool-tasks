@@ -8,6 +8,7 @@ import { CategoryPage } from './components/CategoryPage';
 import { images } from './shared/categoryImages';
 
 import { GameActions } from './models/GameActions';
+import { StatsPage } from './components/StatsPage';
 
 export const App = () => {
     const [currentAction, setCurrentAction] = useState(GameActions.Train);
@@ -60,6 +61,11 @@ export const App = () => {
                             setFailures={setFailures}
                             choices={choices}
                             setChoices={setChoices}
+                        />
+                    } />
+                    <Route path="/statistics" render={(props) => 
+                        <StatsPage
+                            category={category}
                         />
                     } />
                     <Route exact path="/" render={HomePage} />

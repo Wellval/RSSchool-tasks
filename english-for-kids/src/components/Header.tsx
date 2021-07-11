@@ -1,6 +1,4 @@
 import React, { useState, useRef } from 'react';
-import ReactDOM from 'react-dom';
-import { images } from '../shared/categoryImages';
 import { data } from '../shared/images';
 import {
     NavLink,
@@ -80,6 +78,9 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
                                 </li>
                             )
                         }
+                        <li className="nav-item">
+                            <NavLink to="/statistics" className={`nav-link ${location.pathname === "/statistics" ? "active" : ""}`}>Statistics</NavLink>
+                        </li>
                     </ul>
                 </nav>
             </span>
