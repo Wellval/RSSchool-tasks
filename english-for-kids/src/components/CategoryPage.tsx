@@ -80,7 +80,9 @@ export const CategoryPage = ({ setChoices, choices, currentAction, category, shu
     }
 
     useEffect(() => {
-        new Audio(shuffledAudios[count]).play();
+        if (currentAction === GameActions.Started) {
+            new Audio(shuffledAudios[count]).play();
+        }
     }, [shuffledAudios])
 
     const chosenRight = (name: string) => {

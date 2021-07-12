@@ -47,7 +47,9 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
     });
 
     useEffect(() => {
-        setCurrentAction(GameActions.Train);
+        if (currentAction !== GameActions.Play) {
+            setCurrentAction(GameActions.Train);
+        }
         setMenuVisibility(false);
     }, [location.pathname])
 
@@ -97,7 +99,7 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
                     </label>
                 </div>
                 {
-                    currentAction !== GameActions.Train ? 
+                    currentAction !== GameActions.Train && location.pathname !== '/' ? 
                     <button className="start-game" onClick={(e) => changeStartButton(e)}>{ currentAction === GameActions.Started ? 'repeat' : 'play'}</button> :
                     <div></div>
                 }
