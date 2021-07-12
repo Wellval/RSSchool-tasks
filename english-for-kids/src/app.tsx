@@ -33,11 +33,6 @@ export const App = () => {
         setCount(0)
     }, [currentAction]);
 
-
-    useEffect(() => {
-        localStorage.setItem('action', currentAction as unknown as string);
-    }, [currentAction]);
-
     return (
         <div className="view">
             <Router>

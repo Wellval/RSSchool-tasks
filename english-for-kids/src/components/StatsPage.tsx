@@ -45,10 +45,19 @@ export const StatsPage = ({ category }: Props) => {
                     <tbody>
                         {
                             images.map(image => image.images.map((singleImg, index) => {
+                                let object = JSON.parse(localStorage.getItem(singleImg)!);
+                                const trained = (localStorage.getItem(singleImg)) ? +object.trained : 0;
+                                const correct = (localStorage.getItem(singleImg)) ? +object.correct : 0;
+                                const incorrect = (localStorage.getItem(singleImg)) ? +object.incorrect : 0;
+                                const percentage = (correct === 0 && incorrect === 0) ? 0 : ((100 / (correct + incorrect)) * correct).toFixed(2);
                                 return <tr> 
                                         <td> { image.category } </td>
                                         <td> { singleImg } </td>
                                         <td> { image.rus[index] } </td>
+                                        <td> { trained } </td>
+                                        <td> { correct } </td>
+                                        <td> { incorrect } </td>
+                                        <td> {  percentage } </td>
                                     </tr>
                             }))
                         }

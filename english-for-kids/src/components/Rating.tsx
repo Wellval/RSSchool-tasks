@@ -2,16 +2,20 @@ import React, { useEffect } from 'react';
 import { GameActions } from '../models/GameActions';
 
 interface Props {
-    choices: Array<boolean>
+    choices: Array<boolean>;
+    currentAction: GameActions;
 }
 
-export const Rating = ({ choices }: Props) => {
+export const Rating = ({ choices, currentAction }: Props) => {
 
     return (
         <div className="rating">
-            {choices.map(choice =>
+        {
+            currentAction === GameActions.Started ? choices.map(choice =>
                 choice === true ? <i className="fas fa-star"></i> : <i className="fas fa-heart-broken"></i>
-            )}
+            ) : ''
+        }
+            
         </div>
     );
 }
