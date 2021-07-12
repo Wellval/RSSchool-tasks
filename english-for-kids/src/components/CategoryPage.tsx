@@ -130,12 +130,14 @@ export const CategoryPage = ({ setChoices, choices, currentAction, category, shu
     const playView = () => <div className="main-wrapper">
         {
             cards.map((x, index) =>
-                <div className={(x.guessed === true) && currentAction === GameActions.Started ? 'card-container guessed' : 'card-container'} id={`${x.name}`}>
+                <div className={(x.guessed === true) && currentAction === GameActions.Started ? 'card-container guessed' : 'card-container'} 
+                id={`${x.name}`}
+                onClick={(e) => {
+                    sayWord(x.name, e)
+                    guessWord(x.name, e)
+                }}>
                     <ReactCardFlip key={index} isFlipped={x.flipped} flipDirection="vertical">
-                        <div className="pink-card" id={`${x.name}`} onClick={(e) => {
-                            sayWord(x.name, e)
-                            guessWord(x.name, e)
-                        }}>
+                        <div className="pink-card" id={`${x.name}`}>
                             <img className={currentAction !== GameActions.Train ? 'play-mode' : ''}
                                 src={'/' + category.category + '/' + x.name + '.png'} />
                             {
