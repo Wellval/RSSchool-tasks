@@ -83,6 +83,9 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
                         <li className="nav-item">
                             <NavLink to="/statistics" className={`nav-link ${location.pathname === "/statistics" ? "active" : ""}`}>Statistics</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <button className="log-in-button">Log in</button>
+                        </li>
                     </ul>
                 </nav>
             </span>
