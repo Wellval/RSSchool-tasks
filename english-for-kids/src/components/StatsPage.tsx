@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { images } from '../shared/categoryImages';
 
 interface Props {
@@ -54,7 +53,7 @@ export const StatsPage = ({ category }: Props) => {
                                     <td> {image.category} </td>
                                     <td> {singleImg} </td>
                                     <td> {image.rus[index]} </td>
-                                    <td> { trained } </td>
+                                    <td> {trained} </td>
                                     <td> {correct} </td>
                                     <td> {incorrect} </td>
                                     <td> {percentage} </td>

@@ -1,6 +1,6 @@
 import { images } from '../shared/categoryImages';
 
-export const newPerson = () => {
+export const newCard = () => {
     let trained: number = 0;
     let correct: number = 0;
     let incorrect: number = 0;

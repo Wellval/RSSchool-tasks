@@ -16,10 +16,10 @@ interface Props {
     setCount: (value: number) => void;
 }
 
-export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count, setCount } : Props) => {
+export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count, setCount }: Props) => {
     const [menuVisibility, setMenuVisibility] = useState(false);
     const [themeColor, setThemeColor] = useState('pink');
-  
+
     const wrapperRef = useRef<any>();
 
     const location = useLocation();
@@ -28,9 +28,9 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
         if (themeColor === 'blue') {
             setThemeColor('pink');
         } else setThemeColor('blue');
-       setCurrentAction(currentAction === GameActions.Train ? GameActions.Play : GameActions.Train);
+        setCurrentAction(currentAction === GameActions.Train ? GameActions.Play : GameActions.Train);
     }
-    
+
     const openMenu = () => {
         setMenuVisibility(!menuVisibility);
     }
@@ -65,7 +65,7 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
             <span ref={wrapperRef}>
                 <div className="hamburger-menu" onClick={openMenu}>
                     {[1, 2, 3].map(index => <div key={"line-" + index} className={`line line-${index} 
-                    ${menuVisibility ? "cross": ""} ${themeColor === 'blue' ? "light-blue" : ""}`}></div>)}
+                    ${menuVisibility ? "cross" : ""} ${themeColor === 'blue' ? "light-blue" : ""}`}></div>)}
                 </div>
                 <nav className={`${menuVisibility === true ? "navbar active" : "navbar"} ${themeColor === 'blue' ? "blue" : ""}`}>
                     <ul className="nav-list">
@@ -89,8 +89,8 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
             <div className="buttons">
                 <div className="toggler">
                     <input type="checkbox" className="checkbox" id="checkbox" checked={currentAction === GameActions.Train ?
-                    false :
-                    true
+                        false :
+                        true
                     } onChange={changeMode} />
                     <label htmlFor="checkbox" className="label">
                         <div className="play-mode">Play</div>
@@ -99,9 +99,9 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
                     </label>
                 </div>
                 {
-                    currentAction !== GameActions.Train && location.pathname !== '/' ? 
-                    <button className="start-game" onClick={(e) => changeStartButton(e)}>{ currentAction === GameActions.Started ? 'repeat' : 'play'}</button> :
-                    <div></div>
+                    currentAction !== GameActions.Train && location.pathname !== '/' ?
+                        <button className="start-game" onClick={(e) => changeStartButton(e)}>{currentAction === GameActions.Started ? 'repeat' : 'play'}</button> :
+                        <div></div>
                 }
             </div>
         </header>
