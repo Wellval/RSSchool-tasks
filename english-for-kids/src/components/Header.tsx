@@ -14,9 +14,11 @@ interface Props {
     shuffledAudios: Array<string>;
     count: number;
     setCount: (value: number) => void;
+    loginForm: boolean;
+    setLoginForm: (value: boolean) => void;
 }
 
-export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count, setCount }: Props) => {
+export const Header = ({ loginForm, setLoginForm, currentAction, setCurrentAction, shuffledAudios, count, setCount }: Props) => {
     const [menuVisibility, setMenuVisibility] = useState(false);
     const [themeColor, setThemeColor] = useState('pink');
 
@@ -60,6 +62,12 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
         setCurrentAction(GameActions.Started);
     }
 
+    const openLoginForm = () => {
+        setMenuVisibility(false)
+        setLoginForm(true);
+        console.log(loginForm)
+    }
+
     return (
         <header>
             <span ref={wrapperRef}>
@@ -84,7 +92,7 @@ export const Header = ({ currentAction, setCurrentAction, shuffledAudios, count,
                             <NavLink to="/statistics" className={`nav-link ${location.pathname === "/statistics" ? "active" : ""}`}>Statistics</NavLink>
                         </li>
                         <li className="nav-item">
-                            <button className="log-in-button">Log in</button>
+                            <NavLink to="/login" className="log-in-button" onClick={ () => openLoginForm() }>Log in</NavLink>
                         </li>
                     </ul>
                 </nav>

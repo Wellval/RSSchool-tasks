@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-
 import { HomePage } from './components/HomePage';
 import { CategoryPage } from './components/CardsPage';
 import { images } from './shared/categoryImages';
-
 import { GameActions } from './models/GameActions';
 import { StatsPage } from './components/StatsPage';
+import { LoginForm } from './components/LoginForm';
 
 export const App = () => {
     const [currentAction, setCurrentAction] = useState(GameActions.Train);
     const [audios, setAudios] = useState<Array<string>>([]);
     const [choices, setChoices] = useState<Array<boolean>>([]);
     let [failures, setFailures] = useState<number>(0);
+    const [loginForm, setLoginForm] = useState(false);
     let [count, setCount] = useState<number>(0);
     const [shuffledAudios, setShuffledAudios] = useState<Array<string>>([]);
     const category = images.filter((x) => x.category === location.pathname.slice(10))[0];
@@ -42,6 +42,8 @@ export const App = () => {
                     shuffledAudios={shuffledAudios}
                     count={count}
                     setCount={setCount}
+                    loginForm={loginForm}
+                    setLoginForm={setLoginForm}
                 />
                 <Switch>
                     <Route path="/category/:name" render={(props) => 
@@ -56,6 +58,8 @@ export const App = () => {
                             setFailures={setFailures}
                             choices={choices}
                             setChoices={setChoices}
+                            loginForm={loginForm}
+                            setLoginForm={setLoginForm}
                         />
                     } />
                     <Route path="/statistics" render={(props) => 
@@ -63,6 +67,7 @@ export const App = () => {
                             category={category}
                         />
                     } />
+                    <Route path="/login" render={LoginForm} />
                     <Route exact path="/" render={HomePage} />
                 </Switch>
             </Router>

@@ -7,7 +7,10 @@ footer {
     font-size: 24px;
     color: lightslategrey;
     text-transform: uppercase;
-    margin: 0 auto;
+    position: relative;
+    margin-bottom: -6rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 
     .rs-logo-year {
         display: flex;

@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GameActions } from '../models/GameActions';
 import { Rating } from "./Rating";
 import { CardItem } from './Card';
-import { Card } from '../models/CardInterface'
-import { Category } from '../models/CategoryInterface'
+import { Card } from '../models/CardInterface';
+import { Category } from '../models/CategoryInterface';
+import { LoginForm } from './LoginForm';
 
 
 interface Props {
@@ -17,11 +18,32 @@ interface Props {
     setFailures: (value: number) => void;
     choices: Array<boolean>
     setChoices: (value: Array<boolean>) => void;
+    loginForm: boolean;
+    setLoginForm: (value: boolean) => void;
 }
 
 
-export const CategoryPage = ({ setChoices, choices, currentAction, category, shuffledAudios, count, setCount, failures, setFailures }: Props) => {
+export const CategoryPage = ({ loginForm, setLoginForm, setChoices, choices, currentAction, category, shuffledAudios, count, setCount, failures, setFailures }: Props) => {
     const [cards, setCards] = useState<Array<Card>>([]);
+    const wrapperRef = useRef<any>();
+    const [token, setToken] = useState();
+
+    // if(!token) {
+    //     return <LoginForm setToken={setToken} />
+    //   }
+
+
+    const handleClickOutside = (e: Event) => {
+        if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+            setLoginForm(false);
+            console.log(loginForm)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    });
 
     useEffect(() => {
         if (category.images) {
