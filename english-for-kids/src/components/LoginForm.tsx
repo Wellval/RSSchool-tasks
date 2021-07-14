@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
-
 
 export const LoginForm = () => {
-
     return (
         <div className="content-wrapper">
             <div className="login-wrapper">
@@ -23,9 +20,9 @@ export const LoginForm = () => {
                 </form>
             </div>
         </div>
-    )
-}
+    );
+};
 
 LoginForm.propTypes = {
-    setToken: PropTypes.func.isRequired
-}
+    setToken: PropTypes.func.isRequired,
+};

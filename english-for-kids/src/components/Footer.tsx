@@ -1,6 +1,3 @@
-import React, { useState, useRef, MouseEvent } from 'react';
-import ReactDOM from 'react-dom';
-
 export const Footer = () => {
     return (
         <footer>
@@ -11,5 +8,5 @@ export const Footer = () => {
             </a>
             </div>
         </footer>
-    )
-}
+    );
+};

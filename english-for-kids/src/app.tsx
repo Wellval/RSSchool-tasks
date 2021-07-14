@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './components/HomePage';
@@ -13,41 +13,39 @@ export const App = () => {
     const [currentAction, setCurrentAction] = useState(GameActions.Train);
     const [audios, setAudios] = useState<Array<string>>([]);
     const [choices, setChoices] = useState<Array<boolean>>([]);
-    let [failures, setFailures] = useState<number>(0);
+    const [failures, setFailures] = useState<number>(0);
     const [loginForm, setLoginForm] = useState(false);
-    let [count, setCount] = useState<number>(0);
+    const [count, setCount] = useState<number>(0);
     const [shuffledAudios, setShuffledAudios] = useState<Array<string>>([]);
-    const category = images.filter((x) => x.category === location.pathname.slice(10))[0];
+    const category = images.filter((x) => x.category === window.location.pathname.slice(10))[0];
 
     useEffect(() => {
         if (category) {
-            setAudios(category.images.map(name => `/${category.category}/${name}.mp3`));
-        } 
+            setAudios(category.images.map((name) => `/${category.category}/${name}.mp3`));
+        }
         document.querySelector('#checkbox')?.setAttribute('checked', 'false');
-    }, [location.pathname])
+    }, [window.location.pathname]);
 
     useEffect(() => {
         if (currentAction === GameActions.Started) {
             setShuffledAudios(audios.slice().sort(() => Math.random() - 0.5));
         }
-        setCount(0)
+        setCount(0);
     }, [currentAction]);
 
     return (
-        <div className="view">
+        <div className='view'>
             <Router>
-                <Header 
-                    currentAction={currentAction} 
+                <Header
+                    currentAction={currentAction}
                     setCurrentAction={setCurrentAction}
                     shuffledAudios={shuffledAudios}
                     count={count}
-                    setCount={setCount}
                     loginForm={loginForm}
                     setLoginForm={setLoginForm}
                 />
                 <Switch>
-                    <Route path="/category/:name" render={(props) => 
-                        <CategoryPage 
+                    <Route path='/category/:name' render={(props) => <CategoryPage
                             name={props.match.params.name}
                             currentAction={currentAction}
                             category={images.filter((x) => x.category === props.match.params.name)[0]}
@@ -62,16 +60,12 @@ export const App = () => {
                             setLoginForm={setLoginForm}
                         />
                     } />
-                    <Route path="/statistics" render={(props) => 
-                        <StatsPage
-                            category={category}
-                        />
-                    } />
-                    <Route path="/login" render={LoginForm} />
-                    <Route exact path="/" render={HomePage} />
+                    <Route path='/statistics' render={StatsPage} />
+                    <Route path='/login' render={LoginForm} />
+                    <Route exact path='/' render={HomePage} />
                 </Switch>
             </Router>
             <Footer />
         </div>
     );
-}
+};

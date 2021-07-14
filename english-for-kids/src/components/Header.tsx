@@ -1,11 +1,9 @@
-import React, { useState, useRef } from 'react';
-import { data } from '../shared/images';
+import React, { useState, useRef, useEffect } from 'react';
 import {
     NavLink,
-    useLocation
-} from "react-router-dom";
-import { useEffect } from 'react';
-
+    useLocation,
+} from 'react-router-dom';
+import { data } from '../shared/images';
 import { GameActions } from '../models/GameActions';
 
 interface Props {
@@ -13,12 +11,18 @@ interface Props {
     setCurrentAction: (value: GameActions) => void;
     shuffledAudios: Array<string>;
     count: number;
-    setCount: (value: number) => void;
     loginForm: boolean;
     setLoginForm: (value: boolean) => void;
 }
 
-export const Header = ({ loginForm, setLoginForm, currentAction, setCurrentAction, shuffledAudios, count, setCount }: Props) => {
+export const Header = ({
+    loginForm,
+    setLoginForm,
+    currentAction,
+    setCurrentAction,
+    shuffledAudios,
+    count,
+}: Props) => {
     const [menuVisibility, setMenuVisibility] = useState(false);
     const [themeColor, setThemeColor] = useState('pink');
 
@@ -31,17 +35,17 @@ export const Header = ({ loginForm, setLoginForm, currentAction, setCurrentActio
             setThemeColor('pink');
         } else setThemeColor('blue');
         setCurrentAction(currentAction === GameActions.Train ? GameActions.Play : GameActions.Train);
-    }
+    };
 
     const openMenu = () => {
         setMenuVisibility(!menuVisibility);
-    }
+    };
 
     const handleClickOutside = (e: Event) => {
         if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
             setMenuVisibility(false);
         }
-    }
+    };
 
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
@@ -53,66 +57,72 @@ export const Header = ({ loginForm, setLoginForm, currentAction, setCurrentActio
             setCurrentAction(GameActions.Train);
         }
         setMenuVisibility(false);
-    }, [location.pathname])
+    }, [window.location.pathname]);
 
     const changeStartButton = (e: React.MouseEvent) => {
         if (currentAction === GameActions.Started) {
             new Audio(shuffledAudios[count]).play();
         }
         setCurrentAction(GameActions.Started);
-    }
+    };
 
     const openLoginForm = () => {
-        setMenuVisibility(false)
+        setMenuVisibility(false);
         setLoginForm(true);
-        console.log(loginForm)
-    }
+    };
 
     return (
         <header>
             <span ref={wrapperRef}>
-                <div className="hamburger-menu" onClick={openMenu}>
-                    {[1, 2, 3].map(index => <div key={"line-" + index} className={`line line-${index} 
-                    ${menuVisibility ? "cross" : ""} ${themeColor === 'blue' ? "light-blue" : ""}`}></div>)}
+                <div className='hamburger-menu' onClick={openMenu}>
+                    {[1, 2, 3].map((index) => <div key={`line-${index}`} className={`line line-${index} 
+                    ${menuVisibility
+                            ? 'cross'
+                            : ''} ${themeColor === 'blue'
+                                ? 'light-blue'
+                                : ''}`}></div>)}
                 </div>
-                <nav className={`${menuVisibility === true ? "navbar active" : "navbar"} ${themeColor === 'blue' ? "blue" : ""}`}>
-                    <ul className="nav-list">
-                        <li className="nav-item">
-                            <NavLink to="/" exact={true} className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>Main Page</NavLink>
+                <nav className={`${menuVisibility === true ? 'navbar active' : 'navbar'} ${themeColor === 'blue'
+                    ? 'blue'
+                    : ''}`}>
+                    <ul className='nav-list'>
+                        <li className='nav-item'>
+                            <NavLink to='/' exact={true} className={`nav-link ${location.pathname === '/'
+                                ? 'active'
+                                : ''}`}>Main Page</NavLink>
                         </li>
                         {
-                            data.map((x, index) =>
-                                <li key={index} className={`nav-item`}>
-                                    <NavLink to={"/category/" + x.category} className={`nav-link 
-                                    ${location.pathname.includes("/category/" + x.category) ? "active" : ""}`}>{x.category}</NavLink>
-                                </li>
-                            )
+                            data.map((x, index) => <li key={index} className={'nav-item'}>
+                                <NavLink to={`/category/${x.category}`} className={`nav-link 
+                                    ${location.pathname.includes(`/category/${x.category}`) ? 'active' : ''}`}>{x.category}</NavLink>
+                            </li>)
                         }
-                        <li className="nav-item">
-                            <NavLink to="/statistics" className={`nav-link ${location.pathname === "/statistics" ? "active" : ""}`}>Statistics</NavLink>
+                        <li className='nav-item'>
+                            <NavLink to='/statistics' className={`nav-link ${location.pathname === '/statistics'
+                                ? 'active'
+                                : ''}`}>Statistics</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink to="/login" className="log-in-button" onClick={ () => openLoginForm() }>Log in</NavLink>
+                        <li className='nav-item'>
+                            <NavLink to='/login' className='log-in-button' onClick={() => openLoginForm()}>Log in</NavLink>
                         </li>
                     </ul>
                 </nav>
             </span>
-            <div className="buttons">
-                <div className="toggler">
-                    <input type="checkbox" className="checkbox" id="checkbox" checked={currentAction === GameActions.Train ?
-                        false :
-                        true
-                    } onChange={changeMode} />
-                    <label htmlFor="checkbox" className="label">
-                        <div className="play-mode">Play</div>
-                        <div className="train-mode">Train</div>
-                        <div className="ball"></div>
+            <div className='buttons'>
+                <div className='toggler'>
+                    <input type='checkbox' className='checkbox' id='checkbox' checked={currentAction !== GameActions.Train} onChange={changeMode} />
+                    <label htmlFor='checkbox' className='label'>
+                        <div className='play-mode'>Play</div>
+                        <div className='train-mode'>Train</div>
+                        <div className='ball'></div>
                     </label>
                 </div>
                 {
-                    currentAction !== GameActions.Train && location.pathname !== '/' ?
-                        <button className="start-game" onClick={(e) => changeStartButton(e)}>{currentAction === GameActions.Started ? 'repeat' : 'play'}</button> :
-                        <div></div>
+                    currentAction !== GameActions.Train && location.pathname !== '/'
+                        ? <button className='start-game' onClick={(e) => changeStartButton(e)}>{currentAction === GameActions.Started
+                            ? 'repeat'
+                            : 'play'}</button>
+                        : <div></div>
                 }
             </div>
         </header>

@@ -1,6 +1,6 @@
 export const images = [
     {
-        category: "food",
+        category: 'food',
         images: [
             'cheese',
             'cake',
@@ -23,7 +23,7 @@ export const images = [
         ],
     },
     {
-        category: "clothes",
+        category: 'clothes',
         images: [
             'blouse',
             'bag',
@@ -43,7 +43,7 @@ export const images = [
             'свитер',
             'футболка',
             'штаны',
-        ]
+        ],
     },
     {
         category: 'emotions',
@@ -55,7 +55,7 @@ export const images = [
             'sad',
             'scared',
             'shy',
-            'surprised'
+            'surprised',
         ],
         rus: [
             'злой',
@@ -65,7 +65,7 @@ export const images = [
             'грустный',
             'испуганный',
             'стеснительный',
-            'удивленный'
+            'удивленный',
         ],
     },
     {
@@ -78,7 +78,7 @@ export const images = [
             'owl',
             'shark',
             'snake',
-            'squirrel'
+            'squirrel',
         ],
         rus: [
             'орел',
@@ -88,7 +88,7 @@ export const images = [
             'сова',
             'акула',
             'змея',
-            'белка'
+            'белка',
         ],
     },
     {
@@ -101,7 +101,7 @@ export const images = [
             'fox',
             'panda',
             'raccoon',
-            'zebra'
+            'zebra',
         ],
         rus: [
             'кот',
@@ -111,7 +111,7 @@ export const images = [
             'лиса',
             'панда',
             'енот',
-            'зебра'
+            'зебра',
         ],
     },
     {
@@ -124,7 +124,7 @@ export const images = [
             'run',
             'sing',
             'ski',
-            'swim'
+            'swim',
         ],
         rus: [
             'танцевать',
@@ -134,8 +134,8 @@ export const images = [
             'бежать',
             'петь',
             'кататься на лыжах',
-            'плавать'
-        ]
+            'плавать',
+        ],
     },
     {
         category: 'actions-b',
@@ -147,7 +147,7 @@ export const images = [
             'present',
             'sleep',
             'walk',
-            'teach'
+            'teach',
         ],
         rus: [
             'ловить',
@@ -157,7 +157,7 @@ export const images = [
             'дарить',
             'спать',
             'ходить',
-            'обучать'
+            'обучать',
         ],
     },
     {
@@ -170,7 +170,7 @@ export const images = [
             'giggle',
             'hug',
             'ride',
-            'scratch'
+            'scratch',
         ],
         rus: [
             'нести',
@@ -180,8 +180,7 @@ export const images = [
             'хихикать',
             'обнимать',
             'ехать',
-            'царапать'
+            'царапать',
         ],
     },
-
-]
+];

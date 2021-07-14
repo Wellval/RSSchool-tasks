@@ -7,15 +7,16 @@ interface Props {
 }
 
 export const Rating = ({ choices, currentAction }: Props) => {
-
     return (
-        <div className="rating">
+        <div className='rating'>
             {
-                currentAction === GameActions.Started ? choices.map(choice =>
-                    choice === true ? <i className="fas fa-star"></i> : <i className="fas fa-heart-broken"></i>
-                ) : ''
+                currentAction === GameActions.Started
+                ? choices.map((choice) =>
+                    (choice === true
+                    ? <i className='fas fa-star'></i>
+                    : <i className='fas fa-heart-broken'></i>))
+                : ''
             }
-
         </div>
     );
-}
+};
